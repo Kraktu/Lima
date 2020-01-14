@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 1592076621}
   - component: {fileID: 1592076619}
   - component: {fileID: 1592076620}
+  - component: {fileID: 1592076622}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1422,10 +1423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7cd41e670c9b84ea9cad79e055d9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawmill: {fileID: 0}
-  mine: {fileID: 0}
-  headquarter: {fileID: 0}
-  incubator: {fileID: 0}
   sawmillName: Sawmill
   mineName: Mine
   headquarterName: Node Concile
@@ -1454,19 +1451,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f33d9d9b43610742a262e2e7939af16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: {fileID: 0}
-  ore: {fileID: 0}
-  venacid: {fileID: 0}
   startingWood: 5
   startingOre: 7
   startingVenacid: 20
-  startingWoodPerSecond: 0
-  startingOrePerSecond: 0
+  startingWoodPerSecond: 1
+  startingOrePerSecond: 1
   startingVenacidPerSecond: 0
   startingWoodPerClick: 1
   startingOrePerClick: 1
   startingVenacidPerClick: 1
-  TotalResources: {x: 0, y: 0, z: 0}
+  totalResources: {x: 0, y: 0, z: 0}
 --- !u!4 &1592076621
 Transform:
   m_ObjectHideFlags: 0
@@ -1481,6 +1475,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592076622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592076618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d79717098e77c409979f7132c18559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodNumberText: {fileID: 1234140999}
+  oreNumberText: {fileID: 1111310145}
+  woodPerSecText: {fileID: 624861737}
+  orePerSecText: {fileID: 1460052452}
 --- !u!1 &1718520876
 GameObject:
   m_ObjectHideFlags: 0
