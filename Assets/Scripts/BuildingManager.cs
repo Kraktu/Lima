@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class BuildingManager : MonoBehaviour
 {
+    static public BuildingManager Instance { get; private set; }
     public Building sawmill, mine, headquarter, incubator;
     public string sawmillName, mineName, headquarterName, incubatorName;
     public Vector3Int sawmillCost, mineCost, headquarterCost, incubatorCost;
     public Vector3Int sawmillUpgradeCost, mineUpgradeCost, headquarterUpgradeCost, incubatorUpgradeCost;
     public Vector3 sawmillCostMultiplicator, mineCostMultiplicator, headquarterCostMultiplicator, incubatorCostMultiplicator;
 
+   
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     private void Start()
     {
         sawmill = new Building { buildingName = sawmillName, cost = sawmillCost, upgradeCost = sawmillUpgradeCost, CostMultiplicator = sawmillCostMultiplicator };
@@ -20,8 +32,9 @@ public class BuildingManager : MonoBehaviour
 
     public void Upgrade(Building buildingToUpgrade)
     {
-        if (buildingToUpgrade.level=)
+        if (buildingToUpgrade.level==0)
         {
+            buildingToUpgrade.level++;
 
         }
     }
