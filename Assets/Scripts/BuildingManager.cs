@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingManager : MonoBehaviour
 {
     static public BuildingManager Instance { get; private set; }
+    [HideInInspector]
     public Building sawmill, mine, headquarter, incubator;
     public string sawmillName, mineName, headquarterName, incubatorName;
     public Vector3Int sawmillCost, mineCost, headquarterCost, incubatorCost;
