@@ -1422,10 +1422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7cd41e670c9b84ea9cad79e055d9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawmill: {fileID: 0}
-  mine: {fileID: 0}
-  headquarter: {fileID: 0}
-  incubator: {fileID: 0}
   sawmillName: Sawmill
   mineName: Mine
   headquarterName: Node Concile
@@ -1454,19 +1450,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f33d9d9b43610742a262e2e7939af16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: {fileID: 0}
-  ore: {fileID: 0}
-  venacid: {fileID: 0}
   startingWood: 5
   startingOre: 7
   startingVenacid: 20
-  startingWoodPerSecond: 0
-  startingOrePerSecond: 0
-  startingVenacidPerSecond: 0
+  startingWoodPerSecond: 1
+  startingOrePerSecond: 1
+  startingVenacidPerSecond: 1
   startingWoodPerClick: 1
   startingOrePerClick: 1
   startingVenacidPerClick: 1
-  TotalResources: {x: 0, y: 0, z: 0}
+  totalResources: {x: 0, y: 0, z: 0}
 --- !u!4 &1592076621
 Transform:
   m_ObjectHideFlags: 0

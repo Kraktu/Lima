@@ -42,9 +42,20 @@ public class ResourceManager : MonoBehaviour
 		wood.resourcePerClick = startingWoodPerClick;
 		ore.resourcePerClick = startingOrePerClick;
 		venacid.resourcePerClick = startingVenacidPerClick;
+        StartCoroutine(GenerateResourcePerSec());
 	}
     private void Update()
     {
         totalResources = new Vector3Int((int)wood.totalResource, (int)ore.totalResource, (int)venacid.totalResource);
+    }
+
+    public IEnumerator GenerateResourcePerSec()
+    {
+        while (true)
+        {
+            wood.totalResource += wood.resourcePerSecond * Time.deltaTime;
+            ore.totalResource += wood.resourcePerSecond * Time.deltaTime;
+            yield return null;
+        }
     }
 }
