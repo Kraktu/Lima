@@ -57,15 +57,19 @@ public class BuildingManager : MonoBehaviour
     }
     public void Upgrade(Building buildingToUpgrade)
     {
-        if (buildingToUpgrade.level==0&&buildingToUpgrade.cost.x<ResourceManager.Instance.TotalResources.x&& buildingToUpgrade.cost.y < ResourceManager.Instance.TotalResources.y&&buildingToUpgrade.cost.z < ResourceManager.Instance.TotalResources.z)
+        if (buildingToUpgrade.level==0&&buildingToUpgrade.cost.x<=ResourceManager.Instance.totalResources.x&& buildingToUpgrade.cost.y <= ResourceManager.Instance.totalResources.y&&buildingToUpgrade.cost.z <= ResourceManager.Instance.totalResources.z)
         {
             buildingToUpgrade.level++;
-            ResourceManager.Instance.TotalResources -= buildingToUpgrade.cost;
+            ResourceManager.Instance.wood.totalResource -= buildingToUpgrade.cost.x;
+            ResourceManager.Instance.ore.totalResource -= buildingToUpgrade.cost.y;
+            ResourceManager.Instance.venacid.totalResource -= buildingToUpgrade.cost.z;
         }
-        else if (buildingToUpgrade.level != 0 && buildingToUpgrade.cost.x < ResourceManager.Instance.TotalResources.x && buildingToUpgrade.cost.y < ResourceManager.Instance.TotalResources.y&& buildingToUpgrade.cost.z < ResourceManager.Instance.TotalResources.z)
+        else if (buildingToUpgrade.level != 0 && buildingToUpgrade.upgradeCost.x <= ResourceManager.Instance.totalResources.x && buildingToUpgrade.upgradeCost.y <= ResourceManager.Instance.totalResources.y&& buildingToUpgrade.upgradeCost.z <= ResourceManager.Instance.totalResources.z)
         {
             buildingToUpgrade.level++;
-            ResourceManager.Instance.TotalResources -= buildingToUpgrade.upgradeCost;
+            ResourceManager.Instance.wood.totalResource -= buildingToUpgrade.upgradeCost.x;
+            ResourceManager.Instance.ore.totalResource -= buildingToUpgrade.upgradeCost.y;
+            ResourceManager.Instance.venacid.totalResource -= buildingToUpgrade.upgradeCost.z;
         }
     }
 }

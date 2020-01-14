@@ -17,7 +17,7 @@ public class ResourceManager : MonoBehaviour
 	public int startingWoodPerSecond, startingOrePerSecond, startingVenacidPerSecond;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick;
     
-    public Vector3Int TotalResources;
+    public Vector3Int totalResources;
 
     private void Awake()
     {
@@ -34,17 +34,17 @@ public class ResourceManager : MonoBehaviour
 		wood.totalResource = startingWood;
 		ore.totalResource = startingOre;
 		venacid.totalResource = startingVenacid;
-
+    
 		wood.resourcePerSecond = startingWoodPerSecond;
 		ore.resourcePerSecond = startingOrePerSecond;
 		venacid.resourcePerSecond = startingVenacidPerSecond;
-
+    
 		wood.resourcePerClick = startingWoodPerClick;
 		ore.resourcePerClick = startingOrePerClick;
 		venacid.resourcePerClick = startingVenacidPerClick;
 	}
     private void Update()
     {
-        TotalResources = new Vector3Int((int)wood.totalResource, (int)ore.totalResource, (int)venacid.totalResource);
+        totalResources = new Vector3Int((int)wood.totalResource, (int)ore.totalResource, (int)venacid.totalResource);
     }
 }
