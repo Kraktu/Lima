@@ -6,12 +6,18 @@ public class ResourceManager : MonoBehaviour
 
 {
     static public ResourceManager Instance { get; private set; }
+    [HideInInspector]
     public Resource wood = new Resource { resourceName = "wood"};
-	public Resource ore = new Resource { resourceName = "ore" };
-	public Resource venacid = new Resource{ resourceName = "venacid" };
+    [HideInInspector]
+    public Resource ore = new Resource { resourceName = "ore" };
+    [HideInInspector]
+    public Resource venacid = new Resource{ resourceName = "venacid" };
+
 	public int startingWood, startingOre, startingVenacid;
 	public int startingWoodPerSecond, startingOrePerSecond, startingVenacidPerSecond;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick;
+    
+    public Vector3Int TotalResources;
 
     private void Awake()
     {
@@ -37,5 +43,8 @@ public class ResourceManager : MonoBehaviour
 		ore.resourcePerClick = startingOrePerClick;
 		venacid.resourcePerClick = startingVenacidPerClick;
 	}
-
+    private void Update()
+    {
+        TotalResources = new Vector3Int((int)wood.totalResource, (int)ore.totalResource, (int)venacid.totalResource);
+    }
 }

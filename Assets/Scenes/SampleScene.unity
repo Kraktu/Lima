@@ -212,14 +212,14 @@ RectTransform:
   m_Children:
   - {fileID: 1718520877}
   - {fileID: 516147988}
-  - {fileID: 1574865534}
   - {fileID: 1517858316}
+  - {fileID: 1574865534}
   - {fileID: 1234140998}
   - {fileID: 1111310144}
   - {fileID: 1460052451}
   - {fileID: 624861736}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 516147990}
   - component: {fileID: 516147989}
   m_Layer: 5
-  m_Name: Upgrade 1
+  m_Name: Upgrade Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 516147990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592076619}
+        m_MethodName: OnClickUpgradeBuilding
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Mine
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &516147990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884160170
 GameObject:
@@ -1078,7 +1089,7 @@ RectTransform:
   m_Children:
   - {fileID: 1544707363}
   m_Father: {fileID: 449558308}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1127,7 +1138,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1517858318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592076619}
+        m_MethodName: OnClickGatherRessource
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sawmill
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517858318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,7 +1295,7 @@ RectTransform:
   m_Children:
   - {fileID: 884160171}
   m_Father: {fileID: 449558308}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1322,7 +1344,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1574865536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592076619}
+        m_MethodName: OnClickGatherRessource
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Mine
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1574865536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,6 +1392,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574865533}
   m_CullTransparentMesh: 0
+--- !u!1 &1592076618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1592076621}
+  - component: {fileID: 1592076619}
+  - component: {fileID: 1592076620}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1592076619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592076618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7cd41e670c9b84ea9cad79e055d9e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sawmill: {fileID: 0}
+  mine: {fileID: 0}
+  headquarter: {fileID: 0}
+  incubator: {fileID: 0}
+  sawmillName: Sawmill
+  mineName: Mine
+  headquarterName: Node Concile
+  incubatorName: Incubator
+  sawmillCost: {x: 10, y: 10, z: 0}
+  mineCost: {x: 15, y: 15, z: 0}
+  headquarterCost: {x: 50, y: 50, z: 0}
+  incubatorCost: {x: 100, y: 100, z: 0}
+  sawmillUpgradeCost: {x: 5, y: 5, z: 0}
+  mineUpgradeCost: {x: 7, y: 7, z: 0}
+  headquarterUpgradeCost: {x: 20, y: 20, z: 0}
+  incubatorUpgradeCost: {x: 10, y: 10, z: 0}
+  sawmillCostMultiplicator: {x: 1.07, y: 1.07, z: 1.07}
+  mineCostMultiplicator: {x: 1.07, y: 1.07, z: 1.07}
+  headquarterCostMultiplicator: {x: 1.07, y: 1.07, z: 1.07}
+  incubatorCostMultiplicator: {x: 1.07, y: 1.07, z: 1.07}
+--- !u!114 &1592076620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592076618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f33d9d9b43610742a262e2e7939af16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wood: {fileID: 0}
+  ore: {fileID: 0}
+  venacid: {fileID: 0}
+  startingWood: 5
+  startingOre: 7
+  startingVenacid: 20
+  startingWoodPerSecond: 0
+  startingOrePerSecond: 0
+  startingVenacidPerSecond: 0
+  startingWoodPerClick: 1
+  startingOrePerClick: 1
+  startingVenacidPerClick: 1
+  TotalResources: {x: 0, y: 0, z: 0}
+--- !u!4 &1592076621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592076618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 764.6416, y: 621.4988, z: -163.76855}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718520876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,7 +1494,7 @@ GameObject:
   - component: {fileID: 1718520879}
   - component: {fileID: 1718520878}
   m_Layer: 5
-  m_Name: Upgrade
+  m_Name: Upgrade Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1440,7 +1562,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1718520879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592076619}
+        m_MethodName: OnClickUpgradeBuilding
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Sawmill
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1718520879
 MonoBehaviour:
   m_ObjectHideFlags: 0
