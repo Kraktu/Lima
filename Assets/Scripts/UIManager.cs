@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
 		orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " ores/sec";
 	}
 
-	public void TextUpdate(Vector3Int cost)
+	public void TextUpdate(Vector3 cost)
 	{
 		priceForUpgrade.text = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
 	}
