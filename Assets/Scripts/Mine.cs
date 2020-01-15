@@ -12,4 +12,15 @@ public class Mine : ResourceBuilding
 			PassiveProducingUpgrade(areUpgradesMultiplicators, PerSecUpgrade, ResourceManager.Instance.ore);
 		}
 	}
+	private void Update()
+	{
+		if(level==0)
+		{
+			UIManager.Instance.TextUpdate(cost);
+		}
+		else if (level>0)
+		{
+			UIManager.Instance.TextUpdate(upgradeCost);
+		}
+	}
 }

@@ -138,6 +138,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1962990233}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &285430467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285430468}
+  - component: {fileID: 285430470}
+  - component: {fileID: 285430469}
+  m_Layer: 5
+  m_Name: Price Mine Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &285430468
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285430467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 449558308}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 53.7, y: -459.39}
+  m_SizeDelta: {x: 201.4, y: 161.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &285430469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285430467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &285430470
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285430467}
+  m_CullTransparentMesh: 0
 --- !u!1 &444871711 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: e1d8c36332d0b554087731f250ad0585,
@@ -246,6 +323,7 @@ RectTransform:
   - {fileID: 1111310144}
   - {fileID: 1460052451}
   - {fileID: 624861736}
+  - {fileID: 285430468}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -527,7 +605,7 @@ GameObject:
   - component: {fileID: 624861738}
   - component: {fileID: 624861737}
   m_Layer: 5
-  m_Name: wood par sec
+  m_Name: Wood Per Sec Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1178,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: i
+  m_Text: UPGRADE
 --- !u!222 &1052884552
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1121,7 +1199,7 @@ GameObject:
   - component: {fileID: 1111310146}
   - component: {fileID: 1111310145}
   m_Layer: 5
-  m_Name: ore total
+  m_Name: Ore Total Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1276,7 @@ GameObject:
   - component: {fileID: 1234141000}
   - component: {fileID: 1234140999}
   m_Layer: 5
-  m_Name: wood total
+  m_Name: Wood Total Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1321,8 +1399,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.540555, y: 1, z: 5.2477818}
-  m_Center: {x: 0.09629488, y: 0, z: -0.070889354}
+  m_Size: {x: 5.6589627, y: 1.5040398, z: 5.2477818}
+  m_Center: {x: 0.15549874, y: 0.25201988, z: -0.07088947}
 --- !u!4 &1393608208
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,7 +1434,7 @@ GameObject:
   - component: {fileID: 1460052453}
   - component: {fileID: 1460052452}
   m_Layer: 5
-  m_Name: ore par sec
+  m_Name: Ore Per Sec Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1508,6 +1586,7 @@ MonoBehaviour:
   oreNumberText: {fileID: 1111310145}
   woodPerSecText: {fileID: 624861737}
   orePerSecText: {fileID: 1460052452}
+  priceForUpgrade: {fileID: 285430469}
 --- !u!1 &1602226629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,7 +1891,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
@@ -1821,7 +1900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: UPGRADE
 --- !u!222 &1745590260
 CanvasRenderer:
   m_ObjectHideFlags: 0
