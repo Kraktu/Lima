@@ -11,6 +11,9 @@ public class BuildingManager : MonoBehaviour
     public Vector3Int sawmillCost, mineCost, headquarterCost, incubatorCost;
     public Vector3Int sawmillUpgradeCost, mineUpgradeCost, headquarterUpgradeCost, incubatorUpgradeCost;
     public Vector3 sawmillCostMultiplicator, mineCostMultiplicator, headquarterCostMultiplicator, incubatorCostMultiplicator;
+    public int sawmillWoodPerClickUpgrade, mineOrePerClickUpgrade;
+    public int sawmillWoodPerSecUpgrade, mineOrePerSecUpgrade;
+    public bool areUpgradesMultiplicators;
 
 
     private void Awake()
@@ -47,15 +50,25 @@ public class BuildingManager : MonoBehaviour
     {
         switch (buildingClickedName)
         {
-            case "Sawmill": Upgrade(sawmill);
+            case "Sawmill":
+                if (LevelUp(sawmill))
+                {
+                    SawmillClickProducingUpgrade(areUpgradesMultiplicators,sawmillWoodPerClickUpgrade);
+                    SawmillPassiveProducingUpgrade(areUpgradesMultiplicators,sawmillWoodPerSecUpgrade);
+                }
                 break;
-            case "Mine":Upgrade(mine);
+            case "Mine":
+                if (LevelUp(mine))
+                {
+                    MineClickProducingUpgrade(areUpgradesMultiplicators,mineOrePerClickUpgrade);
+                    MinePassiveProducingUpgrade(areUpgradesMultiplicators,mineOrePerSecUpgrade);
+                }
                 break;
             default:
                 break;
         }
     }
-    public void Upgrade(Building buildingToUpgrade)
+    public bool LevelUp(Building buildingToUpgrade)
     {
         if (buildingToUpgrade.level==0&&buildingToUpgrade.cost.x<=ResourceManager.Instance.totalResources.x&& buildingToUpgrade.cost.y <= ResourceManager.Instance.totalResources.y&&buildingToUpgrade.cost.z <= ResourceManager.Instance.totalResources.z)
         {
@@ -63,6 +76,7 @@ public class BuildingManager : MonoBehaviour
             ResourceManager.Instance.wood.totalResource -= buildingToUpgrade.cost.x;
             ResourceManager.Instance.ore.totalResource -= buildingToUpgrade.cost.y;
             ResourceManager.Instance.venacid.totalResource -= buildingToUpgrade.cost.z;
+            return true;
         }
         else if (buildingToUpgrade.level != 0 && buildingToUpgrade.upgradeCost.x <= ResourceManager.Instance.totalResources.x && buildingToUpgrade.upgradeCost.y <= ResourceManager.Instance.totalResources.y&& buildingToUpgrade.upgradeCost.z <= ResourceManager.Instance.totalResources.z)
         {
@@ -70,6 +84,56 @@ public class BuildingManager : MonoBehaviour
             ResourceManager.Instance.wood.totalResource -= buildingToUpgrade.upgradeCost.x;
             ResourceManager.Instance.ore.totalResource -= buildingToUpgrade.upgradeCost.y;
             ResourceManager.Instance.venacid.totalResource -= buildingToUpgrade.upgradeCost.z;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
+    public void SawmillClickProducingUpgrade(bool isMultiplicator,float bonus)
+    {
+        if (isMultiplicator)
+        {
+            ResourceManager.Instance.wood.resourcePerClick *= bonus;
+        }
+        else
+        {
+            ResourceManager.Instance.wood.resourcePerClick += bonus;
+        }
+    }
+    public void SawmillPassiveProducingUpgrade(bool isMultiplicator, float bonus)
+    {
+        if (isMultiplicator)
+        {
+            ResourceManager.Instance.wood.resourcePerSec *= bonus;
+        }
+        else
+        {
+            ResourceManager.Instance.wood.resourcePerSec += bonus;
+        }
+    }
+    public void MineClickProducingUpgrade(bool isMultiplicator, float bonus)
+    {
+        if (isMultiplicator)
+        {
+            ResourceManager.Instance.ore.resourcePerClick *= bonus;
+        }
+        else
+        {
+            ResourceManager.Instance.ore.resourcePerClick += bonus;
+        }
+    }
+    public void MinePassiveProducingUpgrade(bool isMultiplicator, float bonus)
+    {
+        if (isMultiplicator)
+        {
+            ResourceManager.Instance.ore.resourcePerSec *= bonus;
+        }
+        else
+        {
+            ResourceManager.Instance.ore.resourcePerSec += bonus;
+        }
+    }
+
 }

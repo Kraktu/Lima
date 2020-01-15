@@ -23,10 +23,10 @@ public class UIManager : MonoBehaviour
 
 	private void Update()
 	{
-		woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString() + " woods";
-		oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString() + " ores";
-		woodPerSecText.text = ResourceManager.Instance.wood.resourcePerSecond.ToString();
-		orePerSecText.text = ResourceManager.Instance.ore.resourcePerSecond.ToString();
+		woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
+		oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
+		woodPerSecText.text = ResourceManager.Instance.wood.resourcePerSec.ToString("0")+" wood/sec";
+		orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0")+ " ores/sec";
 
 	}
 }

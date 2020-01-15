@@ -6,7 +6,7 @@ public class Resource
 {
 	public string resourceName;
 	public double totalResource = 0;
-	public double resourcePerSecond = 1;
+	public double resourcePerSec = 1;
 	public double resourcePerClick = 1;
 
 }
