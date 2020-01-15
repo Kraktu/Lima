@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;                                                                                                                                                                                                                                                                                                                                                                    
 
 public class ResourceManager : MonoBehaviour
 
 {
     static public ResourceManager Instance { get; private set; }
     [HideInInspector]
-    public Resource wood = new Resource { resourceName = "wood"};
-    [HideInInspector]
-    public Resource ore = new Resource { resourceName = "ore" };
-    [HideInInspector]
-    public Resource venacid = new Resource{ resourceName = "venacid" };
-
+    public Resource wood, ore, venacid;
+    public string woodName, oreName, venacidName;
 	public int startingWood, startingOre, startingVenacid;
 	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick;
@@ -31,17 +27,9 @@ public class ResourceManager : MonoBehaviour
     }
     private void Start()
 	{
-		wood.totalResource = startingWood;
-		ore.totalResource = startingOre;
-		venacid.totalResource = startingVenacid;
-    
-		wood.resourcePerSec = startingWoodPerSec;
-		ore.resourcePerSec = startingOrePerSec;
-		venacid.resourcePerSec = startingVenacidPerSec;
-    
-		wood.resourcePerClick = startingWoodPerClick;
-		ore.resourcePerClick = startingOrePerClick;
-		venacid.resourcePerClick = startingVenacidPerClick;
+        wood = new Resource(woodName,startingWoodPerSec,startingWoodPerClick,startingWood);
+        ore = new Resource(oreName,startingOrePerSec,startingOrePerClick,startingOre);
+        venacid = new Resource(venacidName,startingVenacidPerSec,startingVenacidPerClick,startingVenacid);
         StartCoroutine(GenerateResourcePerSec());
 	}
     private void Update()

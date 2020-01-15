@@ -40,6 +40,7 @@ public class Building:MonoBehaviour
                 currentUsedModel++;
                 models[currentUsedModel].SetActive(true);
             }
+            //upgradeCost *= CostMultiplicator;
             return true;
 
         }
