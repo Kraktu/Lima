@@ -9,7 +9,7 @@ public class Sawmill : ResourceBuilding
         if (LevelUp())
         {
             ClickProducingUpgrade(areUpgradesMultiplicators,PerClickUpgrade,ResourceManager.Instance.wood);
-            PassiveProducingUpgrade(areUpgradesMultiplicators,PerSecUpgrade, ResourceManager.Instance.ore);
+            PassiveProducingUpgrade(areUpgradesMultiplicators,PerSecUpgrade, ResourceManager.Instance.wood);
         }
     }
 }
