@@ -16,11 +16,11 @@ public class Mine : ResourceBuilding
 	{
 		if(level==0)
 		{
-			UIManager.Instance.TextUpdate(cost);
+			UIManager.Instance.TextMineUpdate(cost);
 		}
 		else if (level>0)
 		{
-			UIManager.Instance.TextUpdate(upgradeCost);
+			UIManager.Instance.TextMineUpdate(upgradeCost);
 		}
 	}
 }

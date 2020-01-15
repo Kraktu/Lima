@@ -7,7 +7,7 @@ public class ResourceBuilding : Building
     public int PerClickUpgrade, PerSecUpgrade;
     public bool areUpgradesMultiplicators;
 
-    private void OnMouseDown()
+	private void OnMouseDown()
     {
         switch (buildingName)
         {

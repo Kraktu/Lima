@@ -12,4 +12,15 @@ public class Sawmill : ResourceBuilding
             PassiveProducingUpgrade(areUpgradesMultiplicators,PerSecUpgrade, ResourceManager.Instance.wood);
         }
     }
+	private void Update()
+	{
+		if (level == 0)
+		{
+			UIManager.Instance.TextSawmillUpdate(cost);
+		}
+		else if (level > 0)
+		{
+			UIManager.Instance.TextSawmillUpdate(upgradeCost);
+		}
+	}
 }

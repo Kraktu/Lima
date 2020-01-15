@@ -10,10 +10,8 @@ public class UIManager : MonoBehaviour
 	public Text oreNumberText;
 	public Text woodPerSecText;
 	public Text orePerSecText;
-	public Text priceForUpgrade;
-
-
-
+	public Text priceMineForUpgrade;
+	public Text priceSawmillForUpgrade;
 
 	private void Awake()
 	{
@@ -34,8 +32,12 @@ public class UIManager : MonoBehaviour
 		orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " ores/sec";
 	}
 
-	public void TextUpdate(Vector3Int cost)
+	public void TextMineUpdate(Vector3Int cost)
 	{
-		priceForUpgrade.text = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
+		priceMineForUpgrade.text = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
+	}
+	public void TextSawmillUpdate(Vector3Int cost)
+	{
+		priceSawmillForUpgrade.text = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
 	}
 }
