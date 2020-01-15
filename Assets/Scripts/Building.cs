@@ -10,7 +10,10 @@ public class Building:MonoBehaviour
     public Vector3Int upgradeCost;
     public Vector3 CostMultiplicator;
     public bool canBuild=false;
+    public GameObject[] models;
+    public int[] upgradeLevelStep;
 
+    int currentUsedModel=0;
     public bool LevelUp()
     {
         if (level == 0 && cost.x <= ResourceManager.Instance.totalResources.x && cost.y <= ResourceManager.Instance.totalResources.y && cost.z <= ResourceManager.Instance.totalResources.z)
@@ -19,15 +22,26 @@ public class Building:MonoBehaviour
             ResourceManager.Instance.wood.totalResource -= cost.x;
             ResourceManager.Instance.ore.totalResource -= cost.y;
             ResourceManager.Instance.venacid.totalResource -= cost.z;
+            models[currentUsedModel].SetActive(false);
+            currentUsedModel++;
+            models[currentUsedModel].SetActive(true);
             return true;
         }
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
         {
             level++;
+            Debug.Log(level);
             ResourceManager.Instance.wood.totalResource -= upgradeCost.x;
             ResourceManager.Instance.ore.totalResource -= upgradeCost.y;
             ResourceManager.Instance.venacid.totalResource -= upgradeCost.z;
+            if (level==upgradeLevelStep[currentUsedModel-1])
+            {
+                models[currentUsedModel].SetActive(false);
+                currentUsedModel++;
+                models[currentUsedModel].SetActive(true);
+            }
             return true;
+
         }
         else
         {
