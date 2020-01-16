@@ -79,6 +79,7 @@ public class Building:MonoBehaviour
         villagers = currentVillagers.ToString("0") + "/" + villagersLimit.ToString("0"); 
         UIManager.Instance.BuildingInterfaceActivation(true);
         UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
+        UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
 
     }
 }

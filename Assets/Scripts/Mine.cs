@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Mine : ResourceBuilding
 {
-	public void UpgradeMine()
+    public override void OnMouseDown()
+    {
+        base.OnMouseDown();
+        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
+
+    }
+    public void UpgradeMine()
 	{
 		if(LevelUp())
 		{
 			ClickProducingUpgrade(areUpgradesMultiplicators, perClickUpgrade, ResourceManager.Instance.ore);
 			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
+            RefreshInterface();
 		}
 	}
 	//	private void Update()

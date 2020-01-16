@@ -391,12 +391,12 @@ GameObject:
   - component: {fileID: 384230289}
   - component: {fileID: 384230288}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: BuildingCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &384230288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &516147988
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2593,6 +2593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Mine
+  buildingDescription: Mine extract Ores from a cave
   level: 0
   cost: {x: 15, y: 15, z: 0}
   upgradeCost: {x: 7, y: 7, z: 0}
@@ -2606,8 +2607,12 @@ MonoBehaviour:
   - {fileID: 756816126}
   - {fileID: 69396641}
   upgradeLevelStep: 02000000040000000500000008000000
-  PerClickUpgrade: 2
-  PerSecUpgrade: 1
+  currentVillagers: 0
+  villagersLimit: 0
+  refreshInterface: 0
+  perClickUpgrade: 0
+  perSecUpgrade: 0
+  producedResource: Ore
   areUpgradesMultiplicators: 0
 --- !u!65 &1393608205
 BoxCollider:
@@ -2620,8 +2625,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.6589627, y: 1.5040398, z: 5.2477818}
-  m_Center: {x: 0.15549874, y: 0.25201988, z: -0.07088947}
+  m_Size: {x: 5.6589627, y: 2.4698706, z: 5.2477818}
+  m_Center: {x: 0.15549874, y: 0.7349353, z: -0.07088947}
 --- !u!4 &1393608208
 Transform:
   m_ObjectHideFlags: 0
@@ -2895,8 +2900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd7cd41e670c9b84ea9cad79e055d9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sawmill: {fileID: 0}
-  mine: {fileID: 0}
+  sawmill: {fileID: 1602226631}
+  mine: {fileID: 1393608204}
   headquarter: {fileID: 0}
   incubator: {fileID: 0}
 --- !u!114 &1592076620
@@ -2911,9 +2916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f33d9d9b43610742a262e2e7939af16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodName: 
-  oreName: 
-  venacidName: 
+  woodName: Wood
+  oreName: Ore
+  venacidName: Venacid
   startingWood: 5
   startingOre: 7
   startingVenacid: 20
@@ -2950,12 +2955,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d79717098e77c409979f7132c18559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildinfgUICanvas: {fileID: 384230287}
+  buildingNameText: {fileID: 386845223}
+  descriptionText: {fileID: 1800091584}
+  priceText: {fileID: 2033427413}
+  autoProdText: {fileID: 1967243894}
+  clickProdText: {fileID: 1265481447}
+  villagersText: {fileID: 1456823849}
+  upgradeButton: {fileID: 1116412197}
   woodNumberText: {fileID: 1234140999}
   oreNumberText: {fileID: 1111310145}
-  woodPerSecText: {fileID: 624861737}
-  orePerSecText: {fileID: 1460052452}
-  priceMineForUpgrade: {fileID: 285430469}
-  priceSawmillForUpgrade: {fileID: 451999241}
 --- !u!1 &1602226629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Sawmill
+  buildingDescription: Sawmill cut trees and provide wood for your village
   level: 0
   cost: {x: 10, y: 10, z: 0}
   upgradeCost: {x: 5, y: 5, z: 0}
@@ -3015,8 +3025,12 @@ MonoBehaviour:
   - {fileID: 1369342487}
   - {fileID: 501839351}
   upgradeLevelStep: 0300000005000000090000000b000000
-  PerClickUpgrade: 1
-  PerSecUpgrade: 2
+  currentVillagers: 0
+  villagersLimit: 0
+  refreshInterface: 0
+  perClickUpgrade: 0
+  perSecUpgrade: 0
+  producedResource: Wood
   areUpgradesMultiplicators: 0
 --- !u!65 &1602226632
 BoxCollider:
@@ -3029,8 +3043,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.3598423, z: 1}
+  m_Center: {x: 0, y: 0.17992115, z: 0}
 --- !u!1 &1636558620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3214,7 +3228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1718520877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3667,6 +3681,8 @@ GameObject:
   - component: {fileID: 1934028027}
   - component: {fileID: 1934028026}
   - component: {fileID: 1934028025}
+  - component: {fileID: 1934028030}
+  - component: {fileID: 1934028029}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3748,6 +3764,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934028029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934028024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea24c003ca896064785986355d270431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1934028030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934028024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.05391456, z: 10}
+  m_Center: {x: 0, y: -0.012562806, z: 0}
 --- !u!1 &1967243892
 GameObject:
   m_ObjectHideFlags: 0

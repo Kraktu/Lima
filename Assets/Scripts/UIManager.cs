@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 	static public UIManager Instance { get; private set; }
-    public Canvas buildinfgUICanvas;
+    public GameObject buildinfgUICanvas;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText;
+    public Button upgradeButton;
 
 
     private void Awake()
@@ -17,17 +18,18 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        Instance = this;
     }
 
     public void BuildingInterfaceActivation(bool isActive)
     {
         if (isActive)
         {
-            buildinfgUICanvas.gameObject.SetActive(true);
+            buildinfgUICanvas.SetActive(true);
         }
         else
         {
-            buildinfgUICanvas.gameObject.SetActive(false);
+            buildinfgUICanvas.SetActive(false);
         }
     }
     public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers)
@@ -40,14 +42,8 @@ public class UIManager : MonoBehaviour
         villagersText.text = villagers;
     }
 
-
-
-
-
-
-
-    //public Text woodNumberText;
-    //public Text oreNumberText;
+    public Text woodNumberText;
+    public Text oreNumberText;
     //public Text woodPerSecText;
     //public Text orePerSecText;
     //public Text priceMineForUpgrade;
@@ -66,13 +62,13 @@ public class UIManager : MonoBehaviour
     //	Instance = this;
     //}
     //
-    //private void Update()
-    //{
-    //	woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
-    //	oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
+    private void Update()
+    {
+    	woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
+    	oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
     //	woodPerSecText.text = ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " wood/sec";
     //	orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " ores/sec";
-    //}
+    }
     //
     //public void TextMineUpdate(Vector3 cost)
     //{
