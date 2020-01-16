@@ -18,6 +18,7 @@ public class Mine : ResourceBuilding
 			ClickProducingUpgrade(areUpgradesMultiplicators, perClickUpgrade, ResourceManager.Instance.ore);
 			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
             RefreshInterface();
+			AnimationBuildings();
 		}
 	}
     public override void RefreshInterface()
@@ -27,23 +28,26 @@ public class Mine : ResourceBuilding
         _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " /S";
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
     }
-    //	private void Update()
-    //	{
-    //		if(level==0)
-    //		{
-    //			UIManager.Instance.TextMineUpdate(cost);
-    //		}
-    //		else if (level>0)
-    //		{
-    //			UIManager.Instance.TextMineUpdate(upgradeCost);
-    //		}
-    //	}
-
-    //public void AnimationBuildings()
-    //{
-    //	if (currentVillagers >= 0)
-    //	{
-    //		anim.Play("Charret_Animation");
-    //	}
-    //}
+	//	private void Update()
+	//	{
+	//		if(level==0)
+	//		{
+	//			UIManager.Instance.TextMineUpdate(cost);
+	//		}
+	//		else if (level>0)
+	//		{
+	//			UIManager.Instance.TextMineUpdate(upgradeCost);
+	//		}
+	//	}
+	public void AnimationBuildings()
+	{
+		if (ResourceManager.Instance.wood.resourcePerSec == 0)
+		{
+			anim.Play("Charret_AnimationIdle");
+		}
+		else if (ResourceManager.Instance.wood.resourcePerSec > 0)
+		{
+			anim.Play("Charret_Animation");
+		}
+	}
 }

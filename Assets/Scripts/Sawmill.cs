@@ -43,7 +43,11 @@ public class Sawmill : ResourceBuilding
     //{
     //	if ( ResourceManager.Instance.wood.resourcePerSec == 0)
     //	{
-	//		
+	//		anim.Play("Charret_AnimationIdle");
     //	}
+	//	else if(ResourceManager.Instance.wood.resourcePerSec > 0)
+	//	{
+	//		anim.Play("Charret_Animation");
+	//	}
     //}
 }
