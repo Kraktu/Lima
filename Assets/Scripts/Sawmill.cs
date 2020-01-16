@@ -8,19 +8,19 @@ public class Sawmill : ResourceBuilding
     {
         if (LevelUp())
         {
-            ClickProducingUpgrade(areUpgradesMultiplicators,PerClickUpgrade,ResourceManager.Instance.wood);
-            PassiveProducingUpgrade(areUpgradesMultiplicators,PerSecUpgrade, ResourceManager.Instance.wood);
+            ClickProducingUpgrade(areUpgradesMultiplicators,perClickUpgrade,ResourceManager.Instance.wood);
+            PassiveProducingUpgrade(areUpgradesMultiplicators,perSecUpgrade, ResourceManager.Instance.wood);
         }
     }
-	private void Update()
-	{
-		if (level == 0)
-		{
-			UIManager.Instance.TextSawmillUpdate(cost);
-		}
-		else if (level > 0)
-		{
-			UIManager.Instance.TextSawmillUpdate(upgradeCost);
-		}
-	}
+	//private void Update()
+	//{
+	//	if (level == 0)
+	//	{
+	//		UIManager.Instance.TextSawmillUpdate(cost);
+	//	}
+	//	else if (level > 0)
+	//	{
+	//		UIManager.Instance.TextSawmillUpdate(upgradeCost);
+	//	}
+	//}
 }

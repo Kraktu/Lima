@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class ResourceBuilding : Building
 {
-    public int PerClickUpgrade, PerSecUpgrade;
+    public int perClickUpgrade, perSecUpgrade;
+    public string producedResource;
     public bool areUpgradesMultiplicators;
-
-	private void OnMouseDown()
+    string _perClickUpgradeString, _perSecUpgradeString;
+	public override void OnMouseDown()
     {
+        base.OnMouseDown();
+        _perClickUpgradeString = producedResource+" "+perClickUpgrade.ToString("0") + " /Click";
+        _perSecUpgradeString = producedResource + " " + perSecUpgrade.ToString("0") + " /S";
+        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
         switch (buildingName)
         {
             case "Sawmill":
@@ -22,7 +27,10 @@ public class ResourceBuilding : Building
         }
     }
 
-
+    public override void RefreshInterface()
+    {
+       UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+    }
     public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
     {
         if (isMultiplicator)
