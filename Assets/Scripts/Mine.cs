@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Mine : ResourceBuilding
 {
-    public override void OnMouseDown()
-    {
-        base.OnMouseDown();
-        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
-
-    }
-    public void UpgradeMine()
+	public void UpgradeMine()
 	{
 		if(LevelUp())
 		{
 			ClickProducingUpgrade(areUpgradesMultiplicators, perClickUpgrade, ResourceManager.Instance.ore);
 			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
-            RefreshInterface();
 		}
 	}
 	//	private void Update()
@@ -30,7 +23,6 @@ public class Mine : ResourceBuilding
 	//			UIManager.Instance.TextMineUpdate(upgradeCost);
 	//		}
 	//	}
-
 	public void AnimationBuildings()
 	{
 		if (currentVillagers >= 0)
