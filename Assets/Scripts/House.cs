@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneralQuarter : Building
+public class House : Building
 {
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
 		RefreshInterface();
 	}
-	public void UpgradeGeneralQuarter()
+	public void UpgradeHouse()
 	{
-		if(LevelUp())
+		if (LevelUp())
 		{
 			RefreshInterface();
 		}
