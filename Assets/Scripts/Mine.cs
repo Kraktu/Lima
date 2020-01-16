@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Mine : ResourceBuilding
 {
+
     public override void OnMouseDown()
     {
         base.OnMouseDown();
         UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
-
+        RefreshInterface();
     }
     public void UpgradeMine()
 	{
@@ -19,23 +20,30 @@ public class Mine : ResourceBuilding
             RefreshInterface();
 		}
 	}
-	//	private void Update()
-	//	{
-	//		if(level==0)
-	//		{
-	//			UIManager.Instance.TextMineUpdate(cost);
-	//		}
-	//		else if (level>0)
-	//		{
-	//			UIManager.Instance.TextMineUpdate(upgradeCost);
-	//		}
-	//	}
+    public override void RefreshInterface()
+    {
+        base.RefreshInterface();
+        _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
+        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " /S";
+        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+    }
+    //	private void Update()
+    //	{
+    //		if(level==0)
+    //		{
+    //			UIManager.Instance.TextMineUpdate(cost);
+    //		}
+    //		else if (level>0)
+    //		{
+    //			UIManager.Instance.TextMineUpdate(upgradeCost);
+    //		}
+    //	}
 
-	//public void AnimationBuildings()
-	//{
-	//	if (currentVillagers >= 0)
-	//	{
-	//		anim.Play("Charret_Animation");
-	//	}
-	//}
+    //public void AnimationBuildings()
+    //{
+    //	if (currentVillagers >= 0)
+    //	{
+    //		anim.Play("Charret_Animation");
+    //	}
+    //}
 }
