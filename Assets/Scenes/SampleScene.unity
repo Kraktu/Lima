@@ -2610,6 +2610,7 @@ MonoBehaviour:
   currentVillagers: 0
   villagersLimit: 0
   refreshInterface: 0
+  anim: {fileID: 0}
   perClickUpgrade: 0
   perSecUpgrade: 0
   producedResource: Ore
@@ -3028,6 +3029,7 @@ MonoBehaviour:
   currentVillagers: 0
   villagersLimit: 0
   refreshInterface: 0
+  anim: {fileID: 0}
   perClickUpgrade: 0
   perSecUpgrade: 0
   producedResource: Wood
@@ -3680,7 +3682,6 @@ GameObject:
   - component: {fileID: 1934028028}
   - component: {fileID: 1934028027}
   - component: {fileID: 1934028026}
-  - component: {fileID: 1934028025}
   - component: {fileID: 1934028030}
   - component: {fileID: 1934028029}
   m_Layer: 0
@@ -3690,20 +3691,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &1934028025
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934028024}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1934028026
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3787,8 +3774,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.05391456, z: 10}
-  m_Center: {x: 0, y: -0.012562806, z: 0}
+  m_Size: {x: 10.045989, y: 0.05391456, z: 10}
+  m_Center: {x: -0.02298317, y: -0.012562806, z: 0}
 --- !u!1 &1967243892
 GameObject:
   m_ObjectHideFlags: 0

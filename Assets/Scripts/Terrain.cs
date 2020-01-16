@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Terrain : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        UIManager.Instance.BuildingInterfaceActivation(false);
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            UIManager.Instance.BuildingInterfaceActivation(false);
+        }
     }
 }

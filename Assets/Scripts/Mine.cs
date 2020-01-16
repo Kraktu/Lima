@@ -31,11 +31,11 @@ public class Mine : ResourceBuilding
 	//		}
 	//	}
 
-	public void AnimationBuildings()
-	{
-		if (currentVillagers >= 0)
-		{
-			anim.Play("Charret_Animation");
-		}
-	}
+	//public void AnimationBuildings()
+	//{
+	//	if (currentVillagers >= 0)
+	//	{
+	//		anim.Play("Charret_Animation");
+	//	}
+	//}
 }

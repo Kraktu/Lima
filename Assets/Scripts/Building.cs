@@ -62,6 +62,8 @@ public class Building:MonoBehaviour
     }
     public virtual void RefreshInterface()
     {
+        villagers = currentVillagers.ToString("0") + "/" + villagersLimit.ToString("0");
+        currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
         UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
     }
 

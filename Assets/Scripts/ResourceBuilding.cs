@@ -29,7 +29,10 @@ public class ResourceBuilding : Building
 
     public override void RefreshInterface()
     {
-       UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+        base.RefreshInterface();
+        _perClickUpgradeString = producedResource + " " + perClickUpgrade.ToString("0") + " /Click";
+        _perSecUpgradeString = producedResource + " " + perSecUpgrade.ToString("0") + " /S";
+        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
     }
     public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
     {

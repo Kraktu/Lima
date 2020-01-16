@@ -31,11 +31,11 @@ public class Sawmill : ResourceBuilding
 	//	}
 	//}
 
-	public void AnimationBuildings()
-	{
-		if (currentVillagers >= 0)
-		{
-			anim.Play("Saw_Controller");
-		}
-	}
+	//public void AnimationBuildings()
+	//{
+	//	if (currentVillagers >= 0)
+	//	{
+	//		anim.Play("Saw_Controller");
+	//	}
+	//}
 }
