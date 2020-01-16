@@ -46,5 +46,5 @@ public class ResourceBuilding : Building
         {
             modifiedResourcePerClick.resourcePerSec += bonus;
         }
-    }
+    } 
 }
