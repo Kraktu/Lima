@@ -23,4 +23,12 @@ public class Sawmill : ResourceBuilding
 	//		UIManager.Instance.TextSawmillUpdate(upgradeCost);
 	//	}
 	//}
+
+	public void AnimationBuildings()
+	{
+		if (currentVillagers >= 0)
+		{
+			anim.Play("Saw_Controller");
+		}
+	}
 }

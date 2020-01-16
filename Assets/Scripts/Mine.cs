@@ -12,15 +12,23 @@ public class Mine : ResourceBuilding
 			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
 		}
 	}
-//	private void Update()
-//	{
-//		if(level==0)
-//		{
-//			UIManager.Instance.TextMineUpdate(cost);
-//		}
-//		else if (level>0)
-//		{
-//			UIManager.Instance.TextMineUpdate(upgradeCost);
-//		}
-//	}
+	//	private void Update()
+	//	{
+	//		if(level==0)
+	//		{
+	//			UIManager.Instance.TextMineUpdate(cost);
+	//		}
+	//		else if (level>0)
+	//		{
+	//			UIManager.Instance.TextMineUpdate(upgradeCost);
+	//		}
+	//	}
+
+	public void AnimationBuildings()
+	{
+		if (currentVillagers >= 0)
+		{
+			anim.Play("Charret_Animation");
+		}
+	}
 }

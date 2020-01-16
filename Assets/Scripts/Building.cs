@@ -19,6 +19,8 @@ public class Building:MonoBehaviour
     [HideInInspector]
     public bool refreshInterface;
 
+	public Animation anim;
+
     int _currentUsedModel=0;
     bool _isInterfaceActive;
     public bool LevelUp()
@@ -79,5 +81,4 @@ public class Building:MonoBehaviour
         UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
 
     }
-
 }
