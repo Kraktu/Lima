@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour
 
     public Text woodNumberText;
     public Text oreNumberText;
+    public Text workersNumberText;
     //public Text woodPerSecText;
     //public Text orePerSecText;
     //public Text priceMineForUpgrade;
@@ -66,8 +67,9 @@ public class UIManager : MonoBehaviour
     {
     	woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
     	oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
-    //	woodPerSecText.text = ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " wood/sec";
-    //	orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " ores/sec";
+        workersNumberText.text = ResourceManager.Instance.worker.totalResource.ToString("0") + " Workers";
+        //	woodPerSecText.text = ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " wood/sec";
+        //	orePerSecText.text = ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " ores/sec";
     }
     //
     //public void TextMineUpdate(Vector3 cost)

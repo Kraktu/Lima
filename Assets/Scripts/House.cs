@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class House : Building
+public class House : ResourceBuilding
 {
 	public override void OnMouseDown()
 	{
@@ -14,7 +14,13 @@ public class House : Building
 	{
 		if (LevelUp())
 		{
-			RefreshInterface();
+            if (level==1)
+            {
+                currentVillagers = 1;
+                ResourceManager.Instance.worker.totalResource--;
+            }
+            PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.worker);
+            RefreshInterface();
 		}
 	}
 }

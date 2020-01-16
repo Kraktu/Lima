@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResourceBuilding : Building
 {
-    public int perClickUpgrade, perSecUpgrade;
+    public float perClickUpgrade, perSecUpgrade;
     public string producedResource;
     public bool areUpgradesMultiplicators;
     protected string _perClickUpgradeString, _perSecUpgradeString;

@@ -7,11 +7,11 @@ public class ResourceManager : MonoBehaviour
 {
     static public ResourceManager Instance { get; private set; }
     [HideInInspector]
-    public Resource wood, ore, venacid;
-    public string woodName, oreName, venacidName;
-	public int startingWood, startingOre, startingVenacid;
-	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec;
-	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick;
+    public Resource wood, ore, venacid,worker;
+    public string woodName, oreName, venacidName,workerName;
+    public int startingWood, startingOre, startingVenacid, startingWorker;
+	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
+	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
     
     public Vector3Int totalResources;
 
@@ -30,6 +30,7 @@ public class ResourceManager : MonoBehaviour
         wood = new Resource(woodName,startingWoodPerSec,startingWoodPerClick,startingWood);
         ore = new Resource(oreName,startingOrePerSec,startingOrePerClick,startingOre);
         venacid = new Resource(venacidName,startingVenacidPerSec,startingVenacidPerClick,startingVenacid);
+        worker = new Resource(workerName, startingWorkerPerSec, startingWorkerPerClick, startingWorker);
         StartCoroutine(GenerateResourcePerSec());
 	}
     private void Update()
@@ -43,6 +44,8 @@ public class ResourceManager : MonoBehaviour
         {
             wood.totalResource += wood.resourcePerSec * Time.deltaTime;
             ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+            venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
+            worker.totalResource += worker.resourcePerSec * Time.deltaTime;
             yield return null;
         }
     }

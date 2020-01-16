@@ -34,6 +34,7 @@ public class Building:MonoBehaviour
             models[_currentUsedModel].SetActive(false);
             _currentUsedModel++;
             models[_currentUsedModel].SetActive(true);
+            villagersLimit += 10;
             return true;
         }
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
@@ -52,6 +53,7 @@ public class Building:MonoBehaviour
             upgradeCost.x = upgradeCost.x*CostMultiplicator.x;
             upgradeCost.y = upgradeCost.y * CostMultiplicator.y;
             upgradeCost.z = upgradeCost.z * CostMultiplicator.z;
+            villagersLimit += 10;
             return true;
 
         }
