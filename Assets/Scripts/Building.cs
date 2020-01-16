@@ -15,7 +15,7 @@ public class Building:MonoBehaviour
     public GameObject[] models;
     public int[] upgradeLevelStep;
     public int currentVillagers, villagersLimit;
-    protected string currentCost,villagers;
+    protected string currentCost,villagers,buildingNamePlusLevel;
     [HideInInspector]
     public bool refreshInterface;
 
@@ -71,8 +71,8 @@ public class Building:MonoBehaviour
         {
             currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
         }
-        
-        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
+        buildingNamePlusLevel = buildingName + " Lv." + level;
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers);
     }
 
     public virtual void OnMouseDown()
@@ -87,8 +87,9 @@ public class Building:MonoBehaviour
             currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
         }
         villagers = currentVillagers.ToString("0") + "/" + villagersLimit.ToString("0"); 
+
         UIManager.Instance.BuildingInterfaceActivation(true);
-        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
+        //UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
         UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
         RefreshInterface();
 

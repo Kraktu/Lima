@@ -25,7 +25,7 @@ public class Mine : ResourceBuilding
         base.RefreshInterface();
         _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
         _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " /S";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
     }
     //	private void Update()
     //	{
