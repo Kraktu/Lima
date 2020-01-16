@@ -7,13 +7,10 @@ public class ResourceBuilding : Building
     public int perClickUpgrade, perSecUpgrade;
     public string producedResource;
     public bool areUpgradesMultiplicators;
-    string _perClickUpgradeString, _perSecUpgradeString;
-	public override void OnMouseDown()
+    protected string _perClickUpgradeString, _perSecUpgradeString;
+    public override void OnMouseDown()
     {
         base.OnMouseDown();
-        _perClickUpgradeString = producedResource+" "+perClickUpgrade.ToString("0") + " /Click";
-        _perSecUpgradeString = producedResource + " " + perSecUpgrade.ToString("0") + " /S";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
         switch (buildingName)
         {
             case "Sawmill":
@@ -25,15 +22,9 @@ public class ResourceBuilding : Building
             default:
                 break;
         }
+        RefreshInterface();
     }
 
-    public override void RefreshInterface()
-    {
-        base.RefreshInterface();
-        _perClickUpgradeString = producedResource + " " + perClickUpgrade.ToString("0") + " /Click";
-        _perSecUpgradeString = producedResource + " " + perSecUpgrade.ToString("0") + " /S";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
-    }
     public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
     {
         if (isMultiplicator)

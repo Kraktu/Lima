@@ -63,13 +63,21 @@ public class Building:MonoBehaviour
     public virtual void RefreshInterface()
     {
         villagers = currentVillagers.ToString("0") + "/" + villagersLimit.ToString("0");
-        currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
+        if (level==0)
+        {
+            currentCost = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
+        }
+        else
+        {
+            currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
+        }
+        
         UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
     }
 
     public virtual void OnMouseDown()
     {
-
+        
         if (level==0)
         {
             currentCost = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
@@ -82,6 +90,7 @@ public class Building:MonoBehaviour
         UIManager.Instance.BuildingInterfaceActivation(true);
         UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);
         UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
+        RefreshInterface();
 
     }
 }

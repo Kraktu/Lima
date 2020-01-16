@@ -9,6 +9,7 @@ public class Sawmill : ResourceBuilding
     {
         base.OnMouseDown();
         UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
+        RefreshInterface();
     }
     public void UpgradeSawmill()
     {
@@ -19,23 +20,30 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
-	//private void Update()
-	//{
-	//	if (level == 0)
-	//	{
-	//		UIManager.Instance.TextSawmillUpdate(cost);
-	//	}
-	//	else if (level > 0)
-	//	{
-	//		UIManager.Instance.TextSawmillUpdate(upgradeCost);
-	//	}
-	//}
+    public override void RefreshInterface()
+    {
+        base.RefreshInterface();
+        _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
+        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " /S";
+        UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+    }
+    //private void Update()
+    //{
+    //	if (level == 0)
+    //	{
+    //		UIManager.Instance.TextSawmillUpdate(cost);
+    //	}
+    //	else if (level > 0)
+    //	{
+    //		UIManager.Instance.TextSawmillUpdate(upgradeCost);
+    //	}
+    //}
 
-	//public void AnimationBuildings()
-	//{
-	//	if (currentVillagers >= 0)
-	//	{
-	//		anim.Play("Saw_Controller");
-	//	}
-	//}
+    //public void AnimationBuildings()
+    //{
+    //	if (currentVillagers >= 0)
+    //	{
+    //		anim.Play("Saw_Controller");
+    //	}
+    //}
 }
