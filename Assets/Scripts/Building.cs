@@ -53,7 +53,7 @@ public class Building:MonoBehaviour
             upgradeCost.x = upgradeCost.x*CostMultiplicator.x;
             upgradeCost.y = upgradeCost.y * CostMultiplicator.y;
             upgradeCost.z = upgradeCost.z * CostMultiplicator.z;
-            if (level % workerUpgradeStep == 0)
+            if (workerUpgradeStep!=0&&level % workerUpgradeStep == 0)
             {
                 workersLimit += workerUpgradeLimit;
             }
