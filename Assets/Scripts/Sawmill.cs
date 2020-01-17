@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sawmill : ResourceBuilding
 {
+	
 
     public override void OnMouseDown()
     {
@@ -36,7 +37,7 @@ public class Sawmill : ResourceBuilding
         base.RefreshInterface();
         _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
         _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " /S";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding);
     }
     //private void Update()
     //{
@@ -55,7 +56,12 @@ public class Sawmill : ResourceBuilding
     
 		if(ResourceManager.Instance.wood.resourcePerSec > 0)
 		{
-			anim.Play("Saw_Animation");
+			//anim.Play("Saw_Animation");
+			anim = GetComponent<Animation>();
+			foreach(AnimationState state in anim)
+			{
+				state.speed = 1;
+			}
 		}
     }
 }

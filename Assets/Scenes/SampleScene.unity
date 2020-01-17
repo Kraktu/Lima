@@ -1399,7 +1399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2218,6 +2218,7 @@ MonoBehaviour:
   currenWorkers: 0
   workersLimit: 0
   refreshInterface: 0
+  workerIconBuilding: {fileID: 0}
   anim: {fileID: 0}
   perClickUpgrade: 0
   perSecUpgrade: 0.2
@@ -3350,6 +3351,7 @@ MonoBehaviour:
   currenWorkers: 0
   workersLimit: 0
   refreshInterface: 0
+  workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
@@ -4029,6 +4031,7 @@ MonoBehaviour:
   villagersText: {fileID: 1456823849}
   upgradeButton: {fileID: 1116412197}
   addWorkerButton: {fileID: 2009608928}
+  workerIcon: {fileID: 0}
   woodNumberText: {fileID: 1234140999}
   oreNumberText: {fileID: 1111310145}
   workersNumberText: {fileID: 471069496}
@@ -4095,6 +4098,7 @@ MonoBehaviour:
   currenWorkers: 0
   workersLimit: 0
   refreshInterface: 0
+  workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
@@ -4700,6 +4704,7 @@ MonoBehaviour:
   currenWorkers: 0
   workersLimit: 0
   refreshInterface: 0
+  workerIconBuilding: {fileID: 0}
   anim: {fileID: 0}
 --- !u!65 &1804895544
 BoxCollider:
