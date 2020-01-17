@@ -29,7 +29,7 @@ public class Sawmill : ResourceBuilding
         {
             ResourceManager.Instance.worker.totalResource--;
             currenWorkers++;
-            RefreshInterface();
+             RefreshInterface();
         }
     }
     public override void RefreshInterface()
