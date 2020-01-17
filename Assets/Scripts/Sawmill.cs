@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Sawmill : ResourceBuilding
 {
-	
-
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -56,12 +54,12 @@ public class Sawmill : ResourceBuilding
     
 		if(ResourceManager.Instance.wood.resourcePerSec > 0)
 		{
-			//anim.Play("Saw_Animation");
-			anim = GetComponent<Animation>();
-			foreach(AnimationState state in anim)
-			{
-				state.speed = 1;
-			}
+			anim.Play("Saw_Animation");
+			//anim = GetComponent<Animation>();
+			//foreach(AnimationState state in anim)
+			//{
+			//	state.speed = 1;
+			//}
 		}
     }
 }
