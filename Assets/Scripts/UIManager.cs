@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText;
     public Button upgradeButton,addWorkerButton;
 
-	public Sprite workerIcon;
+	public Image workerIcon;
 
     private void Awake()
     {
@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
         autoProdText.text = autoProd;
         clickProdText.text = clickProd;
         villagersText.text = villagers;
-		workerIcon = icons;
+		workerIcon.sprite = icons;
     }
 
     public Text woodNumberText;
