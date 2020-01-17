@@ -2215,13 +2215,14 @@ MonoBehaviour:
   - {fileID: 990793860}
   - {fileID: 1181765109}
   upgradeLevelStep: 02000000040000000600000008000000
-  currenWorkers: 0
+  currentWorkers: 0
   workersLimit: 10
   workerUpgradeLimit: 50
   workerUpgradeStep: 10
   refreshInterface: 0
   workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   buildingIcon: {fileID: 21300000, guid: db1e86d9536e4a04e994e63f131f8b0d, type: 3}
+  anim: {fileID: 0}
   perClickUpgrade: 0
   perSecUpgrade: 0.2
   producedResource: Worker
@@ -3316,6 +3317,7 @@ GameObject:
   - component: {fileID: 1393608208}
   - component: {fileID: 1393608205}
   - component: {fileID: 1393608204}
+  - component: {fileID: 1393608206}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -3350,13 +3352,14 @@ MonoBehaviour:
   - {fileID: 756816126}
   - {fileID: 69396641}
   upgradeLevelStep: 02000000040000000500000008000000
-  currenWorkers: 0
+  currentWorkers: 0
   workersLimit: 1
   workerUpgradeLimit: 10
   workerUpgradeStep: 5
   refreshInterface: 0
   workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
+  anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
   producedResource: Ore
@@ -3374,6 +3377,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.1253343, y: 1.2800779, z: 3.9392333}
   m_Center: {x: -0.016002893, y: 0.14003897, z: -0.00024163733}
+--- !u!95 &1393608206
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393608203}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a0cc2e5c1cfb4a49a92dde1edf4930d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1393608208
 Transform:
   m_ObjectHideFlags: 0
@@ -4100,13 +4122,14 @@ MonoBehaviour:
   - {fileID: 305796650}
   - {fileID: 1897964516}
   upgradeLevelStep: 0300000005000000090000000b000000
-  currenWorkers: 0
+  currentWorkers: 0
   workersLimit: 5
   workerUpgradeLimit: 3
   workerUpgradeStep: 2
   refreshInterface: 0
   workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
+  anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
   producedResource: Wood
@@ -4708,13 +4731,14 @@ MonoBehaviour:
   - {fileID: 57660535}
   - {fileID: 843312419}
   upgradeLevelStep: 02000000040000000600000008000000
-  currenWorkers: 0
+  currentWorkers: 0
   workersLimit: 0
   workerUpgradeLimit: 0
   workerUpgradeStep: 0
   refreshInterface: 0
   workerIconBuilding: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
+  anim: {fileID: 0}
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0
