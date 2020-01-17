@@ -19,7 +19,7 @@ public class Building:MonoBehaviour
     [HideInInspector]
     public bool refreshInterface;
 
-	public Sprite workerIconBuilding;
+	public Sprite workerIconBuilding,buildingIcon;
 
 	private Animation anim;
 
@@ -76,7 +76,7 @@ public class Building:MonoBehaviour
             currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon);
     }
 
     public virtual void OnMouseDown()

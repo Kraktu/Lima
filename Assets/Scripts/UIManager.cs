@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText;
     public Button upgradeButton,addWorkerButton;
 
-	public Image workerIcon;
+	public Image workerIcon,buildingIcon;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
             buildinfgUICanvas.SetActive(false);
         }
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite icons)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
         autoProdText.text = autoProd;
         clickProdText.text = clickProd;
         villagersText.text = villagers;
-		workerIcon.sprite = icons;
+		workerIcon.sprite = workerSpecifiedIcon;
     }
 
     public Text woodNumberText;
