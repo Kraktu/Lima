@@ -49,17 +49,17 @@ public class Sawmill : ResourceBuilding
     //	}
     //}
 
-    //public void AnimationBuildings()
-    //{
-    //
+   // public void AnimationBuildings()
+   // {
+   // 
 	//	if(ResourceManager.Instance.wood.resourcePerSec > 0)
 	//	{
-	//		//anim.Play("Saw_Animation");
+	//		anim.Play("Saw_Animation");
 	//		//anim = GetComponent<Animation>();
 	//		//foreach(AnimationState state in anim)
 	//		//{
 	//		//	state.speed = 1;
 	//		//}
 	//	}
-    //}
+   // }
 }
