@@ -21,7 +21,7 @@ public class Building:MonoBehaviour
 
 	public Sprite workerIconBuilding;
 
-	public Animation anim;
+	private Animation anim;
 
     int _currentUsedModel=0;
     public bool LevelUp()
