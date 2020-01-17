@@ -41,9 +41,13 @@ public class Sawmill : ResourceBuilding
 
     //public void AnimationBuildings()
     //{
-    //	if (currentVillagers >= 0)
+    //	if ( ResourceManager.Instance.wood.resourcePerSec == 0)
     //	{
-    //		anim.Play("Saw_Controller");
+	//		anim.Play("Charret_AnimationIdle");
     //	}
+	//	else if(ResourceManager.Instance.wood.resourcePerSec > 0)
+	//	{
+	//		anim.Play("Charret_Animation");
+	//	}
     //}
 }
