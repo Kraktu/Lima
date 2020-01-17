@@ -30,6 +30,7 @@ public class House : ResourceBuilding
         {
             ResourceManager.Instance.worker.totalResource--;
             currenWorkers++;
+            RefreshInterface();
         }
     }
 }

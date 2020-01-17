@@ -24,6 +24,7 @@ public class GeneralQuarter : Building
         {
             ResourceManager.Instance.worker.totalResource--;
             currenWorkers++;
+            RefreshInterface();
         }
     }
 }

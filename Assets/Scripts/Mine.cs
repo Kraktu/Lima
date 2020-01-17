@@ -28,6 +28,7 @@ public class Mine : ResourceBuilding
         {
             ResourceManager.Instance.worker.totalResource--;
             currenWorkers++;
+            RefreshInterface();
         }
     }
     public override void RefreshInterface()
