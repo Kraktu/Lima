@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 
 {
+ 
     static public ResourceManager Instance { get; private set; }
     [HideInInspector]
     public Resource wood, ore, venacid,worker;
