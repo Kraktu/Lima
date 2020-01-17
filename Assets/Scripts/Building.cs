@@ -14,7 +14,7 @@ public class Building:MonoBehaviour
     public bool canBuild=false;
     public GameObject[] models;
     public int[] upgradeLevelStep;
-    public int currenWorkers, workersLimit;
+    public int currenWorkers, workersLimit, workerUpgradeLimit, workerUpgradeStep;
     protected string currentCost,villagers,buildingNamePlusLevel;
     [HideInInspector]
     public bool refreshInterface;
@@ -35,7 +35,6 @@ public class Building:MonoBehaviour
             models[_currentUsedModel].SetActive(false);
             _currentUsedModel++;
             models[_currentUsedModel].SetActive(true);
-            workersLimit += 10;
             return true;
         }
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
@@ -54,7 +53,10 @@ public class Building:MonoBehaviour
             upgradeCost.x = upgradeCost.x*CostMultiplicator.x;
             upgradeCost.y = upgradeCost.y * CostMultiplicator.y;
             upgradeCost.z = upgradeCost.z * CostMultiplicator.z;
-            workersLimit += 10;
+            if (level % workerUpgradeStep == 0)
+            {
+                workersLimit += workerUpgradeLimit;
+            }
             return true;
 
         }
