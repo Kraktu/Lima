@@ -5,7 +5,6 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 
 {
-
     static public ResourceManager Instance { get; private set; }
     [HideInInspector]
     public Resource wood, ore, venacid,worker;
@@ -13,8 +12,11 @@ public class ResourceManager : MonoBehaviour
     public int startingWood, startingOre, startingVenacid, startingWorker;
 	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
-    
     public Vector3Int totalResources;
+    public GeneralQuarter generalQuarter;
+    public House house;
+    public Sawmill sawmill;
+    public Mine mine;
 
     private void Awake()
     {
@@ -43,10 +45,10 @@ public class ResourceManager : MonoBehaviour
     {
         while (true)
         {
-            wood.totalResource += wood.resourcePerSec * Time.deltaTime;
-            ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+            wood.totalResource += wood.resourcePerSec * Time.deltaTime*sawmill.currenWorkers;
+            ore.totalResource += ore.resourcePerSec * Time.deltaTime*mine.currenWorkers;
             venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-            worker.totalResource += worker.resourcePerSec * Time.deltaTime;
+            worker.totalResource += worker.resourcePerSec * Time.deltaTime*house.currenWorkers;
             yield return null;
         }
     }

@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 	static public UIManager Instance { get; private set; }
     public GameObject buildinfgUICanvas;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText;
-    public Button upgradeButton;
+    public Button upgradeButton,addWorkerButton;
 
 
     private void Awake()

@@ -8,6 +8,7 @@ public class GeneralQuarter : Building
 	{
 		base.OnMouseDown();
 		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToGeneralQuarter);
 		RefreshInterface();
 	}
 	public void UpgradeGeneralQuarter()
@@ -17,4 +18,12 @@ public class GeneralQuarter : Building
 			RefreshInterface();
 		}
 	}
+    public void AddWorkerToGeneralQuarter()
+    {
+        if (ResourceManager.Instance.worker.totalResource>0&&currenWorkers<workersLimit)
+        {
+            ResourceManager.Instance.worker.totalResource--;
+            currenWorkers++;
+        }
+    }
 }

@@ -8,7 +8,8 @@ public class House : ResourceBuilding
 	{
 		base.OnMouseDown();
 		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-		RefreshInterface();
+        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToHouse);
+        RefreshInterface();
 	}
 	public void UpgradeHouse()
 	{
@@ -16,11 +17,19 @@ public class House : ResourceBuilding
 		{
             if (level==1)
             {
-                currentVillagers = 1;
+                currenWorkers = 1;
                 ResourceManager.Instance.worker.totalResource--;
             }
             PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.worker);
             RefreshInterface();
 		}
 	}
+    public void AddWorkerToHouse()
+    {
+        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        {
+            ResourceManager.Instance.worker.totalResource--;
+            currenWorkers++;
+        }
+    }
 }

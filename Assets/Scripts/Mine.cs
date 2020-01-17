@@ -9,6 +9,7 @@ public class Mine : ResourceBuilding
     {
         base.OnMouseDown();
         UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
+        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToMine);
         RefreshInterface();
     }
     public void UpgradeMine()
@@ -21,6 +22,14 @@ public class Mine : ResourceBuilding
 			AnimationBuildings();
 		}
 	}
+    public void AddWorkerToMine()
+    {
+        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        {
+            ResourceManager.Instance.worker.totalResource--;
+            currenWorkers++;
+        }
+    }
     public override void RefreshInterface()
     {
         base.RefreshInterface();

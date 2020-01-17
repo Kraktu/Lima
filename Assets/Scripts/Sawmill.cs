@@ -9,6 +9,7 @@ public class Sawmill : ResourceBuilding
     {
         base.OnMouseDown();
         UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
+        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToSawmill);
         RefreshInterface();
     }
     public void UpgradeSawmill()
@@ -19,6 +20,14 @@ public class Sawmill : ResourceBuilding
             PassiveProducingUpgrade(areUpgradesMultiplicators,perSecUpgrade, ResourceManager.Instance.wood);
             RefreshInterface();
 			AnimationBuildings();
+        }
+    }
+    public void AddWorkerToSawmill()
+    {
+        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        {
+            ResourceManager.Instance.worker.totalResource--;
+            currenWorkers++;
         }
     }
     public override void RefreshInterface()
