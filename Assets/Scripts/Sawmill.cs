@@ -18,7 +18,7 @@ public class Sawmill : ResourceBuilding
             ClickProducingUpgrade(areUpgradesMultiplicators,perClickUpgrade,ResourceManager.Instance.wood);
             PassiveProducingUpgrade(areUpgradesMultiplicators,perSecUpgrade, ResourceManager.Instance.wood);
             RefreshInterface();
-			AnimationBuildings();
+			//AnimationBuildings();
         }
     }
     public void AddWorkerToSawmill()
@@ -49,17 +49,17 @@ public class Sawmill : ResourceBuilding
     //	}
     //}
 
-    public void AnimationBuildings()
-    {
-    
-		if(ResourceManager.Instance.wood.resourcePerSec > 0)
-		{
-			anim.Play("Saw_Animation");
-			//anim = GetComponent<Animation>();
-			//foreach(AnimationState state in anim)
-			//{
-			//	state.speed = 1;
-			//}
-		}
-    }
+    //public void AnimationBuildings()
+    //{
+    //
+	//	if(ResourceManager.Instance.wood.resourcePerSec > 0)
+	//	{
+	//		//anim.Play("Saw_Animation");
+	//		//anim = GetComponent<Animation>();
+	//		//foreach(AnimationState state in anim)
+	//		//{
+	//		//	state.speed = 1;
+	//		//}
+	//	}
+    //}
 }

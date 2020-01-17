@@ -40,8 +40,7 @@ public class Building:MonoBehaviour
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
         {
             level++;
-            Debug.Log(level);
-            ResourceManager.Instance.wood.totalResource -= upgradeCost.x;
+			ResourceManager.Instance.wood.totalResource -= upgradeCost.x;
             ResourceManager.Instance.ore.totalResource -= upgradeCost.y;
             ResourceManager.Instance.venacid.totalResource -= upgradeCost.z;
             if (_currentUsedModel-1<upgradeLevelStep.Length&&level==upgradeLevelStep[_currentUsedModel-1])
