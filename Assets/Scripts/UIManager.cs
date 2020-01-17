@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
         clickProdText.text = clickProd;
         villagersText.text = villagers;
 		workerIcon.sprite = workerSpecifiedIcon;
+        buildingIcon.sprite = buildingSpecifiedIcon;
     }
 
     public Text woodNumberText;
