@@ -20,10 +20,10 @@ public class GeneralQuarter : Building
 	}
     public void AddWorkerToGeneralQuarter()
     {
-        if (ResourceManager.Instance.worker.totalResource>0&&currenWorkers<workersLimit)
+        if (ResourceManager.Instance.worker.totalResource>0&&currentWorkers<workersLimit)
         {
             ResourceManager.Instance.worker.totalResource--;
-            currenWorkers++;
+            currentWorkers++;
             RefreshInterface();
         }
     }

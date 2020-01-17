@@ -45,10 +45,10 @@ public class ResourceManager : MonoBehaviour
     {
         while (true)
         {
-            wood.totalResource += wood.resourcePerSec * Time.deltaTime*sawmill.currenWorkers;
-            ore.totalResource += ore.resourcePerSec * Time.deltaTime*mine.currenWorkers;
+            wood.totalResource += wood.resourcePerSec * Time.deltaTime*sawmill.currentWorkers;
+            ore.totalResource += ore.resourcePerSec * Time.deltaTime*mine.currentWorkers;
             venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-            worker.totalResource += worker.resourcePerSec * Time.deltaTime*house.currenWorkers;
+            worker.totalResource += worker.resourcePerSec * Time.deltaTime*house.currentWorkers;
             yield return null;
         }
     }

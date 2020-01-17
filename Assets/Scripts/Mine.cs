@@ -19,16 +19,16 @@ public class Mine : ResourceBuilding
 			ClickProducingUpgrade(areUpgradesMultiplicators, perClickUpgrade, ResourceManager.Instance.ore);
 			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
             RefreshInterface();
-			//AnimationBuildings();
 		}
 	}
     public void AddWorkerToMine()
     {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
         {
             ResourceManager.Instance.worker.totalResource--;
-            currenWorkers++;
+            currentWorkers++;
             RefreshInterface();
+			AnimationBuildings();
         }
     }
     public override void RefreshInterface()
@@ -49,15 +49,16 @@ public class Mine : ResourceBuilding
 	//			UIManager.Instance.TextMineUpdate(upgradeCost);
 	//		}
 	//	}
-	//public void AnimationBuildings()
-	//{
-	//	if (ResourceManager.Instance.wood.resourcePerSec == 0)
-	//	{
-	//		anim.Play("Charret_AnimationIdle");
-	//	}
-	//	else if (ResourceManager.Instance.wood.resourcePerSec > 0)
-	//	{
-	//		anim.Play("Charret_Animation");
-	//	}
-	//}
+	public void AnimationBuildings()
+	{
+		if (currentWorkers == 0)
+		{
+			anim.Play("Charret_AnimationIdle");
+		}
+
+		else if (currentWorkers > 0)
+		{
+			anim.Play("Charret_Animation");
+		}
+	}
 }

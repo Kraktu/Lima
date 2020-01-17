@@ -14,16 +14,16 @@ public class Building:MonoBehaviour
     public bool canBuild=false;
     public GameObject[] models;
     public int[] upgradeLevelStep;
-    public int currenWorkers, workersLimit, workerUpgradeLimit, workerUpgradeStep;
+    public int currentWorkers, workersLimit, workerUpgradeLimit, workerUpgradeStep;
     protected string currentCost,villagers,buildingNamePlusLevel;
     [HideInInspector]
     public bool refreshInterface;
 
 	public Sprite workerIconBuilding,buildingIcon;
 
-	private Animation anim;
+	public Animator anim;
 
-    int _currentUsedModel=0;
+	int _currentUsedModel=0;
     public bool LevelUp()
     {
         if (level == 0 && cost.x <= ResourceManager.Instance.totalResources.x && cost.y <= ResourceManager.Instance.totalResources.y && cost.z <= ResourceManager.Instance.totalResources.z)
@@ -35,7 +35,8 @@ public class Building:MonoBehaviour
             models[_currentUsedModel].SetActive(false);
             _currentUsedModel++;
             models[_currentUsedModel].SetActive(true);
-            return true;
+			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
+			return true;
         }
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
         {
@@ -48,7 +49,8 @@ public class Building:MonoBehaviour
                 models[_currentUsedModel].SetActive(false);
                 _currentUsedModel++;
                 models[_currentUsedModel].SetActive(true);
-            }
+				anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
+			}
             upgradeCost.x = upgradeCost.x*CostMultiplicator.x;
             upgradeCost.y = upgradeCost.y * CostMultiplicator.y;
             upgradeCost.z = upgradeCost.z * CostMultiplicator.z;
@@ -66,7 +68,7 @@ public class Building:MonoBehaviour
     }
     public virtual void RefreshInterface()
     {
-        villagers = currenWorkers.ToString("0") + "/" + workersLimit.ToString("0");
+        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0");
         if (level==0)
         {
             currentCost = cost.x.ToString("0") + " woods\n" + cost.y.ToString("0") + " ores\n" + cost.z.ToString("0") + " venacids";
@@ -90,7 +92,7 @@ public class Building:MonoBehaviour
         {
             currentCost = upgradeCost.x.ToString("0") + " woods\n" + upgradeCost.y.ToString("0") + " ores\n" + upgradeCost.z.ToString("0") + " venacids";
         }
-        villagers = currenWorkers.ToString("0") + "/" + workersLimit.ToString("0"); 
+        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0"); 
 
         UIManager.Instance.BuildingInterfaceActivation(true);
         //UIManager.Instance.BuildingInterfaceUpdate(buildingName, buildingDescription, currentCost, "", "", villagers);

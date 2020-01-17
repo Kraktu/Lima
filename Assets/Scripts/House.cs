@@ -17,7 +17,7 @@ public class House : ResourceBuilding
 		{
             if (level==1)
             {
-                currenWorkers = 1;
+                currentWorkers = 1;
                 ResourceManager.Instance.worker.totalResource--;
             }
             PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.worker);
@@ -26,10 +26,10 @@ public class House : ResourceBuilding
 	}
     public void AddWorkerToHouse()
     {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
         {
             ResourceManager.Instance.worker.totalResource--;
-            currenWorkers++;
+            currentWorkers++;
             RefreshInterface();
         }
     }

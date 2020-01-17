@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sawmill : ResourceBuilding
 {
+	
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -18,16 +19,16 @@ public class Sawmill : ResourceBuilding
             ClickProducingUpgrade(areUpgradesMultiplicators,perClickUpgrade,ResourceManager.Instance.wood);
             PassiveProducingUpgrade(areUpgradesMultiplicators,perSecUpgrade, ResourceManager.Instance.wood);
             RefreshInterface();
-			//AnimationBuildings();
         }
     }
     public void AddWorkerToSawmill()
     {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currenWorkers < workersLimit)
+        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
         {
             ResourceManager.Instance.worker.totalResource--;
-            currenWorkers++;
-             RefreshInterface();
+            currentWorkers++;
+            RefreshInterface();
+			AnimationBuildings();
         }
     }
     public override void RefreshInterface()
@@ -49,17 +50,16 @@ public class Sawmill : ResourceBuilding
     //	}
     //}
 
-   // public void AnimationBuildings()
-   // {
-   // 
-	//	if(ResourceManager.Instance.wood.resourcePerSec > 0)
-	//	{
-	//		anim.Play("Saw_Animation");
-	//		//anim = GetComponent<Animation>();
-	//		//foreach(AnimationState state in anim)
-	//		//{
-	//		//	state.speed = 1;
-	//		//}
-	//	}
-   // }
+    public void AnimationBuildings()
+    {
+		if (currentWorkers == 0)
+		{
+			anim.Play("Saw_AnimationIdle");
+		}
+    
+		else if(currentWorkers > 0)
+		{
+	 		anim.Play("Saw_Animation");
+		}
+    }
 }
