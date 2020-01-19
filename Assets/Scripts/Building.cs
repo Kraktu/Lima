@@ -10,9 +10,13 @@ public class Building:MonoBehaviour
     public Vector3 upgradeCost, CostMultiplicator;
     public bool canBuild=false;
     public GameObject[] models;
+	public GameObject inConstructionModel;
     public int[] upgradeModelsLevelStep;
     public int level = 0,currentWorkers, workersLimit, workerLimitUpgrade, workerLimitUpgradeLevelStep;
 	public Sprite workerIconBuilding,buildingIcon;
+	public float constructionTime;
+	public float constructionTimeMultiplicator;
+	public TextMesh ConstructionTimerText;
 
     [HideInInspector]
     public bool refreshInterface;
@@ -22,6 +26,7 @@ public class Building:MonoBehaviour
     protected string currentCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
+	//bool _isCurentlyUpgrading=false;
 
     public virtual void OnMouseDown()
     {
@@ -52,10 +57,7 @@ public class Building:MonoBehaviour
             ResourceManager.Instance.wood.totalResource -= cost.x;
             ResourceManager.Instance.ore.totalResource -= cost.y;
             ResourceManager.Instance.venacid.totalResource -= cost.z;
-            models[_currentUsedModel].SetActive(false);
-            _currentUsedModel++;
-            models[_currentUsedModel].SetActive(true);
-			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
+			StartCoroutine(Upgrading());
 			return true;
         }
         else if (level != 0 && upgradeCost.x <= ResourceManager.Instance.totalResources.x && upgradeCost.y <= ResourceManager.Instance.totalResources.y && upgradeCost.z <= ResourceManager.Instance.totalResources.z)
@@ -64,20 +66,10 @@ public class Building:MonoBehaviour
             ResourceManager.Instance.wood.totalResource -= upgradeCost.x;
             ResourceManager.Instance.ore.totalResource -= upgradeCost.y;
             ResourceManager.Instance.venacid.totalResource -= upgradeCost.z;
-            if (_currentUsedModel-1<upgradeModelsLevelStep.Length&&level==upgradeModelsLevelStep[_currentUsedModel-1])
-            {
-                models[_currentUsedModel].SetActive(false);
-                _currentUsedModel++;
-                models[_currentUsedModel].SetActive(true);
-				anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
-			}
-            upgradeCost.x *= CostMultiplicator.x;
+			StartCoroutine(Upgrading());
+			upgradeCost.x *= CostMultiplicator.x;
             upgradeCost.y *= CostMultiplicator.y;
             upgradeCost.z *= CostMultiplicator.z;
-            if (workerLimitUpgradeLevelStep!=0&&level % workerLimitUpgradeLevelStep == 0)
-            {
-                workersLimit += workerLimitUpgrade;
-            }
             return true;
 
         }
@@ -94,6 +86,58 @@ public class Building:MonoBehaviour
 			currentWorkers++;
 			RefreshInterface();
 			AnimationBuildings();
+		}
+	}
+	public IEnumerator Upgrading()
+	{
+		//déclaration des variables
+		float elpasedTime = 0;
+		float timeToCompletion;
+		//_isCurentlyUpgrading = true;
+
+		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
+		models[_currentUsedModel].SetActive(false);
+		inConstructionModel.SetActive(true);
+		GetComponent<BoxCollider>().enabled = false;
+		UIManager.Instance.BuildingInterfaceActivation(false);
+		ConstructionTimerText.gameObject.SetActive(true);
+		//starting timer
+		while (elpasedTime < constructionTime)
+		{
+ 			timeToCompletion = constructionTime - elpasedTime;
+			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor((timeToCompletion %3600) /60).ToString("00") + ":" + ((timeToCompletion % 3600)%60).ToString("00");
+			elpasedTime += Time.deltaTime;
+			yield return null;
+		}
+		// réactivation du boxcolider, MAJ du temps pour la prochaine upgrade,desactivation du text de timer
+		GetComponent<BoxCollider>().enabled = true;
+		constructionTime *= constructionTimeMultiplicator;
+		ConstructionTimerText.gameObject.SetActive(false);
+		//_isCurentlyUpgrading = false;
+
+		//Réactivation du modèle en checkant si on est pas passé au modèle suivant, même chose pour les habitants max dans le bâtiment.
+		if (level==1)
+		{
+			inConstructionModel.SetActive(false);
+			_currentUsedModel++;
+			models[_currentUsedModel].SetActive(true);
+			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
+		}
+		if (level>1&&_currentUsedModel - 1 < upgradeModelsLevelStep.Length && level == upgradeModelsLevelStep[_currentUsedModel - 1])
+		{
+			inConstructionModel.SetActive(false);
+			_currentUsedModel++;
+			models[_currentUsedModel].SetActive(true);
+			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
+		}
+		else if (level>1)
+		{
+			inConstructionModel.SetActive(false);
+			models[_currentUsedModel].SetActive(true);
+		}
+		if (workerLimitUpgradeLevelStep != 0 && level % workerLimitUpgradeLevelStep == 0)
+		{
+			workersLimit += workerLimitUpgrade;
 		}
 	}
 
