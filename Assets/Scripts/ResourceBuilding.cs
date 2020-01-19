@@ -7,7 +7,7 @@ public class ResourceBuilding : Building
     public float perClickUpgrade, perSecUpgrade;
     public string producedResource;
     public bool areUpgradesMultiplicators;
-    protected string _perClickUpgradeString, _perSecUpgradeString;
+    protected string _perClickString, _perSecString;
 
     public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
     {

@@ -2202,7 +2202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: House
   buildingDescription: Where the villager lives
-  level: 0
   cost: {x: 4, y: 2, z: 0}
   upgradeCost: {x: 2, y: 1, z: 0}
   CostMultiplicator: {x: 1.5, y: 1.5, z: 1.5}
@@ -2214,14 +2213,15 @@ MonoBehaviour:
   - {fileID: 557802913}
   - {fileID: 990793860}
   - {fileID: 1181765109}
-  upgradeLevelStep: 02000000040000000600000008000000
+  upgradeModelsLevelStep: 0a000000140000001e00000028000000
+  level: 0
   currentWorkers: 0
   workersLimit: 10
-  workerUpgradeLimit: 50
-  workerUpgradeStep: 10
-  refreshInterface: 0
+  workerLimitUpgrade: 10
+  workerLimitUpgradeLevelStep: 10
   workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   buildingIcon: {fileID: 21300000, guid: db1e86d9536e4a04e994e63f131f8b0d, type: 3}
+  refreshInterface: 0
   anim: {fileID: 0}
   perClickUpgrade: 0
   perSecUpgrade: 0.2
@@ -3339,7 +3339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Mine
   buildingDescription: Mine extract Ores from a cave
-  level: 0
   cost: {x: 15, y: 15, z: 0}
   upgradeCost: {x: 7, y: 7, z: 0}
   CostMultiplicator: {x: 1.1, y: 1.3, z: 1.2}
@@ -3351,14 +3350,15 @@ MonoBehaviour:
   - {fileID: 920354119}
   - {fileID: 756816126}
   - {fileID: 69396641}
-  upgradeLevelStep: 02000000040000000500000008000000
+  upgradeModelsLevelStep: 0300000006000000090000000c000000
+  level: 0
   currentWorkers: 0
   workersLimit: 1
-  workerUpgradeLimit: 10
-  workerUpgradeStep: 5
-  refreshInterface: 0
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
+  refreshInterface: 0
   anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
@@ -3969,7 +3969,7 @@ GameObject:
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3987,8 +3987,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sawmill: {fileID: 1602226631}
   mine: {fileID: 1393608204}
-  headquarter: {fileID: 0}
-  incubator: {fileID: 0}
+  generalQuarter: {fileID: 1804895543}
+  house: {fileID: 900474091}
 --- !u!114 &1592076620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4004,11 +4004,11 @@ MonoBehaviour:
   woodName: Wood
   oreName: Ore
   venacidName: Venacid
-  workerName: 
+  workerName: Worker
   startingWood: 5
   startingOre: 7
   startingVenacid: 20
-  startingWorker: 1
+  startingWorker: 0
   startingWoodPerSec: 0
   startingOrePerSec: 0
   startingVenacidPerSec: 0
@@ -4018,10 +4018,10 @@ MonoBehaviour:
   startingVenacidPerClick: 1
   startingWorkerPerClick: 0
   totalResources: {x: 0, y: 0, z: 0}
-  generalQuarter: {fileID: 1804895543}
-  house: {fileID: 900474091}
-  sawmill: {fileID: 1602226631}
-  mine: {fileID: 1393608204}
+  totalWoodPerSec: 0
+  totalOrePerSec: 0
+  totalVenacidPerSec: 0
+  totalWorkerPerSec: 0
 --- !u!4 &1592076621
 Transform:
   m_ObjectHideFlags: 0
@@ -4030,7 +4030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592076618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 764.6416, y: 621.4988, z: -163.76855}
+  m_LocalPosition: {x: -27.9, y: 0, z: 31.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4055,13 +4055,13 @@ MonoBehaviour:
   autoProdText: {fileID: 1967243894}
   clickProdText: {fileID: 1265481447}
   villagersText: {fileID: 1456823849}
+  woodNumberText: {fileID: 1234140999}
+  oreNumberText: {fileID: 1111310145}
+  workersNumberText: {fileID: 471069496}
   upgradeButton: {fileID: 1116412197}
   addWorkerButton: {fileID: 2009608928}
   workerIcon: {fileID: 550875934}
   buildingIcon: {fileID: 1438007095}
-  woodNumberText: {fileID: 1234140999}
-  oreNumberText: {fileID: 1111310145}
-  workersNumberText: {fileID: 471069496}
 --- !u!1 &1602226629
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,7 +4109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Sawmill
   buildingDescription: Sawmill cut trees and provide wood for your village
-  level: 0
   cost: {x: 10, y: 10, z: 0}
   upgradeCost: {x: 5, y: 5, z: 0}
   CostMultiplicator: {x: 1.3, y: 1.2, z: 1.1}
@@ -4121,14 +4120,15 @@ MonoBehaviour:
   - {fileID: 1884415937}
   - {fileID: 305796650}
   - {fileID: 1897964516}
-  upgradeLevelStep: 0300000005000000090000000b000000
+  upgradeModelsLevelStep: 050000000a0000000f00000014000000
+  level: 0
   currentWorkers: 0
   workersLimit: 5
-  workerUpgradeLimit: 3
-  workerUpgradeStep: 2
-  refreshInterface: 0
+  workerLimitUpgrade: 5
+  workerLimitUpgradeLevelStep: 5
   workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
+  refreshInterface: 0
   anim: {fileID: 0}
   perClickUpgrade: 1
   perSecUpgrade: 2
@@ -4718,7 +4718,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Head Quarter
   buildingDescription: The Head Quarter, to control your troopers
-  level: 0
   cost: {x: 7, y: 5, z: 0}
   upgradeCost: {x: 5, y: 4, z: 0}
   CostMultiplicator: {x: 1.5, y: 1.5, z: 1.5}
@@ -4730,14 +4729,15 @@ MonoBehaviour:
   - {fileID: 21963349}
   - {fileID: 57660535}
   - {fileID: 843312419}
-  upgradeLevelStep: 02000000040000000600000008000000
+  upgradeModelsLevelStep: 060000000c0000001200000018000000
+  level: 0
   currentWorkers: 0
   workersLimit: 0
-  workerUpgradeLimit: 0
-  workerUpgradeStep: 0
-  refreshInterface: 0
+  workerLimitUpgrade: 0
+  workerLimitUpgradeLevelStep: 0
   workerIconBuilding: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
+  refreshInterface: 0
   anim: {fileID: 0}
 --- !u!65 &1804895544
 BoxCollider:

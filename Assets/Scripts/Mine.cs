@@ -26,9 +26,9 @@ public class Mine : ResourceBuilding
     public override void RefreshInterface()
     {
         base.RefreshInterface();
-        _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
-        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.totalOrePerSec.ToString("0") + " /S";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding, buildingIcon);
+        _perClickString = producedResource + ": " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
+        _perSecString = producedResource + ": " + (3600*ResourceManager.Instance.totalOrePerSec).ToString("0") + " /h";
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon);
     }
 	public override void AnimationBuildings()
 	{

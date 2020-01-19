@@ -28,9 +28,9 @@ public class House : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickUpgradeString = producedResource + " " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
-		_perSecUpgradeString = producedResource + " " + ResourceManager.Instance.totalWorkerPerSec.ToString("F1") + " /S";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding, buildingIcon);
+		_perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
+		_perSecString = producedResource + ": " + (3600*ResourceManager.Instance.totalWorkerPerSec).ToString("0") + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon);
 	}
 	public override void AnimationBuildings()
 	{
