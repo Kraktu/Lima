@@ -6,19 +6,19 @@ public class ResourceManager : MonoBehaviour
 
 {
     static public ResourceManager Instance { get; private set; }
-    [HideInInspector]
-    public Resource wood, ore, venacid,worker;
+
     public string woodName, oreName, venacidName,workerName;
     public int startingWood, startingOre, startingVenacid, startingWorker;
 	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
     public Vector3Int totalResources;
-    public GeneralQuarter generalQuarter;
-    public House house;
-    public Sawmill sawmill;
-    public Mine mine;
 
-    private void Awake()
+    [HideInInspector]
+    public Resource wood, ore, venacid,worker;
+	[HideInInspector]
+	public double totalWoodPerSec, totalOrePerSec, totalVenacidPerSec, totalWorkerPerSec;
+
+	private void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -41,14 +41,22 @@ public class ResourceManager : MonoBehaviour
         totalResources = new Vector3Int((int)wood.totalResource, (int)ore.totalResource, (int)venacid.totalResource);
     }
 
+	public void CalculateResourcePerSecond()
+	{
+		totalWoodPerSec = wood.resourcePerSec * BuildingManager.Instance.sawmill.currentWorkers;
+		totalOrePerSec = ore.resourcePerSec * BuildingManager.Instance.mine.currentWorkers;
+		totalVenacidPerSec = venacid.resourcePerSec;
+		totalWorkerPerSec = worker.resourcePerSec * BuildingManager.Instance.house.currentWorkers;
+	}
     public IEnumerator GenerateResourcePerSec()
     {
         while (true)
         {
-            wood.totalResource += wood.resourcePerSec * Time.deltaTime*sawmill.currentWorkers;
-            ore.totalResource += ore.resourcePerSec * Time.deltaTime*mine.currentWorkers;
-            venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-            worker.totalResource += worker.resourcePerSec * Time.deltaTime*house.currentWorkers;
+			CalculateResourcePerSecond();
+            wood.totalResource +=  totalWoodPerSec * Time.deltaTime;
+            ore.totalResource +=  totalOrePerSec * Time.deltaTime;
+            venacid.totalResource += totalVenacidPerSec * Time.deltaTime;
+			worker.totalResource +=  totalWorkerPerSec * Time.deltaTime;
             yield return null;
         }
     }

@@ -8,9 +8,9 @@ public class GeneralQuarter : Building
 	{
 		base.OnMouseDown();
 		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
-        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToGeneralQuarter);
 		RefreshInterface();
 	}
+
 	public void UpgradeGeneralQuarter()
 	{
 		if(LevelUp())
@@ -18,13 +18,18 @@ public class GeneralQuarter : Building
 			RefreshInterface();
 		}
 	}
-    public void AddWorkerToGeneralQuarter()
-    {
-        if (ResourceManager.Instance.worker.totalResource>0&&currentWorkers<workersLimit)
-        {
-            ResourceManager.Instance.worker.totalResource--;
-            currentWorkers++;
-            RefreshInterface();
-        }
-    }
+
+	public override void AnimationBuildings()
+	{
+		base.AnimationBuildings();
+		if (currentWorkers == 0)
+		{
+			//idle Anim
+		}
+
+		else if (currentWorkers > 0)
+		{
+			//working anim
+		}
+	}
 }

@@ -8,10 +8,11 @@ public class Mine : ResourceBuilding
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
-        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToMine);
+		ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
+		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
         RefreshInterface();
     }
+
     public void UpgradeMine()
 	{
 		if(LevelUp())
@@ -21,36 +22,17 @@ public class Mine : ResourceBuilding
             RefreshInterface();
 		}
 	}
-    public void AddWorkerToMine()
-    {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
-        {
-            ResourceManager.Instance.worker.totalResource--;
-            currentWorkers++;
-            RefreshInterface();
-			AnimationBuildings();
-        }
-    }
+
     public override void RefreshInterface()
     {
         base.RefreshInterface();
         _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
-        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.ore.resourcePerSec.ToString("0") + " /S";
+        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.totalOrePerSec.ToString("0") + " /S";
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding, buildingIcon);
     }
-	//	private void Update()
-	//	{
-	//		if(level==0)
-	//		{
-	//			UIManager.Instance.TextMineUpdate(cost);
-	//		}
-	//		else if (level>0)
-	//		{
-	//			UIManager.Instance.TextMineUpdate(upgradeCost);
-	//		}
-	//	}
-	public void AnimationBuildings()
+	public override void AnimationBuildings()
 	{
+		base.AnimationBuildings();
 		if (currentWorkers == 0)
 		{
 			anim.Play("Charret_AnimationIdle");

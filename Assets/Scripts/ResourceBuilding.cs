@@ -8,22 +8,6 @@ public class ResourceBuilding : Building
     public string producedResource;
     public bool areUpgradesMultiplicators;
     protected string _perClickUpgradeString, _perSecUpgradeString;
-    public override void OnMouseDown()
-    {
-        base.OnMouseDown();
-        switch (buildingName)
-        {
-            case "Sawmill":
-                ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
-                break;
-            case "Mine":
-                ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
-                break;
-            default:
-                break;
-        }
-        RefreshInterface();
-    }
 
     public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
     {
@@ -46,5 +30,5 @@ public class ResourceBuilding : Building
         {
             modifiedResourcePerClick.resourcePerSec += bonus;
         }
-    } 
+    }
 }

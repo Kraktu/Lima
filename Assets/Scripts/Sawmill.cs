@@ -8,10 +8,11 @@ public class Sawmill : ResourceBuilding
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
-        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToSawmill);
+		ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
+		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
         RefreshInterface();
     }
+
     public void UpgradeSawmill()
     {
         if (LevelUp())
@@ -21,37 +22,17 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
-    public void AddWorkerToSawmill()
-    {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
-        {
-            ResourceManager.Instance.worker.totalResource--;
-            currentWorkers++;
-            RefreshInterface();
-			AnimationBuildings();
-        }
-    }
+
     public override void RefreshInterface()
     {
         base.RefreshInterface();
         _perClickUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
-        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.wood.resourcePerSec.ToString("0") + " /S";
+        _perSecUpgradeString = producedResource + " " + ResourceManager.Instance.totalWoodPerSec.ToString("0") + " /S";
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding, buildingIcon);
     }
-    //private void Update()
-    //{
-    //	if (level == 0)
-    //	{
-    //		UIManager.Instance.TextSawmillUpdate(cost);
-    //	}
-    //	else if (level > 0)
-    //	{
-    //		UIManager.Instance.TextSawmillUpdate(upgradeCost);
-    //	}
-    //}
-
-    public void AnimationBuildings()
+    public override void AnimationBuildings()
     {
+		base.AnimationBuildings();
 		if (currentWorkers == 0)
 		{
 			anim.Play("Saw_AnimationIdle");

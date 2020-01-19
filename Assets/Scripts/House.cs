@@ -8,9 +8,10 @@ public class House : ResourceBuilding
 	{
 		base.OnMouseDown();
 		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-        UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToHouse);
+        
         RefreshInterface();
 	}
+
 	public void UpgradeHouse()
 	{
 		if (LevelUp())
@@ -18,19 +19,30 @@ public class House : ResourceBuilding
             if (level==1)
             {
                 currentWorkers = 1;
-                ResourceManager.Instance.worker.totalResource--;
             }
             PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.worker);
             RefreshInterface();
 		}
 	}
-    public void AddWorkerToHouse()
-    {
-        if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
-        {
-            ResourceManager.Instance.worker.totalResource--;
-            currentWorkers++;
-            RefreshInterface();
-        }
-    }
+
+	public override void RefreshInterface()
+	{
+		base.RefreshInterface();
+		_perClickUpgradeString = producedResource + " " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
+		_perSecUpgradeString = producedResource + " " + ResourceManager.Instance.totalWorkerPerSec.ToString("F1") + " /S";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecUpgradeString, _perClickUpgradeString, villagers, workerIconBuilding, buildingIcon);
+	}
+	public override void AnimationBuildings()
+	{
+		base.AnimationBuildings();
+		if (currentWorkers == 0)
+		{
+			//idle Anim
+		}
+
+		else if (currentWorkers > 0)
+		{
+			//working anim
+		}
+	}
 }
