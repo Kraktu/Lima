@@ -139,6 +139,7 @@ public class Building:MonoBehaviour
 		{
 			workersLimit += workerLimitUpgrade;
 		}
+		AnimationBuildings();
 	}
 
     public virtual void RefreshInterface()

@@ -33,12 +33,7 @@ public class Sawmill : ResourceBuilding
     public override void AnimationBuildings()
     {
 		base.AnimationBuildings();
-		if (currentWorkers == 0)
-		{
-			anim.Play("Saw_AnimationIdle");
-		}
-    
-		else if(currentWorkers > 0)
+		if(currentWorkers > 0)
 		{
 	 		anim.Play("Saw_Animation");
 		}
