@@ -2554,7 +2554,6 @@ MonoBehaviour:
   - {fileID: 557802913}
   - {fileID: 990793860}
   - {fileID: 1181765109}
-  inConstructionModel: {fileID: 368700656}
   upgradeModelsLevelStep: 0a000000140000001e00000028000000
   level: 0
   currentWorkers: 0
@@ -2566,6 +2565,7 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.2
   ConstructionTimerText: {fileID: 1121612507}
+  scaffoldingModels: []
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -3882,7 +3882,6 @@ MonoBehaviour:
   - {fileID: 920354119}
   - {fileID: 756816126}
   - {fileID: 69396641}
-  inConstructionModel: {fileID: 1824262623}
   upgradeModelsLevelStep: 0300000006000000090000000c000000
   level: 0
   currentWorkers: 0
@@ -3894,6 +3893,7 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.4
   ConstructionTimerText: {fileID: 302967593}
+  scaffoldingModels: []
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -4597,8 +4597,10 @@ MonoBehaviour:
   woodNumberText: {fileID: 1234140999}
   oreNumberText: {fileID: 1111310145}
   workersNumberText: {fileID: 471069496}
+  goToMenuText: {fileID: 0}
   upgradeButton: {fileID: 1116412197}
   addWorkerButton: {fileID: 2009608928}
+  goToMenuButton: {fileID: 0}
   workerIcon: {fileID: 550875934}
   buildingIcon: {fileID: 1438007095}
 --- !u!1 &1602226629
@@ -4660,7 +4662,6 @@ MonoBehaviour:
   - {fileID: 1884415937}
   - {fileID: 305796650}
   - {fileID: 1897964516}
-  inConstructionModel: {fileID: 777534651}
   upgradeModelsLevelStep: 050000000a0000000f00000014000000
   level: 0
   currentWorkers: 0
@@ -4672,6 +4673,7 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.1
   ConstructionTimerText: {fileID: 1913292645}
+  scaffoldingModels: []
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -5338,7 +5340,6 @@ MonoBehaviour:
   - {fileID: 21963349}
   - {fileID: 57660535}
   - {fileID: 843312419}
-  inConstructionModel: {fileID: 966826916}
   upgradeModelsLevelStep: 060000000c0000001200000018000000
   level: 0
   currentWorkers: 0
@@ -5350,11 +5351,14 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.3
   ConstructionTimerText: {fileID: 2127961027}
+  scaffoldingModels: []
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
   isCurentlyUpgrading: 0
   buildings: []
+  goToBarracksMenuSprite: {fileID: 0}
+  goToBarracksMenuText: 
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5563,6 +5567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b112716e5c63a4b9b653e7723f51bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnTime: 0.5
+  center: {x: 0, y: 2, z: 0}
+  size: {x: 35, y: 1, z: 15}
   SpawnChest:
   - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
   - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
@@ -5571,7 +5578,6 @@ MonoBehaviour:
   - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
   Bonus:
   - {fileID: 3742230682664721933, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
-  spawnTime: 5
 --- !u!4 &1854049880
 Transform:
   m_ObjectHideFlags: 0
