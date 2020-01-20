@@ -19,6 +19,8 @@ public class Building:MonoBehaviour
 	public TextMesh ConstructionTimerText;
 
     [HideInInspector]
+    public float elpasedTime = 0;
+    [HideInInspector]
     public bool refreshInterface;
 	[HideInInspector]
 	public Animator anim;
@@ -26,8 +28,12 @@ public class Building:MonoBehaviour
     protected string currentCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
-	//bool _isCurentlyUpgrading=false;
+	public bool isCurentlyUpgrading=false;
 
+    public virtual void Start()
+    {
+        //FutureStart
+    }
     public virtual void OnMouseDown()
     {
         
@@ -90,10 +96,11 @@ public class Building:MonoBehaviour
 	}
 	public IEnumerator Upgrading()
 	{
-		//déclaration des variables
-		float elpasedTime = 0;
+        //déclaration des variables
+        elpasedTime = 0;
+		
 		float timeToCompletion;
-		//_isCurentlyUpgrading = true;
+		isCurentlyUpgrading = true;
 
 		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
 		models[_currentUsedModel].SetActive(false);
@@ -113,7 +120,7 @@ public class Building:MonoBehaviour
 		GetComponent<BoxCollider>().enabled = true;
 		constructionTime *= constructionTimeMultiplicator;
 		ConstructionTimerText.gameObject.SetActive(false);
-		//_isCurentlyUpgrading = false;
+		isCurentlyUpgrading = false;
 
 		//Réactivation du modèle en checkant si on est pas passé au modèle suivant, même chose pour les habitants max dans le bâtiment.
 		if (level==1)
