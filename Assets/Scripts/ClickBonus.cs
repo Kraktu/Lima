@@ -6,7 +6,7 @@ public class ClickBonus : MonoBehaviour
 {
 	void OnMouseDown()
 	{
-		ResourceManager.Instance.wood.totalResource += 200;
+		ResourceManager.Instance.gems.totalResource += 200;
 		Destroy(gameObject);
 	}
 }

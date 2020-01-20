@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 	static public UIManager Instance { get; private set; }
 
     public GameObject buildinfgUICanvas;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText,goToMenuText;
+    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText,goToMenuText,gemsNumberText;
     public Button upgradeButton,addWorkerButton,goToMenuButton;
 
 	public Image workerIcon,buildingIcon;
@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     	woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
     	oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
         workersNumberText.text = ResourceManager.Instance.worker.totalResource.ToString("0") + " Workers";
+		gemsNumberText.text = ResourceManager.Instance.gems.totalResource.ToString("0") + " gems";
     }
 
     public void BuildingInterfaceActivation(bool isActive)
@@ -48,6 +49,7 @@ public class UIManager : MonoBehaviour
         autoProdText.text = autoProd;
         clickProdText.text = clickProd;
         villagersText.text = villagers;
+
 		workerIcon.sprite = workerSpecifiedIcon;
         buildingIcon.sprite = buildingSpecifiedIcon;
         goToMenuText.text = GoToText;

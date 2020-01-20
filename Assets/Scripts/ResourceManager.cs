@@ -7,14 +7,14 @@ public class ResourceManager : MonoBehaviour
 {
     static public ResourceManager Instance { get; private set; }
 
-    public string woodName, oreName, venacidName,workerName;
-    public int startingWood, startingOre, startingVenacid, startingWorker;
+    public string woodName, oreName, venacidName,workerName,gemsName;
+    public int startingWood, startingOre, startingVenacid, startingWorker,startingGems;
 	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
     public Vector3Int totalResources;
 
     [HideInInspector]
-    public Resource wood, ore, venacid,worker;
+    public Resource wood, ore, venacid,worker,gems;
 	[HideInInspector]
 	public double totalWoodPerSec, totalOrePerSec, totalVenacidPerSec, totalWorkerPerSec;
 
@@ -34,6 +34,7 @@ public class ResourceManager : MonoBehaviour
         ore = new Resource(oreName,startingOrePerSec,startingOrePerClick,startingOre);
         venacid = new Resource(venacidName,startingVenacidPerSec,startingVenacidPerClick,startingVenacid);
         worker = new Resource(workerName, startingWorkerPerSec, startingWorkerPerClick, startingWorker);
+		gems = new Resource(gemsName, 0, 0, startingGems);
         StartCoroutine(GenerateResourcePerSec());
 	}
     private void Update()
