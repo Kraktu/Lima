@@ -8,8 +8,8 @@ public class UIManager : MonoBehaviour
 	static public UIManager Instance { get; private set; }
 
     public GameObject buildinfgUICanvas;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText;
-    public Button upgradeButton,addWorkerButton;
+    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText,goToMenuText;
+    public Button upgradeButton,addWorkerButton,goToMenuButton;
 
 	public Image workerIcon,buildingIcon;
 
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
             buildinfgUICanvas.SetActive(false);
         }
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon,string GoToText="",Sprite goToSprite=null)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
@@ -50,6 +50,18 @@ public class UIManager : MonoBehaviour
         villagersText.text = villagers;
 		workerIcon.sprite = workerSpecifiedIcon;
         buildingIcon.sprite = buildingSpecifiedIcon;
+        goToMenuText.text = GoToText;
+        if (goToSprite==null)
+        {
+            goToMenuButton.image.sprite = null;
+            goToMenuButton.image.color = new Color(0, 0, 0, 0);
+        }
+        else
+        {
+            goToMenuButton.image.sprite = goToSprite;
+            goToMenuButton.image.color = new Color(0, 0, 0, 255);
+        }
+        
     }
 
 }

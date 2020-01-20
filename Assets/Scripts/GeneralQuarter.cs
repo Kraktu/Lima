@@ -6,6 +6,9 @@ public class GeneralQuarter : Building
 {
     public List<Building> buildings = new List<Building>();
 
+    public Sprite goToBarracksMenuSprite;
+    public string goToBarracksMenuText;
+
     public override void Start()
     {
         base.Start();
@@ -26,6 +29,7 @@ public class GeneralQuarter : Building
         }
 
 		RefreshInterface();
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon,goToBarracksMenuText,goToBarracksMenuSprite);
 	}
 
 	public void UpgradeGeneralQuarter()
