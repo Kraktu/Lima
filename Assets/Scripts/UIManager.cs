@@ -53,13 +53,12 @@ public class UIManager : MonoBehaviour
         goToMenuText.text = GoToText;
         if (goToSprite==null)
         {
-            goToMenuButton.image.sprite = null;
-            goToMenuButton.image.color = new Color(0, 0, 0, 0);
+            goToMenuButton.gameObject.SetActive(false);
         }
         else
         {
             goToMenuButton.image.sprite = goToSprite;
-            goToMenuButton.image.color = new Color(0, 0, 0, 255);
+            goToMenuButton.gameObject.SetActive(true);
         }
         
     }
