@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Building:MonoBehaviour
 {
     public string buildingName, buildingDescription;
-    public Vector3Int cost;
+    public Vector3 cost;
     public Vector3 upgradeCost, CostMultiplicator;
     public bool canBuild=false;
     public GameObject[] models;

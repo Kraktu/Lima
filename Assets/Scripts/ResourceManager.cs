@@ -11,7 +11,7 @@ public class ResourceManager : MonoBehaviour
     public int startingWood, startingOre, startingVenacid, startingWorker,startingGems;
 	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
-    public Vector3Int totalResources;
+    public Vector3 totalResources;
 
     [HideInInspector]
     public Resource wood, ore, venacid,worker,gems;
