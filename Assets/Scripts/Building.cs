@@ -105,7 +105,7 @@ public class Building:MonoBehaviour
 		while (elpasedTime < constructionTime)
 		{
  			timeToCompletion = constructionTime - elpasedTime;
-			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor((timeToCompletion %3600) /60).ToString("00") + ":" + ((timeToCompletion % 3600)%60).ToString("00");
+			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor((timeToCompletion %3600) /60).ToString("00") + ":" + Mathf.Floor((timeToCompletion % 3600)%60).ToString("00");
 			elpasedTime += Time.deltaTime;
 			yield return null;
 		}
