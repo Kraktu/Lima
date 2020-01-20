@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnBonus : MonoBehaviour
 {
-	public float spawnTime = 1;
+	public int spawnMinTime = 1;
+	public int spawnMaxTime = 1;
 
 	public Vector3 center;
 	public Vector3 size;
@@ -15,13 +16,18 @@ public class SpawnBonus : MonoBehaviour
 
     void Start()
     {
-		InvokeRepeating("RandomSpawn", spawnTime, spawnTime);
+		Invoke("RandomSpawn", Random.Range(spawnMinTime, spawnMaxTime));
     }
+
+
 
 	public void RandomSpawn()
 	{
 		Vector3 posistion = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0, Random.Range(-size.z / 2, size.z / 2));
 		Instantiate(Bonus[0], posistion, Quaternion.identity);
+		int spawnTime = Random.Range(spawnMinTime, spawnMaxTime);
+		Invoke("RandomSpawn", spawnTime);
+
 	}
 	void OnDrawGizmosSelected()
 	{
