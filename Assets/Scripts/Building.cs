@@ -10,13 +10,13 @@ public class Building:MonoBehaviour
     public Vector3 upgradeCost, CostMultiplicator;
     public bool canBuild=false;
     public GameObject[] models;
-	public GameObject inConstructionModel;
     public int[] upgradeModelsLevelStep;
     public int level = 0,currentWorkers, workersLimit, workerLimitUpgrade, workerLimitUpgradeLevelStep;
 	public Sprite workerIconBuilding,buildingIcon;
 	public float constructionTime;
 	public float constructionTimeMultiplicator;
 	public TextMesh ConstructionTimerText;
+    public GameObject[] scaffoldingModels;
 
     [HideInInspector]
     public float elpasedTime = 0;
@@ -98,19 +98,25 @@ public class Building:MonoBehaviour
 	{
         //déclaration des variables
         elpasedTime = 0;
-		
+        float constructionScafoldStep = constructionTime / scaffoldingModels.Length;
 		float timeToCompletion;
 		isCurentlyUpgrading = true;
 
 		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
 		models[_currentUsedModel].SetActive(false);
-		inConstructionModel.SetActive(true);
 		GetComponent<BoxCollider>().enabled = false;
 		UIManager.Instance.BuildingInterfaceActivation(false);
 		ConstructionTimerText.gameObject.SetActive(true);
 		//starting timer
 		while (elpasedTime < constructionTime)
 		{
+            for (int i = 0; i < scaffoldingModels.Length; i++)
+            {
+                if (!scaffoldingModels[i].gameObject.activeSelf&& constructionScafoldStep*i<elpasedTime)
+                {
+                    scaffoldingModels[i].SetActive(true);
+                }
+            }
  			timeToCompletion = constructionTime - elpasedTime;
 			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor(timeToCompletion %3600) /60).ToString("00") + ":" + Mathf.Floor((timeToCompletion % 3600)%60).ToString("00");
 			elpasedTime += Time.deltaTime;
@@ -125,28 +131,29 @@ public class Building:MonoBehaviour
 		//Réactivation du modèle en checkant si on est pas passé au modèle suivant, même chose pour les habitants max dans le bâtiment.
 		if (level==1)
 		{
-			inConstructionModel.SetActive(false);
 			_currentUsedModel++;
 			models[_currentUsedModel].SetActive(true);
 			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
 		}
 		if (level>1&&_currentUsedModel - 1 < upgradeModelsLevelStep.Length && level == upgradeModelsLevelStep[_currentUsedModel - 1])
 		{
-			inConstructionModel.SetActive(false);
 			_currentUsedModel++;
 			models[_currentUsedModel].SetActive(true);
 			anim = models[_currentUsedModel].GetComponentInChildren<Animator>();
 		}
 		else if (level>1)
 		{
-			inConstructionModel.SetActive(false);
 			models[_currentUsedModel].SetActive(true);
 		}
 		if (workerLimitUpgradeLevelStep != 0 && level % workerLimitUpgradeLevelStep == 0)
 		{
 			workersLimit += workerLimitUpgrade;
 		}
-		AnimationBuildings();
+        for (int i = 0; i < scaffoldingModels.Length; i++)
+        {
+                scaffoldingModels[i].SetActive(false);
+        }
+        AnimationBuildings();
 	}
 
     public virtual void RefreshInterface()
