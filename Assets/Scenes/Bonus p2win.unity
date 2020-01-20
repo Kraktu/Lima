@@ -2566,8 +2566,10 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.2
   ConstructionTimerText: {fileID: 1121612507}
+  elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
+  isCurentlyUpgrading: 0
   perClickUpgrade: 0
   perSecUpgrade: 0.2
   producedResource: Worker
@@ -3892,8 +3894,10 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.4
   ConstructionTimerText: {fileID: 302967593}
+  elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
+  isCurentlyUpgrading: 0
   perClickUpgrade: 1
   perSecUpgrade: 2
   producedResource: Ore
@@ -4668,8 +4672,10 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.1
   ConstructionTimerText: {fileID: 1913292645}
+  elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
+  isCurentlyUpgrading: 0
   perClickUpgrade: 1
   perSecUpgrade: 2
   producedResource: Wood
@@ -5344,8 +5350,11 @@ MonoBehaviour:
   constructionTime: 10
   constructionTimeMultiplicator: 1.3
   ConstructionTimerText: {fileID: 2127961027}
+  elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
+  isCurentlyUpgrading: 0
+  buildings: []
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5524,6 +5533,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 572148437}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854049878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854049880}
+  - component: {fileID: 1854049879}
+  m_Layer: 0
+  m_Name: SpawnerBonus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1854049879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854049878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b112716e5c63a4b9b653e7723f51bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnChest:
+  - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  Bonus:
+  - {fileID: 3742230682664721933, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  spawnTime: 5
+--- !u!4 &1854049880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854049878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884415937 stripped
 GameObject:
