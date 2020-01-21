@@ -8,8 +8,8 @@ public class UIManager : MonoBehaviour
 	static public UIManager Instance { get; private set; }
 
     public GameObject buildinfgUICanvas;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText,goToMenuText,gemsNumberText;
-    public Button upgradeButton,addWorkerButton,goToMenuButton;
+	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade;
+	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
 
 	public Image workerIcon,buildingIcon;
 
@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
             buildinfgUICanvas.SetActive(false);
         }
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon,string GoToText="",Sprite goToSprite=null)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon,string skillPoints , string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString, string GoToText="",Sprite goToSprite=null)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
@@ -49,6 +49,11 @@ public class UIManager : MonoBehaviour
         autoProdText.text = autoProd;
         clickProdText.text = clickProd;
         villagersText.text = villagers;
+		skillPointsText.text = skillPoints;
+		firstSkillPointUpgrade.text = firstSkillPointUpgradeString;
+		secondSkillPointUpgrade.text = secondSkillpointUpgradeString;
+		thirdSkillPointUpgrade.text = thirdSkillPointUpgradeString;
+		fourthSkillPointUpgrade.text = fourthSkillPointUpgradeString;
 
 		workerIcon.sprite = workerSpecifiedIcon;
         buildingIcon.sprite = buildingSpecifiedIcon;

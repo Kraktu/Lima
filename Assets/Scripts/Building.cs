@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Building:MonoBehaviour
 {
     public string buildingName, buildingDescription;
-    public double woodCost,oreCost,venacidCost;
+	public string firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName;
+	public double woodCost,oreCost,venacidCost;
     public double woodUpgradeCost, oreUpgradeCost, venacidUpgradeCost;
     public Vector3 CostMultiplicator;
     public bool canBuild=false;
@@ -20,6 +21,8 @@ public class Building:MonoBehaviour
 	public TextMesh ConstructionTimerText;
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
+	public int skillPointUpgradeLevelStep;
+
 
     [HideInInspector]
     public float elpasedTime = 0;
@@ -27,6 +30,10 @@ public class Building:MonoBehaviour
     public bool refreshInterface;
 	[HideInInspector]
 	public Animator anim;
+	[HideInInspector]
+	public float skillPoints =0;
+
+	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
     protected string currentCost,villagers,buildingNamePlusLevel;
 
@@ -52,8 +59,17 @@ public class Building:MonoBehaviour
 
         UIManager.Instance.BuildingInterfaceActivation(true);
         UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
-        UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
+		UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
 		UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
+		UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
+		UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
+		UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
+		UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
+
 		RefreshInterface();
 
     }
@@ -97,6 +113,47 @@ public class Building:MonoBehaviour
 			AnimationBuildings();
 		}
 	}
+
+	public void AddFirstSkillPoint()
+	{
+		if (skillPoints>0)
+		{
+			skillPoints--;
+			firstSkillPointLevel++;
+			RefreshInterface();
+		}
+	}
+
+	public void AddSecondSkillPoint()
+	{
+		if (skillPoints > 0)
+		{
+			skillPoints--;
+			secondSkillPointLevel++;
+			RefreshInterface();
+		}
+	}
+
+	public void AddThirdSkillPoint()
+	{
+		if (skillPoints > 0)
+		{
+			skillPoints--;
+			thirdSkillPointLevel++;
+			RefreshInterface();
+		}
+	}
+
+	public void AddFourthSkillPoint()
+	{
+		if (skillPoints > 0)
+		{
+			skillPoints--;
+			fourthSkillPointLevel++;
+			RefreshInterface();
+		}
+	}
+
 	public IEnumerator Upgrading()
 	{
         //déclaration des variables
@@ -154,6 +211,10 @@ public class Building:MonoBehaviour
 		{
 			workersLimit += workerLimitUpgrade;
 		}
+		if (skillPointUpgradeLevelStep != 0 && level % skillPointUpgradeLevelStep == 0)
+		{
+			skillPoints++;
+		}
         for (int i = 0; i < scaffoldingModels.Length; i++)
         {
                 scaffoldingModels[i].SetActive(false);
@@ -173,11 +234,11 @@ public class Building:MonoBehaviour
             currentCost = woodUpgradeCost.ToString("0") + " woods\n" + oreUpgradeCost.ToString("0") + " ores\n" + venacidUpgradeCost.ToString("0") + " venacids";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
     }
 	public virtual void AnimationBuildings()
 	{
 
 	}
-
+	
 }
