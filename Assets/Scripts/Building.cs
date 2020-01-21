@@ -19,6 +19,7 @@ public class Building:MonoBehaviour
 	public float constructionTimeMultiplicator;
 	public TextMesh ConstructionTimerText;
     public GameObject[] scaffoldingModels;
+	public GameObject constructionPoof;
 
     [HideInInspector]
     public float elpasedTime = 0;
@@ -110,6 +111,7 @@ public class Building:MonoBehaviour
 		UIManager.Instance.BuildingInterfaceActivation(false);
 		ConstructionTimerText.gameObject.SetActive(true);
 		//starting timer
+		GameObject go = Instantiate(constructionPoof,transform.position+Vector3.up*2,Quaternion.identity);
 		while (elpasedTime < constructionTime)
 		{
             for (int i = 0; i < scaffoldingModels.Length; i++)
@@ -124,6 +126,7 @@ public class Building:MonoBehaviour
 			elpasedTime += Time.deltaTime;
 			yield return null;
 		}
+		Destroy(go);
 		// réactivation du boxcolider, MAJ du temps pour la prochaine upgrade,desactivation du text de timer
 		GetComponent<BoxCollider>().enabled = true;
 		constructionTime *= constructionTimeMultiplicator;
