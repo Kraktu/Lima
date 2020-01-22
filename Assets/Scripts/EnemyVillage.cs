@@ -8,5 +8,7 @@ public class EnemyVillage : MonoBehaviour
 	{
 		UIManager.Instance.enemyVillageCanvas.SetActive(true);
 		UIManager.Instance.enemyVillageCanvas.transform.position = new Vector3 (gameObject.transform.position.x, UIManager.Instance.enemyVillageCanvas.transform.position.y, gameObject.transform.position.z);
+		UIManager.Instance.spyPanel.SetActive(false);
+		UIManager.Instance.isSpyPanelActive = false;
 	}
 }

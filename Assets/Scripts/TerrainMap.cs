@@ -10,6 +10,8 @@ public class TerrainMap : MonoBehaviour
 		if (!EventSystem.current.IsPointerOverGameObject())
 		{
 			UIManager.Instance.enemyVillageCanvas.SetActive(false);
+			UIManager.Instance.spyPanel.SetActive(false);
+			UIManager.Instance.isSpyPanelActive = false;
 		}
 	}
 }
