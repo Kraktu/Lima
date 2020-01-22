@@ -7,10 +7,9 @@ public class UIManager : MonoBehaviour
 {
 	static public UIManager Instance { get; private set; }
 
-    public GameObject buildinfgUICanvas;
+	public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas;
 	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade;
 	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
-
 	public Image workerIcon,buildingIcon;
 
     private void Awake()

@@ -63,13 +63,13 @@ public class Building:MonoBehaviour
 		UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
 		UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
 		UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.goToMenuButton.onClick.RemoveAllListeners();
 		UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
 		UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
 		UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
 		UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
 		UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
 		UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
-
 		RefreshInterface();
 
     }

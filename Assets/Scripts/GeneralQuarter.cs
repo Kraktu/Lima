@@ -9,6 +9,8 @@ public class GeneralQuarter : Building
     public Sprite goToBarracksMenuSprite;
     public string goToBarracksMenuText;
 
+	
+
     public override void Start()
     {
         base.Start();
@@ -32,6 +34,14 @@ public class GeneralQuarter : Building
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
 		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
 		goToBarracksMenuText,goToBarracksMenuSprite);
+		UIManager.Instance.goToMenuButton.onClick.AddListener(GoToMap);
+	}
+
+	void GoToMap()
+	{
+		Camera camera = FindObjectOfType<Camera>();
+		camera.transform.position = MapManager.Instance.cameraMapPosition;
+		UIManager.Instance.totalResourceCanvas.SetActive(false);
 	}
 
 	public void UpgradeGeneralQuarter()
