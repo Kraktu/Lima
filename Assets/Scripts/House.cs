@@ -20,7 +20,7 @@ public class House : ResourceBuilding
             {
                 currentWorkers = 1;
             }
-            PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.worker);
+            PassiveProducingUpgrade(ResourceManager.Instance.worker,ResourceManager.Instance.startingWorkerPerSec,ResourceManager.Instance.percentWorkerBonusPerSec,ResourceManager.Instance.flatWorkerBonusPerSec);
             RefreshInterface();
 		}
 	}
@@ -37,5 +37,13 @@ public class House : ResourceBuilding
 		{
 			//working anim
 		}
+	}
+	public override void RefreshInterface()
+	{
+		base.RefreshInterface();
+		_perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
+		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.totalWorkerPerSec).ToString("0") + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
+		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
 	}
 }

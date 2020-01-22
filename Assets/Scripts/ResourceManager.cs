@@ -16,7 +16,8 @@ public class ResourceManager : MonoBehaviour
     public Resource wood, ore, venacid,worker,gems;
 	[HideInInspector]
 	public double totalWoodPerSec, totalOrePerSec, totalVenacidPerSec, totalWorkerPerSec;
-
+	[HideInInspector]
+	public double flatWoodBonusPerSec = 0, percentWoodBonusPerSec = 0, flatOreBonusPerSec = 0, percentOreBonusPerSec = 0, flatVenacidBonusPerSec = 0, percentVenacidBonusPerSec = 0, flatWorkerBonusPerSec = 0, percentWorkerBonusPerSec = 0, flatWoodBonusPerClick = 0, percentWoodBonusPerClick = 0, flatOreBonusPerClick = 0, percentOreBonusPerClick = 0, flatVenacidBonusPerClick = 0, percentVenacidBonusPerClick = 0, flatWorkerBonusPerClick = 0, percentWorkerBonusPerClick = 0;
 	private void Awake()
     {
         if (Instance != null && Instance != this)

@@ -31,4 +31,12 @@ public class Sawmill : ResourceBuilding
 	 		anim.Play("Saw_Animation");
 		}
     }
+	public override void RefreshInterface()
+	{
+		base.RefreshInterface();
+		_perClickString = producedResource + ": " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
+		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.totalWoodPerSec).ToString("0") + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
+		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
+	}
 }

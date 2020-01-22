@@ -4,41 +4,20 @@ using UnityEngine;
 
 public class ResourceBuilding : Building
 {
-    public float perClickUpgrade, perSecUpgrade;
+    public float perClickMagicRatioUpgrade, perSecMagicRatioUpgrade;
     public string producedResource;
-    public bool areUpgradesMultiplicators;
     protected string _perClickString, _perSecString;
 
-    public void ClickProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
+    public void ClickProducingUpgrade(Resource modifiedResourcePerClick,double startingresource,double percentBonus,double flatBonus)
     {
-        if (isMultiplicator)
-        {
-            modifiedResourcePerClick.resourcePerClick *= bonus;
-        }
-        else
-        {
-            modifiedResourcePerClick.resourcePerClick += bonus;
-        }
+            modifiedResourcePerClick.resourcePerClick= startingresource*(Mathf.Pow(perClickMagicRatioUpgrade,level-1))*(percentBonus/100)+flatBonus;
     }
-    public void PassiveProducingUpgrade(bool isMultiplicator, float bonus, Resource modifiedResourcePerClick)
-    {
-        if (isMultiplicator)
-        {
-            modifiedResourcePerClick.resourcePerSec *= bonus;
-        }
-        else
-        {
-            modifiedResourcePerClick.resourcePerSec += bonus;
-        }
-    }
+    public void PassiveProducingUpgrade(Resource modifiedResourcePerSec, double startingResource, double percentBonus, double flatBonus)
+
+	{
+			modifiedResourcePerSec.resourcePerSec = startingResource * (Mathf.Pow(perSecMagicRatioUpgrade, level - 1)) * (percentBonus / 100) + flatBonus;
+	}
 
 
-    public override void RefreshInterface()
-    {
-        base.RefreshInterface();
-        _perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
-        _perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.totalWorkerPerSec).ToString("0") + " /h";
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-        firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
-    }
+
 }

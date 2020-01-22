@@ -17,8 +17,8 @@ public class Mine : ResourceBuilding
 	{
 		if(LevelUp())
 		{
-			ClickProducingUpgrade(areUpgradesMultiplicators, perClickUpgrade, ResourceManager.Instance.ore);
-			PassiveProducingUpgrade(areUpgradesMultiplicators, perSecUpgrade, ResourceManager.Instance.ore);
+			ClickProducingUpgrade(ResourceManager.Instance.ore,ResourceManager.Instance.startingOrePerClick,ResourceManager.Instance.percentOreBonusPerClick,ResourceManager.Instance.flatOreBonusPerClick);
+			PassiveProducingUpgrade(ResourceManager.Instance.ore,ResourceManager.Instance.startingOrePerSec,ResourceManager.Instance.percentOreBonusPerSec,ResourceManager.Instance.flatOreBonusPerSec);
             RefreshInterface();
 		}
 	}
@@ -30,5 +30,13 @@ public class Mine : ResourceBuilding
 		{
 			anim.Play("Charret_Animation");
 		}
+	}
+	public override void RefreshInterface()
+	{
+		base.RefreshInterface();
+		_perClickString = producedResource + ": " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
+		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.totalOrePerSec).ToString("0") + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
+		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
 	}
 }
