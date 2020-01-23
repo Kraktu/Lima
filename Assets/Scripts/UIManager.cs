@@ -7,10 +7,15 @@ public class UIManager : MonoBehaviour
 {
 	static public UIManager Instance { get; private set; }
 
-	public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel,TroopsProducingCanvas;
-	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade;
+	public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel,TroopsProducingCanvas,UnitPanel;
+	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade,WaitingforUnitSelectionText;
 	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
 	public Image workerIcon,buildingIcon;
+
+    public Sprite selectedUnitBigSprite;
+    public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime;
+    public Button selectedUnitProduceButton;
+    public InputField selectedUnitInputField;
 
 	[HideInInspector]
 	public bool isSpyPanelActive;
@@ -85,7 +90,27 @@ public class UIManager : MonoBehaviour
 	}
     public void CloseUnitTab()
     {
+        WaitingforUnitSelectionText.gameObject.SetActive(true);
         TroopsProducingCanvas.SetActive(false);
+    }
+
+    public void OpenSelectedUnitTab(string name,double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime, Sprite bigsprite)
+    {
+        WaitingforUnitSelectionText.gameObject.SetActive(false);
+        UnitPanel.SetActive(true);
+
+        selectedUnitName.text = name;
+        selectedUnitStatFirst.text = "ATK : "+firststat.ToString();
+        selectedUnitStatSecond.text = "HP : " + secondstat.ToString();
+        selectedUnitStatThird.text = "ATK/T : " + thirdstat.ToString();
+        selectedUnitStatFourth.text = "AR : " + fourthstat.ToString();
+        selectedUnitStatFifth.text = "PRC : " + fifthstat.ToString();
+        selectedUnitStatSixth.text = "ACC : " + sixthstat.ToString();
+        selectedUnitWoodPrice.text = woodprice.ToString();
+        selectedUnitOrePrice.text = oreprice.ToString();
+        selectedUnitVenacidPrice.text = venacidprice.ToString();
+        selectedUnitTime.text = producingtime.ToString();
+        selectedUnitBigSprite = bigsprite;
     }
 
 }
