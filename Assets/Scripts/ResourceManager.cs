@@ -15,8 +15,6 @@ public class ResourceManager : MonoBehaviour
     [HideInInspector]
     public Resource wood, ore, venacid,worker,gems;
 	[HideInInspector]
-	public double totalWoodPerSec, totalOrePerSec, totalVenacidPerSec, totalWorkerPerSec;
-	[HideInInspector]
 	public double flatWoodBonusPerSec = 0, percentWoodBonusPerSec = 0, flatOreBonusPerSec = 0, percentOreBonusPerSec = 0, flatVenacidBonusPerSec = 0, percentVenacidBonusPerSec = 0, flatWorkerBonusPerSec = 0, percentWorkerBonusPerSec = 0, flatWoodBonusPerClick = 0, percentWoodBonusPerClick = 0, flatOreBonusPerClick = 0, percentOreBonusPerClick = 0, flatVenacidBonusPerClick = 0, percentVenacidBonusPerClick = 0, flatWorkerBonusPerClick = 0, percentWorkerBonusPerClick = 0;
 	private void Awake()
     {
@@ -30,30 +28,21 @@ public class ResourceManager : MonoBehaviour
     }
     private void Start()
 	{
-        wood = new Resource(woodName,startingWoodPerSec,startingWoodPerClick,startingWood);
-        ore = new Resource(oreName,startingOrePerSec,startingOrePerClick,startingOre);
-        venacid = new Resource(venacidName,startingVenacidPerSec,startingVenacidPerClick,startingVenacid);
-        worker = new Resource(workerName, startingWorkerPerSec, startingWorkerPerClick, startingWorker);
+        wood = new Resource(woodName,0,startingWoodPerClick,startingWood);
+        ore = new Resource(oreName,0,startingOrePerClick,startingOre);
+        venacid = new Resource(venacidName,0,startingVenacidPerClick,startingVenacid);
+        worker = new Resource(workerName, 0, startingWorkerPerClick, startingWorker);
 		gems = new Resource(gemsName, 0, 0, startingGems);
         StartCoroutine(GenerateResourcePerSec());
-	}
-
-	public void CalculateResourcePerSecond()
-	{
-		totalWoodPerSec = wood.resourcePerSec * BuildingManager.Instance.sawmill.currentWorkers;
-		totalOrePerSec = ore.resourcePerSec * BuildingManager.Instance.mine.currentWorkers;
-		totalVenacidPerSec = venacid.resourcePerSec;
-		totalWorkerPerSec = worker.resourcePerSec * BuildingManager.Instance.house.currentWorkers;
 	}
     public IEnumerator GenerateResourcePerSec()
     {
         while (true)
         {
-			CalculateResourcePerSecond();
-            wood.totalResource +=  totalWoodPerSec * Time.deltaTime;
-            ore.totalResource +=  totalOrePerSec * Time.deltaTime;
-            venacid.totalResource += totalVenacidPerSec * Time.deltaTime;
-			worker.totalResource +=  totalWorkerPerSec * Time.deltaTime;
+            wood.totalResource += wood.resourcePerSec * Time.deltaTime;
+            ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+            venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
+			worker.totalResource += worker.resourcePerSec * Time.deltaTime;
             yield return null;
         }
     }

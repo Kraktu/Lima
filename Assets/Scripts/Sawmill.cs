@@ -22,7 +22,17 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
-
+    public override void AddWorkerToProducing()
+    {
+        base.AddWorkerToProducing();
+        if (workerGotUpgraded)
+        {
+            ResourceManager.Instance.percentWoodBonusPerSec += 1;
+            ClickProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
+            PassiveProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+            RefreshInterface();
+        }
+    }
     public override void AnimationBuildings()
     {
 		base.AnimationBuildings();
@@ -35,7 +45,7 @@ public class Sawmill : ResourceBuilding
 	{
 		base.RefreshInterface();
 		_perClickString = producedResource + ": " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.totalWoodPerSec).ToString("0") + " /h";
+		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.wood.resourcePerSec).ToString("0") + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
 		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
 	}

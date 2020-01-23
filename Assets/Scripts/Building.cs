@@ -38,10 +38,11 @@ public class Building:MonoBehaviour
 
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
+    protected bool workerGotUpgraded;
     protected string currentCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
-	double woodUpgradeCost, oreUpgradeCost, venacidUpgradeCost;
+	double _woodUpgradeCost, _oreUpgradeCost, _venacidUpgradeCost;
 
     public virtual void Start()
     {
@@ -56,7 +57,7 @@ public class Building:MonoBehaviour
         }
         else if (level>0)
         {
-            currentCost = woodUpgradeCost.ToString("0") + " woods\n" + oreUpgradeCost.ToString("0") + " ores\n" + venacidUpgradeCost.ToString("0") + " venacids";
+            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
         }
         villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0"); 
 
@@ -86,18 +87,21 @@ public class Building:MonoBehaviour
             ResourceManager.Instance.ore.totalResource -= oreCost;
             ResourceManager.Instance.venacid.totalResource -= venacidCost;
 			StartCoroutine(Upgrading());
-			return true;
+            _woodUpgradeCost = startingWoodUpgradeCost * (Mathf.Pow(magicRatio.x, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            _venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            return true;
         }
-        else if (level != 0 && woodUpgradeCost <= ResourceManager.Instance.wood.totalResource && oreUpgradeCost <= ResourceManager.Instance.ore.totalResource && venacidUpgradeCost <= ResourceManager.Instance.venacid.totalResource)
+        else if (level != 0 && _woodUpgradeCost <= ResourceManager.Instance.wood.totalResource && _oreUpgradeCost <= ResourceManager.Instance.ore.totalResource && _venacidUpgradeCost <= ResourceManager.Instance.venacid.totalResource)
         {
             level++;
-            ResourceManager.Instance.wood.totalResource -= woodUpgradeCost;
-            ResourceManager.Instance.ore.totalResource -= oreUpgradeCost;
-            ResourceManager.Instance.venacid.totalResource -= venacidUpgradeCost;
+            ResourceManager.Instance.wood.totalResource -= _woodUpgradeCost;
+            ResourceManager.Instance.ore.totalResource -= _oreUpgradeCost;
+            ResourceManager.Instance.venacid.totalResource -= _venacidUpgradeCost;
 			StartCoroutine(Upgrading());
-            woodUpgradeCost = startingWoodUpgradeCost*(Mathf.Pow(magicRatio.x,level-1))*(1-reductionPercentCostBonus)-reductionFlatCostBonus;
-            oreUpgradeCost *= startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
-			venacidUpgradeCost *= startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            _woodUpgradeCost = startingWoodUpgradeCost*(Mathf.Pow(magicRatio.x,level-1))*(1-reductionPercentCostBonus)-reductionFlatCostBonus;
+            _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+			_venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
 			return true;
 
         }
@@ -106,17 +110,18 @@ public class Building:MonoBehaviour
             return false;
         }
     }
-	public void AddWorkerToProducing()
+	public virtual void AddWorkerToProducing()
 	{
+        workerGotUpgraded = false;
 		if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
 		{
 			ResourceManager.Instance.worker.totalResource--;
 			currentWorkers++;
 			RefreshInterface();
 			AnimationBuildings();
+            workerGotUpgraded = true;
 		}
 	}
-
 	public void AddFirstSkillPoint()
 	{
 		if (skillPoints>0)
@@ -126,7 +131,6 @@ public class Building:MonoBehaviour
 			RefreshInterface();
 		}
 	}
-
 	public void AddSecondSkillPoint()
 	{
 		if (skillPoints > 0)
@@ -136,7 +140,6 @@ public class Building:MonoBehaviour
 			RefreshInterface();
 		}
 	}
-
 	public void AddThirdSkillPoint()
 	{
 		if (skillPoints > 0)
@@ -146,7 +149,6 @@ public class Building:MonoBehaviour
 			RefreshInterface();
 		}
 	}
-
 	public void AddFourthSkillPoint()
 	{
 		if (skillPoints > 0)
@@ -234,7 +236,7 @@ public class Building:MonoBehaviour
         }
         else
         {
-            currentCost = woodUpgradeCost.ToString("0") + " woods\n" + oreUpgradeCost.ToString("0") + " ores\n" + venacidUpgradeCost.ToString("0") + " venacids";
+            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);

@@ -10,12 +10,19 @@ public class ResourceBuilding : Building
 
     public void ClickProducingUpgrade(Resource modifiedResourcePerClick,double startingresource,double percentBonus,double flatBonus)
     {
-            modifiedResourcePerClick.resourcePerClick= startingresource*(Mathf.Pow(perClickMagicRatioUpgrade,level-1))*(percentBonus/100)+flatBonus;
+            modifiedResourcePerClick.resourcePerClick= startingresource*(Mathf.Pow(perClickMagicRatioUpgrade,level-1))*(1+percentBonus/100)+flatBonus;
     }
     public void PassiveProducingUpgrade(Resource modifiedResourcePerSec, double startingResource, double percentBonus, double flatBonus)
 
-	{
-			modifiedResourcePerSec.resourcePerSec = startingResource * (Mathf.Pow(perSecMagicRatioUpgrade, level - 1)) * (percentBonus / 100) + flatBonus;
+    {
+        if (currentWorkers==0)
+        {
+            modifiedResourcePerSec.resourcePerSec = 0;
+        }
+        else
+        {
+            modifiedResourcePerSec.resourcePerSec = startingResource * (Mathf.Pow(perSecMagicRatioUpgrade, level - 1)) * (1 + percentBonus / 100) + flatBonus;
+        }
 	}
 
 

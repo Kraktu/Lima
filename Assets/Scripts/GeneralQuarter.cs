@@ -52,7 +52,20 @@ public class GeneralQuarter : Building
 		}
 	}
 
-	public override void AnimationBuildings()
+    public override void AddWorkerToProducing()
+    {
+        base.AddWorkerToProducing();
+        if (workerGotUpgraded)
+        {
+            for (int i = 0; i < buildings.Count; i++)
+            {
+                buildings[i].constructionTime -= buildings[i].constructionTime / 100;
+            }
+            RefreshInterface();
+        }
+    }
+
+    public override void AnimationBuildings()
 	{
 		base.AnimationBuildings();
 		if (currentWorkers == 0)
