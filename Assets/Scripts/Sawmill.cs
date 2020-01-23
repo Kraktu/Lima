@@ -39,16 +39,17 @@ public class Sawmill : ResourceBuilding
 	 		anim.Play("Saw_Animation");
 		}
     }
-    public void UpdateSawmillProducing()
-    {
-        ClickProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
-        PassiveProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+	public void UpdateSawmillProducing()
+	{
+		ClickProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
+		PassiveProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+	}
     public override void RefreshInterface()
 	{
 		base.RefreshInterface();
 		_perClickString = producedResource + ": " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
 		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.wood.resourcePerSec).ToString("0") + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
+		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus*3600).ToString("0") + " wood/h" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.0")+ " wood/click" + " lvl" + fourthSkillPointLevel);
 	}
 }

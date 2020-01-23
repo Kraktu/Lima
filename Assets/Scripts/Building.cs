@@ -18,6 +18,10 @@ public class Building:MonoBehaviour
 	public Sprite workerIconBuilding,buildingIcon;
 	public float constructionTime;
 	public float constructionTimeMultiplicator;
+	public float skillFirstBonus = 1;
+	public float skillSecondBonus = 7500/3600;
+	public float skillThirdBonus = 1;
+	public float skillFourthBonus = 0.1f;
 	public TextMesh ConstructionTimerText;
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
@@ -38,7 +42,7 @@ public class Building:MonoBehaviour
 
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
-    protected bool workerGotUpgraded;
+    protected bool workerGotUpgraded, skillFirstUpgraded,skillSecondUpgraded,skillThirdUpgraded,skillFourthUpgraded;
     protected string currentCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
@@ -122,40 +126,48 @@ public class Building:MonoBehaviour
             workerGotUpgraded = true;
 		}
 	}
-	public void AddFirstSkillPoint()
+	public virtual void AddFirstSkillPoint()
 	{
+		skillFirstUpgraded = false;
 		if (skillPoints>0)
 		{
 			skillPoints--;
 			firstSkillPointLevel++;
 			RefreshInterface();
+			skillFirstUpgraded = true;
 		}
 	}
-	public void AddSecondSkillPoint()
+	public virtual void AddSecondSkillPoint()
 	{
+		skillSecondUpgraded = false;
 		if (skillPoints > 0)
 		{
 			skillPoints--;
 			secondSkillPointLevel++;
 			RefreshInterface();
+			skillSecondUpgraded = true;
 		}
 	}
-	public void AddThirdSkillPoint()
+	public virtual void AddThirdSkillPoint()
 	{
+		skillThirdUpgraded = false;
 		if (skillPoints > 0)
 		{
 			skillPoints--;
 			thirdSkillPointLevel++;
 			RefreshInterface();
+			skillThirdUpgraded = true;
 		}
 	}
-	public void AddFourthSkillPoint()
+	public virtual void AddFourthSkillPoint()
 	{
+		skillFourthUpgraded = false;
 		if (skillPoints > 0)
 		{
 			skillPoints--;
 			fourthSkillPointLevel++;
 			RefreshInterface();
+			skillFourthUpgraded = true;
 		}
 	}
 
