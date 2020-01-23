@@ -4970,7 +4970,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFourthBonus: 0.10000000149011612
   ConstructionTimerText: {fileID: 1121612507}
   scaffoldingModels:
   - {fileID: 1080734070}
@@ -7460,7 +7460,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFourthBonus: 0.10000000149011612
   ConstructionTimerText: {fileID: 302967593}
   scaffoldingModels:
   - {fileID: 1947120053}
@@ -9030,6 +9030,7 @@ MonoBehaviour:
   totalResourceCanvas: {fileID: 449558304}
   enemyVillageCanvas: {fileID: 1311038817}
   spyPanel: {fileID: 796505730}
+  TroopsProducingCanvas: {fileID: 0}
   buildingNameText: {fileID: 386845223}
   descriptionText: {fileID: 1800091584}
   priceText: {fileID: 2033427413}
@@ -9151,7 +9152,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFourthBonus: 0.10000000149011612
   ConstructionTimerText: {fileID: 1913292645}
   scaffoldingModels:
   - {fileID: 1141855015}
@@ -10189,10 +10190,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Head Quarter
   buildingDescription: The Head Quarter, to control your troopers
-  firstSkillPointUpgradeName: Head Quarter auto collect multiplicator +10%
-  secondSkillPointUpgradeName: Head Quarter base auto collect +100
-  thirdSkillPointUpgradeName: Head Quarter click multiplicator +5%
-  fourthSkillPointUpgradeName: Head Quarter base click +25
+  firstSkillPointUpgradeName: 'Reduce time on click + '
+  secondSkillPointUpgradeName: Reduce time on click +
+  thirdSkillPointUpgradeName: Reduce general time +
+  fourthSkillPointUpgradeName: Reduce all skill spoints +
   woodCost: 30
   oreCost: 15
   venacidCost: 0
@@ -10218,7 +10219,7 @@ MonoBehaviour:
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
   constructionTime: 10
   constructionTimeMultiplicator: 1.3
-  skillFirstBonus: 1
+  skillFirstBonus: 0.1
   skillSecondBonus: 2
   skillThirdBonus: 1
   skillFourthBonus: 0.1
@@ -10239,9 +10240,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   skillPoints: 0
   buildings: []
-  goToBarracksMenuSprite: {fileID: 21300000, guid: 5830e98115e071648a9ea4e86cad4e20,
-    type: 3}
-  goToBarracksMenuText: Go To Barracks Menu
+  goToMapMenuSprite: {fileID: 0}
+  goToMapMenuText: 
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0

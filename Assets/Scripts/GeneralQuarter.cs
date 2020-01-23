@@ -31,9 +31,6 @@ public class GeneralQuarter : Building
         }
 
 		RefreshInterface();
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
-		goToMapMenuText,goToMapMenuSprite);
 		UIManager.Instance.goToMenuButton.onClick.AddListener(GoToMap);
 	}
 
@@ -81,7 +78,8 @@ public class GeneralQuarter : Building
     public override void RefreshInterface()
     {
         base.RefreshInterface();
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "","", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-        firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
-    }
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
+		firstSkillPointUpgradeName + skillFirstBonus.ToString("0.0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus*3600).ToString("0") + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.00")+ "%" + " lvl" + fourthSkillPointLevel, 
+		goToMapMenuText,goToMapMenuSprite);
+	}
 }

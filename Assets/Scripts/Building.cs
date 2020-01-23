@@ -18,10 +18,10 @@ public class Building:MonoBehaviour
 	public Sprite workerIconBuilding,buildingIcon;
 	public float constructionTime;
 	public float constructionTimeMultiplicator;
-	public float skillFirstBonus = 1;
-	public float skillSecondBonus = 7500/3600;
-	public float skillThirdBonus = 1;
-	public float skillFourthBonus = 0.1f;
+	public double skillFirstBonus = 1;
+	public double skillSecondBonus = 7500/3600;
+	public double skillThirdBonus = 1;
+	public double skillFourthBonus = 0.1f;
 	public TextMesh ConstructionTimerText;
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
