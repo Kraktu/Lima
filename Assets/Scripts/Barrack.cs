@@ -6,6 +6,14 @@ public class Barrack : Building
 {
     public Sprite goToBarrackMenuSprite;
     public string goToBarrackMenuText;
+    public Unit[] unitsToUnlock;
+    public int[] levelToUnlockNextUnit;
+
+    public override void Start()
+    {
+        base.Start();
+
+    }
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -26,7 +34,13 @@ public class Barrack : Building
     }
     public void UpdateBarrack()
     {
-
+        for (int i = 0; i < unitsToUnlock.Length; i++)
+        {
+            if (levelToUnlockNextUnit[i]==level)
+            {
+                unitsToUnlock[i].gameObject.SetActive(true);
+            }
+        }
     }
     public void ShowUnitInterface()
     {

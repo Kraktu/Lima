@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
 	public Image workerIcon,buildingIcon;
 
-    public Sprite selectedUnitBigSprite;
+    public Image selectedUnitBigSprite;
     public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime;
     public Button selectedUnitProduceButton;
     public InputField selectedUnitInputField;
@@ -91,6 +91,7 @@ public class UIManager : MonoBehaviour
     public void CloseUnitTab()
     {
         WaitingforUnitSelectionText.gameObject.SetActive(true);
+        UnitPanel.gameObject.SetActive(false);
         TroopsProducingCanvas.SetActive(false);
     }
 
@@ -110,7 +111,7 @@ public class UIManager : MonoBehaviour
         selectedUnitOrePrice.text = oreprice.ToString();
         selectedUnitVenacidPrice.text = venacidprice.ToString();
         selectedUnitTime.text = producingtime.ToString();
-        selectedUnitBigSprite = bigsprite;
+        selectedUnitBigSprite.sprite = bigsprite;
     }
 
 }
