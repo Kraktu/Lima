@@ -30,8 +30,48 @@ public class Mine : ResourceBuilding
             RefreshInterface();
         }
     }
+	public override void AddFirstSkillPoint()
+	{
+		base.AddFirstSkillPoint();
+		if (skillFirstUpgraded)
+		{
+			ResourceManager.Instance.percentOreBonusPerSec += skillFirstBonus;
+			UpdateMineProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddSecondSkillPoint()
+	{
+		base.AddSecondSkillPoint();
+		if (skillSecondUpgraded)
+		{
+			ResourceManager.Instance.flatOreBonusPerSec += skillSecondBonus;
+			UpdateMineProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddThirdSkillPoint()
+	{
+		base.AddThirdSkillPoint();
+		if (skillThirdUpgraded)
+		{
+			ResourceManager.Instance.percentOreBonusPerSec += skillThirdBonus;
+			UpdateMineProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddFourthSkillPoint()
+	{
+		base.AddFourthSkillPoint();
+		if (skillFourthUpgraded)
+		{
+			ResourceManager.Instance.flatOreBonusPerClick += skillFourthBonus;
+			UpdateMineProducing();
+			RefreshInterface();
+		}
+	}
 
-    public override void AnimationBuildings()
+	public override void AnimationBuildings()
 	{
 		base.AnimationBuildings();
 		if (currentWorkers > 0)

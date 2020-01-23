@@ -79,7 +79,7 @@ public class GeneralQuarter : Building
     {
         base.RefreshInterface();
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0.0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus*3600).ToString("0") + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.00")+ "%" + " lvl" + fourthSkillPointLevel, 
+		firstSkillPointUpgradeName + skillFirstBonus.ToString("0.0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.00")+ "%" + " lvl" + fourthSkillPointLevel, 
 		goToMapMenuText,goToMapMenuSprite);
 	}
 }

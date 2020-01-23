@@ -4310,6 +4310,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
+      propertyPath: SpawnChest.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
       propertyPath: spawnMinTime
       value: 1
       objectReference: {fileID: 0}
@@ -9031,6 +9036,7 @@ MonoBehaviour:
   enemyVillageCanvas: {fileID: 1311038817}
   spyPanel: {fileID: 796505730}
   TroopsProducingCanvas: {fileID: 0}
+  UnitPanel: {fileID: 0}
   buildingNameText: {fileID: 386845223}
   descriptionText: {fileID: 1800091584}
   priceText: {fileID: 2033427413}
@@ -9047,6 +9053,7 @@ MonoBehaviour:
   secondSkillPointUpgrade: {fileID: 1920719831}
   thirdSkillPointUpgrade: {fileID: 1446959491}
   fourthSkillPointUpgrade: {fileID: 334142034}
+  WaitingforUnitSelectionText: {fileID: 0}
   upgradeButton: {fileID: 1116412197}
   addWorkerButton: {fileID: 2009608928}
   goToMenuButton: {fileID: 836538271}
@@ -9056,6 +9063,20 @@ MonoBehaviour:
   addFourthSkillPoint: {fileID: 319094575}
   workerIcon: {fileID: 550875934}
   buildingIcon: {fileID: 1438007095}
+  selectedUnitBigSprite: {fileID: 0}
+  selectedUnitName: {fileID: 0}
+  selectedUnitStatFirst: {fileID: 0}
+  selectedUnitStatSecond: {fileID: 0}
+  selectedUnitStatThird: {fileID: 0}
+  selectedUnitStatFourth: {fileID: 0}
+  selectedUnitStatFifth: {fileID: 0}
+  selectedUnitStatSixth: {fileID: 0}
+  selectedUnitWoodPrice: {fileID: 0}
+  selectedUnitOrePrice: {fileID: 0}
+  selectedUnitVenacidPrice: {fileID: 0}
+  selectedUnitTime: {fileID: 0}
+  selectedUnitProduceButton: {fileID: 0}
+  selectedUnitInputField: {fileID: 0}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -10240,8 +10261,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   skillPoints: 0
   buildings: []
-  goToMapMenuSprite: {fileID: 0}
-  goToMapMenuText: 
+  goToMapMenuSprite: {fileID: 21300000, guid: 0b137cd946fad7948b0fda06b088102f, type: 3}
+  goToMapMenuText: map
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -31,7 +31,49 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
-    public override void AnimationBuildings()
+
+	public override void AddFirstSkillPoint()
+	{
+		base.AddFirstSkillPoint();
+		if (skillFirstUpgraded)
+		{
+			ResourceManager.Instance.percentWoodBonusPerSec += skillFirstBonus;
+			UpdateSawmillProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddSecondSkillPoint()
+	{
+		base.AddSecondSkillPoint();
+		if (skillSecondUpgraded)
+		{
+			ResourceManager.Instance.flatWoodBonusPerSec += skillSecondBonus;
+			UpdateSawmillProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddThirdSkillPoint()
+	{
+		base.AddThirdSkillPoint();
+		if (skillThirdUpgraded)
+		{
+			ResourceManager.Instance.percentWoodBonusPerSec += skillThirdBonus;
+			UpdateSawmillProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddFourthSkillPoint()
+	{
+		base.AddFourthSkillPoint();
+		if (skillFourthUpgraded)
+		{
+			ResourceManager.Instance.flatWoodBonusPerClick += skillFourthBonus;
+			UpdateSawmillProducing();
+			RefreshInterface();
+		}
+	}
+
+	public override void AnimationBuildings()
     {
 		base.AnimationBuildings();
 		if(currentWorkers > 0)
