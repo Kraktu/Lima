@@ -43,6 +43,7 @@ public class Sawmill : ResourceBuilding
     {
         ClickProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
         PassiveProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+    }
     public override void RefreshInterface()
 	{
 		base.RefreshInterface();
