@@ -17,22 +17,22 @@ public class GeneralQuarter : Building
         buildings.Add(BuildingManager.Instance.house);
     }
     public override void OnMouseDown()
-	{
-		base.OnMouseDown();
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+    {
+        base.OnMouseDown();
+        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
         for (int i = 0; i < buildings.Count; i++)
         {
             if (buildings[i].isCurentlyUpgrading)
             {
-                buildings[i].elpasedTime+=1*level;
+                buildings[i].elpasedTime += 1 * level;
             }
         }
 
-		RefreshInterface();
+        RefreshInterface();
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
-		goToBarracksMenuText,goToBarracksMenuSprite);
-	}
+        firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
+        goToBarracksMenuText, goToBarracksMenuSprite);
+    }
 
 	public void UpgradeGeneralQuarter()
 	{
