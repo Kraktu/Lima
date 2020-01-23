@@ -6,8 +6,8 @@ public class GeneralQuarter : Building
 {
     public List<Building> buildings = new List<Building>();
 
-    public Sprite goToBarracksMenuSprite;
-    public string goToBarracksMenuText;
+    public Sprite goToMapMenuSprite;
+    public string goToMapMenuText;
 
 	
 
@@ -33,7 +33,7 @@ public class GeneralQuarter : Building
 		RefreshInterface();
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
 		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
-		goToBarracksMenuText,goToBarracksMenuSprite);
+		goToMapMenuText,goToMapMenuSprite);
 		UIManager.Instance.goToMenuButton.onClick.AddListener(GoToMap);
 	}
 
