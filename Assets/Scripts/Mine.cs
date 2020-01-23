@@ -50,6 +50,6 @@ public class Mine : ResourceBuilding
 		_perClickString = producedResource + ": " + ResourceManager.Instance.ore.resourcePerClick.ToString("0") + " /Click";
 		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.ore.resourcePerSec).ToString("0") + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + " ores/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + " ores/click" + " lvl" + fourthSkillPointLevel);
+		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
 	}
 }
