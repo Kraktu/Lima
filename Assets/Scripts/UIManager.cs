@@ -7,11 +7,13 @@ public class UIManager : MonoBehaviour
 {
 	static public UIManager Instance { get; private set; }
 
-    public GameObject buildinfgUICanvas;
+	public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel;
 	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade;
 	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
-
 	public Image workerIcon,buildingIcon;
+
+	[HideInInspector]
+	public bool isSpyPanelActive;
 
     private void Awake()
     {
@@ -69,5 +71,17 @@ public class UIManager : MonoBehaviour
         }
         
     }
+	public void SpyPanelAcitve()
+	{
+		if(isSpyPanelActive)
+		{
+			spyPanel.SetActive(false);
+		}
+		else
+		{
+			spyPanel.SetActive(true);
+		}
+		isSpyPanelActive = !isSpyPanelActive;
+	}
 
 }

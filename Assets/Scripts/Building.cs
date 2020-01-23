@@ -8,8 +8,8 @@ public class Building:MonoBehaviour
     public string buildingName, buildingDescription;
 	public string firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName;
 	public double woodCost,oreCost,venacidCost;
-    public double woodUpgradeCost, oreUpgradeCost, venacidUpgradeCost;
-    public Vector3 CostMultiplicator;
+	public double startingWoodUpgradeCost, startingOreUpgradeCost, startingVenacidUpgradeCost;
+    public Vector3 magicRatio;
     public bool canBuild=false;
     public GameObject[] models;
     public int[] upgradeModelsLevelStep;
@@ -23,7 +23,10 @@ public class Building:MonoBehaviour
 	public GameObject constructionPoof;
 	public int skillPointUpgradeLevelStep;
 
-
+	[HideInInspector]
+	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
+	[HideInInspector]
+	public bool isCurentlyUpgrading=false;
     [HideInInspector]
     public float elpasedTime = 0;
     [HideInInspector]
@@ -38,7 +41,7 @@ public class Building:MonoBehaviour
     protected string currentCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
-	public bool isCurentlyUpgrading=false;
+	double woodUpgradeCost, oreUpgradeCost, venacidUpgradeCost;
 
     public virtual void Start()
     {
@@ -63,13 +66,13 @@ public class Building:MonoBehaviour
 		UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
 		UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
 		UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+		UIManager.Instance.goToMenuButton.onClick.RemoveAllListeners();
 		UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
 		UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
 		UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
 		UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
 		UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
 		UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
-
 		RefreshInterface();
 
     }
@@ -92,10 +95,10 @@ public class Building:MonoBehaviour
             ResourceManager.Instance.ore.totalResource -= oreUpgradeCost;
             ResourceManager.Instance.venacid.totalResource -= venacidUpgradeCost;
 			StartCoroutine(Upgrading());
-            woodUpgradeCost *= CostMultiplicator.x;
-            oreUpgradeCost *= CostMultiplicator.y;
-            venacidUpgradeCost *= CostMultiplicator.z;
-            return true;
+            woodUpgradeCost = startingWoodUpgradeCost*(Mathf.Pow(magicRatio.x,level-1))*(1-reductionPercentCostBonus)-reductionFlatCostBonus;
+            oreUpgradeCost *= startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+			venacidUpgradeCost *= startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+			return true;
 
         }
         else
