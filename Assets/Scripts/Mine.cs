@@ -16,8 +16,7 @@ public class Mine : ResourceBuilding
 	{
 		if(LevelUp())
 		{
-			ClickProducingUpgrade(ResourceManager.Instance.ore,ResourceManager.Instance.startingOrePerClick,ResourceManager.Instance.percentOreBonusPerClick,ResourceManager.Instance.flatOreBonusPerClick);
-			PassiveProducingUpgrade(ResourceManager.Instance.ore,ResourceManager.Instance.startingOrePerSec,ResourceManager.Instance.percentOreBonusPerSec,ResourceManager.Instance.flatOreBonusPerSec);
+            UpdateMineProducing();
             RefreshInterface();
 		}
 	}
@@ -27,8 +26,7 @@ public class Mine : ResourceBuilding
         if (workerGotUpgraded)
         {
             ResourceManager.Instance.percentOreBonusPerSec += 1;
-            ClickProducingUpgrade(ResourceManager.Instance.ore, ResourceManager.Instance.startingOrePerClick, ResourceManager.Instance.percentOreBonusPerClick, ResourceManager.Instance.flatOreBonusPerClick);
-            PassiveProducingUpgrade(ResourceManager.Instance.ore, ResourceManager.Instance.startingOrePerSec, ResourceManager.Instance.percentOreBonusPerSec, ResourceManager.Instance.flatOreBonusPerSec);
+            UpdateMineProducing();
             RefreshInterface();
         }
     }
@@ -41,6 +39,11 @@ public class Mine : ResourceBuilding
 			anim.Play("Charret_Animation");
 		}
 	}
+    public void UpdateMineProducing()
+    {
+        ClickProducingUpdate(ResourceManager.Instance.ore, ResourceManager.Instance.startingOrePerClick, ResourceManager.Instance.percentOreBonusPerClick, ResourceManager.Instance.flatOreBonusPerClick);
+        PassiveProducingUpdate(ResourceManager.Instance.ore, ResourceManager.Instance.startingOrePerSec, ResourceManager.Instance.percentOreBonusPerSec, ResourceManager.Instance.flatOreBonusPerSec);
+    }
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();

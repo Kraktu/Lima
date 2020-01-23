@@ -17,8 +17,7 @@ public class Sawmill : ResourceBuilding
     {
         if (LevelUp())
         {
-            ClickProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
-            PassiveProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+            UpdateSawmillProducing();
             RefreshInterface();
         }
     }
@@ -28,8 +27,7 @@ public class Sawmill : ResourceBuilding
         if (workerGotUpgraded)
         {
             ResourceManager.Instance.percentWoodBonusPerSec += 1;
-            ClickProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
-            PassiveProducingUpgrade(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+            UpdateSawmillProducing();
             RefreshInterface();
         }
     }
@@ -41,7 +39,11 @@ public class Sawmill : ResourceBuilding
 	 		anim.Play("Saw_Animation");
 		}
     }
-	public override void RefreshInterface()
+    public void UpdateSawmillProducing()
+    {
+        ClickProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerClick, ResourceManager.Instance.percentWoodBonusPerClick, ResourceManager.Instance.flatWoodBonusPerClick);
+        PassiveProducingUpdate(ResourceManager.Instance.wood, ResourceManager.Instance.startingWoodPerSec, ResourceManager.Instance.percentWoodBonusPerSec, ResourceManager.Instance.flatWoodBonusPerSec);
+    public override void RefreshInterface()
 	{
 		base.RefreshInterface();
 		_perClickString = producedResource + ": " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";

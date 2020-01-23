@@ -20,7 +20,7 @@ public class House : ResourceBuilding
             {
                 currentWorkers = 1;
             }
-            PassiveProducingUpgrade(ResourceManager.Instance.worker,ResourceManager.Instance.startingWorkerPerSec,ResourceManager.Instance.percentWorkerBonusPerSec,ResourceManager.Instance.flatWorkerBonusPerSec);
+            UpdateHouseProducing();
             RefreshInterface();
 		}
 	}
@@ -30,7 +30,7 @@ public class House : ResourceBuilding
         if (workerGotUpgraded)
         {
             ResourceManager.Instance.percentWorkerBonusPerSec += 1;
-            PassiveProducingUpgrade(ResourceManager.Instance.worker, ResourceManager.Instance.startingWorkerPerSec, ResourceManager.Instance.percentWorkerBonusPerSec, ResourceManager.Instance.flatWorkerBonusPerSec);
+            UpdateHouseProducing();
             RefreshInterface();
         }
     }
@@ -47,6 +47,11 @@ public class House : ResourceBuilding
 			//working anim
 		}
 	}
+
+    public void UpdateHouseProducing()
+    {
+        PassiveProducingUpdate(ResourceManager.Instance.worker, ResourceManager.Instance.startingWorkerPerSec, ResourceManager.Instance.percentWorkerBonusPerSec, ResourceManager.Instance.flatWorkerBonusPerSec);
+    }
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
