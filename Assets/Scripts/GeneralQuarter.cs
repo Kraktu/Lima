@@ -8,7 +8,8 @@ public class GeneralQuarter : Building
 
     public Sprite goToMapMenuSprite;
     public string goToMapMenuText;
-
+	public double removeTheTimeOnClick =1;
+	double workerFactor =100;
 	
 
     public override void Start()
@@ -26,7 +27,7 @@ public class GeneralQuarter : Building
         {
             if (buildings[i].isCurentlyUpgrading)
             {
-                buildings[i].elpasedTime+=1*level;
+                buildings[i].elpasedTime+=removeTheTimeOnClick;
             }
         }
 
@@ -56,13 +57,53 @@ public class GeneralQuarter : Building
         {
             for (int i = 0; i < buildings.Count; i++)
             {
-                buildings[i].constructionTime -= buildings[i].constructionTime / 100;
+                buildings[i].constructionTime -= buildings[i].constructionTime / workerFactor;
             }
             RefreshInterface();
         }
     }
 
-    public override void AnimationBuildings()
+	public override void AddFirstSkillPoint()
+	{
+		base.AddFirstSkillPoint();
+		if (skillFirstUpgraded)
+		{
+			removeTheTimeOnClick += skillFirstBonus;
+			RefreshInterface();
+		}
+	}
+	public override void AddSecondSkillPoint()
+	{
+		base.AddSecondSkillPoint();
+		if (skillSecondUpgraded)
+		{
+			removeTheTimeOnClick *= (1 + skillSecondBonus / 100);
+			RefreshInterface();
+		}
+	}
+	public override void AddThirdSkillPoint()
+	{
+		base.AddThirdSkillPoint();
+		if (skillThirdUpgraded)
+		{
+			for (int i = 0; i < buildings.Count; i++)
+			{
+				buildings[i].constructionTime -= ((1 + level) * level) / 2;
+			}
+			RefreshInterface();
+		}
+	}
+	public override void AddFourthSkillPoint()
+	{
+		base.AddFourthSkillPoint();
+		if (skillFourthUpgraded)
+		{
+			workerFactor -= skillFourthBonus;
+			RefreshInterface();
+		}
+	}
+
+	public override void AnimationBuildings()
 	{
 		base.AnimationBuildings();
 		if (currentWorkers == 0)

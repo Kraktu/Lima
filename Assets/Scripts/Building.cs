@@ -16,12 +16,12 @@ public class Building:MonoBehaviour
     public float level = 0;
     public double currentWorkers, workersLimit, workerLimitUpgrade, workerLimitUpgradeLevelStep;
 	public Sprite workerIconBuilding,buildingIcon;
-	public float constructionTime;
 	public float constructionTimeMultiplicator;
+	public double constructionTime;
 	public double skillFirstBonus = 1;
-	public double skillSecondBonus = 7500/3600;
+	public double skillSecondBonus = 1;
 	public double skillThirdBonus = 1;
-	public double skillFourthBonus = 0.1f;
+	public double skillFourthBonus = 1;
 	public TextMesh ConstructionTimerText;
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
@@ -32,7 +32,7 @@ public class Building:MonoBehaviour
 	[HideInInspector]
 	public bool isCurentlyUpgrading=false;
     [HideInInspector]
-    public float elpasedTime = 0;
+    public double elpasedTime = 0;
     [HideInInspector]
     public bool refreshInterface;
 	[HideInInspector]
@@ -175,8 +175,8 @@ public class Building:MonoBehaviour
 	{
         //déclaration des variables
         elpasedTime = 0;
-        float constructionScafoldStep = constructionTime / scaffoldingModels.Length;
-		float timeToCompletion;
+        double constructionScafoldStep = constructionTime / scaffoldingModels.Length;
+		double timeToCompletion;
 		isCurentlyUpgrading = true;
 
 		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
@@ -196,7 +196,7 @@ public class Building:MonoBehaviour
                 }
             }
  			timeToCompletion = constructionTime - elpasedTime;
-			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor(timeToCompletion %3600) /60).ToString("00") + ":" + Mathf.Floor((timeToCompletion % 3600)%60).ToString("00");
+			ConstructionTimerText.text = (timeToCompletion / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToCompletion %3600) /60).ToString("00") + ":" + Mathf.Floor(((float)timeToCompletion % 3600)%60).ToString("00");
 			elpasedTime += Time.deltaTime;
 			yield return null;
 		}
