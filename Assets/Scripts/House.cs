@@ -58,6 +58,6 @@ public class House : ResourceBuilding
 		_perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
 		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.worker.resourcePerSec).ToString("0") + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
+		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + "%" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + "%" + " lvl" + fourthSkillPointLevel);
 	}
 }

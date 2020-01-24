@@ -4943,8 +4943,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: House
   buildingDescription: Where the villager lives
-  firstSkillPointUpgradeName: House auto collect multiplicator +10%
-  secondSkillPointUpgradeName: House base auto collect +100
+  firstSkillPointUpgradeName: 'reduce flat time production of workers + '
+  secondSkillPointUpgradeName: 'reduce % time production of workers + '
   thirdSkillPointUpgradeName: House click multiplicator +5%
   fourthSkillPointUpgradeName: House base click +25
   woodCost: 15
@@ -4975,7 +4975,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.10000000149011612
+  skillFourthBonus: 0.11
   ConstructionTimerText: {fileID: 1121612507}
   scaffoldingModels:
   - {fileID: 1080734070}
@@ -7465,7 +7465,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.10000000149011612
+  skillFourthBonus: 0.1
   ConstructionTimerText: {fileID: 302967593}
   scaffoldingModels:
   - {fileID: 1947120053}
@@ -9173,7 +9173,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
-  skillFourthBonus: 0.10000000149011612
+  skillFourthBonus: 0.1
   ConstructionTimerText: {fileID: 1913292645}
   scaffoldingModels:
   - {fileID: 1141855015}
@@ -10211,10 +10211,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Head Quarter
   buildingDescription: The Head Quarter, to control your troopers
-  firstSkillPointUpgradeName: 'Reduce time on click + '
-  secondSkillPointUpgradeName: Reduce time on click +
-  thirdSkillPointUpgradeName: Reduce general time +
-  fourthSkillPointUpgradeName: Reduce all skill spoints +
+  firstSkillPointUpgradeName: 'Reduce flat time on click + '
+  secondSkillPointUpgradeName: 'Reduce % time on click + '
+  thirdSkillPointUpgradeName: 'Reduce flat general time + '
+  fourthSkillPointUpgradeName: 'Reduce % general time  + '
   woodCost: 30
   oreCost: 15
   venacidCost: 0
@@ -10243,7 +10243,7 @@ MonoBehaviour:
   skillFirstBonus: 1
   skillSecondBonus: 1
   skillThirdBonus: 1
-  skillFourthBonus: 10
+  skillFourthBonus: 0.1
   ConstructionTimerText: {fileID: 2127961027}
   scaffoldingModels:
   - {fileID: 270149804}
