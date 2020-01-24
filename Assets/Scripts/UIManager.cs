@@ -13,9 +13,9 @@ public class UIManager : MonoBehaviour
 	public Image workerIcon,buildingIcon;
 
     public Image selectedUnitBigSprite;
-    public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime;
+    public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime,selectedUnitOwnedNumber, diplayedTimeToProduceUnits;
     public Button selectedUnitProduceButton;
-    public InputField selectedUnitInputField;
+    public Text selectedUnitInputField;
 
 	[HideInInspector]
 	public bool isSpyPanelActive;
@@ -95,7 +95,7 @@ public class UIManager : MonoBehaviour
         TroopsProducingCanvas.SetActive(false);
     }
 
-    public void OpenSelectedUnitTab(string name,double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime, Sprite bigsprite)
+    public void OpenSelectedUnitTab(string name,double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime,double ownedNumber, Sprite bigsprite)
     {
         WaitingforUnitSelectionText.gameObject.SetActive(false);
         UnitPanel.SetActive(true);
@@ -111,6 +111,7 @@ public class UIManager : MonoBehaviour
         selectedUnitOrePrice.text = oreprice.ToString();
         selectedUnitVenacidPrice.text = venacidprice.ToString();
         selectedUnitTime.text = producingtime.ToString();
+        selectedUnitOwnedNumber.text = ownedNumber.ToString();
         selectedUnitBigSprite.sprite = bigsprite;
     }
 
