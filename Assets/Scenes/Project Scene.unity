@@ -6935,8 +6935,8 @@ MonoBehaviour:
   workerLimitUpgradeLevelStep: 5
   workerIconBuilding: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   buildingIcon: {fileID: 21300000, guid: db1e86d9536e4a04e994e63f131f8b0d, type: 3}
-  constructionTime: 10
   constructionTimeMultiplicator: 1.2
+  constructionTime: 10
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
@@ -10989,10 +10989,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Mine
   buildingDescription: Mine extract Ores from a cave
-  firstSkillPointUpgradeName: Mine auto collect multiplicator +10%
-  secondSkillPointUpgradeName: Mine base auto collect +100
-  thirdSkillPointUpgradeName: Mine click multiplicator +5%
-  fourthSkillPointUpgradeName: Mine base click +25
+  firstSkillPointUpgradeName: 'Auto collect multiplicator + '
+  secondSkillPointUpgradeName: 'Auto collect + '
+  thirdSkillPointUpgradeName: 'Click collect multiplicator + '
+  fourthSkillPointUpgradeName: 'Click collect + '
   woodCost: 25
   oreCost: 30
   venacidCost: 0
@@ -11016,8 +11016,8 @@ MonoBehaviour:
   workerLimitUpgradeLevelStep: 5
   workerIconBuilding: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
-  constructionTime: 10
   constructionTimeMultiplicator: 1.4
+  constructionTime: 10
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
@@ -12451,8 +12451,8 @@ MonoBehaviour:
   workerLimitUpgradeLevelStep: 0
   workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   buildingIcon: {fileID: 21300000, guid: 594c01935eb99e24c86c31401dc6d66b, type: 3}
-  constructionTime: 2
   constructionTimeMultiplicator: 1.01
+  constructionTime: 2
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
@@ -13515,10 +13515,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Sawmill
   buildingDescription: Sawmill cut trees and provide wood for your village
-  firstSkillPointUpgradeName: Sawmill auto collect multiplicator +10%
-  secondSkillPointUpgradeName: Sawmill base auto collect +100
-  thirdSkillPointUpgradeName: Sawmill click multiplicator +5%
-  fourthSkillPointUpgradeName: Sawmill base click +25
+  firstSkillPointUpgradeName: 'Auto collect multiplicator + '
+  secondSkillPointUpgradeName: 'Auto collect + '
+  thirdSkillPointUpgradeName: 'Click collect multiplicator + '
+  fourthSkillPointUpgradeName: 'Click collect + '
   woodCost: 10
   oreCost: 20
   venacidCost: 0
@@ -13542,8 +13542,8 @@ MonoBehaviour:
   workerLimitUpgradeLevelStep: 5
   workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
-  constructionTime: 10
   constructionTimeMultiplicator: 1.1
+  constructionTime: 10
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
@@ -15319,10 +15319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Head Quarter
   buildingDescription: The Head Quarter, to control your troopers
-  firstSkillPointUpgradeName: Head Quarter auto collect multiplicator +10%
-  secondSkillPointUpgradeName: Head Quarter base auto collect +100
-  thirdSkillPointUpgradeName: Head Quarter click multiplicator +5%
-  fourthSkillPointUpgradeName: Head Quarter base click +25
+  firstSkillPointUpgradeName: 'Reduce flat time on click + '
+  secondSkillPointUpgradeName: 'Reduce % time on click + '
+  thirdSkillPointUpgradeName: 'Reduce flat general time + '
+  fourthSkillPointUpgradeName: 'Reduce % general time  + '
   woodCost: 30
   oreCost: 15
   venacidCost: 0
@@ -15346,8 +15346,8 @@ MonoBehaviour:
   workerLimitUpgradeLevelStep: 5
   workerIconBuilding: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
-  constructionTime: 10
   constructionTimeMultiplicator: 1.3
+  constructionTime: 10
   skillFirstBonus: 1
   skillSecondBonus: 2
   skillThirdBonus: 1
@@ -15371,6 +15371,7 @@ MonoBehaviour:
   buildings: []
   goToMapMenuSprite: {fileID: 21300000, guid: 0b137cd946fad7948b0fda06b088102f, type: 3}
   goToMapMenuText: Go To Map
+  removeTheTimeOnClick: 1
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0
