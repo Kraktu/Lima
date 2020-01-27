@@ -6908,10 +6908,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: House
   buildingDescription: Where the villager lives
-  firstSkillPointUpgradeName: NaN
-  secondSkillPointUpgradeName: NaN
-  thirdSkillPointUpgradeName: NaN
-  fourthSkillPointUpgradeName: NaN
+  firstSkillPointUpgradeName: 'Reduce flat time per sec + '
+  secondSkillPointUpgradeName: 'Reduce % time per sec + '
+  thirdSkillPointUpgradeName: 'Reduce flat time per click + '
+  fourthSkillPointUpgradeName: 'Reduce %  time per click + '
   woodCost: 15
   oreCost: 20
   venacidCost: 0
@@ -12483,6 +12483,7 @@ MonoBehaviour:
   - {fileID: 1853417452}
   - {fileID: 1227434452}
   levelToUnlockNextUnit: 0100000002000000030000000400000005000000
+  timeReducedOnClick: 1
 --- !u!65 &1462228425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13338,11 +13339,11 @@ MonoBehaviour:
   startingWoodPerSec: 10
   startingOrePerSec: 20
   startingVenacidPerSec: 10
-  startingWorkerPerSec: 10
+  startingWorkerPerSec: 1
   startingWoodPerClick: 1
   startingOrePerClick: 1
   startingVenacidPerClick: 1
-  startingWorkerPerClick: 0
+  startingWorkerPerClick: 1
   flatWoodBonusPerSec: 0
   percentWoodBonusPerSec: 0
   flatOreBonusPerSec: 0
@@ -13466,6 +13467,7 @@ MonoBehaviour:
   swordman: {fileID: 305859133}
   alchemist: {fileID: 1227434452}
   canProduceNewUnit: 1
+  currentProducedUnit: {fileID: 0}
 --- !u!1 &1602226629
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,6 +51,7 @@ public class Barrack : Building
             {
                 unitsToUnlock[i].gameObject.SetActive(true);
                 unitsToUnlock[i].myAttackPanel.SetActive(true);
+				UnitManager.Instance.allUnits.Add(unitsToUnlock[i]);
             }
         }
     }
