@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -1516,6 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -1856,6 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
   longUnitImage: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
   unitName: HorseMan
@@ -2370,6 +2373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0d31625415cabf44fa34fa0d04f58cc2, type: 3}
   longUnitImage: {fileID: 21300000, guid: 0d31625415cabf44fa34fa0d04f58cc2, type: 3}
   unitName: Swordman
@@ -6084,6 +6088,42 @@ PrefabInstance:
       propertyPath: center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: Bonus.Array.data[0]
+      value: 
+      objectReference: {fileID: 7350406647036814535, guid: c2857939615c0dc4992931c9bd45bc75,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: SpawnChest.Array.data[1]
+      value: 
+      objectReference: {fileID: 7118135460440333157, guid: 680d83aeb21723642a5a35c5b984276f,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: SpawnChest.Array.data[2]
+      value: 
+      objectReference: {fileID: 7118135460440333157, guid: bda0141261533074f9bc1380ff6f8492,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: SpawnChest.Array.data[3]
+      value: 
+      objectReference: {fileID: 7118135460440333157, guid: 3c6ca8b5b0114374ebc09092dc805487,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: SpawnChest.Array.data[4]
+      value: 
+      objectReference: {fileID: 7118135460440333157, guid: 6cd8b2850107e1f4cb56095b502e8541,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: Bonus.Array.data[2]
+      value: 
+      objectReference: {fileID: 7350406647036814535, guid: 6cd8b2850107e1f4cb56095b502e8541,
+        type: 3}
     - target: {fileID: 173750701303189057, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: m_Name
@@ -7165,6 +7205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -7847,6 +7888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -8005,6 +8047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -8277,6 +8320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 52eea2f719bf69a4a95a5b2cf2701437, type: 3}
   longUnitImage: {fileID: 21300000, guid: 52eea2f719bf69a4a95a5b2cf2701437, type: 3}
   unitName: Archer
@@ -9868,6 +9912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 203f1ee2a5113a6488180fceaf88f175, type: 3}
   longUnitImage: {fileID: 21300000, guid: 203f1ee2a5113a6488180fceaf88f175, type: 3}
   unitName: Alchemist
@@ -11570,6 +11615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -13314,6 +13360,7 @@ MonoBehaviour:
   mine: {fileID: 1393608204}
   generalQuarter: {fileID: 1804895543}
   house: {fileID: 900474091}
+  barraks: {fileID: 0}
 --- !u!114 &1592076620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13434,6 +13481,13 @@ MonoBehaviour:
   diplayedTimeToProduceUnits: {fileID: 1543206695}
   selectedUnitProduceButton: {fileID: 889607155}
   selectedUnitInputField: {fileID: 2013907715}
+  attackPanel: {fileID: 0}
+  atUserName: {fileID: 0}
+  atUserLvl: {fileID: 0}
+  atEnemyName: {fileID: 0}
+  atEnemyLvl: {fileID: 0}
+  atUserIcon: {fileID: 0}
+  atEnemyIcon: {fileID: 0}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -13468,6 +13522,7 @@ MonoBehaviour:
   alchemist: {fileID: 1227434452}
   canProduceNewUnit: 1
   currentProducedUnit: {fileID: 0}
+  allUnits: []
 --- !u!1 &1602226629
 GameObject:
   m_ObjectHideFlags: 0
@@ -13990,6 +14045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -14935,6 +14991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
@@ -15903,6 +15960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 660b863a478e8964d8c0f4c54a3f6cf7, type: 3}
   longUnitImage: {fileID: 21300000, guid: 660b863a478e8964d8c0f4c54a3f6cf7, type: 3}
   unitName: Spearman
@@ -16734,6 +16792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myAttackPanel: {fileID: 0}
   smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
   longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
   unitName: Swordman
