@@ -13,7 +13,6 @@ public class ResourceBuilding : Building
             modifiedResourcePerClick.resourcePerClick= startingresource*(Mathf.Pow(perClickMagicRatioUpgrade,level-1))*(1+percentBonus/100)+flatBonus;
     }
     public void PassiveProducingUpdate(Resource modifiedResourcePerSec, double startingResource, double percentBonus, double flatBonus)
-
     {
         if (currentWorkers==0)
         {

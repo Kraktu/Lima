@@ -7,8 +7,8 @@ public class House : ResourceBuilding
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
+		ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
 		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-        
         RefreshInterface();
 	}
 
@@ -34,7 +34,47 @@ public class House : ResourceBuilding
             RefreshInterface();
         }
     }
-    public override void AnimationBuildings()
+	public override void AddFirstSkillPoint()
+	{
+		base.AddFirstSkillPoint();
+		if (skillFirstUpgraded)
+		{
+			ResourceManager.Instance.flatWorkerBonusPerSec += skillFirstBonus;
+			UpdateHouseProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddSecondSkillPoint()
+	{
+		base.AddSecondSkillPoint();
+		if (skillSecondUpgraded)
+		{
+			ResourceManager.Instance.percentWorkerBonusPerSec += skillSecondBonus;
+			UpdateHouseProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddThirdSkillPoint()
+	{
+		base.AddThirdSkillPoint();
+		if (skillThirdUpgraded)
+		{
+			ResourceManager.Instance.flatWorkerBonusPerClick += skillThirdBonus;
+			UpdateHouseProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AddFourthSkillPoint()
+	{
+		base.AddFourthSkillPoint();
+		if (skillFourthUpgraded)
+		{
+			ResourceManager.Instance.percentWorkerBonusPerClick += skillFourthBonus;
+			UpdateHouseProducing();
+			RefreshInterface();
+		}
+	}
+	public override void AnimationBuildings()
 	{
 		base.AnimationBuildings();
 		if (currentWorkers == 0)
