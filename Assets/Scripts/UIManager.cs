@@ -102,6 +102,8 @@ public class UIManager : MonoBehaviour
             atUserLvl.text = "Lv."+BuildingManager.Instance.generalQuarter.level.ToString();
             atEnemyName.text = "GwoMéchan";
             atEnemyLvl.text = "Lv." + BuildingManager.Instance.generalQuarter.level.ToString();
+
+            UnitManager.Instance.ActualiseAttackPanel();
         }
         else
         {

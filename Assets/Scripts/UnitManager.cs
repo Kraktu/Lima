@@ -27,6 +27,16 @@ public class UnitManager : MonoBehaviour
     {
         StartCoroutine(ProducingUnit(unit));
     }
+    public void ActualiseAttackPanel()
+    {
+        for (int i = 0; i < allUnits.Count; i++)
+        {
+            allUnits[i].atUnitName.text = allUnits[i].unitName;
+            allUnits[i].atUnitNbr.text = allUnits[i].unitNbr.ToString();
+            allUnits[i].atUnitSprite.sprite = allUnits[i].smallUnitImage;
+        }
+
+    }
     public IEnumerator ProducingUnit(Unit unit)
     {
 		currentProducedUnit = unit;

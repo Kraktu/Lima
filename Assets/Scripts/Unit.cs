@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Unit : MonoBehaviour
     public double unitNbr;
     public double attack, life, attackPerTurn, armor, pierce, accuracy;
     public double woodPrice, orePrice, venacidPrice, timeToProduce;
+
+    public Text atUnitName, atUnitNbr,atUnitSentText,atUnitInputField;
+    public Image atUnitSprite;
+    
     [HideInInspector]
     public double unitInQueue;
     [HideInInspector]
