@@ -50,6 +50,7 @@ public class Barrack : Building
             if (levelToUnlockNextUnit[i]==level)
             {
                 unitsToUnlock[i].gameObject.SetActive(true);
+                unitsToUnlock[i].myAttackPanel.SetActive(true);
             }
         }
     }

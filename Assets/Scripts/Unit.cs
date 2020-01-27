@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public GameObject myAttackPanel;
     public Sprite smallUnitImage, longUnitImage;
     public string unitName;
     public double unitNbr;

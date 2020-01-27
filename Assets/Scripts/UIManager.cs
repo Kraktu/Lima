@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime,selectedUnitOwnedNumber, diplayedTimeToProduceUnits;
     public Button selectedUnitProduceButton;
     public Text selectedUnitInputField;
+    public GameObject attackPanel;
 
 	[HideInInspector]
 	public bool isSpyPanelActive;
@@ -88,13 +89,23 @@ public class UIManager : MonoBehaviour
 		}
 		isSpyPanelActive = !isSpyPanelActive;
 	}
+    public void AttackPanelControl(bool isActive)
+    {
+        if (isActive)
+        {
+            attackPanel.SetActive(true);
+        }
+        else
+        {
+            attackPanel.SetActive(false);
+        }
+    }
     public void CloseUnitTab()
     {
         WaitingforUnitSelectionText.gameObject.SetActive(true);
         UnitPanel.gameObject.SetActive(false);
         TroopsProducingCanvas.SetActive(false);
     }
-
     public void OpenSelectedUnitTab(string name,double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime,double ownedNumber, Sprite bigsprite)
     {
         WaitingforUnitSelectionText.gameObject.SetActive(false);
