@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 	static public UIManager Instance { get; private set; }
 
 	public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel,TroopsProducingCanvas,UnitPanel;
-	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade,WaitingforUnitSelectionText;
+	public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText,venacidNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade,secondSkillPointUpgrade,thirdSkillPointUpgrade, fourthSkillPointUpgrade,WaitingforUnitSelectionText;
 	public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
 	public Image workerIcon,buildingIcon;
 
@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     {
     	woodNumberText.text = ResourceManager.Instance.wood.totalResource.ToString("0") + " woods";
     	oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
+		venacidNumberText.text = ResourceManager.Instance.venacid.totalResource.ToString("0") + " venacid";
         workersNumberText.text = ResourceManager.Instance.worker.totalResource.ToString("0") + " Workers";
 		gemsNumberText.text = ResourceManager.Instance.gems.totalResource.ToString("0") + " gems";
     }

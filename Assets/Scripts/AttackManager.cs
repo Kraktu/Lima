@@ -33,7 +33,7 @@ public class AttackManager : MonoBehaviour
         }
         else
         {
-            ControlledUnit.atUnitSentText.text
+            //ControlledUnit.atUnitSentText.text
         }
     }
 }
