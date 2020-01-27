@@ -7,7 +7,10 @@ public class UnitManager : MonoBehaviour
     public Unit archer, horseman, spearman, swordman, alchemist;
     [HideInInspector]
     public bool canProduceNewUnit = true;
-    static public UnitManager Instance { get; private set; }
+	[HideInInspector]
+	public Unit currentProducedUnit;
+
+	static public UnitManager Instance { get; private set; }
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -25,6 +28,7 @@ public class UnitManager : MonoBehaviour
     }
     public IEnumerator ProducingUnit(Unit unit)
     {
+		currentProducedUnit = unit;
         UIManager.Instance.diplayedTimeToProduceUnits.gameObject.SetActive(true);
         while (unit.totalTimeToProduce > 0)
         {
@@ -37,6 +41,7 @@ public class UnitManager : MonoBehaviour
             UIManager.Instance.diplayedTimeToProduceUnits.text = (unit.totalTimeToProduce / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)unit.totalTimeToProduce % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)unit.totalTimeToProduce % 3600) % 60).ToString("00"); ;
             yield return null;
         }
+		currentProducedUnit = null;
         UnitManager.Instance.canProduceNewUnit = true;
         UIManager.Instance.diplayedTimeToProduceUnits.gameObject.SetActive(false);
     }

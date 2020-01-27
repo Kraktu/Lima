@@ -6072,12 +6072,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 3
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -6908,10 +6908,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: House
   buildingDescription: Where the villager lives
-  firstSkillPointUpgradeName: House auto collect multiplicator +10%
-  secondSkillPointUpgradeName: House base auto collect +100
-  thirdSkillPointUpgradeName: House click multiplicator +5%
-  fourthSkillPointUpgradeName: House base click +25
+  firstSkillPointUpgradeName: NaN
+  secondSkillPointUpgradeName: NaN
+  thirdSkillPointUpgradeName: NaN
+  fourthSkillPointUpgradeName: NaN
   woodCost: 15
   oreCost: 20
   venacidCost: 0

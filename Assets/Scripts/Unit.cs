@@ -41,22 +41,4 @@ public class Unit : MonoBehaviour
         }
         
     }
-
-    public IEnumerator ProducingUnit()
-    {
-        UIManager.Instance.diplayedTimeToProduceUnits.gameObject.SetActive(true);
-        while (totalTimeToProduce>0)
-        {
-            if (totalTimeToProduce<timeToProduce*remainingUnitToProduce-1)
-            {
-                remainingUnitToProduce--;
-                unitNbr++;
-            }
-            totalTimeToProduce -= Time.deltaTime;
-            UIManager.Instance.diplayedTimeToProduceUnits.text = (totalTimeToProduce / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)totalTimeToProduce % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)totalTimeToProduce % 3600) % 60).ToString("00"); ;
-            yield return null;
-        }
-        UnitManager.Instance.canProduceNewUnit = true;
-        UIManager.Instance.diplayedTimeToProduceUnits.gameObject.SetActive(false);
-    }
 }

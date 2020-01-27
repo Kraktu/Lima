@@ -55,7 +55,7 @@ public class Mine : ResourceBuilding
 		base.AddThirdSkillPoint();
 		if (skillThirdUpgraded)
 		{
-			ResourceManager.Instance.percentOreBonusPerSec += skillThirdBonus;
+			ResourceManager.Instance.percentOreBonusPerClick += skillThirdBonus;
 			UpdateMineProducing();
 			RefreshInterface();
 		}

@@ -57,7 +57,7 @@ public class Sawmill : ResourceBuilding
 		base.AddThirdSkillPoint();
 		if (skillThirdUpgraded)
 		{
-			ResourceManager.Instance.percentWoodBonusPerSec += skillThirdBonus;
+			ResourceManager.Instance.percentWoodBonusPerClick += skillThirdBonus;
 			UpdateSawmillProducing();
 			RefreshInterface();
 		}

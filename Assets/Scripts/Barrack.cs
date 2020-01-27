@@ -8,6 +8,7 @@ public class Barrack : Building
     public string goToBarrackMenuText;
     public Unit[] unitsToUnlock;
     public int[] levelToUnlockNextUnit;
+	public float timeReducedOnClick =1;
 
     public override void Start()
     {
@@ -19,12 +20,22 @@ public class Barrack : Building
         base.OnMouseDown();
         UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
         UIManager.Instance.goToMenuButton.onClick.AddListener(ShowUnitInterface);
+		ReduceProductionTime();
         RefreshInterface();
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
         firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
         goToBarrackMenuText, goToBarrackMenuSprite);
     }
-    public void UpgradeBarrack()
+
+	public void ReduceProductionTime()
+	{
+		if (UnitManager.Instance.canProduceNewUnit == false)
+		{
+			UnitManager.Instance.currentProducedUnit.totalTimeToProduce -= timeReducedOnClick;
+		}
+	}
+
+	public void UpgradeBarrack()
     {
         if (LevelUp())
         {
