@@ -16,8 +16,12 @@ public class UIManager : MonoBehaviour
     public Text selectedUnitName,selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth,selectedUnitWoodPrice,selectedUnitOrePrice,selectedUnitVenacidPrice,selectedUnitTime,selectedUnitOwnedNumber, diplayedTimeToProduceUnits;
     public Button selectedUnitProduceButton;
     public Text selectedUnitInputField;
+    
     public GameObject attackPanel;
 
+    public Text atUserName, atUserLvl, atEnemyName, atEnemyLvl;
+    public Image atUserIcon, atEnemyIcon;
+    
 	[HideInInspector]
 	public bool isSpyPanelActive;
 
@@ -94,6 +98,10 @@ public class UIManager : MonoBehaviour
         if (isActive)
         {
             attackPanel.SetActive(true);
+            atUserName.text = "Weshweshlesamis";
+            atUserLvl.text = "Lv."+BuildingManager.Instance.generalQuarter.level.ToString();
+            atEnemyName.text = "GwoMéchan";
+            atEnemyLvl.text = "Lv." + BuildingManager.Instance.generalQuarter.level.ToString();
         }
         else
         {
