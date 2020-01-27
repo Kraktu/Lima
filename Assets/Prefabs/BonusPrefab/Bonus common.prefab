@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 961661585914183639}
   - component: {fileID: 7350406647036814535}
   m_Layer: 0
-  m_Name: Bonus
+  m_Name: Bonus common
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 18e2447d0f9b2bf49862354d442f80a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,4 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 10
+  spawnChance: 55
+  time: 2
+  destroyClicks: 2
+  gemsNbr: 1
+  typeOfBonus: 1

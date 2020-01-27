@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b112716e5c63a4b9b653e7723f51bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 3
+  spawnMinTime: 1
+  spawnMaxTime: 1
   center: {x: 0, y: 2, z: 0}
   size: {x: 35, y: 1, z: 15}
   SpawnChest:
@@ -53,4 +54,8 @@ MonoBehaviour:
   - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
   - {fileID: 7118135460440333157, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
   Bonus:
-  - {fileID: 3742230682664721933, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7350406647036814535, guid: 6cd8b2850107e1f4cb56095b502e8541, type: 3}
+  - {fileID: 7350406647036814535, guid: 680d83aeb21723642a5a35c5b984276f, type: 3}
+  - {fileID: 7350406647036814535, guid: c2857939615c0dc4992931c9bd45bc75, type: 3}
+  - {fileID: 7350406647036814535, guid: 3c6ca8b5b0114374ebc09092dc805487, type: 3}
+  - {fileID: 7350406647036814535, guid: bda0141261533074f9bc1380ff6f8492, type: 3}
