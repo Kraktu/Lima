@@ -26,14 +26,16 @@ public class AttackManager : MonoBehaviour
 
     public void AddUnitToAttack(Unit ControlledUnit)
     {
+        double currentlySentUnit = double.Parse(ControlledUnit.atUnitSentText.text);
+        double userInput = double.Parse(ControlledUnit.atUnitInputField.text);
 
-        if (double.Parse(ControlledUnit.atUnitInputField.text)+double.Parse(ControlledUnit.atUnitSentText.text) >ControlledUnit.unitNbr)
+        if (userInput + currentlySentUnit > ControlledUnit.unitNbr)
         {
             ControlledUnit.atUnitSentText.text = ControlledUnit.unitNbr.ToString();
         }
         else
         {
-            ControlledUnit.atUnitSentText.text
+            ControlledUnit.atUnitSentText.text = (currentlySentUnit + userInput).ToString();
         }
     }
 }
