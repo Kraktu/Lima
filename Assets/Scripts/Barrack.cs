@@ -43,7 +43,50 @@ public class Barrack : Building
             RefreshInterface();
         }
     }
-    public void UpdateBarrack()
+
+	//public override void AddFirstSkillPoint()
+	//{
+	//	base.AddFirstSkillPoint();
+	//	if (skillFirstUpgraded)
+	//	{
+	//		ResourceManager.Instance. += skillFirstBonus;
+	//		UpdateBarrack();
+	//		RefreshInterface();
+	//	}
+	//}
+	//public override void AddSecondSkillPoint()
+	//{
+	//	base.AddSecondSkillPoint();
+	//	if (skillSecondUpgraded)
+	//	{
+	//		ResourceManager.Instance.flatOreBonusPerSec += skillSecondBonus;
+	//		UpdateBarrack();
+	//		RefreshInterface();
+	//	}
+	//}
+	//public override void AddThirdSkillPoint()
+	//{
+	//	base.AddThirdSkillPoint();
+	//	if (skillThirdUpgraded)
+	//	{
+	//		ResourceManager.Instance.percentOreBonusPerClick += skillThirdBonus;
+	//		UpdateBarrack();
+	//		RefreshInterface();
+	//	}
+	//}
+	//public override void AddFourthSkillPoint()
+	//{
+	//	base.AddFourthSkillPoint();
+	//	if (skillFourthUpgraded)
+	//	{
+	//		ResourceManager.Instance.flatOreBonusPerClick += skillFourthBonus;
+	//		UpdateBarrack();
+	//		RefreshInterface();
+	//	}
+	//}
+
+
+	public void UpdateBarrack()
     {
         for (int i = 0; i < unitsToUnlock.Length; i++)
         {
