@@ -11,6 +11,8 @@ public class AttackManager : MonoBehaviour
 {
     [HideInInspector]
     public List<ArmySent> armySent = new List<ArmySent>();
+    [HideInInspector]
+    public double timeToAttack;
     static public AttackManager Instance { get; private set; }
 
     private void Awake()
@@ -50,6 +52,17 @@ public class AttackManager : MonoBehaviour
         else
         {
             ControlledUnit.atUnitSentText.text = (currentlySentUnit - userInput).ToString();
+        }
+    }
+
+    public void SendAttack()
+    {
+        for (int i = 0; i < UnitManager.Instance.allUnits.Count; i++)
+        {
+            if (double.Parse(UnitManager.Instance.allUnits[i].atUnitSentText.text)>0)
+            {
+
+            }
         }
     }
 }

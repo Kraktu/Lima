@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyVillage : MonoBehaviour
 {
-    public float timeToAttack;
+    public float timeToGetAttacked;
     public string enemyName;
     public int level;
     public Sprite myIcon;
@@ -17,6 +17,7 @@ public class EnemyVillage : MonoBehaviour
         UIManager.Instance.atEnemyName.text = enemyName;
         UIManager.Instance.atEnemyLvl.text = "Lv."+level.ToString();
         UIManager.Instance.atEnemyIcon.sprite = myIcon;
+        AttackManager.Instance.timeToAttack = timeToGetAttacked;
 
 	}
 }

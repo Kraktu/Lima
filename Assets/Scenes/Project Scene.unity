@@ -15365,7 +15365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToAttack: 600
+  timeToGetAttacked: 0
   enemyName: Winnie
   level: 2
   myIcon: {fileID: 21300000, guid: 669149cedd5aa25429bd524d77786fbd, type: 3}
@@ -17526,7 +17526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToAttack: 10
+  timeToGetAttacked: 0
   enemyName: OuiOui
   level: 1
   myIcon: {fileID: 21300000, guid: 1e7786d7b9051b74bbedef050f2ce1eb, type: 3}
@@ -17911,7 +17911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToAttack: 1800
+  timeToGetAttacked: 0
   enemyName: Pikachu
   level: 3
   myIcon: {fileID: 21300000, guid: 1cd96935a953c3346aaba1a403712a66, type: 3}
@@ -20042,7 +20042,7 @@ MonoBehaviour:
   startingWoodPerClick: 1
   startingOrePerClick: 1
   startingVenacidPerClick: 1
-  startingWorkerPerClick: 0
+  startingWorkerPerClick: 1
   flatWoodBonusPerSec: 0
   percentWoodBonusPerSec: 0
   flatOreBonusPerSec: 0
@@ -20188,6 +20188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674d9ecd4b577bf4d823e93694b844d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToAttack: 0
 --- !u!1 &1600890898
 GameObject:
   m_ObjectHideFlags: 0
