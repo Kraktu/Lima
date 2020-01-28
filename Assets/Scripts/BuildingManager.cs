@@ -7,7 +7,7 @@ public class BuildingManager : MonoBehaviour
     static public BuildingManager Instance { get; private set; }
 
     [SerializeField]
-    public Building sawmill, mine, generalQuarter, house,barraks;
+    public Building sawmill, mine, generalQuarter, house,barraks,refinery;
 
     private void Awake()
     {

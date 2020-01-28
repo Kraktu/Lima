@@ -38,4 +38,18 @@ public class AttackManager : MonoBehaviour
             ControlledUnit.atUnitSentText.text = (currentlySentUnit + userInput).ToString();
         }
     }
+    public void RemoveUnitToAttack(Unit ControlledUnit)
+    {
+        double currentlySentUnit = double.Parse(ControlledUnit.atUnitSentText.text);
+        double userInput = double.Parse(ControlledUnit.atUnitInputField.text);
+
+        if (userInput > currentlySentUnit)
+        {
+            ControlledUnit.atUnitSentText.text = ("0");
+        }
+        else
+        {
+            ControlledUnit.atUnitSentText.text = (currentlySentUnit - userInput).ToString();
+        }
+    }
 }

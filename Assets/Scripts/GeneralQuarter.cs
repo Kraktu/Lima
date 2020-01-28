@@ -18,6 +18,8 @@ public class GeneralQuarter : Building
         buildings.Add(BuildingManager.Instance.sawmill);
         buildings.Add(BuildingManager.Instance.mine);
         buildings.Add(BuildingManager.Instance.house);
+        buildings.Add(BuildingManager.Instance.barraks);
+        buildings.Add(BuildingManager.Instance.refinery);
     }
     public override void OnMouseDown()
 	{
