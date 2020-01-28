@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct ArmySent
-{
-    public Unit sentUnit;
-    public double nbrOfUnit;
-}
 public class AttackManager : MonoBehaviour
 {
     [HideInInspector]
-    public List<ArmySent> armySent = new List<ArmySent>();
+    public List<Unit> armySent = new List<Unit>();
     [HideInInspector]
     public double timeToAttack;
     static public AttackManager Instance { get; private set; }
@@ -59,9 +54,13 @@ public class AttackManager : MonoBehaviour
     {
         for (int i = 0; i < UnitManager.Instance.allUnits.Count; i++)
         {
-            if (double.Parse(UnitManager.Instance.allUnits[i].atUnitSentText.text)>0)
+            double currentUnitNbr = double.Parse(UnitManager.Instance.allUnits[i].atUnitSentText.text);
+            if (currentUnitNbr > 0)
             {
-
+                for (int j = 0; j < currentUnitNbr; j++)
+                {
+                    armySent.Add(UnitManager.Instance.allUnits[i]);
+                }
             }
         }
     }
