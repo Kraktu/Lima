@@ -101,9 +101,6 @@ public class UIManager : MonoBehaviour
             attackPanel.SetActive(true);
             atUserName.text = "Weshweshlesamis";
             atUserLvl.text = "Lv."+BuildingManager.Instance.generalQuarter.level.ToString();
-            atEnemyName.text = "GwoMéchan";
-            atEnemyLvl.text = "Lv." + BuildingManager.Instance.generalQuarter.level.ToString();
-
             UnitManager.Instance.ActualiseAttackPanel();
         }
         else

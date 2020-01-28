@@ -27,9 +27,4 @@ public class MapManager : MonoBehaviour
 		cam = FindObjectOfType<Camera>();
 		initialCameraPosition = cam.transform.position;
     }
-
-    void Update()
-    {
-        
-    }
 }
