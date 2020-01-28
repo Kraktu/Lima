@@ -8,9 +8,9 @@ public class ResourceManager : MonoBehaviour
     static public ResourceManager Instance { get; private set; }
 
     public string woodName, oreName, venacidName,workerName,gemsName;
-    public int startingWood, startingOre, startingVenacid, startingWorker,startingGems;
-	public int startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
-	public int startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
+    public double startingWood, startingOre, startingVenacid, startingWorker,startingGems;
+	public double startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
+	public double startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
 
     [HideInInspector]
     public Resource wood, ore, venacid,worker,gems;

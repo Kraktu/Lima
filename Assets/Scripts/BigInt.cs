@@ -166,7 +166,30 @@ public class BigInt
         {
             return nbr[0].ToString();
         }
-        
+       //BigInt A;
+       //BigInt B;
+       //BigInt c = A + B;
     }
 
+   // public static BigInt operator+ (BigInt Terme1, BigInt Term2)
+   // {
+   //
+   //     for (int i = 0; i < nbrToAdd.rank; i++)
+   //     {
+   //         if (nbr[i] == 0)
+   //         {
+   //             rank++;
+   //         }
+   //         nbr[i] += nbrToAdd.nbr[i];
+   //         if (nbr[i] > 1000)
+   //         {
+   //             if (nbr[i + 1] == 0)
+   //             {
+   //                 rank++;
+   //             }
+   //             nbr[i + 1] += Mathf.Floor(nbr[i] / 1000);
+   //             nbr[i] = nbr[i] % 1000;
+   //         }
+   //     }
+   // }
 }
