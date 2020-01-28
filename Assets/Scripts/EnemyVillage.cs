@@ -18,6 +18,7 @@ public class EnemyVillage : MonoBehaviour
         UIManager.Instance.atEnemyLvl.text = "Lv."+level.ToString();
         UIManager.Instance.atEnemyIcon.sprite = myIcon;
         AttackManager.Instance.timeToAttack = timeToGetAttacked;
+        AttackManager.Instance.AttackedVillage = this.gameObject;
 
 	}
 }

@@ -17,9 +17,9 @@ public class UIManager : MonoBehaviour
     public Button selectedUnitProduceButton;
     public Text selectedUnitInputField;
     
-    public GameObject attackPanel;
+    public GameObject attackPanel,attackReportPanel;
 
-    public Text atUserName, atUserLvl, atEnemyName, atEnemyLvl;
+    public Text atUserName, atUserLvl, atEnemyName, atEnemyLvl, attackReportText;
     public Image atUserIcon, atEnemyIcon;
     
 	[HideInInspector]

@@ -9,6 +9,7 @@ public class UnitManager : MonoBehaviour
     public bool canProduceNewUnit = true;
 	[HideInInspector]
 	public Unit currentProducedUnit;
+    [HideInInspector]
 	public List<Unit> allUnits = new List<Unit>();
 
 	static public UnitManager Instance { get; private set; }

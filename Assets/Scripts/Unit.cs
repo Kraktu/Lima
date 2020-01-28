@@ -21,7 +21,6 @@ public class Unit : MonoBehaviour
     public double totalTimeToProduce;
     [HideInInspector]
     public double remainingUnitToProduce;
-
     public void OpenMyTab()
     {
         UIManager.Instance.selectedUnitProduceButton.onClick.RemoveAllListeners();
