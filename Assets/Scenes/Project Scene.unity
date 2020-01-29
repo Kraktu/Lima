@@ -20339,9 +20339,9 @@ MonoBehaviour:
   startingVenacid: 20
   startingWorker: 0
   startingGems: 0
-  startingWoodPerSec: 20
-  startingOrePerSec: 20
-  startingVenacidPerSec: 5
+  startingWoodPerSec: 200000000
+  startingOrePerSec: 200000000
+  startingVenacidPerSec: 50
   startingWorkerPerSec: 10
   startingWoodPerClick: 1
   startingOrePerClick: 1
@@ -20720,8 +20720,8 @@ MonoBehaviour:
   woodCost: 10
   oreCost: 20
   venacidCost: 0
-  startingWoodUpgradeCost: 300
-  startingOreUpgradeCost: 250
+  startingWoodUpgradeCost: 20
+  startingOreUpgradeCost: 25
   startingVenacidUpgradeCost: 0
   magicRatio: {x: 1.02, y: 1.02, z: 1.02}
   canBuild: 1
