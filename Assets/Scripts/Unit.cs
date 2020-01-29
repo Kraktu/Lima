@@ -19,8 +19,13 @@ public class Unit : MonoBehaviour
     public double unitInQueue;
     [HideInInspector]
     public double totalTimeToProduce;
+	[HideInInspector]
+	public double timeToReduceMultiplicator = 100;
     [HideInInspector]
     public double remainingUnitToProduce;
+	[HideInInspector]
+	public double flatTimeReducing = 0;
+
     public void OpenMyTab()
     {
         UIManager.Instance.selectedUnitProduceButton.onClick.RemoveAllListeners();
@@ -38,7 +43,11 @@ public class Unit : MonoBehaviour
             ResourceManager.Instance.ore.totalResource -= unitInQueue*orePrice;
             ResourceManager.Instance.venacid.totalResource -= unitInQueue*venacidPrice;
             UnitManager.Instance.canProduceNewUnit = false;
-            totalTimeToProduce = unitInQueue * timeToProduce;
+            totalTimeToProduce = (unitInQueue * timeToProduce)*(timeToReduceMultiplicator/100)-flatTimeReducing*unitInQueue;
+			if (totalTimeToProduce<=0)
+			{
+				totalTimeToProduce = 1f;
+			}
             remainingUnitToProduce = unitInQueue;
 
             UnitManager.Instance.ProduceUnitCallCoroutine(this);
