@@ -139,11 +139,11 @@ public class UIManager : MonoBehaviour
     // ============= Transformation en Big Chiffres 
 
 
-    string[] suffixes = new string[] {"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "d", "U", "D", "!", "@", "#", "$", "%", "^", "&", "*", "Aa", "Ab", "Ac", "Ad" };
+    string[] suffixes = new string[] {"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "d", "U", "D", "!", "@", "#", "$", "%", "^", "&", "*", "Aa", "Ab", "Ac", "Ad", "Ae", "Af", "Ag", "Ah", "Ai", "Aj", "Ak", "Al", "Am", "An" };
     public string BigIntToString(double nbrToTransform)
     {
         int rank = 0;
-        double[] nbr = new double[25];
+        double[] nbr = new double[35];
         nbr[0] = nbrToTransform;
         for (int i = 0; i < nbr.Length - 1; i++)
         {
