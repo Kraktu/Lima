@@ -57,13 +57,13 @@ public class Building:MonoBehaviour
         
         if (level==0)
         {
-            currentCost = woodCost.ToString("0") + " woods\n" + oreCost.ToString("0") + " ores\n" + venacidCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
         }
         else if (level>0)
         {
-            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
         }
-        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0"); 
+        villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit); 
 
         UIManager.Instance.BuildingInterfaceActivation(true);
         UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
@@ -241,17 +241,17 @@ public class Building:MonoBehaviour
 
     public virtual void RefreshInterface()
     {
-        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0");
+        villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
         if (level==0)
         {
-            currentCost = woodCost.ToString("0") + " woods\n" + oreCost.ToString("0") + " ores\n" + venacidCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
         }
         else
         {
-            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
     }
 	public virtual void AnimationBuildings()
 	{

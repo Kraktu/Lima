@@ -95,9 +95,9 @@ public class House : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.worker.resourcePerSec).ToString("0") + " /h";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + "%" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + "%" + " lvl" + fourthSkillPointLevel);
+		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick) + " /Click";
+		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.worker.resourcePerSec) + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + "%" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + "%" + " lvl" + fourthSkillPointLevel);
 	}
 }

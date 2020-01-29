@@ -35,11 +35,11 @@ public class AttackManager : MonoBehaviour
 
         if (userInput + currentlySentUnit > ControlledUnit.unitNbr)
         {
-            ControlledUnit.atUnitSentText.text = ControlledUnit.unitNbr.ToString();
+            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(ControlledUnit.unitNbr);
         }
         else
         {
-            ControlledUnit.atUnitSentText.text = (currentlySentUnit + userInput).ToString();
+            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(currentlySentUnit + userInput);
         }
     }
     public void RemoveUnitToAttack(Unit ControlledUnit)
@@ -53,7 +53,7 @@ public class AttackManager : MonoBehaviour
         }
         else
         {
-            ControlledUnit.atUnitSentText.text = (currentlySentUnit - userInput).ToString();
+            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(currentlySentUnit - userInput);
         }
     }
 
@@ -152,7 +152,7 @@ public class AttackManager : MonoBehaviour
         UIManager.Instance.attackReportText.text = "You Won : \n" + wonWood + " Wood\n" + wonOre + "Ore" + "\nAnd came back with :";
         for (int i = 0; i < comeBackArmy.Count; i++)
         {
-            UIManager.Instance.attackReportText.text += "\n" + comeBackArmy[i].armyName + " : " + comeBackArmy[i].armyNbr.ToString();        
+            UIManager.Instance.attackReportText.text += "\n" + comeBackArmy[i].armyName + " : " + UIManager.Instance.BigIntToString(comeBackArmy[i].armyNbr);        
         }
     }
 }

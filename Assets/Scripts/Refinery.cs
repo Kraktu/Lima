@@ -77,9 +77,9 @@ public class Refinery : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickString = producedResource + ": " + ResourceManager.Instance.venacid.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.venacid.resourcePerSec).ToString("0") + " /h";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus * 3600).ToString("0") + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + " venacid/click" + " lvl" + fourthSkillPointLevel);
+		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick) + " /Click";
+		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.venacid.resourcePerSec) + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus * 3600) + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + " venacid/click" + " lvl" + fourthSkillPointLevel);
 	}
 }
