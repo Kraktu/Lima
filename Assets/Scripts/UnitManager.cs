@@ -54,7 +54,7 @@ public class UnitManager : MonoBehaviour
             yield return null;
         }
 		currentProducedUnit = null;
-        UnitManager.Instance.canProduceNewUnit = true;
+        canProduceNewUnit = true;
         UIManager.Instance.diplayedTimeToProduceUnits.gameObject.SetActive(false);
     }
 }
