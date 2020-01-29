@@ -145,12 +145,12 @@ public class AttackManager : MonoBehaviour
             }
         }
         currentSimultaneousAttack--;
-        GetAttackReport(comeBackArmy,wonWood,wonOre);
+        GetAttackReport(comeBackArmy,wonWood,wonOre,VenacidWon);
     }
-    public void GetAttackReport(List<Army> comeBackArmy, double wonWood, double wonOre)
+    public void GetAttackReport(List<Army> comeBackArmy, double wonWood, double wonOre,double wonVenacid)
     {
         UIManager.Instance.attackReportPanel.SetActive(true);
-        UIManager.Instance.attackReportText.text = "You Won : \n" + wonWood + " Wood\n" + wonOre + "Ore" + "\nAnd came back with :";
+        UIManager.Instance.attackReportText.text = "You Won : \n" + UIManager.Instance.BigIntToString( wonWood )+ " Wood\n" + UIManager.Instance.BigIntToString(wonOre) + " Ore\n" + UIManager.Instance.BigIntToString(wonVenacid)+" Venacid"+ "\nAnd came back with :";
         for (int i = 0; i < comeBackArmy.Count; i++)
         {
             UIManager.Instance.attackReportText.text += "\n" + comeBackArmy[i].armyName + " : " + UIManager.Instance.BigIntToString(comeBackArmy[i].armyNbr);        
