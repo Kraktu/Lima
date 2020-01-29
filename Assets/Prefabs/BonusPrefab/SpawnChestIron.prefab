@@ -185,6 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615508899808634858}
+  - component: {fileID: 2093233642676763652}
   m_Layer: 0
   m_Name: SpawnChestIron
   m_TagString: Untagged
@@ -199,7 +200,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3615508899808634859}
-  m_LocalRotation: {x: -0, y: 0.99452424, z: 0.104506545, w: 0}
+  m_LocalRotation: {x: 0, y: 0.99452466, z: 0.104502484, w: 0}
   m_LocalPosition: {x: -2.7, y: 0.62247, z: -3.75}
   m_LocalScale: {x: 0.55528, y: 0.55528, z: 0.55528}
   m_Children:
@@ -208,7 +209,24 @@ Transform:
   - {fileID: 3615508900072432491}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -11.997001, y: 180.00002, z: 0}
+  m_LocalEulerAnglesHint: {x: -11.997001, y: 180, z: 0}
+--- !u!114 &2093233642676763652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615508899808634859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnChance: 55
+  time: 2
+  destroyClicks: 2
+  gemsNbr: 1
+  typeOfBonus: 1
 --- !u!1 &3615508900072432488
 GameObject:
   m_ObjectHideFlags: 0
