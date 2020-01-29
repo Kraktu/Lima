@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class AttackManager : MonoBehaviour
 {
@@ -113,10 +114,10 @@ public class AttackManager : MonoBehaviour
         // Phase d'attack
         if (atArmy.Count > 0)
         {
-            StartCoroutine(ArmyComeBack(atArmy, Random.Range(1000 * enemy.level, 10000 * enemy.level), Random.Range(1000 * enemy.level, 10000 * enemy.level), enemy.transform.position, enemy));
+            StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon,(float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
         }
     }
-    public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre, Vector3 startingPos, EnemyVillage enemy)
+    public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy)
     {
         GameObject go = Instantiate(armyPrefabOnMap);
         Vector3 endingPos = OurVillageOnMap.transform.position;
@@ -143,7 +144,7 @@ public class AttackManager : MonoBehaviour
                 }
             }
         }
-        currentSimultaneousAttack++;
+        currentSimultaneousAttack--;
         GetAttackReport(comeBackArmy,wonWood,wonOre);
     }
     public void GetAttackReport(List<Army> comeBackArmy, double wonWood, double wonOre)
@@ -155,4 +156,11 @@ public class AttackManager : MonoBehaviour
             UIManager.Instance.attackReportText.text += "\n" + comeBackArmy[i].armyName + " : " + UIManager.Instance.BigIntToString(comeBackArmy[i].armyNbr);        
         }
     }
+
+   //public double GetRandomNumber(double minimum, double maximum)
+   //{
+   //    Unity.Mathematics.Random random = new Unity.Mathematics.Random();
+   //    return random.NextDouble(0,1) * (maximum - minimum) + minimum;
+   //}
 }
+

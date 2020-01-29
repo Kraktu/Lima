@@ -15,6 +15,7 @@ public class GeneralQuarter : Building
     public override void Start()
     {
         base.Start();
+        MapManager.Instance.RefreshEnemies();
         buildings.Add(BuildingManager.Instance.sawmill);
         buildings.Add(BuildingManager.Instance.mine);
         buildings.Add(BuildingManager.Instance.house);
@@ -48,6 +49,7 @@ public class GeneralQuarter : Building
 	{
 		if(LevelUp())
 		{
+            MapManager.Instance.RefreshEnemies();
 			RefreshInterface();
 		}
 	}

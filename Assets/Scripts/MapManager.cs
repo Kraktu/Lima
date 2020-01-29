@@ -8,6 +8,8 @@ public class MapManager : MonoBehaviour
 	public Vector3 cameraMapPosition;
 	[HideInInspector]
 	public Vector3 initialCameraPosition;
+
+    public EnemyVillage[] enemyVillages;
 	static public MapManager Instance { get; private set; }
 
 
@@ -26,5 +28,12 @@ public class MapManager : MonoBehaviour
     {
 		cam = FindObjectOfType<Camera>();
 		initialCameraPosition = cam.transform.position;
+    }
+    public void RefreshEnemies()
+    {
+        for (int i = 0; i < enemyVillages.Length; i++)
+        {
+            enemyVillages[i].LoadAnEnemy();
+        }
     }
 }
