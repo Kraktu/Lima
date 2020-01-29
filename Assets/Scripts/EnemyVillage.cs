@@ -15,7 +15,7 @@ public class EnemyVillage : MonoBehaviour
 		UIManager.Instance.spyPanel.SetActive(false);
 		UIManager.Instance.isSpyPanelActive = false;
         UIManager.Instance.atEnemyName.text = enemyName;
-        UIManager.Instance.atEnemyLvl.text = "Lv."+level.ToString();
+        UIManager.Instance.atEnemyLvl.text = "Lv."+ UIManager.Instance.BigIntToString(level);
         UIManager.Instance.atEnemyIcon.sprite = myIcon;
         AttackManager.Instance.timeToAttack = timeToGetAttacked;
         AttackManager.Instance.AttackedVillage = this.gameObject;

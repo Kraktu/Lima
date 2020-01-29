@@ -38,10 +38,10 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         woodNumberText.text = BigIntToString(ResourceManager.Instance.wood.totalResource) + " woods";
-        oreNumberText.text = ResourceManager.Instance.ore.totalResource.ToString("0") + " ores";
-        venacidNumberText.text = ResourceManager.Instance.venacid.totalResource.ToString("0") + " venacid";
-        workersNumberText.text = ResourceManager.Instance.worker.totalResource.ToString("0") + " Workers";
-        gemsNumberText.text = ResourceManager.Instance.gems.totalResource.ToString("0") + " gems";
+        oreNumberText.text = BigIntToString(ResourceManager.Instance.ore.totalResource) + " ores";
+        venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource) + " venacid";
+        workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource) + " Workers";
+        gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource) + " gems";
     }
 
     public void BuildingInterfaceActivation(bool isActive)
@@ -101,7 +101,7 @@ public class UIManager : MonoBehaviour
         {
             attackPanel.SetActive(true);
             atUserName.text = "Weshweshlesamis";
-            atUserLvl.text = "Lv." + BuildingManager.Instance.generalQuarter.level.ToString();
+            atUserLvl.text = "Lv." + BigIntToString(BuildingManager.Instance.generalQuarter.level);
             UnitManager.Instance.ActualiseAttackPanel();
         }
         else
@@ -121,17 +121,17 @@ public class UIManager : MonoBehaviour
         UnitPanel.SetActive(true);
 
         selectedUnitName.text = name;
-        selectedUnitStatFirst.text = "ATK : " + firststat.ToString();
-        selectedUnitStatSecond.text = "HP : " + secondstat.ToString();
-        selectedUnitStatThird.text = "ATK/T : " + thirdstat.ToString();
-        selectedUnitStatFourth.text = "AR : " + fourthstat.ToString();
-        selectedUnitStatFifth.text = "PRC : " + fifthstat.ToString();
-        selectedUnitStatSixth.text = "ACC : " + sixthstat.ToString();
-        selectedUnitWoodPrice.text = woodprice.ToString();
-        selectedUnitOrePrice.text = oreprice.ToString();
-        selectedUnitVenacidPrice.text = venacidprice.ToString();
-        selectedUnitTime.text = producingtime.ToString();
-        selectedUnitOwnedNumber.text = ownedNumber.ToString();
+		selectedUnitStatFirst.text = "ATK : " + BigIntToString(firststat);
+        selectedUnitStatSecond.text = "HP : " + BigIntToString(secondstat);
+        selectedUnitStatThird.text = "ATK/T : " + BigIntToString(thirdstat);
+        selectedUnitStatFourth.text = "AR : " + BigIntToString(fourthstat);
+        selectedUnitStatFifth.text = "PRC : " + BigIntToString(fifthstat);
+        selectedUnitStatSixth.text = "ACC : " + BigIntToString(sixthstat);
+        selectedUnitWoodPrice.text = BigIntToString(woodprice);
+        selectedUnitOrePrice.text = BigIntToString(oreprice);
+        selectedUnitVenacidPrice.text = BigIntToString(venacidprice);
+        selectedUnitTime.text = BigIntToString(producingtime);
+        selectedUnitOwnedNumber.text = BigIntToString(ownedNumber);
         selectedUnitBigSprite.sprite = bigsprite;
     }
 
@@ -160,7 +160,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            return nbr[0].ToString();
+            return nbr[0].ToString("0");
         }
 
     }

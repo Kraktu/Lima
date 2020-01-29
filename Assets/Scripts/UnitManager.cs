@@ -33,7 +33,7 @@ public class UnitManager : MonoBehaviour
         for (int i = 0; i < allUnits.Count; i++)
         {
             allUnits[i].atUnitName.text = allUnits[i].unitName;
-            allUnits[i].atUnitNbr.text = allUnits[i].unitNbr.ToString();
+            allUnits[i].atUnitNbr.text = UIManager.Instance.BigIntToString(allUnits[i].unitNbr);
             allUnits[i].atUnitSprite.sprite = allUnits[i].smallUnitImage;
         }
 
