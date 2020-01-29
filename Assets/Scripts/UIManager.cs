@@ -140,11 +140,6 @@ public class UIManager : MonoBehaviour
 
 
     string[] suffixes = new string[] {"", "K", "M", "B", "T", "q", "Q", "s", "S", "O", "N", "d", "U", "D", "!", "@", "#", "$", "%", "^", "&", "*", "Aa", "Ab", "Ac", "Ad" };
-
-    public void TransformIntToBigInt()
-    {
-        
-    }
     public string BigIntToString(double nbrToTransform)
     {
         int rank = 0;

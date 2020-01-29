@@ -598,7 +598,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &30098878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2888,7 +2890,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &208793297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3307,7 +3311,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 288549411}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &257174590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3977,7 +3983,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 213271968}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &305859134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11825,7 +11833,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &932977102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12590,7 +12600,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1001250523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12754,7 +12766,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1007973069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13032,7 +13046,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 921903031}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!1 &1024791485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7638346441841959730, guid: 9c14b647f98de674485b2fe57a1fdb30,
@@ -15249,7 +15265,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 1497476800}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1227434453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17907,7 +17925,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1432357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18841,10 +18861,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Barrack
   buildingDescription: You can create Unit here
-  firstSkillPointUpgradeName: NaN
-  secondSkillPointUpgradeName: NaN
-  thirdSkillPointUpgradeName: NaN
-  fourthSkillPointUpgradeName: NaN
+  firstSkillPointUpgradeName: "alex d\xE9brouille toi"
+  secondSkillPointUpgradeName: xD
+  thirdSkillPointUpgradeName: g pa d'inspi
+  fourthSkillPointUpgradeName: dsl
   woodCost: 10
   oreCost: 20
   venacidCost: 0
@@ -18901,6 +18921,7 @@ MonoBehaviour:
   - {fileID: 1227434452}
   levelToUnlockNextUnit: 0100000002000000030000000400000005000000
   timeReducedOnClick: 1
+  timePercentReducedOnClick: 1
 --- !u!65 &1462228425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21369,7 +21390,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1653608640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22763,7 +22786,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1790936670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24072,7 +24097,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 1898264137}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1853417453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24994,7 +25021,9 @@ MonoBehaviour:
   atUnitSprite: {fileID: 0}
   unitInQueue: 0
   totalTimeToProduce: 0
+  timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
+  flatTimeReducing: 0
 --- !u!114 &1945919085
 MonoBehaviour:
   m_ObjectHideFlags: 0
