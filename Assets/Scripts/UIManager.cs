@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     public Text selectedUnitName, selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth, selectedUnitWoodPrice, selectedUnitOrePrice, selectedUnitVenacidPrice, selectedUnitTime, selectedUnitOwnedNumber, diplayedTimeToProduceUnits;
     public Button selectedUnitProduceButton;
     public Text selectedUnitInputField;
+	public InputField inputFieldToClear;
+	public InputField[] inputFieldUnits;
 
     public GameObject attackPanel, attackReportPanel;
 
@@ -103,6 +105,10 @@ public class UIManager : MonoBehaviour
             atUserName.text = "Weshweshlesamis";
             atUserLvl.text = "Lv." + BigIntToString(BuildingManager.Instance.generalQuarter.level);
             UnitManager.Instance.ActualiseAttackPanel();
+			for (int i = 0; i < inputFieldUnits.Length; i++)
+			{
+				Clear(inputFieldUnits[i]);
+			}
         }
         else
         {
@@ -111,6 +117,7 @@ public class UIManager : MonoBehaviour
     }
     public void CloseUnitTab()
     {
+		Clear(inputFieldToClear);
         WaitingforUnitSelectionText.gameObject.SetActive(true);
         UnitPanel.gameObject.SetActive(false);
         TroopsProducingCanvas.SetActive(false);
@@ -135,6 +142,10 @@ public class UIManager : MonoBehaviour
         selectedUnitBigSprite.sprite = bigsprite;
     }
 
+	public void Clear(InputField toClear)
+	{
+		toClear.text = "";
+	}
 
     // ============= Transformation en Big Chiffres 
 

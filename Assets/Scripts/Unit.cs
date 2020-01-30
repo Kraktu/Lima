@@ -51,7 +51,7 @@ public class Unit : MonoBehaviour
             remainingUnitToProduce = unitInQueue;
 
             UnitManager.Instance.ProduceUnitCallCoroutine(this);
-
+			UIManager.Instance.CloseUnitTab();
         }
         
     }
