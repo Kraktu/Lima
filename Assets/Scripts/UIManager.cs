@@ -121,12 +121,12 @@ public class UIManager : MonoBehaviour
         UnitPanel.SetActive(true);
 
         selectedUnitName.text = name;
-		selectedUnitStatFirst.text = "ATK : " + BigIntToString(firststat);
-        selectedUnitStatSecond.text = "HP : " + BigIntToString(secondstat);
-        selectedUnitStatThird.text = "ATK/T : " + BigIntToString(thirdstat);
-        selectedUnitStatFourth.text = "AR : " + BigIntToString(fourthstat);
-        selectedUnitStatFifth.text = "PRC : " + BigIntToString(fifthstat);
-        selectedUnitStatSixth.text = "ACC : " + BigIntToString(sixthstat);
+		selectedUnitStatFirst.text =  BigIntToString(firststat);
+        selectedUnitStatSecond.text = BigIntToString(secondstat);
+        selectedUnitStatThird.text =  BigIntToString(thirdstat);
+        selectedUnitStatFourth.text = BigIntToString(fourthstat);
+        selectedUnitStatFifth.text =  BigIntToString(fifthstat);
+        selectedUnitStatSixth.text =  BigIntToString(sixthstat);
         selectedUnitWoodPrice.text = BigIntToString(woodprice);
         selectedUnitOrePrice.text = BigIntToString(oreprice);
         selectedUnitVenacidPrice.text = BigIntToString(venacidprice);
