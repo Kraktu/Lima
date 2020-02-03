@@ -114,12 +114,10 @@ public class UIManager : MonoBehaviour
 			{
 				Clear(inputFieldUnits[i]);
 			}
-			DisableButton();
         }
         else
         {
             attackPanel.SetActive(false);
-			EnableButton();
         }
     }
     public void CloseUnitTab()
