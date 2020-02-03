@@ -19,10 +19,17 @@ public class Barrack : Building
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
-        UIManager.Instance.goToMenuButton.onClick.AddListener(ShowUnitInterface);
-		ReduceProductionTime();
-        RefreshInterface();
+		if (isCurrentlyUpgrading == true)
+		{
+			elpasedTime += timeToReduce;
+		}
+		else if (isCurrentlyUpgrading == false)
+		{
+			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
+			UIManager.Instance.goToMenuButton.onClick.AddListener(ShowUnitInterface);
+			ReduceProductionTime();
+			RefreshInterface();
+		}
 
     }
 

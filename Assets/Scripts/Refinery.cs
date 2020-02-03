@@ -7,9 +7,16 @@ public class Refinery : ResourceBuilding
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
-		RefreshInterface();
+		if(isCurrentlyUpgrading == true)
+		{
+			elpasedTime += timeToReduce;
+		}
+		else if(isCurrentlyUpgrading == false)
+		{
+			ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
+			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
+			RefreshInterface();
+		}
 	}
 	public void UpgradeRefinery()
 	{

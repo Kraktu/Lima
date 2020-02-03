@@ -7,9 +7,16 @@ public class House : ResourceBuilding
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-        RefreshInterface();
+		if(isCurrentlyUpgrading == true)
+		{
+			elpasedTime += timeToReduce;
+		}
+		else if(isCurrentlyUpgrading == false)
+		{
+			ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
+			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
+			RefreshInterface();
+		}
 	}
 
 	public void UpgradeHouse()

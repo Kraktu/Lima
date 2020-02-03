@@ -26,11 +26,12 @@ public class Building:MonoBehaviour
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
 	public int skillPointUpgradeLevelStep;
+	public double timeToReduce = 5;
 
 	[HideInInspector]
 	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
 	[HideInInspector]
-	public bool isCurentlyUpgrading=false;
+	public bool isCurrentlyUpgrading=false;
     [HideInInspector]
     public double elpasedTime = 0;
     [HideInInspector]
@@ -54,32 +55,33 @@ public class Building:MonoBehaviour
     }
     public virtual void OnMouseDown()
     {
-        
-        if (level==0)
-        {
-            currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
-        }
-        else if (level>0)
-        {
-            currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
-        }
-        villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit); 
+		if (isCurrentlyUpgrading == false)
+		{
+			if (level == 0)
+			{
+				currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
+			}
+			else if (level > 0)
+			{
+				currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+			}
+			villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
-        UIManager.Instance.BuildingInterfaceActivation(true);
-        UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.goToMenuButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
-		UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
-		UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
-		UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
-		UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
-		RefreshInterface();
-
+			UIManager.Instance.BuildingInterfaceActivation(true);
+			UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
+			UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
+			UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
+			UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
+			UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+			UIManager.Instance.goToMenuButton.onClick.RemoveAllListeners();
+			UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
+			UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
+			UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
+			UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
+			UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
+			UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
+			RefreshInterface();
+		}
     }
 
     public bool LevelUp()
@@ -177,11 +179,10 @@ public class Building:MonoBehaviour
         elpasedTime = 0;
         double constructionScafoldStep = constructionTime / scaffoldingModels.Length;
 		double timeToCompletion;
-		isCurentlyUpgrading = true;
+		isCurrentlyUpgrading = true;
 
 		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
 		models[_currentUsedModel].SetActive(false);
-		GetComponent<BoxCollider>().enabled = false;
 		UIManager.Instance.BuildingInterfaceActivation(false);
 		ConstructionTimerText.gameObject.SetActive(true);
 		//starting timer
@@ -202,10 +203,9 @@ public class Building:MonoBehaviour
 		}
 		Destroy(go);
 		// réactivation du boxcolider, MAJ du temps pour la prochaine upgrade,desactivation du text de timer
-		GetComponent<BoxCollider>().enabled = true;
 		constructionTime *= constructionTimeMultiplicator;
 		ConstructionTimerText.gameObject.SetActive(false);
-		isCurentlyUpgrading = false;
+		isCurrentlyUpgrading = false;
 
 		//Réactivation du modèle en checkant si on est pas passé au modèle suivant, même chose pour les habitants max dans le bâtiment.
 		if (level==1)
@@ -252,7 +252,15 @@ public class Building:MonoBehaviour
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
-    }
+		if(skillPoints >0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(true);
+		}
+		else if(skillPoints == 0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(false);
+		}
+	}
 	public virtual void AnimationBuildings()
 	{
 

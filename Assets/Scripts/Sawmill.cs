@@ -8,9 +8,16 @@ public class Sawmill : ResourceBuilding
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-		ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
-        RefreshInterface();
+		if(isCurrentlyUpgrading == true)
+		{
+			elpasedTime += timeToReduce;
+		}
+		else if(isCurrentlyUpgrading == false)
+		{
+			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
+			ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
+			RefreshInterface();
+		}
     }
 
     public void UpgradeSawmill()

@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
-    public Image workerIcon, buildingIcon;
+    public Image workerIcon, buildingIcon,exclamationPoint;
 
     public Image selectedUnitBigSprite;
     public Text selectedUnitName, selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth, selectedUnitWoodPrice, selectedUnitOrePrice, selectedUnitVenacidPrice, selectedUnitTime, selectedUnitOwnedNumber, diplayedTimeToProduceUnits;
@@ -156,23 +156,29 @@ public class UIManager : MonoBehaviour
         int rank = 0;
         double[] nbr = new double[35];
         nbr[0] = nbrToTransform;
-        for (int i = 0; i < nbr.Length - 1; i++)
-        {
-            if (nbr[i] > 1000)
-            {
-                rank++;
-                nbr[i + 1] = math.floor(nbr[i] / 1000);
-                nbr[i] = nbr[i] % 1000;
-            }
-        }
-        if (rank > 0)
-        {
-            return (nbr[rank].ToString() + "," + (nbr[rank - 1] / 10).ToString("00")) + suffixes[rank];
-        }
-        else
-        {
-            return nbr[0].ToString("0");
-        }
-
+		if (nbrToTransform > 0 && nbrToTransform < 1)
+		{
+			return nbrToTransform.ToString("0.0");
+		}
+		else
+		{
+			for (int i = 0; i < nbr.Length - 1; i++)
+			{
+				if (nbr[i] > 1000)
+				{
+					rank++;
+					nbr[i + 1] = math.floor(nbr[i] / 1000);
+					nbr[i] = nbr[i] % 1000;
+				}
+			}
+			if (rank > 0)
+			{
+				return (nbr[rank].ToString() + "," + (nbr[rank - 1] / 10).ToString("00")) + suffixes[rank];
+			}
+			else
+			{
+				return nbr[0].ToString("0");
+			}
+		}
     }
 }

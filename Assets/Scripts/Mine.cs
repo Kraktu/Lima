@@ -7,9 +7,16 @@ public class Mine : ResourceBuilding
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-		ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
-        RefreshInterface();
+		if(isCurrentlyUpgrading == true)
+		{
+			elpasedTime += timeToReduce;
+		}
+		else if(isCurrentlyUpgrading == false)
+		{
+			ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
+			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
+			RefreshInterface();
+		}
     }
 
     public void UpgradeMine()
