@@ -5193,7 +5193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &384230288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21475,6 +21475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OurVillageOnMap: {fileID: 1899195187}
   maxSimultaneousAttack: 1
+  numberOfAttackPhase: 0
   armyPrefabOnMap: {fileID: 1284772133450983075, guid: ae7ddaffb1b7ab04cbb1d89377bfcc93,
     type: 3}
   timeToAttack: 0
