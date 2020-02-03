@@ -22,7 +22,7 @@ public class EnemyVillage : MonoBehaviour
     [HideInInspector]
     public EnemyArmySO mySO;
     [HideInInspector]
-    public Army[] myArmy;
+    public List<Army> myArmy;
 	private void OnMouseDown()
 	{
 		UIManager.Instance.enemyVillageCanvas.SetActive(true);
@@ -58,7 +58,7 @@ public class EnemyVillage : MonoBehaviour
             timeToGetAttacked = mySO.timeToGetAttacked;
             myIcon = mySO.myIcon;
             enemyName = mySO.enemyName;
-            myArmy = new Army[mySO.enemyArmy.Length];
+            myArmy = new List<Army>();
             minWoodWon = mySO.minWoodWon;
             maxWoodWon = mySO.maxWoodWon;
             minOreWon = mySO.minOreWon;
@@ -67,7 +67,7 @@ public class EnemyVillage : MonoBehaviour
             maxVenacidWon = mySO.maxWoodWon;
             for (int i = 0; i < mySO.enemyArmy.Length; i++)
             {
-                myArmy[i] = new Army(mySO.enemyArmy[i].armyName, mySO.enemyArmy[i].armyNbr, mySO.enemyArmy[i].armyAttack, mySO.enemyArmy[i].armyLife, mySO.enemyArmy[i].armyAttackPerTurn, mySO.enemyArmy[i].armyArmor, mySO.enemyArmy[i].armyPierce, mySO.enemyArmy[i].armyAccuracy);
+                myArmy.Add(new Army(mySO.enemyArmy[i].armyName, mySO.enemyArmy[i].armyNbr, mySO.enemyArmy[i].armyAttack, mySO.enemyArmy[i].armyLife, mySO.enemyArmy[i].armyAttackPerTurn, mySO.enemyArmy[i].armyArmor, mySO.enemyArmy[i].armyPierce, mySO.enemyArmy[i].armyAccuracy));
             }
         }
         else

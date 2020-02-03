@@ -6,7 +6,7 @@ using Unity.Mathematics;
 public class AttackManager : MonoBehaviour
 {
     public GameObject OurVillageOnMap;
-    public int maxSimultaneousAttack = 1;
+    public int maxSimultaneousAttack = 1,numberOfAttackPhase;
     public GameObject armyPrefabOnMap;
     [HideInInspector]
     public List<Army> armySent;
@@ -108,13 +108,27 @@ public class AttackManager : MonoBehaviour
         Destroy(go);
         Attack(attackingArmy, enemy);
     }
+    
+    public void AttackPhase(List<Army> attackingArmy,List<Army> defendingArmy)
+    {
 
+    }
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
-        // Phase d'attack
+        for (int i = 0; i < numberOfAttackPhase; i++)
+        {
+            AttackPhase(atArmy, enemy.myArmy);
+        }
+
+
+
         if (atArmy.Count > 0)
         {
             StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon,(float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
+        }
+        else if (atArmy.Count==0)
+        {
+            //loose
         }
     }
     public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy)
