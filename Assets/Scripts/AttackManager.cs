@@ -97,9 +97,11 @@ public class AttackManager : MonoBehaviour
         float timeBeforeAction = enemy.timeToGetAttacked;
         float time = 0;
         float tRatio;
-        GameObject go = Instantiate(armyPrefabOnMap);
         Vector3 startingPos = OurVillageOnMap.transform.position;
         Vector3 endingPos = AttackedVillage.transform.position;
+		Vector3 Direction = (endingPos - startingPos).normalized;
+
+        GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < timeBeforeAction)
         {
             tRatio = time/ timeBeforeAction;
@@ -239,10 +241,11 @@ public class AttackManager : MonoBehaviour
     }
     public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy)
     {
-        GameObject go = Instantiate(armyPrefabOnMap);
         Vector3 endingPos = OurVillageOnMap.transform.position;
-        float time = 0;
+		Vector3 Direction = (endingPos - startingPos).normalized;
+		float time = 0;
         float tRatio;
+        GameObject go = Instantiate(armyPrefabOnMap,startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < enemy.timeToGetAttacked)
         {
             tRatio = time/enemy.timeToGetAttacked;
