@@ -131,5 +131,6 @@ public class Barrack : Building
 	public void ShowUnitInterface()
     {
         UIManager.Instance.TroopsProducingCanvas.SetActive(true);
+		UIManager.Instance.DisableButton();
     }
 }
