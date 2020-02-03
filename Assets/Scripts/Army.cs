@@ -7,6 +7,8 @@ public class Army
     public string armyName;
     public double armyNbr;
     public double armyAttack, armyLife, armyAttackPerTurn, armyArmor, armyPierce, armyAccuracy;
+    public bool isDead = false;
+    public double totalLife;
 
     public Army(string name, double unitNbr, double attack, double life, double attackPerTurn, double armor, double pierce, double accuracy)
     {
@@ -18,5 +20,10 @@ public class Army
         armyArmor = armor;
         armyPierce = pierce;
         armyAccuracy = accuracy;
+    }
+
+    public void CalculateTotalLife()
+    {
+        totalLife = armyNbr * armyLife;
     }
 }
