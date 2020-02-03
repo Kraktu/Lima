@@ -8,9 +8,9 @@ public class UIManager : MonoBehaviour
 {
     static public UIManager Instance { get; private set; }
 
-    public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
-    public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
+    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel,spherierPanel;
+    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
+    public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
 
     public Image selectedUnitBigSprite;
@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
     public Text selectedUnitInputField;
 	public InputField inputFieldToClear;
 	public InputField[] inputFieldUnits;
+
+	public Button goToMapButton, troopsButton, spherierButton;
 
     public GameObject attackPanel, attackReportPanel;
 
@@ -39,25 +41,25 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        woodNumberText.text = BigIntToString(ResourceManager.Instance.wood.totalResource) + " woods";
-        oreNumberText.text = BigIntToString(ResourceManager.Instance.ore.totalResource) + " ores";
-        venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource) + " venacid";
-        workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource) + " Workers";
-        gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource) + " gems";
+        woodNumberText.text = BigIntToString(ResourceManager.Instance.wood.totalResource);
+        oreNumberText.text = BigIntToString(ResourceManager.Instance.ore.totalResource);
+        venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource);
+        workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource);
+        gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource);
     }
 
     public void BuildingInterfaceActivation(bool isActive)
     {
         if (isActive)
         {
-            buildinfgUICanvas.SetActive(true);
+            buildingUICanvas.SetActive(true);
         }
         else
         {
-            buildinfgUICanvas.SetActive(false);
+            buildingUICanvas.SetActive(false);
         }
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString, string GoToText = "", Sprite goToSprite = null)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
@@ -73,17 +75,6 @@ public class UIManager : MonoBehaviour
 
         workerIcon.sprite = workerSpecifiedIcon;
         buildingIcon.sprite = buildingSpecifiedIcon;
-        goToMenuText.text = GoToText;
-        if (goToSprite == null)
-        {
-            goToMenuButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            goToMenuButton.image.sprite = goToSprite;
-            goToMenuButton.gameObject.SetActive(true);
-        }
-
     }
     public void SpyPanelAcitve()
     {
@@ -97,6 +88,20 @@ public class UIManager : MonoBehaviour
         }
         isSpyPanelActive = !isSpyPanelActive;
     }
+	public void SpherierCanvasActive(bool isSpherierCanvasActive)
+	{
+		if(isSpherierCanvasActive)
+		{
+			spherierPanel.SetActive(false);
+			EnableButton();
+		}
+		else
+		{
+			spherierPanel.SetActive(true);
+			DisableButton();
+		}
+
+	}
     public void AttackPanelControl(bool isActive)
     {
         if (isActive)
@@ -109,10 +114,12 @@ public class UIManager : MonoBehaviour
 			{
 				Clear(inputFieldUnits[i]);
 			}
+			DisableButton();
         }
         else
         {
             attackPanel.SetActive(false);
+			EnableButton();
         }
     }
     public void CloseUnitTab()
@@ -121,7 +128,21 @@ public class UIManager : MonoBehaviour
         WaitingforUnitSelectionText.gameObject.SetActive(true);
         UnitPanel.gameObject.SetActive(false);
         TroopsProducingCanvas.SetActive(false);
+		EnableButton();
     }
+
+	public void DisableButton()
+	{
+		goToMapButton.gameObject.SetActive(false);
+		troopsButton.gameObject.SetActive(false);
+		spherierButton.gameObject.SetActive(false);
+	}
+	public void EnableButton()
+	{
+		goToMapButton.gameObject.SetActive(true);
+		troopsButton.gameObject.SetActive(true);
+		spherierButton.gameObject.SetActive(true);
+	}
     public void OpenSelectedUnitTab(string name, double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime, double ownedNumber, Sprite bigsprite)
     {
         WaitingforUnitSelectionText.gameObject.SetActive(false);
@@ -140,6 +161,7 @@ public class UIManager : MonoBehaviour
         selectedUnitTime.text = BigIntToString(producingtime);
         selectedUnitOwnedNumber.text = BigIntToString(ownedNumber);
         selectedUnitBigSprite.sprite = bigsprite;
+		EnableButton();
     }
 
 	public void Clear(InputField toClear)
