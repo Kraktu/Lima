@@ -252,7 +252,15 @@ public class Building:MonoBehaviour
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
         UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
-    }
+		if(skillPoints >0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(true);
+		}
+		else if(skillPoints == 0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(false);
+		}
+	}
 	public virtual void AnimationBuildings()
 	{
 

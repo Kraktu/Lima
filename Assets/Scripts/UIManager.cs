@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
-    public Image workerIcon, buildingIcon;
+    public Image workerIcon, buildingIcon,exclamationPoint;
 
     public Image selectedUnitBigSprite;
     public Text selectedUnitName, selectedUnitStatFirst, selectedUnitStatSecond, selectedUnitStatThird, selectedUnitStatFourth, selectedUnitStatFifth, selectedUnitStatSixth, selectedUnitWoodPrice, selectedUnitOrePrice, selectedUnitVenacidPrice, selectedUnitTime, selectedUnitOwnedNumber, diplayedTimeToProduceUnits;

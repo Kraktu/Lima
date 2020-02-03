@@ -8283,9 +8283,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 0
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -11755,9 +11756,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 4
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -12823,14 +12825,14 @@ RectTransform:
   m_GameObject: {fileID: 970293394}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 0.2577664, y: 0.29887, z: 0.29887}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1554168533}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 58.2, y: 10.3}
+  m_AnchoredPosition: {x: 86, y: 10.3}
   m_SizeDelta: {x: 0, y: -0.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &970293396
@@ -17986,9 +17988,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 2
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -19702,9 +19705,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -21385,6 +21389,7 @@ MonoBehaviour:
   addFourthSkillPoint: {fileID: 319094575}
   workerIcon: {fileID: 550875934}
   buildingIcon: {fileID: 1438007095}
+  exclamationPoint: {fileID: 970293396}
   selectedUnitBigSprite: {fileID: 1591818117}
   selectedUnitName: {fileID: 771713934}
   selectedUnitStatFirst: {fileID: 746021853}
@@ -21803,9 +21808,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 1
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -24436,9 +24442,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 3
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
