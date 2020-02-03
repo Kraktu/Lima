@@ -9,8 +9,8 @@ public class UIManager : MonoBehaviour
     static public UIManager Instance { get; private set; }
 
     public GameObject buildinfgUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, goToMenuText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
-    public Button upgradeButton, addWorkerButton, goToMenuButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
+    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
+    public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
 
     public Image selectedUnitBigSprite;
@@ -39,11 +39,11 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        woodNumberText.text = BigIntToString(ResourceManager.Instance.wood.totalResource) + " woods";
-        oreNumberText.text = BigIntToString(ResourceManager.Instance.ore.totalResource) + " ores";
-        venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource) + " venacid";
-        workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource) + " Workers";
-        gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource) + " gems";
+        woodNumberText.text = BigIntToString(ResourceManager.Instance.wood.totalResource);
+        oreNumberText.text = BigIntToString(ResourceManager.Instance.ore.totalResource);
+        venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource);
+        workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource);
+        gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource);
     }
 
     public void BuildingInterfaceActivation(bool isActive)
@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
             buildinfgUICanvas.SetActive(false);
         }
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString, string GoToText = "", Sprite goToSprite = null)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
@@ -73,17 +73,6 @@ public class UIManager : MonoBehaviour
 
         workerIcon.sprite = workerSpecifiedIcon;
         buildingIcon.sprite = buildingSpecifiedIcon;
-        goToMenuText.text = GoToText;
-        if (goToSprite == null)
-        {
-            goToMenuButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            goToMenuButton.image.sprite = goToSprite;
-            goToMenuButton.gameObject.SetActive(true);
-        }
-
     }
     public void SpyPanelAcitve()
     {

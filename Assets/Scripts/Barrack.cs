@@ -26,7 +26,6 @@ public class Barrack : Building
 		else if (isCurrentlyUpgrading == false)
 		{
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
-			UIManager.Instance.goToMenuButton.onClick.AddListener(ShowUnitInterface);
 			ReduceProductionTime();
 			RefreshInterface();
 		}
@@ -127,8 +126,7 @@ public class Barrack : Building
 	{
 		base.RefreshInterface();
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
-		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel,
-		goToBarrackMenuText, goToBarrackMenuSprite);
+		firstSkillPointUpgradeName + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + " lvl" + fourthSkillPointLevel);
 	}
 	public void ShowUnitInterface()
     {

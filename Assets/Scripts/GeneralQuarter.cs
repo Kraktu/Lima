@@ -37,11 +37,10 @@ public class GeneralQuarter : Building
 			}
 
 			RefreshInterface();
-			UIManager.Instance.goToMenuButton.onClick.AddListener(GoToMap);
 		}
 	}
 
-	void GoToMap()
+	public void GoToMap()
 	{
 		Camera camera = FindObjectOfType<Camera>();
 		camera.transform.position = MapManager.Instance.cameraMapPosition;
@@ -127,7 +126,6 @@ public class GeneralQuarter : Building
     {
         base.RefreshInterface();
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
-		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ "%" + " lvl" + fourthSkillPointLevel, 
-		goToMapMenuText,goToMapMenuSprite);
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ "%" + " lvl" + fourthSkillPointLevel);
 	}
 }
