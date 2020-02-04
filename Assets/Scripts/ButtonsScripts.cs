@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class ButtonsScripts : MonoBehaviour
 {
 	public GameObject panelOption;
 	public Button closePanel;
