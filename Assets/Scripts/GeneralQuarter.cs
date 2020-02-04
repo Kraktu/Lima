@@ -54,6 +54,11 @@ public class GeneralQuarter : Building
             MapManager.Instance.RefreshEnemies();
 			RefreshInterface();
 		}
+		if(level == 1)
+		{
+			UIManager.Instance.goToMapButton.gameObject.SetActive(true);
+			UIManager.Instance.spherierButton.gameObject.SetActive(true);
+		}
 	}
 
     public override void AddWorkerToProducing()
