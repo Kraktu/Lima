@@ -20,6 +20,8 @@ public class AttackManager : MonoBehaviour
     [HideInInspector]
     public bool isAttackDraw;
 
+    public CombatReportButton combatReportButtonPrefab;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -243,14 +245,30 @@ public class AttackManager : MonoBehaviour
         return mult;
     }    
 
+    public void ReportAllAtUnit(List<Army> Army,ref string stringToComplete)
+    {
+        for (int i = 0; i < Army.Count; i++)
+        {
+            if (i != Army.Count - 1)
+            {
+                stringToComplete += Army[i].armyNbr + " " + Army[i].armyName + ",";
+            }
+            else
+            {
+                stringToComplete += Army[i].armyNbr + " " + Army[i].armyName + ".\n";
+            }
+        }
+    }
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
+        CombatReportButton reportButton = Instantiate(combatReportButtonPrefab, UIManager.Instance.combatReportButtonScrollViewContent.transform);
         isAttackDraw = false;
         List<Army> cloneAtArmy = new List<Army>();
         cloneAtArmy = CloneArmy(atArmy,cloneAtArmy);
         List<Army> defArmy = enemy.myArmy;
         List<Army> cloneDefArmy = new List<Army>();
         cloneDefArmy= CloneArmy(defArmy,cloneDefArmy);
+        int AttackPhaseNumber = 0;
 
         for (int i = 0; i < atArmy.Count; i++)
         {
@@ -260,9 +278,14 @@ public class AttackManager : MonoBehaviour
         {
             defArmy[i].CalculateTotalLife();
         }
+        reportButton.combatPhase1 = "You attacked " + enemy.name + " with :\n";
+        ReportAllAtUnit(atArmy, ref reportButton.combatPhase1);
+        reportButton.combatPhase1 += "\nHe's defending himself with :\n";
+        ReportAllAtUnit(defArmy, ref reportButton.combatPhase1);
 
         for (int i = 0; i < numberOfAttackPhase; i++)
         {
+            AttackPhaseNumber++;
             for (int j = 0; j < cloneAtArmy.Count; j++)
             {
                 for (int k = 0; k < cloneAtArmy[j].armyNbr; k++)
@@ -389,28 +412,69 @@ public class AttackManager : MonoBehaviour
             cloneAtArmy = CloneArmy(atArmy, cloneAtArmy);
             cloneDefArmy = CloneArmy(defArmy, cloneDefArmy);
 
+            switch (AttackPhaseNumber)
+            {
+                case 1:
+                    reportButton.combatPhase1 += "\nAfter First attack Phase you still have : ";
+                    ReportAllAtUnit(atArmy, ref reportButton.combatPhase1);
+                    reportButton.combatPhase1 += "\nAnd your enemy still have : ";
+                    ReportAllAtUnit(defArmy, ref reportButton.combatPhase1);
+                    break;
+                case 2:
+                    reportButton.combatPhase1 += "\nAfter Second attack Phase you still have : ";
+                    ReportAllAtUnit(atArmy, ref reportButton.combatPhase2);
+                    reportButton.combatPhase1 += "\nAnd your enemy still have : ";
+                    ReportAllAtUnit(defArmy, ref reportButton.combatPhase2);
+                    break;
+                case 3:
+                    reportButton.combatPhase1 += "\nAfter Third attack Phase you still have : ";
+                    ReportAllAtUnit(atArmy, ref reportButton.combatPhase3);
+                    reportButton.combatPhase1 += "\nAnd your enemy still have : ";
+                    ReportAllAtUnit(defArmy, ref reportButton.combatPhase3);
+                    break;
+                case 4:
+                    reportButton.combatPhase1 += "\nAfter Fourth attack Phase you still have : ";
+                    ReportAllAtUnit(atArmy, ref reportButton.combatPhase4);
+                    reportButton.combatPhase1 += "\nAnd your enemy still have : ";
+                    ReportAllAtUnit(defArmy, ref reportButton.combatPhase4);
+                    break;
+                case 5:
+                    reportButton.combatPhase1 += "\nAfter Fifth attack Phase you still have : ";
+                    ReportAllAtUnit(atArmy, ref reportButton.combatPhase5);
+                    reportButton.combatPhase1 += "\nAnd your enemy still have : ";
+                    ReportAllAtUnit(defArmy, ref reportButton.combatPhase5);
+                    break;
+
+                default:
+                    break;
+            }
+
         }
 
 
         if (isAttackDraw)
         {
-            StartCoroutine(ArmyComeBack(atArmy, 0, 0, 0, enemy.transform.position, enemy));
+            StartCoroutine(ArmyComeBack(atArmy, 0, 0, 0, enemy.transform.position, enemy,reportButton,false));
+            reportButton.endOfReport = "Unfortunately, you couldn't beat all the army of your opponent int time. You won nothing, but your soldiers came back.\n Your army came back with :";
+            ReportAllAtUnit(atArmy, ref reportButton.endOfReport);
         }
         else
         {
             if (atArmy.Count > 0)
             {
-                StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon, (float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
+                StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon, (float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy,reportButton,true));
                 enemy.LoadAnEnemy();
             }
             else if (atArmy.Count == 0)
             {
-                //loose
+                reportButton.combatPhase1 = reportButton.combatPhase2 = reportButton.combatPhase3 = reportButton.combatPhase4 = reportButton.combatPhase5 = "";
+                reportButton.endOfReport = "Your Army didn't make it and died for you. You won nothing and lost your entire Army.";
+                reportButton.gameObject.SetActive(true);
             }
         }
       
     }
-    public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy)
+    public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy,CombatReportButton reportButton,bool actualizeReport)
     {
         Vector3 endingPos = OurVillageOnMap.transform.position;
 		Vector3 Direction = (endingPos - startingPos).normalized;
@@ -439,16 +503,12 @@ public class AttackManager : MonoBehaviour
             }
         }
         currentSimultaneousAttack--;
-        GetAttackReport(comeBackArmy,wonWood,wonOre,VenacidWon);
-    }
-    public void GetAttackReport(List<Army> comeBackArmy, double wonWood, double wonOre,double wonVenacid)
-    {
-        UIManager.Instance.attackReportPanel.SetActive(true);
-        UIManager.Instance.attackReportText.text = "You Won : \n" + UIManager.Instance.BigIntToString( wonWood )+ " Wood\n" + UIManager.Instance.BigIntToString(wonOre) + " Ore\n" + UIManager.Instance.BigIntToString(wonVenacid)+" Venacid"+ "\nAnd came back with :";
-        for (int i = 0; i < comeBackArmy.Count; i++)
+        if (actualizeReport)
         {
-            UIManager.Instance.attackReportText.text += "\n" + comeBackArmy[i].armyName + " : " + UIManager.Instance.BigIntToString(comeBackArmy[i].armyNbr);        
+            reportButton.endOfReport = "You Won : \n" + UIManager.Instance.BigIntToString(wonWood) + " Wood\n" + UIManager.Instance.BigIntToString(wonOre) + " Ore\n" + UIManager.Instance.BigIntToString(VenacidWon) + " Venacid" + "\nAnd came back with :";
         }
+        ReportAllAtUnit(comeBackArmy, ref reportButton.endOfReport);
+        reportButton.gameObject.SetActive(true);
     }
 
    //public double GetRandomNumber(double minimum, double maximum)

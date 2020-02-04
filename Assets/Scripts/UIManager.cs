@@ -26,6 +26,8 @@ public class UIManager : MonoBehaviour
 
     public Text atUserName, atUserLvl, atEnemyName, atEnemyLvl, attackReportText;
     public Image atUserIcon, atEnemyIcon;
+    public CombatReport combatReportPanel;
+    public GameObject combatReportButtonScrollViewContent;
 
     [HideInInspector]
     public bool isSpyPanelActive;
