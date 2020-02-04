@@ -114,12 +114,10 @@ public class UIManager : MonoBehaviour
 			{
 				Clear(inputFieldUnits[i]);
 			}
-			DisableButton();
         }
         else
         {
             attackPanel.SetActive(false);
-			EnableButton();
         }
     }
     public void CloseUnitTab()
@@ -139,9 +137,15 @@ public class UIManager : MonoBehaviour
 	}
 	public void EnableButton()
 	{
-		goToMapButton.gameObject.SetActive(true);
-		troopsButton.gameObject.SetActive(true);
-		spherierButton.gameObject.SetActive(true);
+		if (BuildingManager.Instance.generalQuarter.level > 0)
+		{
+			goToMapButton.gameObject.SetActive(true);
+			spherierButton.gameObject.SetActive(true);
+		}
+		if (BuildingManager.Instance.barraks.level > 0)
+		{
+			troopsButton.gameObject.SetActive(true);
+		}
 	}
     public void OpenSelectedUnitTab(string name, double firststat, double secondstat, double thirdstat, double fourthstat, double fifthstat, double sixthstat, double woodprice, double oreprice, double venacidprice, double producingtime, double ownedNumber, Sprite bigsprite)
     {

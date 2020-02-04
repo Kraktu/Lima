@@ -6,7 +6,7 @@ using Unity.Mathematics;
 public class AttackManager : MonoBehaviour
 {
     public GameObject OurVillageOnMap;
-    public int maxSimultaneousAttack = 1,numberOfAttackPhase;
+    public int maxSimultaneousAttack = 1,numberOfAttackPhase=5;
     public GameObject armyPrefabOnMap;
     [HideInInspector]
     public List<Army> armySent;
@@ -17,6 +17,8 @@ public class AttackManager : MonoBehaviour
     [HideInInspector]
     public int currentSimultaneousAttack = 0;
     static public AttackManager Instance { get; private set; }
+    [HideInInspector]
+    public bool isAttackDraw;
 
     private void Awake()
     {
@@ -95,9 +97,11 @@ public class AttackManager : MonoBehaviour
         float timeBeforeAction = enemy.timeToGetAttacked;
         float time = 0;
         float tRatio;
-        GameObject go = Instantiate(armyPrefabOnMap);
         Vector3 startingPos = OurVillageOnMap.transform.position;
         Vector3 endingPos = AttackedVillage.transform.position;
+		Vector3 Direction = (endingPos - startingPos).normalized;
+
+        GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < timeBeforeAction)
         {
             tRatio = time/ timeBeforeAction;
@@ -109,34 +113,150 @@ public class AttackManager : MonoBehaviour
         Attack(attackingArmy, enemy);
     }
     
-    public void AttackPhase(List<Army> attackingArmy,List<Army> defendingArmy)
+    public List<Army> CloneArmy(List<Army> ListToClone,List<Army> ListToAssign)
     {
-
+        for (int i = 0; i < ListToClone.Count; i++)
+        {
+            ListToAssign.Add(ListToClone[i]);
+        }
+        return ListToAssign;
     }
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
+        isAttackDraw = false;
+        List<Army> cloneAtArmy = new List<Army>();
+        cloneAtArmy = CloneArmy(atArmy,cloneAtArmy);
+        List<Army> defArmy = enemy.myArmy;
+        List<Army> cloneDefArmy = new List<Army>();
+        cloneDefArmy= CloneArmy(defArmy,cloneDefArmy);
+
+        for (int i = 0; i < atArmy.Count; i++)
+        {
+            atArmy[i].CalculateTotalLife() ;
+        }
+        for (int i = 0; i < defArmy.Count; i++)
+        {
+            defArmy[i].CalculateTotalLife();
+        }
+
         for (int i = 0; i < numberOfAttackPhase; i++)
         {
-            AttackPhase(atArmy, enemy.myArmy);
+            for (int j = 0; j < cloneAtArmy.Count; j++)
+            {
+                for (int k = 0; k < cloneAtArmy[j].armyNbr; k++)
+                {
+                    for (int l = 0; l < cloneAtArmy[j].armyAttackPerTurn; l++)
+                    {
+                        if (defArmy.Count>0)
+                        {
+                            int attackedArmy = UnityEngine.Random.Range(0, defArmy.Count);
+                            defArmy[attackedArmy].totalLife -= cloneAtArmy[j].armyAttack;
+                            if (defArmy[attackedArmy].totalLife <= 0)
+                            {
+                                defArmy.RemoveAt(j);
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+            for (int j = 0; j < cloneDefArmy.Count; j++)
+            {
+                for (int k = 0; k < cloneDefArmy[j].armyNbr; k++)
+                {
+                    for (int l = 0; l < cloneDefArmy[j].armyAttackPerTurn; l++)
+                    {
+                        if (atArmy.Count>0)
+                        {
+                            int attackedArmy = UnityEngine.Random.Range(0, atArmy.Count);
+                            atArmy[attackedArmy].totalLife -= cloneDefArmy[j].armyAttack;
+                            if (atArmy[attackedArmy].totalLife <= 0)
+                            {
+                                atArmy.RemoveAt(j);
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                        
+                    }
+                }
+            }
+
+            //for (int j = 0; j < atArmy.Count; j++)
+            //{
+            //    if (atArmy[i].isDead==true)
+            //    {
+            //        atArmy.RemoveAt(j);
+            //        j--;
+            //    }
+            //}
+            if (atArmy.Count>0)
+            {
+                for (int j = 0; j < atArmy.Count; j++)
+                {
+                    atArmy[j].armyNbr = math.floor(atArmy[j].totalLife / atArmy[j].armyLife);
+                }
+            }
+           // for (int j = 0; j < defArmy.Count; j++)
+           // {
+           //
+           //     if (defArmy[j].isDead == true)
+           //     {
+           //         defArmy.RemoveAt(j);
+           //         j--;
+           //     }
+           // }
+            if (defArmy.Count>0)
+            {
+                for (int j = 0; j < defArmy.Count; j++)
+                {
+                    defArmy[j].armyNbr = math.floor(defArmy[j].totalLife / defArmy[j].armyLife);
+                }
+            }
+            if (defArmy.Count==0 || atArmy.Count==0)
+            {
+                break;
+            }
+            else if (i==numberOfAttackPhase)
+            {
+                isAttackDraw = true;
+            }
+            cloneAtArmy = CloneArmy(atArmy, cloneAtArmy);
+            cloneDefArmy = CloneArmy(defArmy, cloneDefArmy);
+
         }
 
 
-
-        if (atArmy.Count > 0)
+        if (isAttackDraw)
         {
-            StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon,(float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
+            StartCoroutine(ArmyComeBack(atArmy, 0, 0, 0, enemy.transform.position, enemy));
         }
-        else if (atArmy.Count==0)
+        else
         {
-            //loose
+            if (atArmy.Count > 0)
+            {
+                StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon, (float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
+                enemy.LoadAnEnemy();
+            }
+            else if (atArmy.Count == 0)
+            {
+                //loose
+            }
         }
+      
     }
     public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy)
     {
-        GameObject go = Instantiate(armyPrefabOnMap);
         Vector3 endingPos = OurVillageOnMap.transform.position;
-        float time = 0;
+		Vector3 Direction = (endingPos - startingPos).normalized;
+		float time = 0;
         float tRatio;
+        GameObject go = Instantiate(armyPrefabOnMap,startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < enemy.timeToGetAttacked)
         {
             tRatio = time/enemy.timeToGetAttacked;
