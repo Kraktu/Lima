@@ -3163,18 +3163,18 @@ MonoBehaviour:
   myAttackPanel: {fileID: 566720622}
   smallUnitImage: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
   longUnitImage: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
-  unitName: HorseMan
+  unitName: Gekkorider
   unitNbr: 0
-  attack: 150
-  life: 200
-  attackPerTurn: 1
-  armor: 50
-  pierce: 18
-  accuracy: 80
-  woodPrice: 250
-  orePrice: 300
+  attack: 30
+  life: 20
+  attackPerTurn: 2
+  armor: 20
+  pierce: 25
+  accuracy: 50
+  woodPrice: 120
+  orePrice: 150
   venacidPrice: 0
-  timeToProduce: 50
+  timeToProduce: 60
   atUnitName: {fileID: 617796471}
   atUnitNbr: {fileID: 31330946}
   atUnitSentText: {fileID: 978314402}
@@ -3835,18 +3835,18 @@ MonoBehaviour:
   myAttackPanel: {fileID: 1066951286}
   smallUnitImage: {fileID: 21300000, guid: 0d31625415cabf44fa34fa0d04f58cc2, type: 3}
   longUnitImage: {fileID: 21300000, guid: 0d31625415cabf44fa34fa0d04f58cc2, type: 3}
-  unitName: Swordman
+  unitName: Rattlesword
   unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  woodPrice: 100
-  orePrice: 100
+  attack: 10
+  life: 30
+  attackPerTurn: 1
+  armor: 50
+  pierce: 25
+  accuracy: 80
+  woodPrice: 20
+  orePrice: 60
   venacidPrice: 0
-  timeToProduce: 10
+  timeToProduce: 42
   atUnitName: {fileID: 1277473040}
   atUnitNbr: {fileID: 2051960382}
   atUnitSentText: {fileID: 1256502081}
@@ -7918,9 +7918,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -11236,9 +11237,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -12966,18 +12968,18 @@ MonoBehaviour:
   myAttackPanel: {fileID: 2065482085}
   smallUnitImage: {fileID: 21300000, guid: 52eea2f719bf69a4a95a5b2cf2701437, type: 3}
   longUnitImage: {fileID: 21300000, guid: 52eea2f719bf69a4a95a5b2cf2701437, type: 3}
-  unitName: Archer
+  unitName: Boalist
   unitNbr: 0
-  attack: 10
-  life: 20
-  attackPerTurn: 2
-  armor: 3
-  pierce: 75
+  attack: 20
+  life: 10
+  attackPerTurn: 4
+  armor: 0
+  pierce: 50
   accuracy: 25
   woodPrice: 50
-  orePrice: 50
+  orePrice: 10
   venacidPrice: 0
-  timeToProduce: 5
+  timeToProduce: 33
   atUnitName: {fileID: 545664718}
   atUnitNbr: {fileID: 1362713806}
   atUnitSentText: {fileID: 2106874493}
@@ -15011,18 +15013,18 @@ MonoBehaviour:
   myAttackPanel: {fileID: 571177668}
   smallUnitImage: {fileID: 21300000, guid: 203f1ee2a5113a6488180fceaf88f175, type: 3}
   longUnitImage: {fileID: 21300000, guid: 203f1ee2a5113a6488180fceaf88f175, type: 3}
-  unitName: Alchemist
+  unitName: Oxyuran
   unitNbr: 0
-  attack: 25
-  life: 130
+  attack: 10
+  life: 10
   attackPerTurn: 1
   armor: 10
-  pierce: 25
-  accuracy: 30
-  woodPrice: 100
-  orePrice: 400
+  pierce: 0
+  accuracy: 100
+  woodPrice: 75
+  orePrice: 75
   venacidPrice: 0
-  timeToProduce: 150
+  timeToProduce: 51
   atUnitName: {fileID: 345136670}
   atUnitNbr: {fileID: 930276073}
   atUnitSentText: {fileID: 664636897}
@@ -15452,10 +15454,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDifferenceWithUs: 0
+  enemyArmySOs: []
+  minWoodWon: 0
+  maxWoodWon: 0
+  minOreWon: 0
+  maxOreWon: 0
+  minVenacidWon: 0
+  maxVenacidWon: 0
   timeToGetAttacked: 0
   enemyName: Winnie
-  level: 2
   myIcon: {fileID: 21300000, guid: 669149cedd5aa25429bd524d77786fbd, type: 3}
+  level: 2
+  possibleSO: []
+  mySO: {fileID: 0}
 --- !u!1 &1256502079
 GameObject:
   m_ObjectHideFlags: 0
@@ -17048,9 +17060,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -17613,10 +17626,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDifferenceWithUs: 0
+  enemyArmySOs: []
+  minWoodWon: 0
+  maxWoodWon: 0
+  minOreWon: 0
+  maxOreWon: 0
+  minVenacidWon: 0
+  maxVenacidWon: 0
   timeToGetAttacked: 0
   enemyName: OuiOui
-  level: 1
   myIcon: {fileID: 21300000, guid: 1e7786d7b9051b74bbedef050f2ce1eb, type: 3}
+  level: 1
+  possibleSO: []
+  mySO: {fileID: 0}
 --- !u!1 &1432357032
 GameObject:
   m_ObjectHideFlags: 0
@@ -18000,10 +18023,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5316c7ee892d6c4da087700bd028431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDifferenceWithUs: 0
+  enemyArmySOs: []
+  minWoodWon: 0
+  maxWoodWon: 0
+  minOreWon: 0
+  maxOreWon: 0
+  minVenacidWon: 0
+  maxVenacidWon: 0
   timeToGetAttacked: 0
   enemyName: Pikachu
-  level: 3
   myIcon: {fileID: 21300000, guid: 1cd96935a953c3346aaba1a403712a66, type: 3}
+  level: 3
+  possibleSO: []
+  mySO: {fileID: 0}
 --- !u!1 &1446959489
 GameObject:
   m_ObjectHideFlags: 0
@@ -18668,9 +18701,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -18684,7 +18718,7 @@ MonoBehaviour:
   - {fileID: 257174589}
   - {fileID: 1853417452}
   - {fileID: 1227434452}
-  levelToUnlockNextUnit: 0100000002000000030000000400000005000000
+  levelToUnlockNextUnit: 0200000003000000050000000100000004000000
   timeReducedOnClick: 1
   timePercentReducedOnClick: 1
 --- !u!65 &1462228425
@@ -20208,6 +20242,7 @@ MonoBehaviour:
   addFourthSkillPoint: {fileID: 319094575}
   workerIcon: {fileID: 550875934}
   buildingIcon: {fileID: 1438007095}
+  exclamationPoint: {fileID: 0}
   selectedUnitBigSprite: {fileID: 1591818117}
   selectedUnitName: {fileID: 771713934}
   selectedUnitStatFirst: {fileID: 746021853}
@@ -20224,6 +20259,8 @@ MonoBehaviour:
   diplayedTimeToProduceUnits: {fileID: 1543206695}
   selectedUnitProduceButton: {fileID: 889607155}
   selectedUnitInputField: {fileID: 2013907715}
+  inputFieldToClear: {fileID: 0}
+  inputFieldUnits: []
   attackPanel: {fileID: 155829758}
   attackReportPanel: {fileID: 0}
   atUserName: {fileID: 1769786617}
@@ -20248,6 +20285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraMapPosition: {x: 100, y: 44, z: 62}
   initialCameraPosition: {x: 0, y: 0, z: 0}
+  enemyVillages: []
 --- !u!114 &1592076624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20282,6 +20320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OurVillageOnMap: {fileID: 0}
   maxSimultaneousAttack: 1
+  numberOfAttackPhase: 0
   armyPrefabOnMap: {fileID: 0}
   timeToAttack: 0
   AttackedVillage: {fileID: 0}
@@ -20540,9 +20579,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -23134,9 +23174,10 @@ MonoBehaviour:
   constructionPoof: {fileID: 1314802976339825808, guid: a994eaee814efe94c95d845c1469b7c5,
     type: 3}
   skillPointUpgradeLevelStep: 5
+  timeToReduce: 5
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
-  isCurentlyUpgrading: 0
+  isCurrentlyUpgrading: 0
   elpasedTime: 0
   refreshInterface: 0
   anim: {fileID: 0}
@@ -23754,18 +23795,18 @@ MonoBehaviour:
   myAttackPanel: {fileID: 1301136299}
   smallUnitImage: {fileID: 21300000, guid: 660b863a478e8964d8c0f4c54a3f6cf7, type: 3}
   longUnitImage: {fileID: 21300000, guid: 660b863a478e8964d8c0f4c54a3f6cf7, type: 3}
-  unitName: Spearman
+  unitName: Bothropian
   unitNbr: 0
-  attack: 100
-  life: 50
-  attackPerTurn: 2
-  armor: 5
-  pierce: 70
+  attack: 20
+  life: 20
+  attackPerTurn: 3
+  armor: 10
+  pierce: 75
   accuracy: 30
-  woodPrice: 400
-  orePrice: 400
+  woodPrice: 35
+  orePrice: 25
   venacidPrice: 0
-  timeToProduce: 15
+  timeToProduce: 22
   atUnitName: {fileID: 108282701}
   atUnitNbr: {fileID: 689190743}
   atUnitSentText: {fileID: 41274856}
