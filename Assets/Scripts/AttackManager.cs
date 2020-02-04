@@ -113,12 +113,22 @@ public class AttackManager : MonoBehaviour
         Attack(attackingArmy, enemy);
     }
     
+    public List<Army> CloneArmy(List<Army> ListToClone,List<Army> ListToAssign)
+    {
+        for (int i = 0; i < ListToClone.Count; i++)
+        {
+            ListToAssign.Add(ListToClone[i]);
+        }
+        return ListToAssign;
+    }
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
         isAttackDraw = false;
-        List<Army> cloneAtArmy = atArmy;
+        List<Army> cloneAtArmy = new List<Army>();
+        cloneAtArmy = CloneArmy(atArmy,cloneAtArmy);
         List<Army> defArmy = enemy.myArmy;
-        List<Army> cloneDefArmy = defArmy;
+        List<Army> cloneDefArmy = new List<Army>();
+        cloneDefArmy= CloneArmy(defArmy,cloneDefArmy);
 
         for (int i = 0; i < atArmy.Count; i++)
         {
@@ -145,10 +155,10 @@ public class AttackManager : MonoBehaviour
                             {
                                 defArmy.RemoveAt(j);
                             }
-                            else
-                            {
-                                break;
-                            }
+                        }
+                        else
+                        {
+                            break;
                         }
                     }
                 }
@@ -216,8 +226,8 @@ public class AttackManager : MonoBehaviour
             {
                 isAttackDraw = true;
             }
-            cloneAtArmy = atArmy;
-            cloneDefArmy = defArmy;
+            cloneAtArmy = CloneArmy(atArmy, cloneAtArmy);
+            cloneDefArmy = CloneArmy(defArmy, cloneDefArmy);
 
         }
 
@@ -231,6 +241,7 @@ public class AttackManager : MonoBehaviour
             if (atArmy.Count > 0)
             {
                 StartCoroutine(ArmyComeBack(atArmy, UnityEngine.Random.Range((float)enemy.minWoodWon, (float)enemy.maxWoodWon), UnityEngine.Random.Range((float)enemy.minOreWon, (float)enemy.maxOreWon), UnityEngine.Random.Range((float)enemy.minVenacidWon, (float)enemy.maxVenacidWon), enemy.transform.position, enemy));
+                enemy.LoadAnEnemy();
             }
             else if (atArmy.Count == 0)
             {
