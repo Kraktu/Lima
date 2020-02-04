@@ -4,10 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ButtonsScripts : MonoBehaviour
+public class MenuManagers : MonoBehaviour
 {
+	static public MenuManagers Instance { get; private set; }
+
 	public GameObject panelOption;
 	public Button closePanel;
+
+	private void Awake()
+	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(gameObject);
+			return;
+		}
+
+		Instance = this;
+	}
+
 	public void HumansLoad()
 	{
 		SceneManager.LoadScene("Project Scene");
