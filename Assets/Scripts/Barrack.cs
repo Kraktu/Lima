@@ -60,6 +60,10 @@ public class Barrack : Building
             UpdateBarrack();
             RefreshInterface();
         }
+		if(level == 1)
+		{
+			UIManager.Instance.troopsButton.gameObject.SetActive(true);
+		}
     }
 
 	public override void AddFirstSkillPoint()
