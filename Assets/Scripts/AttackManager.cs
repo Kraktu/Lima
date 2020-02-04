@@ -6,7 +6,7 @@ using Unity.Mathematics;
 public class AttackManager : MonoBehaviour
 {
     public GameObject OurVillageOnMap;
-    public int maxSimultaneousAttack = 1,numberOfAttackPhase=5;
+    public int maxSimultaneousAttack = 1, numberOfAttackPhase = 5;
     public GameObject armyPrefabOnMap;
     [HideInInspector]
     public List<Army> armySent;
@@ -99,12 +99,12 @@ public class AttackManager : MonoBehaviour
         float tRatio;
         Vector3 startingPos = OurVillageOnMap.transform.position;
         Vector3 endingPos = AttackedVillage.transform.position;
-		Vector3 Direction = (endingPos - startingPos).normalized;
+        Vector3 Direction = (endingPos - startingPos).normalized;
 
         GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < timeBeforeAction)
         {
-            tRatio = time/ timeBeforeAction;
+            tRatio = time / timeBeforeAction;
             go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
             time += Time.deltaTime;
             yield return null;
@@ -112,8 +112,8 @@ public class AttackManager : MonoBehaviour
         Destroy(go);
         Attack(attackingArmy, enemy);
     }
-    
-    public List<Army> CloneArmy(List<Army> ListToClone,List<Army> ListToAssign)
+
+    public List<Army> CloneArmy(List<Army> ListToClone, List<Army> ListToAssign)
     {
         for (int i = 0; i < ListToClone.Count; i++)
         {
@@ -121,6 +121,128 @@ public class AttackManager : MonoBehaviour
         }
         return ListToAssign;
     }
+
+    public double CalculateMultiplicator(string atUnitName, string defUnitName)
+    {
+        double mult = 0;
+        switch (atUnitName)
+        {
+            case "Archer":
+                switch (defUnitName)
+                {
+                    case "Archer": 
+                        mult = 1;
+                        break;
+                    case "Swordman": 
+                        mult = 1.25;
+                        break;
+                    case "Spearman": 
+                        mult = 1;
+                        break;
+                    case "Horseman": 
+                        mult = 0.75;
+                        break;
+                    case "Alchemist": 
+                        mult = 1;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "Swordman":
+                switch (defUnitName)
+                {
+                    case "Archer":
+                        mult = 1;
+                        break;
+                    case "Swordman":
+                        mult = 1;
+                        break;
+                    case "Spearman":
+                        mult = 1.25;
+                        break;
+                    case "Horseman":
+                        mult = 0.75;
+                        break;
+                    case "Alchemist":
+                        mult = 1;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "Spearman":
+                switch (defUnitName)
+                {
+                    case "Archer":
+                        mult = 1.25;
+                        break;
+                    case "Swordman":
+                        mult = 0.75;
+                        break;
+                    case "Spearman":
+                        mult = 1;
+                        break;
+                    case "Horseman":
+                        mult = 1.25;
+                        break;
+                    case "Alchemist":
+                        mult = 1;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "Horseman":
+                switch (defUnitName)
+                {
+                    case "Archer":
+                        mult = 1.25;
+                        break;
+                    case "Swordman":
+                        mult = 1.25;
+                        break;
+                    case "Spearman":
+                        mult = 0.75;
+                        break;
+                    case "Horseman":
+                        mult = 1;
+                        break;
+                    case "Alchemist":
+                        mult = 1;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "Alchemist":
+                switch (defUnitName)
+                {
+                    case "Archer":
+                        mult = 1;
+                        break;
+                    case "Swordman":
+                        mult = 1;
+                        break;
+                    case "Spearman":
+                        mult = 1;
+                        break;
+                    case "Horseman":
+                        mult = 1;
+                        break;
+                    case "Alchemist":
+                        mult = 1;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
+        return mult;
+    }    
+
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
         isAttackDraw = false;
@@ -150,15 +272,32 @@ public class AttackManager : MonoBehaviour
                         if (defArmy.Count>0)
                         {
                             int attackedArmy = UnityEngine.Random.Range(0, defArmy.Count);
-                            defArmy[attackedArmy].totalLife -= cloneAtArmy[j].armyAttack;
+                            int Hit = UnityEngine.Random.Range(0, 100);
+                            if (Hit<cloneAtArmy[j].armyAccuracy)
+                            {
+                                if (cloneAtArmy[j].armyPierce <= defArmy[attackedArmy].armyArmor)
+                                {
+                                    if ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) >= (defArmy[attackedArmy].armyArmor - cloneAtArmy[j].armyPierce))
+                                    {
+                                        defArmy[attackedArmy].totalLife -= ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) - (defArmy[attackedArmy].armyArmor - cloneAtArmy[j].armyPierce));
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                        defArmy[attackedArmy].totalLife -= (cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName));
+                                }
+                               
+                                
+                            }
+                            
                             if (defArmy[attackedArmy].totalLife <= 0)
                             {
                                 defArmy.RemoveAt(j);
                             }
-                        }
-                        else
-                        {
-                            break;
                         }
                     }
                 }
@@ -171,8 +310,29 @@ public class AttackManager : MonoBehaviour
                     {
                         if (atArmy.Count>0)
                         {
+
                             int attackedArmy = UnityEngine.Random.Range(0, atArmy.Count);
-                            atArmy[attackedArmy].totalLife -= cloneDefArmy[j].armyAttack;
+                            int Hit = UnityEngine.Random.Range(0, 100);
+                            if (Hit < cloneDefArmy[j].armyAccuracy)
+                            {
+                                if (cloneDefArmy[j].armyPierce <= atArmy[attackedArmy].armyArmor)
+                                {
+                                    if ((cloneDefArmy[j].armyAttack * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) >= (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce))
+                                    {
+                                        atArmy[attackedArmy].totalLife -= ((cloneDefArmy[j].armyAttack * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) - (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce));
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    atArmy[attackedArmy].totalLife -= (cloneDefArmy[j].armyAttack * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName));
+                                }
+
+
+                            }
                             if (atArmy[attackedArmy].totalLife <= 0)
                             {
                                 atArmy.RemoveAt(j);
