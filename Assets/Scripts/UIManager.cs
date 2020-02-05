@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     static public UIManager Instance { get; private set; }
 
-    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
+    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel,spherierCanvas;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
@@ -100,11 +100,18 @@ public class UIManager : MonoBehaviour
 			Camera cam = FindObjectOfType<Camera>();
 			cam.transform.position = MapManager.Instance.cameraSpherierPosition;
 			cam.transform.Rotate(new Vector3(35,0,0));
-			EnableButton();
+			cam.orthographic = true;
+			spherierCanvas.SetActive(true);
+			totalResourceCanvas.SetActive(false);
 		}
 		else
 		{
-			DisableButton();
+			Camera cam = FindObjectOfType<Camera>();
+			cam.transform.position = MapManager.Instance.initialCameraPosition;
+			cam.transform.Rotate(new Vector3(-35, 0, 0));
+			cam.orthographic = false;
+			spherierCanvas.SetActive(false);
+			totalResourceCanvas.SetActive(true);
 		}
 
 	}
