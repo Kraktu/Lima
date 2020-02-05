@@ -47,6 +47,8 @@ public class Unit : MonoBehaviour
 			if (totalTimeToProduce<=0)
 			{
 				totalTimeToProduce = 1f;
+                unitNbr+=unitInQueue;
+                unitInQueue = 0;
 			}
             remainingUnitToProduce = unitInQueue;
 
