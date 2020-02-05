@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2360896000033270238}
   - component: {fileID: 4382205408661346383}
+  - component: {fileID: -2577261158258562305}
   m_Layer: 0
   m_Name: SpawnChestGoldYellow
   m_TagString: Untagged
@@ -46,11 +47,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 9
-  time: 2
-  destroyClicks: 10
-  gemsNbr: 1
-  typeOfBonus: 3
+  spawnChance: 55
+  time: 12
+  destroyClicks: 2
+  gemsNbr: 5
+  typeOfBonus: 1
+--- !u!65 &-2577261158258562305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2360896000033270225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8037968, y: 1.7729696, z: 2.8239257}
+  m_Center: {x: 0.0005699839, y: 0.88677377, z: 0.002863443}
 --- !u!1 &2360896000062194940
 GameObject:
   m_ObjectHideFlags: 0
