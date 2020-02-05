@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce3740637a2cfe499d450c38b59acda, type: 3}
+  m_Name: Lvl1EnemyEZ
+  m_EditorClassIdentifier: 
+  timeToGetAttacked: 0
+  Level: 1
+  enemyName: BonjourLeMonde
+  myIcon: {fileID: 21300000, guid: 13df87dd56d9322418feddab98fbd6ea, type: 3}
+  minWoodWon: 500
+  maxWoodWon: 5000
+  minOreWon: 500
+  maxOreWon: 5000
+  minVenacidWon: 50
+  maxVenacidWon: 500
+  enemyArmy:
+  - armyName: Spearman
+    armyNbr: 10
+    armyAttack: 5
+    armyLife: 10
+    armyAttackPerTurn: 3
+    armyArmor: 10
+    armyPierce: 75
+    armyAccuracy: 30
