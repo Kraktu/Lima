@@ -1066,18 +1066,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1219943864}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &69396641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4123170157154577309, guid: ec3d489cd9352ae48ba09c2e786538a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1028427805}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &69396642 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1108774675986930062, guid: ec3d489cd9352ae48ba09c2e786538a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1028427805}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &74254010
 GameObject:
   m_ObjectHideFlags: 0
@@ -8096,7 +8084,7 @@ Transform:
   - {fileID: 1677082867}
   - {fileID: 3490545}
   - {fileID: 4865464351334875617}
-  - {fileID: 69396642}
+  - {fileID: 1028427806}
   - {fileID: 1824262627}
   m_Father: {fileID: 1393608208}
   m_RootOrder: 1
@@ -11101,7 +11089,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: a454050719005b444b59a84eaafba779, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -13758,6 +13746,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec3d489cd9352ae48ba09c2e786538a1, type: 3}
+--- !u!4 &1028427806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1028427805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1036492872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17835,7 +17829,7 @@ MonoBehaviour:
   - {fileID: 52719682}
   - {fileID: 3490544}
   - {fileID: 8493441264567628786}
-  - {fileID: 69396641}
+  - {fileID: 0}
   upgradeModelsLevelStep: 0300000006000000090000000c000000
   level: 0
   currentWorkers: 0
@@ -21218,6 +21212,8 @@ MonoBehaviour:
   attackReportText: {fileID: 1742638709}
   atUserIcon: {fileID: 352784608}
   atEnemyIcon: {fileID: 1245806509}
+  combatReportPanel: {fileID: 0}
+  combatReportButtonScrollViewContent: {fileID: 0}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -21278,6 +21274,7 @@ MonoBehaviour:
   AttackedVillage: {fileID: 0}
   currentSimultaneousAttack: 0
   isAttackDraw: 0
+  combatReportButtonPrefab: {fileID: 0}
 --- !u!1 &1596924236
 GameObject:
   m_ObjectHideFlags: 0
