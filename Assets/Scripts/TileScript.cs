@@ -16,7 +16,7 @@ public class TileScript : MonoBehaviour
 		
 	}
 
-	public void OnMouseClick()
+	public void OnMouseOver()
 	{
 
 	}
