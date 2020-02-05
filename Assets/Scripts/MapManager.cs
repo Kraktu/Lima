@@ -5,7 +5,8 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
 	Camera cam;
-	public Vector3 cameraMapPosition;
+	public Vector3 cameraMapPosition, cameraSpherierPosition;
+	public Quaternion cameraSpherierRotation;
 	[HideInInspector]
 	public Vector3 initialCameraPosition;
 

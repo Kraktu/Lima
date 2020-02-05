@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     static public UIManager Instance { get; private set; }
 
-    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel,spherierPanel;
+    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
@@ -90,16 +90,20 @@ public class UIManager : MonoBehaviour
         }
         isSpyPanelActive = !isSpyPanelActive;
     }
-	public void SpherierCanvasActive(bool isSpherierCanvasActive)
+	public void SpherierMapActive(bool isSpherierMapActive)
 	{
-		if(isSpherierCanvasActive)
+
+
+
+		if (isSpherierMapActive)
 		{
-			spherierPanel.SetActive(false);
+			Camera cam = FindObjectOfType<Camera>();
+			cam.transform.position = MapManager.Instance.cameraSpherierPosition;
+			cam.transform.Rotate(new Vector3(35,0,0));
 			EnableButton();
 		}
 		else
 		{
-			spherierPanel.SetActive(true);
 			DisableButton();
 		}
 
