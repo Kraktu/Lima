@@ -3864,10 +3864,10 @@ MonoBehaviour:
   armor: 50
   pierce: 25
   accuracy: 50
-  woodPrice: 50
-  orePrice: 200
-  venacidPrice: 10
-  timeToProduce: 120
+  woodPrice: 150
+  orePrice: 600
+  venacidPrice: 30
+  timeToProduce: 240
   atUnitName: {fileID: 617796471}
   atUnitNbr: {fileID: 31330946}
   atUnitSentText: {fileID: 978314402}
@@ -4471,10 +4471,10 @@ MonoBehaviour:
   armor: 40
   pierce: 50
   accuracy: 80
-  woodPrice: 25
-  orePrice: 100
+  woodPrice: 75
+  orePrice: 300
   venacidPrice: 0
-  timeToProduce: 60
+  timeToProduce: 120
   atUnitName: {fileID: 1277473040}
   atUnitNbr: {fileID: 2051960382}
   atUnitSentText: {fileID: 1256502081}
@@ -14628,10 +14628,10 @@ MonoBehaviour:
   armor: 0
   pierce: 50
   accuracy: 25
-  woodPrice: 75
-  orePrice: 10
+  woodPrice: 225
+  orePrice: 30
   venacidPrice: 0
-  timeToProduce: 45
+  timeToProduce: 90
   atUnitName: {fileID: 545664718}
   atUnitNbr: {fileID: 1362713806}
   atUnitSentText: {fileID: 2106874493}
@@ -17255,10 +17255,10 @@ MonoBehaviour:
   armor: 10
   pierce: 0
   accuracy: 100
-  woodPrice: 100
-  orePrice: 100
-  venacidPrice: 20
-  timeToProduce: 130
+  woodPrice: 300
+  orePrice: 300
+  venacidPrice: 60
+  timeToProduce: 260
   atUnitName: {fileID: 345136670}
   atUnitNbr: {fileID: 930276073}
   atUnitSentText: {fileID: 664636897}
@@ -17691,7 +17691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: 0
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
+  - {fileID: 11400000, guid: 6dc935dc53803174ba4fdff67c77c3d2, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -20567,7 +20567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: -1
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
+  - {fileID: 11400000, guid: e7f9003bfcccd43429d85c2d9ea024d8, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -20965,7 +20965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: 1
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
+  - {fileID: 11400000, guid: be0fd011c22072c438ad8e32831eeea3, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -21529,10 +21529,10 @@ MonoBehaviour:
   fourthSkillPointUpgradeName: NaN
   woodCost: 350
   oreCost: 200
-  venacidCost: 50
+  venacidCost: 0
   startingWoodUpgradeCost: 100
   startingOreUpgradeCost: 50
-  startingVenacidUpgradeCost: 25
+  startingVenacidUpgradeCost: 0
   magicRatio: {x: 1.05, y: 1.07, z: 1.02}
   canBuild: 1
   models:
@@ -21582,9 +21582,9 @@ MonoBehaviour:
   - {fileID: 257174589}
   - {fileID: 1853417452}
   - {fileID: 1227434452}
-  levelToUnlockNextUnit: 0100000002000000030000000400000005000000
+  levelToUnlockNextUnit: 050000000a00000014000000010000000f000000
   timeReducedOnClick: 1
-  timePercentReducedOnClick: 1
+  timePercentReducedOnClick: 0
 --- !u!65 &1462228425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27512,10 +27512,10 @@ MonoBehaviour:
   armor: 10
   pierce: 75
   accuracy: 30
-  woodPrice: 50
-  orePrice: 10
+  woodPrice: 150
+  orePrice: 30
   venacidPrice: 0
-  timeToProduce: 30
+  timeToProduce: 60
   atUnitName: {fileID: 108282701}
   atUnitNbr: {fileID: 689190743}
   atUnitSentText: {fileID: 41274856}
