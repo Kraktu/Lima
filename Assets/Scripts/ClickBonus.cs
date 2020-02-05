@@ -14,8 +14,11 @@ public class ClickBonus : MonoBehaviour
 	public double gemsNbr = 1;
 	public TypeOfBonus typeOfBonus;
 
+	public Animator animBonus;
+
 	private void Start()
 	{
+		animBonus = gameObject.GetComponentInChildren<Animator>();
 		Invoke("DestroyChest", time);
 	}
 
@@ -69,7 +72,9 @@ public class ClickBonus : MonoBehaviour
 			default:
 				break;
 		}
-		Destroy(gameObject);
+		animBonus.Play("chest_opening");
+		gameObject.GetComponent<BoxCollider>().enabled = false;
+		Destroy(gameObject,0.75f);
 	}
 
 	void OnMouseDown()
