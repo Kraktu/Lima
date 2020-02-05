@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 {
     static public UIManager Instance { get; private set; }
 
-    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel,spherierCanvas;
+    public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
     public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
@@ -29,8 +29,15 @@ public class UIManager : MonoBehaviour
     public CombatReport combatReportPanel;
     public GameObject combatReportButtonScrollViewContent;
 
+
+	public GameObject spherierPanel, spherierCanvas;
+	public Text tileName, tileLvl, tileDescription;
+
+
+
     [HideInInspector]
     public bool isSpyPanelActive;
+
 
     private void Awake()
     {
