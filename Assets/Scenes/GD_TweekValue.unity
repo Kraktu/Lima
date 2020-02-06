@@ -9103,12 +9103,12 @@ MonoBehaviour:
   secondSkillPointUpgradeName: NaN
   thirdSkillPointUpgradeName: NaN
   fourthSkillPointUpgradeName: NaN
-  woodCost: 1000
-  oreCost: 1000
-  venacidCost: 250
-  startingWoodUpgradeCost: 2000
-  startingOreUpgradeCost: 2000
-  startingVenacidUpgradeCost: 500
+  woodCost: 500
+  oreCost: 500
+  venacidCost: 150
+  startingWoodUpgradeCost: 1000
+  startingOreUpgradeCost: 1000
+  startingVenacidUpgradeCost: 350
   magicRatio: {x: 1.03, y: 1.03, z: 1.7}
   canBuild: 1
   models:
@@ -9141,7 +9141,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  timeToReduce: 2
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -12641,10 +12641,10 @@ MonoBehaviour:
   woodCost: 150
   oreCost: 100
   venacidCost: 0
-  startingWoodUpgradeCost: 300
-  startingOreUpgradeCost: 200
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.07, y: 1.07, z: 0}
+  startingWoodUpgradeCost: 562.5
+  startingOreUpgradeCost: 375
+  startingVenacidUpgradeCost: 75
+  magicRatio: {x: 1.075, y: 1.075, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 619305647}
@@ -12676,7 +12676,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  timeToReduce: 2
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -19835,10 +19835,10 @@ MonoBehaviour:
   woodCost: 50
   oreCost: 100
   venacidCost: 0
-  startingWoodUpgradeCost: 100
-  startingOreUpgradeCost: 250
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.07, y: 1.07, z: 0}
+  startingWoodUpgradeCost: 187.5
+  startingOreUpgradeCost: 468.75
+  startingVenacidUpgradeCost: 62.5
+  magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 309530105}
@@ -19870,7 +19870,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  timeToReduce: 2
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -21548,10 +21548,10 @@ MonoBehaviour:
   woodCost: 350
   oreCost: 200
   venacidCost: 0
-  startingWoodUpgradeCost: 100
-  startingOreUpgradeCost: 50
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.05, y: 1.07, z: 1.02}
+  startingWoodUpgradeCost: 250
+  startingOreUpgradeCost: 150
+  startingVenacidUpgradeCost: 100
+  magicRatio: {x: 1.05, y: 1.08, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 1138483829}
@@ -21583,7 +21583,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  timeToReduce: 2
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -21602,7 +21602,7 @@ MonoBehaviour:
   - {fileID: 1227434452}
   levelToUnlockNextUnit: 050000000a00000014000000010000000f000000
   timeReducedOnClick: 1
-  timePercentReducedOnClick: 0
+  timePercentReducedOnClick: 0.1
 --- !u!65 &1462228425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23474,16 +23474,17 @@ MonoBehaviour:
   startingWood: 100
   startingOre: 100
   startingVenacid: 0
-  startingWorker: 3
+  startingWorker: 2
   startingGems: 0
   startingWoodPerSec: 1.5
   startingOrePerSec: 1.5
-  startingVenacidPerSec: 1.25
+  startingVenacidPerSec: 0.6
   startingWorkerPerSec: 0.008333333333333333
   startingWoodPerClick: 1.1666666666666667
   startingOrePerClick: 1.1666666666666667
-  startingVenacidPerClick: 1.0833333333333333
+  startingVenacidPerClick: 0.3
   startingWorkerPerClick: 0.016666666666666666
+  skillPoint: 0
   flatWoodBonusPerSec: 0
   percentWoodBonusPerSec: 0
   flatOreBonusPerSec: 0
@@ -23532,7 +23533,6 @@ MonoBehaviour:
   spyPanel: {fileID: 796505730}
   TroopsProducingCanvas: {fileID: 347484684}
   UnitPanel: {fileID: 1062679326}
-  spherierCanvas: {fileID: 0}
   buildingNameText: {fileID: 386845223}
   descriptionText: {fileID: 1800091584}
   priceText: {fileID: 2033427413}
@@ -23596,6 +23596,11 @@ MonoBehaviour:
   atEnemyIcon: {fileID: 1245806509}
   combatReportPanel: {fileID: 70675075}
   combatReportButtonScrollViewContent: {fileID: 1250292117}
+  spherierPanel: {fileID: 0}
+  spherierCanvas: {fileID: 0}
+  tileName: {fileID: 0}
+  tileLvl: {fileID: 0}
+  tileDescription: {fileID: 0}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -24096,10 +24101,10 @@ MonoBehaviour:
   woodCost: 100
   oreCost: 50
   venacidCost: 0
-  startingWoodUpgradeCost: 200
-  startingOreUpgradeCost: 100
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.07, y: 1.07, z: 1.02}
+  startingWoodUpgradeCost: 468.75
+  startingOreUpgradeCost: 187.5
+  startingVenacidUpgradeCost: 62.5
+  magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 305339733}
@@ -24131,7 +24136,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  timeToReduce: 2
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -26865,10 +26870,10 @@ MonoBehaviour:
   woodCost: 200
   oreCost: 200
   venacidCost: 0
-  startingWoodUpgradeCost: 150
-  startingOreUpgradeCost: 100
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.07, y: 1.07, z: 0}
+  startingWoodUpgradeCost: 400
+  startingOreUpgradeCost: 400
+  startingVenacidUpgradeCost: 100
+  magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 679646829}
