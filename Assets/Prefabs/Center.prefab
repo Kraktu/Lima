@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 58d4bdefce302a344b20c0ff2ae0bbb7, type: 2}
+  - {fileID: 2100000, guid: 0592b51886314f84f92d7edc885ad1d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,8 +112,12 @@ MonoBehaviour:
   visible: 0
   buyable: 0
   bought: 0
-  invisibleMat: {fileID: 0}
-  visibleMat: {fileID: 0}
-  buyableMat: {fileID: 0}
+  invisibleMat: {fileID: 2100000, guid: 8f01395d1fed4d9478ca1dcec104c73d, type: 2}
+  visibleMat: {fileID: 2100000, guid: 3221220e3fbe57145934700c6d2b43da, type: 2}
+  buyableMat: {fileID: 2100000, guid: 18e2447d0f9b2bf49862354d442f80a3, type: 2}
+  boughtMat: {fileID: 2100000, guid: 58d4bdefce302a344b20c0ff2ae0bbb7, type: 2}
+  maxedMat: {fileID: 2100000, guid: 0592b51886314f84f92d7edc885ad1d1, type: 2}
   tileName: Center
   tileDescription: "kubuluskefehtyytyytytyyty\xA7(t\xA7(g(tgttgrtgrgrvtgfvbgvbfgfv5g115gvf51gfbv5g51fgvfgvgf561gf15155"
+  tileToSee: []
+  tileToUnlock: []
