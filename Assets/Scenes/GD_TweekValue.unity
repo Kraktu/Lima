@@ -600,6 +600,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &30098878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,6 +3388,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &208793297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3878,6 +3886,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &257174590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4485,6 +4497,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &305859134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9103,12 +9119,12 @@ MonoBehaviour:
   secondSkillPointUpgradeName: NaN
   thirdSkillPointUpgradeName: NaN
   fourthSkillPointUpgradeName: NaN
-  woodCost: 500
-  oreCost: 500
-  venacidCost: 150
+  woodCost: 750
+  oreCost: 750
+  venacidCost: 250
   startingWoodUpgradeCost: 1000
   startingOreUpgradeCost: 1000
-  startingVenacidUpgradeCost: 350
+  startingVenacidUpgradeCost: 500
   magicRatio: {x: 1.03, y: 1.03, z: 1.7}
   canBuild: 1
   models:
@@ -13212,6 +13228,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &932977102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14226,6 +14246,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1001250523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14392,6 +14416,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1007973069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14660,6 +14688,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!1 &1024791485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7638346441841959730, guid: 9c14b647f98de674485b2fe57a1fdb30,
@@ -17287,6 +17319,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1227434453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20674,6 +20710,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1432357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23617,6 +23657,7 @@ MonoBehaviour:
   cameraMapPosition: {x: 100, y: 44, z: 62}
   cameraSpherierPosition: {x: 0, y: 0, z: 0}
   cameraSpherierRotation: {x: 0, y: 0, z: 0, w: 0}
+  spawnBonus: {fileID: 0}
   initialCameraPosition: {x: 0, y: 0, z: 0}
   enemyVillages:
   - {fileID: 1428301839}
@@ -24799,6 +24840,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1653608640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26305,6 +26350,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1790936670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27551,6 +27600,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1853417453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28901,6 +28954,10 @@ MonoBehaviour:
   timeToReduceMultiplicator: 100
   remainingUnitToProduce: 0
   flatTimeReducing: 0
+  archerBonusNumber: 0
+  spearmanBonusNumber: 0
+  swordmanBonusNumber: 0
+  horsemanBonusNumber: 0
 --- !u!114 &1945919085
 MonoBehaviour:
   m_ObjectHideFlags: 0
