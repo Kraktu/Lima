@@ -11,7 +11,6 @@ public class TileScript : MonoBehaviour
 	public string tileName, tileDescription;
     public TileScript[] tileToSee, tileToUnlock;
 
-    [HideInInspector]
     public int tileLvl;
 
     [HideInInspector]
