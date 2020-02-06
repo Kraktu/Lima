@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1501822670911125922}
   - component: {fileID: 4321200660154901068}
+  - component: {fileID: 8266221665644786296}
   m_Layer: 0
   m_Name: SpawnChestIron_Green
   m_TagString: Untagged
@@ -130,6 +131,19 @@ MonoBehaviour:
   gemsNbr: 0
   typeOfBonus: 0
   animBonus: {fileID: 0}
+--- !u!65 &8266221665644786296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501822670911125923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8037968, y: 1.7729696, z: 2.8239257}
+  m_Center: {x: 0.0005699839, y: 0.88677377, z: 0.002863443}
 --- !u!1 &1501822671937374244
 GameObject:
   m_ObjectHideFlags: 0

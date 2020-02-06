@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5204839638705266979}
   - component: {fileID: 7429594455362517709}
+  - component: {fileID: -6840487324920804002}
   m_Layer: 0
   m_Name: SpawnChestIron_Violet
   m_TagString: Untagged
@@ -130,6 +131,19 @@ MonoBehaviour:
   gemsNbr: 10
   typeOfBonus: 3
   animBonus: {fileID: 0}
+--- !u!65 &-6840487324920804002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204839638705266978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.8037968, y: 1.7729696, z: 2.8239257}
+  m_Center: {x: 0.0005699839, y: 0.88677377, z: 0.002863443}
 --- !u!1 &5204839639035048050
 GameObject:
   m_ObjectHideFlags: 0
