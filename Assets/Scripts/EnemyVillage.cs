@@ -67,7 +67,7 @@ public class EnemyVillage : MonoBehaviour
             maxVenacidWon = mySO.maxWoodWon;
             for (int i = 0; i < mySO.enemyArmy.Length; i++)
             {
-                myArmy.Add(new Army(mySO.enemyArmy[i].armyName, mySO.enemyArmy[i].armyNbr, mySO.enemyArmy[i].armyAttack, mySO.enemyArmy[i].armyLife, mySO.enemyArmy[i].armyAttackPerTurn, mySO.enemyArmy[i].armyArmor, mySO.enemyArmy[i].armyPierce, mySO.enemyArmy[i].armyAccuracy));
+                myArmy.Add(new Army(mySO.enemyArmy[i].armyName, mySO.enemyArmy[i].armyNbr, mySO.enemyArmy[i].armyAttack, mySO.enemyArmy[i].armyLife, mySO.enemyArmy[i].armyAttackPerTurn, mySO.enemyArmy[i].armyArmor, mySO.enemyArmy[i].armyPierce, mySO.enemyArmy[i].armyAccuracy, mySO.enemyArmy[i].armyInWallDefenseBonus, mySO.enemyArmy[i].armyInWallAttackBonus));
             }
         }
         else

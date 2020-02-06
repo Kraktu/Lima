@@ -74,7 +74,7 @@ public class AttackManager : MonoBehaviour
                 double currentUnitNbr = double.Parse(currentAnalyzeUnit.atUnitSentText.text);
                 if (currentUnitNbr > 0)
                 {
-                    Army createdArmy = new Army(currentAnalyzeUnit.unitName, currentUnitNbr, currentAnalyzeUnit.attack, currentAnalyzeUnit.life, currentAnalyzeUnit.attackPerTurn, currentAnalyzeUnit.armor, currentAnalyzeUnit.pierce, currentAnalyzeUnit.accuracy);
+                    Army createdArmy = new Army(currentAnalyzeUnit.unitName, currentUnitNbr, currentAnalyzeUnit.attack, currentAnalyzeUnit.life, currentAnalyzeUnit.attackPerTurn, currentAnalyzeUnit.armor, currentAnalyzeUnit.pierce, currentAnalyzeUnit.accuracy,currentAnalyzeUnit.inWallArmorBonus,currentAnalyzeUnit.inWallAttackBonus);
                     armySent.Add(createdArmy);
                     currentAnalyzeUnit.unitNbr -= currentUnitNbr;
                     currentAnalyzeUnit.atUnitSentText.text = "0";
@@ -301,9 +301,9 @@ public class AttackManager : MonoBehaviour
                             {
                                 if (cloneAtArmy[j].armyPierce <= defArmy[attackedArmy].armyArmor)
                                 {
-                                    if ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) >= (defArmy[attackedArmy].armyArmor - cloneAtArmy[j].armyPierce))
+                                    if ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) >= ((defArmy[attackedArmy].armyArmor+defArmy[attackedArmy].armyInWallDefenseBonus) - cloneAtArmy[j].armyPierce))
                                     {
-                                        defArmy[attackedArmy].totalLife -= ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) - (defArmy[attackedArmy].armyArmor - cloneAtArmy[j].armyPierce));
+                                        defArmy[attackedArmy].totalLife -= ((cloneAtArmy[j].armyAttack * CalculateMultiplicator(defArmy[attackedArmy].armyName, cloneAtArmy[j].armyName)) - ((defArmy[attackedArmy].armyArmor + defArmy[attackedArmy].armyInWallDefenseBonus) - cloneAtArmy[j].armyPierce));
                                     }
                                     else
                                     {
@@ -341,9 +341,9 @@ public class AttackManager : MonoBehaviour
                             {
                                 if (cloneDefArmy[j].armyPierce <= atArmy[attackedArmy].armyArmor)
                                 {
-                                    if ((cloneDefArmy[j].armyAttack * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) >= (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce))
+                                    if (((cloneDefArmy[j].armyAttack+ cloneDefArmy[j].armyInWallAttackBonus) * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) >= (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce))
                                     {
-                                        atArmy[attackedArmy].totalLife -= ((cloneDefArmy[j].armyAttack * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) - (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce));
+                                        atArmy[attackedArmy].totalLife -= (((cloneDefArmy[j].armyAttack + cloneDefArmy[j].armyInWallAttackBonus) * CalculateMultiplicator(atArmy[attackedArmy].armyName, cloneDefArmy[j].armyName)) - (atArmy[attackedArmy].armyArmor - cloneDefArmy[j].armyPierce));
                                     }
                                     else
                                     {

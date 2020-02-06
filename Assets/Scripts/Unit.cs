@@ -10,7 +10,7 @@ public class Unit : MonoBehaviour
     public Sprite smallUnitImage, longUnitImage;
     public string unitName;
     public double unitNbr;
-    public double attack, life, attackPerTurn, armor, pierce, accuracy;
+    public double attack, life, attackPerTurn, armor, pierce, accuracy,inWallArmorBonus,inWallAttackBonus;
     public double woodPrice, orePrice, venacidPrice, timeToProduce;
 
     public Text atUnitName, atUnitNbr,atUnitSentText,atUnitInputField;
@@ -27,7 +27,7 @@ public class Unit : MonoBehaviour
 	[HideInInspector]
 	public double flatTimeReducing = 0;
     [HideInInspector]
-    public double archerBonusNumber = 0, spearmanBonusNumber = 0, swordmanBonusNumber = 0, horsemanBonusNumber = 0;
+    public double archerBonusNumber = 0, spearmanBonusNumber = 0, swordmanBonusNumber = 0, horsemanBonusNumber = 0,siegeUnitBonusNumber=0;
 
     public void OpenMyTab()
     {
@@ -52,6 +52,25 @@ public class Unit : MonoBehaviour
             }
             if (unitInQueue > 100 && unitName == "Swordman")
             {
+                UnitManager.Instance.horseman.unitNbr += (math.floor(unitInQueue / 100)) * horsemanBonusNumber;
+            }
+            if (unitInQueue>100&&unitName=="Alchemist")
+            {
+                switch (UnityEngine.Random.Range(0, 3))
+                {
+                    case 1:
+                        UnitManager.Instance.apophis.unitNbr += (math.floor(unitInQueue / 100)) * siegeUnitBonusNumber;
+                        break;
+                    case 2:
+                        UnitManager.Instance.leviathan.unitNbr += (math.floor(unitInQueue / 100)) * siegeUnitBonusNumber;
+                        break;
+                    case 3:
+                        UnitManager.Instance.quetzalcoatl.unitNbr += (math.floor(unitInQueue / 100)) * siegeUnitBonusNumber;
+                        break;
+                    default:
+                        break;
+                }
+                
                 UnitManager.Instance.horseman.unitNbr += (math.floor(unitInQueue / 100)) * horsemanBonusNumber;
             }
             ResourceManager.Instance.worker.totalResource -= unitInQueue;
