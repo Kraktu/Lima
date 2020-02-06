@@ -8,12 +8,16 @@ public class TileScript : MonoBehaviour
 	[HideInInspector]
 	public int tileLvl, tilelvlMax, tileSkillPointNeeded;
 	public bool visible, buyable, bought;
-	public Material invisibleMat, visibleMat, buyableMat;
+	public Material invisibleMat, visibleMat, buyableMat,boughtMat,maxedMat;
 	public string tileName, tileDescription;
+    public TileScript[] tileToSee, tileToUnlock;
 
-	public void OnMouseDown()
+    public void OnMouseDown()
 	{
-		
+        if (true)
+        {
+
+        }
 	}
 
 	public void OnMouseOver()
