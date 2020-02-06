@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Mathematics;
 
 public class Unit : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Unit : MonoBehaviour
     public double remainingUnitToProduce;
 	[HideInInspector]
 	public double flatTimeReducing = 0;
+    [HideInInspector]
+    public double archerBonusNumber = 0, spearmanBonusNumber = 0, swordmanBonusNumber = 0, horsemanBonusNumber = 0;
 
     public void OpenMyTab()
     {
@@ -38,6 +41,19 @@ public class Unit : MonoBehaviour
         unitInQueue = double.Parse(UIManager.Instance.selectedUnitInputField.text);
         if (UnitManager.Instance.canProduceNewUnit && unitInQueue*woodPrice<=ResourceManager.Instance.wood.totalResource && unitInQueue * orePrice <= ResourceManager.Instance.ore.totalResource && unitInQueue * venacidPrice <= ResourceManager.Instance.venacid.totalResource && unitInQueue <= ResourceManager.Instance.worker.totalResource)
         {
+            if (unitInQueue>100&&unitName=="Spearman")
+            {
+                UnitManager.Instance.archer.unitNbr += (math.floor(unitInQueue / 100)) * archerBonusNumber;
+                UnitManager.Instance.swordman.unitNbr += (math.floor(unitInQueue / 100)) * swordmanBonusNumber;
+            }
+            if (unitInQueue > 100 && unitName == "Archer")
+            {
+                UnitManager.Instance.spearman.unitNbr += (math.floor(unitInQueue / 100)) * spearmanBonusNumber;
+            }
+            if (unitInQueue > 100 && unitName == "Swordman")
+            {
+                UnitManager.Instance.horseman.unitNbr += (math.floor(unitInQueue / 100)) * horsemanBonusNumber;
+            }
             ResourceManager.Instance.worker.totalResource -= unitInQueue;
             ResourceManager.Instance.wood.totalResource -= unitInQueue*woodPrice;
             ResourceManager.Instance.ore.totalResource -= unitInQueue*orePrice;

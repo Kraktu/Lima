@@ -10,7 +10,7 @@ public class TileScript : MonoBehaviour
 	public bool visible, buyable, bought;
 	public Material inexistantMat,invisibleMat, visibleMat, buyableMat,boughtMat,maxedMat;
 	public string tileName, tileDescription;
-    public TileScript[] tileToSee, tileToUnlock;
+    public TileScript[] tileToSee, tileToUnlock,tileToBlock;
 
     public UnityEvent functionToCall;
 
@@ -21,6 +21,8 @@ public class TileScript : MonoBehaviour
     public Material myMat;
     public void Start()
     {
+
+        gameObject.name = tileName;
         MyMatUpdate();
     }
 
@@ -51,6 +53,12 @@ public class TileScript : MonoBehaviour
         {
             myMat = maxedMat;
         }
+    }
+    public void SetMeBlocked()
+    {
+        tilelvlMax = 0;
+        MyMatUpdate();
+
     }
     public void SetMeVisible()
     {
@@ -101,10 +109,6 @@ public class TileScript : MonoBehaviour
         }
     }
 
-	public void OnMouseOver()
-	{
-		
-	}
 	public void OnMouseEnter()
 	{
         if (visible)

@@ -22,6 +22,7 @@ public class AttackManager : MonoBehaviour
 
     public CombatReportButton combatReportButtonPrefab;
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

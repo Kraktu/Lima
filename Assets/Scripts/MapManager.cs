@@ -7,6 +7,7 @@ public class MapManager : MonoBehaviour
 	Camera cam;
 	public Vector3 cameraMapPosition, cameraSpherierPosition;
 	public Quaternion cameraSpherierRotation;
+    public SpawnBonus spawnBonus;
 	[HideInInspector]
 	public Vector3 initialCameraPosition;
 
