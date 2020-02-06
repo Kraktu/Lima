@@ -11542,12 +11542,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 29
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 30
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -11558,13 +11558,31 @@ PrefabInstance:
         type: 3}
       propertyPath: Bonus.Array.data[0]
       value: 
-      objectReference: {fileID: 7350406647036814535, guid: c2857939615c0dc4992931c9bd45bc75,
+      objectReference: {fileID: 4321200660154901068, guid: 2a46bd4315916c14d9ca51107583f179,
         type: 3}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: Bonus.Array.data[2]
       value: 
-      objectReference: {fileID: 7350406647036814535, guid: 6cd8b2850107e1f4cb56095b502e8541,
+      objectReference: {fileID: 6847532556516655048, guid: 9d3c9f3fb08340f44a1068e4356f5993,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: Bonus.Array.data[1]
+      value: 
+      objectReference: {fileID: 1028225001644838754, guid: 42b8ffbded880d5438faa61ddce991eb,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: Bonus.Array.data[3]
+      value: 
+      objectReference: {fileID: 7429594455362517709, guid: 0d540b86d8d20cb4fa68345b86730759,
+        type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: Bonus.Array.data[4]
+      value: 
+      objectReference: {fileID: 6453592039462751474, guid: 677a9921390384a4ea2097ec7d41c14a,
         type: 3}
     - target: {fileID: 173750701303189057, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -23514,7 +23532,7 @@ MonoBehaviour:
   spyPanel: {fileID: 796505730}
   TroopsProducingCanvas: {fileID: 347484684}
   UnitPanel: {fileID: 1062679326}
-  spherierPanel: {fileID: 990116367}
+  spherierCanvas: {fileID: 0}
   buildingNameText: {fileID: 386845223}
   descriptionText: {fileID: 1800091584}
   priceText: {fileID: 2033427413}
@@ -23592,6 +23610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraMapPosition: {x: 100, y: 44, z: 62}
+  cameraSpherierPosition: {x: 0, y: 0, z: 0}
+  cameraSpherierRotation: {x: 0, y: 0, z: 0, w: 0}
   initialCameraPosition: {x: 0, y: 0, z: 0}
   enemyVillages:
   - {fileID: 1428301839}
