@@ -6,20 +6,20 @@ public class SpherierManager : MonoBehaviour
 {
 
     #region Army
-    public double sharpSpearBonus=5,saddleBonus=5,slingShotBonus=5, swashBucklerBonus=5,militaryHierarchyOneBonus=1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1,squireBonus = 10, heavyArmorBonus=10;
-    public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent=5,basicWeaponBonusPercent=5;
+    public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
+    public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;
 
     [HideInInspector]
     public int industrialSpyLvl, technologicSpyLvl, defenseSpyLvl, militarySpyLvl;
-    
-    
+
+
     public void INeedHealing()
     {
-        UnitManager.Instance.alchemist.timeToProduce -= ((UnitManager.Instance.alchemist.timeToProduce / 100)*INeedHealingPercent);
+        UnitManager.Instance.alchemist.timeToProduce -= ((UnitManager.Instance.alchemist.timeToProduce / 100) * INeedHealingPercent);
     }
     public void HorsemanArmy()
     {
-        UnitManager.Instance.horseman.timeToProduce -= ((UnitManager.Instance.horseman.timeToProduce / 100)*HorsemanArmyPercent);
+        UnitManager.Instance.horseman.timeToProduce -= ((UnitManager.Instance.horseman.timeToProduce / 100) * HorsemanArmyPercent);
     }
     public void ArmySpearHead()
     {
@@ -35,7 +35,7 @@ public class SpherierManager : MonoBehaviour
     }
     public void SlingShot()
     {
-        UnitManager.Instance.archer.attack += slingShotBonus; 
+        UnitManager.Instance.archer.attack += slingShotBonus;
     }
     public void SharpSpear()
     {
@@ -70,19 +70,19 @@ public class SpherierManager : MonoBehaviour
     }
     public void MilitaryHierarchyOne()
     {
-        UnitManager.Instance.spearman.archerBonusNumber +=militaryHierarchyOneBonus;
+        UnitManager.Instance.spearman.archerBonusNumber += militaryHierarchyOneBonus;
     }
     public void MilitaryHierarchyTwo()
     {
-        UnitManager.Instance.archer.spearmanBonusNumber +=militaryHierarchyTwoBonus;
+        UnitManager.Instance.archer.spearmanBonusNumber += militaryHierarchyTwoBonus;
     }
     public void MilitaryHierarchyThree()
     {
-        UnitManager.Instance.spearman.swordmanBonusNumber +=militaryHierarchyThreeBonus;
+        UnitManager.Instance.spearman.swordmanBonusNumber += militaryHierarchyThreeBonus;
     }
     public void MilitaryHierarchyFour()
     {
-        UnitManager.Instance.swordman.horsemanBonusNumber +=militaryHierarchyFourBonus;
+        UnitManager.Instance.swordman.horsemanBonusNumber += militaryHierarchyFourBonus;
     }
     public void ThinBlade()
     {
@@ -106,7 +106,7 @@ public class SpherierManager : MonoBehaviour
                 MapManager.Instance.enemyVillages[i].enemyArmySOs[j].timeToGetAttacked -= ((MapManager.Instance.enemyVillages[i].enemyArmySOs[j].timeToGetAttacked / 100) * (float)forcedWalkBonusPercent);
             }
         }
-        
+
     }
     public void IndustrialSpy()
     {
@@ -153,8 +153,8 @@ public class SpherierManager : MonoBehaviour
 
     #region Passive
 
-    public double AdministrationBonus=5;
-    public double PopulationServiceBonusPercent=5;
+    public double AdministrationBonus = 5;
+    public double PopulationServiceBonusPercent = 5;
     public void Administration()
     {
         BuildingManager.Instance.generalQuarter.workersLimit += AdministrationBonus;
@@ -164,7 +164,7 @@ public class SpherierManager : MonoBehaviour
         ResourceManager.Instance.percentWorkerBonusPerSec += PopulationServiceBonusPercent;
         BuildingManager.Instance.house.GetComponent<House>().UpdateHouseProducing();
     }
-    
+
 
     //WIP
 
@@ -194,15 +194,15 @@ public class SpherierManager : MonoBehaviour
 
     #region Active
 
-    public double roteBonus=2, custodeBonus = 1,ironKeyBonus=1,bronzeKeyBonus=2,silverKeyBonus=5,goldKeyBonus=10;
-    public double souvenirBoxBonusPercent=5,pirateChestBonusPercent=5,dragonChestReduceMediocreBonusPercent=5, dragonChestReduceCommonBonusPercent = 1, dragonChestBoostSurnaturalBonusPercent = 6, elDoradoBonusPercent=4;
+    public double roteBonus = 2, custodeBonus = 1, ironKeyBonus = 1, bronzeKeyBonus = 2, silverKeyBonus = 5, goldKeyBonus = 10;
+    public double souvenirBoxBonusPercent = 5, pirateChestBonusPercent = 5, dragonChestReduceMediocreBonusPercent = 5, dragonChestReduceCommonBonusPercent = 1, dragonChestBoostSurnaturalBonusPercent = 6, elDoradoBonusPercent = 4;
     public void Rote()
     {
-        BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick +=roteBonus;
+        BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick += roteBonus;
     }
     public void Custode()
     {
-        BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick +=custodeBonus;
+        BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick += custodeBonus;
     }
 
     public void SouvenirBox()
@@ -278,8 +278,82 @@ public class SpherierManager : MonoBehaviour
     #endregion
 
     #region Defense
+    public double ApocalypseMessengerBonus = 25, whistlingInTheNightBonus = 1, proselytizingBonus = 1,ardentDefenderBonus=10;
+    public double FeatheredSnakeBonusPercent = 5, delatorBonusPercent = 5, religiousExtremismBonusPercent = 5, inquisitorBonusPercent=10;
 
+    [HideInInspector]
+    public int militaryCounterSpyLvl, technologicCounterSpyLvl, industrialCounterSpyLvl, defenseCounterSpyLvl;
+    public void FeatheredSnake()
+    {
+        UnitManager.Instance.quetzalcoatl.pierce += ((UnitManager.Instance.quetzalcoatl.pierce / 100) * FeatheredSnakeBonusPercent);
+    }
+    public void ApocalypseMessenger()
+    {
+        UnitManager.Instance.leviathan.attack += FeatheredSnakeBonusPercent;
+    }
+    public void IndustrialCounterSpy()
+    {
+        industrialCounterSpyLvl++;
+    }
+    public void TechnologicCounterSpy()
+    {
+        technologicCounterSpyLvl++;
+    }
+    public void DefenseCounterSpy()
+    {
+        defenseCounterSpyLvl++;
+    }
+    public void MilitaryCounterSpy()
+    {
+        militaryCounterSpyLvl++;
+    }
+    public void WhistlingInTheNight()
+    {
+        UnitManager.Instance.apophis.attackPerTurn += whistlingInTheNightBonus;
+    }
+    public void Delator()
+    {
+        UnitManager.Instance.spy.timeToProduce -= ((UnitManager.Instance.spy.timeToProduce / 100) * delatorBonusPercent);
+    }
+    public void Proselytizing()
+    {
+        UnitManager.Instance.alchemist.siegeUnitBonusNumber += proselytizingBonus;
+    }
+    public void ReligiousExtremism()
+    {
+        UnitManager.Instance.quetzalcoatl.timeToProduce -= ((UnitManager.Instance.quetzalcoatl.timeToProduce / 100) * religiousExtremismBonusPercent);
+        UnitManager.Instance.leviathan.timeToProduce -= ((UnitManager.Instance.leviathan.timeToProduce / 100) * religiousExtremismBonusPercent);
+        UnitManager.Instance.apophis.timeToProduce -= ((UnitManager.Instance.apophis.timeToProduce / 100) * religiousExtremismBonusPercent);
+    }
+    public void ArdentDefender()
+    {
+        for (int i = 0; i < BuildingManager.Instance.barraks.GetComponent<Barrack>().unitsToUnlock.Length; i++)
+        {
+            BuildingManager.Instance.barraks.GetComponent<Barrack>().unitsToUnlock[i].inWallArmorBonus += ardentDefenderBonus;
+        }
+    }
+    public void Inquisitor()
+    {
+        UnitManager.Instance.alchemist.inWallAttackBonus += ((UnitManager.Instance.alchemist.attack / 100) * inquisitorBonusPercent);
+    }
     //WIP   
+
+    public void ScalesWorship()
+    {
+        Debug.Log("WIP");
+    }
+    public void SolidWall()
+    {
+        Debug.Log("WIP");
+    }
+    public void AmmoDeposit()
+    {
+        Debug.Log("WIP");
+    }
+    public void IsolationistPolitics()
+    {
+        Debug.Log("WIP");
+    }
 
     #endregion
 }

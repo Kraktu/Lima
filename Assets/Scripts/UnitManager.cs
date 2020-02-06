@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public Unit archer, horseman, spearman, swordman, alchemist;
+    public Unit archer, horseman, spearman, swordman, alchemist,quetzalcoatl,leviathan,apophis,spy;
     [HideInInspector]
     public bool canProduceNewUnit = true;
 	[HideInInspector]
