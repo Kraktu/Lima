@@ -124,11 +124,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 55
-  time: 2
-  destroyClicks: 2
-  gemsNbr: 1
-  typeOfBonus: 1
+  spawnChance: 15
+  time: 30
+  destroyClicks: 1
+  gemsNbr: 0
+  typeOfBonus: 0
+  animBonus: {fileID: 0}
 --- !u!1 &1501822671937374244
 GameObject:
   m_ObjectHideFlags: 0
