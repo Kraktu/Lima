@@ -171,7 +171,7 @@ public class SpherierManager : MonoBehaviour
 
     public void Immigration()
     {
-        Debug.Log("WIP");
+        UIManager.Instance.immigrationSkill.gameObject.SetActive(true);
     }
     public void ProfessionalReorientation()
     {
@@ -358,23 +358,25 @@ public class SpherierManager : MonoBehaviour
 
     #region Skills
 
-    public void SkillImmigration(bool on, bool reactivateButton)
+    public void SkillImmigration(bool on)
     {
-        if (on&&!reactivateButton)
+        if (on)//&&!reactivateButton)
         {
             ResourceManager.Instance.workerMult = immigrationMultiplicator;
             StartCoroutine(TimerImmigration());
             UIManager.Instance.immigrationSkill.interactable = false;
             StartCoroutine(ReactivateImmigration());
         }
-        else if (!on&&!reactivateButton)
+        else if (!on)//&&!reactivateButton)
         {
             ResourceManager.Instance.workerMult = 1;
         }
-        else if (!on&&reactivateButton)
-        {
+    }
+    public void ResetSkillImmigration()
+    {
+
             UIManager.Instance.immigrationSkill.interactable = true;
-        }
+            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = "Immigration";
     }
     IEnumerator ReactivateImmigration()
     {
@@ -383,12 +385,12 @@ public class SpherierManager : MonoBehaviour
         {
             if (time >immigrationActiveTime)
             {
-                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = time.ToString("0");
+                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (time / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)time % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)time % 3600) % 60).ToString("00");
             }
             time += Time.deltaTime;
             yield return null;
         }
-        SkillImmigration(false, true);
+        ResetSkillImmigration();
     }
     IEnumerator TimerImmigration()
     {
@@ -398,11 +400,11 @@ public class SpherierManager : MonoBehaviour
         double time=0;
         while (time<immigrationActiveTime)
         {
-            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = time.ToString("0");
+            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (time / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)time % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)time % 3600) % 60).ToString("00"); ;
             time += Time.deltaTime;
             yield return null;
         }
-        SkillImmigration(false,false);
+        SkillImmigration(false);
         colors.disabledColor = Color.red;
         UIManager.Instance.immigrationSkill.colors = colors;
     }
