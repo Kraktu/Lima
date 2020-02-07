@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpherierManager : MonoBehaviour
 {
-
+    public double immigrationActiveTime=3600,immigratioReloadTime = 259200;
+    public double immigrationMultiplicator = 2;
     #region Army
     public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
     public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;
@@ -150,7 +152,6 @@ public class SpherierManager : MonoBehaviour
     }
 
     #endregion
-
     #region Passive
 
     public double AdministrationBonus = 5;
@@ -191,7 +192,6 @@ public class SpherierManager : MonoBehaviour
         Debug.Log("WIP");
     }
     #endregion
-
     #region Active
 
     public double roteBonus = 2, custodeBonus = 1, ironKeyBonus = 1, bronzeKeyBonus = 2, silverKeyBonus = 5, goldKeyBonus = 10;
@@ -276,7 +276,6 @@ public class SpherierManager : MonoBehaviour
         Debug.Log("WIP");
     }
     #endregion
-
     #region Defense
     public double ApocalypseMessengerBonus = 25, whistlingInTheNightBonus = 1, proselytizingBonus = 1,ardentDefenderBonus=10;
     public double FeatheredSnakeBonusPercent = 5, delatorBonusPercent = 5, religiousExtremismBonusPercent = 5, inquisitorBonusPercent=10;
@@ -354,6 +353,60 @@ public class SpherierManager : MonoBehaviour
     {
         Debug.Log("WIP");
     }
+
+    #endregion
+
+    #region Skills
+
+    public void SkillImmigration(bool on, bool reactivateButton)
+    {
+        if (on&&!reactivateButton)
+        {
+            ResourceManager.Instance.workerMult = immigrationMultiplicator;
+            StartCoroutine(TimerImmigration());
+            UIManager.Instance.immigrationSkill.interactable = false;
+            StartCoroutine(ReactivateImmigration());
+        }
+        else if (!on&&!reactivateButton)
+        {
+            ResourceManager.Instance.workerMult = 1;
+        }
+        else if (!on&&reactivateButton)
+        {
+            UIManager.Instance.immigrationSkill.interactable = true;
+        }
+    }
+    IEnumerator ReactivateImmigration()
+    {
+        double time = 0;
+        while (time<= immigratioReloadTime)
+        {
+            if (time >immigrationActiveTime)
+            {
+                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = time.ToString("0");
+            }
+            time += Time.deltaTime;
+            yield return null;
+        }
+        SkillImmigration(false, true);
+    }
+    IEnumerator TimerImmigration()
+    {
+        var colors = UIManager.Instance.immigrationSkill.colors;
+        colors.disabledColor = Color.yellow;
+        UIManager.Instance.immigrationSkill.colors = colors;
+        double time=0;
+        while (time<immigrationActiveTime)
+        {
+            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = time.ToString("0");
+            time += Time.deltaTime;
+            yield return null;
+        }
+        SkillImmigration(false,false);
+        colors.disabledColor = Color.red;
+        UIManager.Instance.immigrationSkill.colors = colors;
+    }
+
 
     #endregion
 }

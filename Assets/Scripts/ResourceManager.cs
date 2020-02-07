@@ -15,6 +15,8 @@ public class ResourceManager : MonoBehaviour
     public int skillPoint=0;
 
     [HideInInspector]
+    public double workerMult=1;
+    [HideInInspector]
     public Resource wood, ore, venacid,worker,gems;
 	[HideInInspector]
 	public double flatWoodBonusPerSec = 0, percentWoodBonusPerSec = 0, flatOreBonusPerSec = 0, percentOreBonusPerSec = 0, flatVenacidBonusPerSec = 0, percentVenacidBonusPerSec = 0, flatWorkerBonusPerSec = 0, percentWorkerBonusPerSec = 0, flatWoodBonusPerClick = 0, percentWoodBonusPerClick = 0, flatOreBonusPerClick = 0, percentOreBonusPerClick = 0, flatVenacidBonusPerClick = 0, percentVenacidBonusPerClick = 0, flatWorkerBonusPerClick = 0, percentWorkerBonusPerClick = 0;
@@ -44,7 +46,7 @@ public class ResourceManager : MonoBehaviour
             wood.totalResource += wood.resourcePerSec * Time.deltaTime;
             ore.totalResource += ore.resourcePerSec * Time.deltaTime;
             venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-			worker.totalResource += worker.resourcePerSec * Time.deltaTime;
+			worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime;
             yield return null;
         }
     }
