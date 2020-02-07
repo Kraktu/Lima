@@ -50,7 +50,7 @@ public class UnitManager : MonoBehaviour
                 unit.unitNbr++;
             }
             unit.totalTimeToProduce -= Time.deltaTime;
-            UIManager.Instance.diplayedTimeToProduceUnits.text = (unit.totalTimeToProduce / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)unit.totalTimeToProduce % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)unit.totalTimeToProduce % 3600) % 60).ToString("00");
+            UIManager.Instance.diplayedTimeToProduceUnits.text = (unit.totalTimeToProduce / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)unit.totalTimeToProduce % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)unit.totalTimeToProduce % 3600) % 60).ToString("00"); ;
             yield return null;
         }
 		currentProducedUnit = null;
