@@ -458,6 +458,7 @@ public class AttackManager : MonoBehaviour
             StartCoroutine(ArmyComeBack(atArmy, 0, 0, 0, enemy.transform.position, enemy,reportButton,false));
             reportButton.endOfReport = "Unfortunately, you couldn't beat all the army of your opponent int time. You won nothing, but your soldiers came back.\n Your army came back with :";
             ReportAllAtUnit(atArmy, ref reportButton.endOfReport);
+            currentSimultaneousAttack--;
         }
         else
         {
@@ -471,6 +472,7 @@ public class AttackManager : MonoBehaviour
                 reportButton.combatPhase1 = reportButton.combatPhase2 = reportButton.combatPhase3 = reportButton.combatPhase4 = reportButton.combatPhase5 = "";
                 reportButton.endOfReport = "Your Army didn't make it and died for you. You won nothing and lost your entire Army.";
                 reportButton.gameObject.SetActive(true);
+                currentSimultaneousAttack--;
             }
         }
       
@@ -490,6 +492,7 @@ public class AttackManager : MonoBehaviour
             yield return null;
 
         }
+        currentSimultaneousAttack--;
         Destroy(go);
         ResourceManager.Instance.wood.totalResource += wonWood;
         ResourceManager.Instance.ore.totalResource += wonOre;
@@ -503,7 +506,7 @@ public class AttackManager : MonoBehaviour
                 }
             }
         }
-        currentSimultaneousAttack--;
+        
         if (actualizeReport)
         {
             reportButton.endOfReport = "You Won : \n" + UIManager.Instance.BigIntToString(wonWood) + " Wood\n" + UIManager.Instance.BigIntToString(wonOre) + " Ore\n" + UIManager.Instance.BigIntToString(VenacidWon) + " Venacid" + "\nAnd came back with :";
