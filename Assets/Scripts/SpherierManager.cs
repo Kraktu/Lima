@@ -284,11 +284,11 @@ public class SpherierManager : MonoBehaviour
     public int militaryCounterSpyLvl, technologicCounterSpyLvl, industrialCounterSpyLvl, defenseCounterSpyLvl;
     public void FeatheredSnake()
     {
-        UnitManager.Instance.quetzalcoatl.pierce += ((UnitManager.Instance.quetzalcoatl.pierce / 100) * FeatheredSnakeBonusPercent);
+        //UnitManager.Instance.quetzalcoatl.pierce += ((UnitManager.Instance.quetzalcoatl.pierce / 100) * FeatheredSnakeBonusPercent);
     }
     public void ApocalypseMessenger()
     {
-        UnitManager.Instance.leviathan.attack += FeatheredSnakeBonusPercent;
+        //UnitManager.Instance.leviathan.attack += FeatheredSnakeBonusPercent;
     }
     public void IndustrialCounterSpy()
     {
@@ -308,11 +308,11 @@ public class SpherierManager : MonoBehaviour
     }
     public void WhistlingInTheNight()
     {
-        UnitManager.Instance.apophis.attackPerTurn += whistlingInTheNightBonus;
+        //UnitManager.Instance.apophis.attackPerTurn += whistlingInTheNightBonus;
     }
     public void Delator()
     {
-        UnitManager.Instance.spy.timeToProduce -= ((UnitManager.Instance.spy.timeToProduce / 100) * delatorBonusPercent);
+        //UnitManager.Instance.spy.timeToProduce -= ((UnitManager.Instance.spy.timeToProduce / 100) * delatorBonusPercent);
     }
     public void Proselytizing()
     {
@@ -320,9 +320,9 @@ public class SpherierManager : MonoBehaviour
     }
     public void ReligiousExtremism()
     {
-        UnitManager.Instance.quetzalcoatl.timeToProduce -= ((UnitManager.Instance.quetzalcoatl.timeToProduce / 100) * religiousExtremismBonusPercent);
-        UnitManager.Instance.leviathan.timeToProduce -= ((UnitManager.Instance.leviathan.timeToProduce / 100) * religiousExtremismBonusPercent);
-        UnitManager.Instance.apophis.timeToProduce -= ((UnitManager.Instance.apophis.timeToProduce / 100) * religiousExtremismBonusPercent);
+       //UnitManager.Instance.quetzalcoatl.timeToProduce -= ((UnitManager.Instance.quetzalcoatl.timeToProduce / 100) * religiousExtremismBonusPercent);
+       //UnitManager.Instance.leviathan.timeToProduce -= ((UnitManager.Instance.leviathan.timeToProduce / 100) * religiousExtremismBonusPercent);
+       //UnitManager.Instance.apophis.timeToProduce -= ((UnitManager.Instance.apophis.timeToProduce / 100) * religiousExtremismBonusPercent);
     }
     public void ArdentDefender()
     {
