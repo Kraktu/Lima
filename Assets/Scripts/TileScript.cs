@@ -18,7 +18,7 @@ public class TileScript : MonoBehaviour
     public int tileLvl;
 
     [HideInInspector]
-    public Material myMat;
+    public MeshRenderer myMesh;
     public void Start()
     {
 
@@ -28,30 +28,30 @@ public class TileScript : MonoBehaviour
 
     public void MyMatUpdate()
     {
-        myMat = gameObject.GetComponent<MeshRenderer>().material;
+        myMesh = gameObject.GetComponent<MeshRenderer>();
         if (tilelvlMax==0)
         {
-            myMat = inexistantMat;
+            myMesh.material = inexistantMat;
         }
         else if (!visible)
         {
-            myMat = invisibleMat;
+            myMesh.material = invisibleMat;
         }
         else if (!buyable)
         {
-            myMat = visibleMat;
+            myMesh.material = visibleMat;
         }
         else if (!bought)
         {
-            myMat = buyableMat;
+            myMesh.material = buyableMat;
         }
         else if (tileLvl != tilelvlMax)
         {
-            myMat = boughtMat;
+            myMesh.material = boughtMat;
         }
         else
         {
-            myMat = maxedMat;
+            myMesh.material = maxedMat;
         }
     }
     public void SetMeBlocked()
@@ -93,7 +93,8 @@ public class TileScript : MonoBehaviour
             SetMeBought();
             MyMatUpdate();
             functionToCall.Invoke();
-
+			ActivateAdjacentTile();
+			RefreshTilePanel();
         }
 	}
 
@@ -114,11 +115,16 @@ public class TileScript : MonoBehaviour
         if (visible)
         {
             UIManager.Instance.spherierPanel.SetActive(true);
-            UIManager.Instance.tileName.text = tileName;
-            UIManager.Instance.tileLvl.text = tileLvl.ToString("0") + " / " + tilelvlMax.ToString("0");
-            UIManager.Instance.tileDescription.text = tileDescription;
+			RefreshTilePanel();
+
         }
 
+	}
+	public void RefreshTilePanel()
+	{
+		UIManager.Instance.tileName.text = tileName;
+		UIManager.Instance.tileLvl.text = tileLvl.ToString("0") + " / " + tilelvlMax.ToString("0");
+		UIManager.Instance.tileDescription.text = tileDescription;
 	}
 	public void OnMouseExit()
     {
