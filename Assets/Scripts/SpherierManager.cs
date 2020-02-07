@@ -357,7 +357,7 @@ public class SpherierManager : MonoBehaviour
     #endregion
 
     #region Skills
-
+    // yolo
     public void SkillImmigration(bool on)
     {
         if (on)//&&!reactivateButton)
