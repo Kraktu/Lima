@@ -41,11 +41,11 @@ public class AttackManager : MonoBehaviour
 
         if (userInput + currentlySentUnit > ControlledUnit.unitNbr)
         {
-            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(ControlledUnit.unitNbr);
+            ControlledUnit.atUnitSentText.text = (ControlledUnit.unitNbr).ToString();
         }
         else
         {
-            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(currentlySentUnit + userInput);
+            ControlledUnit.atUnitSentText.text = (currentlySentUnit + userInput).ToString();
         }
     }
     public void RemoveUnitToAttack(Unit ControlledUnit)
@@ -59,7 +59,7 @@ public class AttackManager : MonoBehaviour
         }
         else
         {
-            ControlledUnit.atUnitSentText.text = UIManager.Instance.BigIntToString(currentlySentUnit - userInput);
+            ControlledUnit.atUnitSentText.text = (currentlySentUnit - userInput).ToString();
         }
     }
 
