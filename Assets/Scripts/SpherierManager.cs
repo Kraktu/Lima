@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SpherierManager : MonoBehaviour
 {
-    public double immigrationActiveTime=3600,immigratioReloadTime = 259200;
+    public double immigrationActiveTime=3600,immigrationReloadTime = 259200;
     public double immigrationMultiplicator = 2;
     #region Army
     public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
@@ -381,11 +381,13 @@ public class SpherierManager : MonoBehaviour
     IEnumerator ReactivateImmigration()
     {
         double time = 0;
-        while (time<= immigratioReloadTime)
+		double timeToDisplay;
+        while (time<= immigrationReloadTime)
         {
             if (time >immigrationActiveTime)
             {
-                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (time / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)time % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)time % 3600) % 60).ToString("00");
+				timeToDisplay = immigrationReloadTime - time;
+                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
             }
             time += Time.deltaTime;
             yield return null;
@@ -394,13 +396,15 @@ public class SpherierManager : MonoBehaviour
     }
     IEnumerator TimerImmigration()
     {
-        var colors = UIManager.Instance.immigrationSkill.colors;
+		double timeToDisplay;
+		var colors = UIManager.Instance.immigrationSkill.colors;
         colors.disabledColor = Color.yellow;
         UIManager.Instance.immigrationSkill.colors = colors;
         double time=0;
         while (time<immigrationActiveTime)
         {
-            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (time / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)time % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)time % 3600) % 60).ToString("00"); ;
+			timeToDisplay = immigrationActiveTime - time;
+			UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00"); ;
             time += Time.deltaTime;
             yield return null;
         }
