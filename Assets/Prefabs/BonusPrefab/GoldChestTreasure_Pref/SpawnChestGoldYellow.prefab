@@ -49,9 +49,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnChance: 55
   time: 12
-  destroyClicks: 2
+  destroyClicks: 1
   gemsNbr: 5
   typeOfBonus: 1
+  animBonus: {fileID: 0}
+  animOnClick: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
+    type: 3}
 --- !u!65 &-2577261158258562305
 BoxCollider:
   m_ObjectHideFlags: 0

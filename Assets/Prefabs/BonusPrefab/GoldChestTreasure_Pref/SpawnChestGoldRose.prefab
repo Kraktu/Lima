@@ -301,11 +301,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 1
+  spawnChance: 5
   time: 5
-  destroyClicks: 15
+  destroyClicks: 10
   gemsNbr: 30
   typeOfBonus: 4
+  animBonus: {fileID: 0}
+  animOnClick: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
+    type: 3}
 --- !u!65 &-7397936462891317118
 BoxCollider:
   m_ObjectHideFlags: 0

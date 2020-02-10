@@ -15,6 +15,8 @@ public class ClickBonus : MonoBehaviour
 	public TypeOfBonus typeOfBonus;
 
 	public Animator animBonus;
+	public GameObject animOnClick;
+	public Vector3 offsetAnimOnClick;
 
 	private void Start()
 	{
@@ -84,5 +86,7 @@ public class ClickBonus : MonoBehaviour
 		{
 			BonusAfterDestroyed();
 		}
+		GameObject go = Instantiate(animOnClick,transform.position + offsetAnimOnClick,Quaternion.identity);
+		Destroy(go, 0.2f);
 	}
 }

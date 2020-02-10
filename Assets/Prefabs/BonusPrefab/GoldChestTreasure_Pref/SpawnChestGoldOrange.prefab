@@ -125,11 +125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 15
+  spawnChance: 0
   time: 15
   destroyClicks: 1
   gemsNbr: 1
   typeOfBonus: 0
+  animBonus: {fileID: 0}
+  animOnClick: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
+    type: 3}
 --- !u!65 &-4319257011504322740
 BoxCollider:
   m_ObjectHideFlags: 0
