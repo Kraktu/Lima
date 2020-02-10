@@ -6304,7 +6304,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1592076627}
-        m_MethodName: ScalesWorship
+        m_MethodName: SkillScaleWorship
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25967,7 +25967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1592076627}
-        m_MethodName: FastMobilization
+        m_MethodName: SkillFastMobilization
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62415,6 +62415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QGLVL00
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671581938379989027, guid: 0070d6ca184b96f4aafb5322f945251e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0070d6ca184b96f4aafb5322f945251e, type: 3}
