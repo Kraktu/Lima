@@ -28,7 +28,10 @@ public class Building:MonoBehaviour
 	public int skillPointUpgradeLevelStep;
 	public double timeToReduce = 5;
 
-	[HideInInspector]
+    public GameObject vfx;
+    public Sprite im;
+
+    [HideInInspector]
 	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
 	[HideInInspector]
 	public bool isCurrentlyUpgrading=false;
