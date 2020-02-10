@@ -299,7 +299,13 @@ public class Building:MonoBehaviour
             }
         }
     }
-	
+    public void InstantiateParticles(string textToInstantiate)
+    {
+        GameObject go = Instantiate(vfx, Input.mousePosition, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
+        go.GetComponentInChildren<Text>().text = textToInstantiate;
+        go.GetComponentInChildren<Image>().sprite = im;
+        go.GetComponent<Animation>().Play("WoodLog");
+    }
 }
 [System.Serializable]
 public struct Prerequisite
