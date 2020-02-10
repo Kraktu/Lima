@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
 	public GameObject spherierPanel, spherierCanvas;
 	public Text tileName, tileLvl, tileDescription;
 
-    public Button immigrationSkill;
+    public Button immigrationSkill, scaleWorshipSkill, fastMobilizationSkill;
 
 
 

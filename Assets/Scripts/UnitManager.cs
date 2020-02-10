@@ -38,6 +38,66 @@ public class UnitManager : MonoBehaviour
         }
 
     }
+    public void ProduceAllUnit()
+    {
+        if (archer.remainingUnitToProduce>0)
+        {
+            archer.unitNbr += archer.remainingUnitToProduce;
+            archer.remainingUnitToProduce=0;
+            archer.totalTimeToProduce = 0;
+        }
+        if (horseman.remainingUnitToProduce > 0)
+        {
+            horseman.unitNbr += horseman.remainingUnitToProduce;
+            horseman.remainingUnitToProduce = 0;
+            horseman.totalTimeToProduce = 0;
+        }
+        if (spearman.remainingUnitToProduce > 0)
+        {
+            spearman.unitNbr += spearman.remainingUnitToProduce;
+            spearman.remainingUnitToProduce = 0;
+            spearman.totalTimeToProduce = 0;
+        }
+        if (swordman.remainingUnitToProduce > 0)
+        {
+            swordman.unitNbr += swordman.remainingUnitToProduce;
+            swordman.remainingUnitToProduce = 0;
+            swordman.totalTimeToProduce = 0;
+        }
+        if (alchemist.remainingUnitToProduce > 0)
+        {
+            alchemist.unitNbr += alchemist.remainingUnitToProduce;
+            alchemist.remainingUnitToProduce = 0;
+            alchemist.totalTimeToProduce = 0;
+        }
+        if (spy.remainingUnitToProduce > 0)
+        {
+            spy.unitNbr += spy.remainingUnitToProduce;
+            spy.remainingUnitToProduce = 0;
+            spy.totalTimeToProduce = 0;
+        }
+    }
+    public void ProduceAllSiege()
+    {
+        if (quetzalcoatl.remainingUnitToProduce > 0)
+        {
+            quetzalcoatl.unitNbr += quetzalcoatl.remainingUnitToProduce;
+            quetzalcoatl.remainingUnitToProduce = 0;
+            quetzalcoatl.totalTimeToProduce = 0;
+        }
+        if (leviathan.remainingUnitToProduce > 0)
+        {
+            leviathan.unitNbr += leviathan.remainingUnitToProduce;
+            leviathan.remainingUnitToProduce = 0;
+            leviathan.totalTimeToProduce = 0;
+        }
+        if (apophis.remainingUnitToProduce > 0)
+        {
+            apophis.unitNbr += apophis.remainingUnitToProduce;
+            apophis.remainingUnitToProduce = 0;
+            apophis.totalTimeToProduce = 0;
+        }
+    }
     public IEnumerator ProducingUnit(Unit unit)
     {
 		currentProducedUnit = unit;

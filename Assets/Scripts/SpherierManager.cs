@@ -7,6 +7,8 @@ public class SpherierManager : MonoBehaviour
 {
     public double immigrationActiveTime=3600,immigrationReloadTime = 259200;
     public double immigrationMultiplicator = 2;
+    public double scaleWorshipCD = 10000;
+    public double fastMobilizationCD = 5000;
     #region Army
     public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
     public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;
@@ -126,14 +128,14 @@ public class SpherierManager : MonoBehaviour
     {
         militarySpyLvl++;
     }
+    public void FastMobilization()
+    {
+        UIManager.Instance.fastMobilizationSkill.gameObject.SetActive(true);
+    }
 
 
     // WIP
 
-    public void FastMobilization()
-    {
-        Debug.Log("WIP");
-    }
     public void FirstHeal()
     {
         Debug.Log("WIP");
@@ -335,12 +337,12 @@ public class SpherierManager : MonoBehaviour
     {
         UnitManager.Instance.alchemist.inWallAttackBonus += ((UnitManager.Instance.alchemist.attack / 100) * inquisitorBonusPercent);
     }
-    //WIP   
-
     public void ScalesWorship()
     {
-        Debug.Log("WIP");
+        UIManager.Instance.scaleWorshipSkill.gameObject.SetActive(true);
     }
+    //WIP   
+
     public void SolidWall()
     {
         Debug.Log("WIP");
@@ -358,6 +360,17 @@ public class SpherierManager : MonoBehaviour
 
     #region Skills
     // yolo
+
+    public void SkillFastMobilization()
+    {
+        UnitManager.Instance.ProduceAllUnit();
+        StartCoroutine(ReactivateSkill(fastMobilizationCD, UIManager.Instance.fastMobilizationSkill.GetComponentInChildren<Text>(), UIManager.Instance.fastMobilizationSkill));
+    }
+    public void SkillScaleWorship()
+    {
+        UnitManager.Instance.ProduceAllSiege();
+        StartCoroutine(ReactivateSkill(scaleWorshipCD, UIManager.Instance.scaleWorshipSkill.GetComponentInChildren<Text>(), UIManager.Instance.scaleWorshipSkill));
+    }
     public void SkillImmigration(bool on)
     {
         if (on)//&&!reactivateButton)
@@ -365,34 +378,34 @@ public class SpherierManager : MonoBehaviour
             ResourceManager.Instance.workerMult = immigrationMultiplicator;
             StartCoroutine(TimerImmigration());
             UIManager.Instance.immigrationSkill.interactable = false;
-            StartCoroutine(ReactivateImmigration());
+            StartCoroutine(ReactivateSkill(immigrationReloadTime, UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>(), UIManager.Instance.immigrationSkill));
         }
         else if (!on)//&&!reactivateButton)
         {
             ResourceManager.Instance.workerMult = 1;
         }
     }
-    public void ResetSkillImmigration()
+    public void ResetSkill(Button buttonToReset)
     {
 
-            UIManager.Instance.immigrationSkill.interactable = true;
-            UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = "Immigration";
+        buttonToReset.interactable = true;
+        buttonToReset.GetComponentInChildren<Text>().text = "Immigration";
     }
-    IEnumerator ReactivateImmigration()
+    IEnumerator ReactivateSkill(double reloadTime,Text cooldownText,Button buttonToReset)
     {
         double time = 0;
 		double timeToDisplay;
-        while (time<= immigrationReloadTime)
+        while (time<= reloadTime)
         {
-            if (time >immigrationActiveTime)
+            if (time > reloadTime)
             {
-				timeToDisplay = immigrationReloadTime - time;
-                UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
+				timeToDisplay = reloadTime - time;
+                cooldownText.text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
             }
             time += Time.deltaTime;
             yield return null;
         }
-        ResetSkillImmigration();
+        ResetSkill(buttonToReset);
     }
     IEnumerator TimerImmigration()
     {
