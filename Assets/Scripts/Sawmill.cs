@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Sawmill : ResourceBuilding
 {
-	
+
+	public GameObject vfx;
+	public Sprite im;
+	public Vector3 target;
+	public Camera cam;
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -18,7 +23,13 @@ public class Sawmill : ResourceBuilding
 			ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
 			RefreshInterface();
 		}
-    }
+		
+			//target = UIManager.Instance.totalResourceCanvas.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+			GameObject go = Instantiate(vfx,Input.mousePosition,Quaternion.identity,UIManager.Instance.totalResourceCanvas.transform);
+			go.GetComponentInChildren<Text>().text = UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick);
+			go.GetComponentInChildren<Image>().sprite = im;
+			go.GetComponent<Animation>().Play("WoodLog");
+	}
 
     public void UpgradeSawmill()
     {
