@@ -76,7 +76,8 @@ public class ClickBonus : MonoBehaviour
 		}
 		animBonus.Play("chest_opening");
 		gameObject.GetComponent<BoxCollider>().enabled = false;
-		Destroy(gameObject,0.75f);
+		SoundManager.Instance.PlaySoundEffect("hallelujahshort.swf");
+		Destroy(gameObject,1);
 	}
 
 	void OnMouseDown()
