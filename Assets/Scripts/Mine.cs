@@ -17,6 +17,7 @@ public class Mine : ResourceBuilding
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick));
+			SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
 		}
     }
 
