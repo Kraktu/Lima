@@ -395,6 +395,9 @@ public class SpherierManager : MonoBehaviour
     }
     IEnumerator ReactivateSkill(double reloadTime,Text cooldownText,Button buttonToReset)
     {
+        var colors = buttonToReset.colors;
+        colors.disabledColor = Color.yellow;
+        buttonToReset.colors = colors;
         double time = 0;
 		double timeToDisplay;
         while (time<= reloadTime)
@@ -424,8 +427,6 @@ public class SpherierManager : MonoBehaviour
             yield return null;
         }
         SkillImmigration(false);
-        colors.disabledColor = Color.red;
-        UIManager.Instance.immigrationSkill.colors = colors;
     }
 
 
