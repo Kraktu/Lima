@@ -37,7 +37,7 @@ public class GeneralQuarter : Building
 			}
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick));
-			SoundManager.Instance.PlaySoundEffect("ClickGeneralButtons_SFX");
+			SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
 		}
 	}
 
