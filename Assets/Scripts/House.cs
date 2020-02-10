@@ -16,6 +16,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
 			RefreshInterface();
+			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick));
 		}
 	}
 

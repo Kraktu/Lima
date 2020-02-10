@@ -16,6 +16,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
 			RefreshInterface();
+			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick));
 		}
     }
 

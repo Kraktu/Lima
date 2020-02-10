@@ -16,6 +16,7 @@ public class Refinery : ResourceBuilding
 			ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
 			RefreshInterface();
+			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick));
 		}
 	}
 	public void UpgradeRefinery()

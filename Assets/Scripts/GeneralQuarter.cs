@@ -35,8 +35,8 @@ public class GeneralQuarter : Building
 					buildings[i].elpasedTime += removeTheTimeOnClick;
 				}
 			}
-
 			RefreshInterface();
+			InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick));
 		}
 	}
 

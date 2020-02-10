@@ -30,6 +30,7 @@ public class Building:MonoBehaviour
 
     public GameObject vfx;
     public Sprite im;
+	public Vector3 offset;
 
     [HideInInspector]
 	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
@@ -301,10 +302,11 @@ public class Building:MonoBehaviour
     }
     public void InstantiateParticles(string textToInstantiate)
     {
-        GameObject go = Instantiate(vfx, Input.mousePosition, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
+        GameObject go = Instantiate(vfx, Input.mousePosition + offset, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
         go.GetComponentInChildren<Text>().text = textToInstantiate;
         go.GetComponentInChildren<Image>().sprite = im;
         go.GetComponent<Animation>().Play("WoodLog");
+		Destroy(go, 2);
     }
 }
 [System.Serializable]
