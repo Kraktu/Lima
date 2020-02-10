@@ -51,7 +51,7 @@ public class Building:MonoBehaviour
 
     public virtual void Start()
     {
-        //FutureStart
+        //wesh
     }
     public virtual void OnMouseDown()
     {
@@ -95,6 +95,10 @@ public class Building:MonoBehaviour
             _woodUpgradeCost = startingWoodUpgradeCost * (Mathf.Pow(magicRatio.x, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
             _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
             _venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+            {
+                BuildingManager.Instance.allBuilding[i].CheckIfActive();
+        }
             return true;
         }
         else if (level != 0 && _woodUpgradeCost <= ResourceManager.Instance.wood.totalResource && _oreUpgradeCost <= ResourceManager.Instance.ore.totalResource && _venacidUpgradeCost <= ResourceManager.Instance.venacid.totalResource)
@@ -107,13 +111,18 @@ public class Building:MonoBehaviour
             _woodUpgradeCost = startingWoodUpgradeCost*(Mathf.Pow(magicRatio.x,level-1))*(1-reductionPercentCostBonus)-reductionFlatCostBonus;
             _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
 			_venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
-			return true;
+            for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+            {
+                BuildingManager.Instance.allBuilding[i].CheckIfActive();
+        }
+            return true;
 
         }
         else
         {
             return false;
         }
+
     }
 	public virtual void AddWorkerToProducing()
 	{
@@ -264,5 +273,34 @@ public class Building:MonoBehaviour
 	{
 
 	}
+    public Prerequisite[] prerequisites;
+    public void CheckIfActive()
+    {
+        int verifiedRequisite = 0;
+        if (prerequisites.Length == 0)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            for (int i = 0; i < prerequisites.Length; i++)
+            {
+                if (prerequisites[i].neededBuilding.level==prerequisites[i].neededBuildingLevel)
+                {
+                    verifiedRequisite++;
+                }
+            }
+            if (verifiedRequisite==prerequisites.Length)
+            {
+                gameObject.SetActive(true);
+            }
+        }
+    }
 	
+}
+[System.Serializable]
+public struct Prerequisite
+{
+   public Building neededBuilding;
+   public int neededBuildingLevel;
 }
