@@ -364,11 +364,13 @@ public class SpherierManager : MonoBehaviour
     public void SkillFastMobilization()
     {
         UnitManager.Instance.ProduceAllUnit();
+        UIManager.Instance.fastMobilizationSkill.interactable = false;
         StartCoroutine(ReactivateSkill(fastMobilizationCD, UIManager.Instance.fastMobilizationSkill.GetComponentInChildren<Text>(), UIManager.Instance.fastMobilizationSkill));
     }
     public void SkillScaleWorship()
     {
         UnitManager.Instance.ProduceAllSiege();
+        UIManager.Instance.scaleWorshipSkill.interactable = false;
         StartCoroutine(ReactivateSkill(scaleWorshipCD, UIManager.Instance.scaleWorshipSkill.GetComponentInChildren<Text>(), UIManager.Instance.scaleWorshipSkill));
     }
     public void SkillImmigration(bool on)
