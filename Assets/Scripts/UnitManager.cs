@@ -70,33 +70,33 @@ public class UnitManager : MonoBehaviour
             alchemist.remainingUnitToProduce = 0;
             alchemist.totalTimeToProduce = 0;
         }
-        if (spy.remainingUnitToProduce > 0)
-        {
-            spy.unitNbr += spy.remainingUnitToProduce;
-            spy.remainingUnitToProduce = 0;
-            spy.totalTimeToProduce = 0;
-        }
+       //if (spy.remainingUnitToProduce > 0)
+       //{
+       //    spy.unitNbr += spy.remainingUnitToProduce;
+       //    spy.remainingUnitToProduce = 0;
+       //    spy.totalTimeToProduce = 0;
+       //}
     }
     public void ProduceAllSiege()
     {
-        if (quetzalcoatl.remainingUnitToProduce > 0)
-        {
-            quetzalcoatl.unitNbr += quetzalcoatl.remainingUnitToProduce;
-            quetzalcoatl.remainingUnitToProduce = 0;
-            quetzalcoatl.totalTimeToProduce = 0;
-        }
-        if (leviathan.remainingUnitToProduce > 0)
-        {
-            leviathan.unitNbr += leviathan.remainingUnitToProduce;
-            leviathan.remainingUnitToProduce = 0;
-            leviathan.totalTimeToProduce = 0;
-        }
-        if (apophis.remainingUnitToProduce > 0)
-        {
-            apophis.unitNbr += apophis.remainingUnitToProduce;
-            apophis.remainingUnitToProduce = 0;
-            apophis.totalTimeToProduce = 0;
-        }
+     //   if (quetzalcoatl.remainingUnitToProduce > 0)
+     //   {
+     //       quetzalcoatl.unitNbr += quetzalcoatl.remainingUnitToProduce;
+     //       quetzalcoatl.remainingUnitToProduce = 0;
+     //       quetzalcoatl.totalTimeToProduce = 0;
+     //   }
+     //   if (leviathan.remainingUnitToProduce > 0)
+     //   {
+     //       leviathan.unitNbr += leviathan.remainingUnitToProduce;
+     //       leviathan.remainingUnitToProduce = 0;
+     //       leviathan.totalTimeToProduce = 0;
+     //   }
+     //   if (apophis.remainingUnitToProduce > 0)
+     //   {
+     //       apophis.unitNbr += apophis.remainingUnitToProduce;
+     //       apophis.remainingUnitToProduce = 0;
+     //       apophis.totalTimeToProduce = 0;
+     //   }
     }
     public IEnumerator ProducingUnit(Unit unit)
     {
