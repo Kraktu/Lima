@@ -83,6 +83,7 @@ public class Building:MonoBehaviour
 			UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
 			UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
 			UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
+
 			RefreshInterface();
 		}
     }

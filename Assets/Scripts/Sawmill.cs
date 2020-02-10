@@ -19,6 +19,7 @@ public class Sawmill : ResourceBuilding
             ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
             RefreshInterface();
             InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick));
+			SoundManager.Instance.PlaySoundEffect("Click_SFX");
         }
     }
 

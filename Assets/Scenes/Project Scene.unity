@@ -21562,6 +21562,133 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 584849637}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &585669323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585669324}
+  - component: {fileID: 585669325}
+  m_Layer: 0
+  m_Name: SFXPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585669324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585669323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 752773123}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &585669325
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585669323}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &589944942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22357,8 +22484,9 @@ MonoBehaviour:
     type: 3}
   skillPointUpgradeLevelStep: 0
   timeToReduce: 5
-  vfx: {fileID: 0}
-  im: {fileID: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  im: {fileID: 21300000, guid: 29deea17b8603944088b68d047e12e0e, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -27722,6 +27850,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1173613280}
+  - {fileID: 585669324}
   - {fileID: 1289892320}
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -29628,12 +29757,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 29
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -33132,8 +33261,9 @@ MonoBehaviour:
     type: 3}
   skillPointUpgradeLevelStep: 4
   timeToReduce: 5
-  vfx: {fileID: 0}
-  im: {fileID: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  im: {fileID: 21300000, guid: 1cd96935a953c3346aaba1a403712a66, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -48900,7 +49030,7 @@ RectTransform:
   - {fileID: 1594385199}
   - {fileID: 76316666}
   m_Father: {fileID: 752773123}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -53004,8 +53134,9 @@ MonoBehaviour:
     type: 3}
   skillPointUpgradeLevelStep: 2
   timeToReduce: 5
-  vfx: {fileID: 0}
-  im: {fileID: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  im: {fileID: 21300000, guid: 1e7786d7b9051b74bbedef050f2ce1eb, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -57021,8 +57152,9 @@ MonoBehaviour:
     type: 3}
   skillPointUpgradeLevelStep: 5
   timeToReduce: 5
-  vfx: {fileID: 0}
-  im: {fileID: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  im: {fileID: 21300000, guid: 8fd891bf252eba94abfa7f0114ec17ee, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -61971,6 +62103,7 @@ GameObject:
   - component: {fileID: 1592076625}
   - component: {fileID: 1592076626}
   - component: {fileID: 1592076627}
+  - component: {fileID: 1592076628}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -62293,6 +62426,31 @@ MonoBehaviour:
   technologicCounterSpyLvl: 0
   industrialCounterSpyLvl: 0
   defenseCounterSpyLvl: 0
+--- !u!114 &1592076628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592076618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab507de7345570240a0f020a0129e57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aSourceSFX: {fileID: 585669325}
+  _aSourceMusic: {fileID: 1173613279}
+  _soundEffects:
+  - name: Click_SFX
+    clip: {fileID: 8300000, guid: 45d0a8ad6030a5746b8b799b2c9a70e3, type: 3}
+  - name: UpgradingBuildings_SFX
+    clip: {fileID: 8300000, guid: 0cfd39bdeef6672458c112cf036ce98c, type: 3}
+  - name: ClickBonus_SFX
+    clip: {fileID: 8300000, guid: af1b4fa8b36867344a49f88591cebff3, type: 3}
+  - name: ClickGeneralButtons_SFX
+    clip: {fileID: 8300000, guid: 14763fae68517ef4d8eca6482ec04ded, type: 3}
+  - name: 
+    clip: {fileID: 0}
 --- !u!1001 &1593021480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63133,6 +63291,7 @@ MonoBehaviour:
   timeToReduce: 5
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   im: {fileID: 21300000, guid: 669149cedd5aa25429bd524d77786fbd, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
@@ -63144,11 +63303,6 @@ MonoBehaviour:
   perClickMagicRatioUpgrade: 1.02
   perSecMagicRatioUpgrade: 1.02
   producedResource: Wood
-  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
-  im: {fileID: 21300000, guid: c9426e1ca0de4e5489371ec34f023007, type: 3}
-  target: {x: 0, y: 0, z: 0}
-  cam: {fileID: 963194227}
-  offset: {x: 2, y: 2, z: 0}
 --- !u!65 &1602226632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70545,8 +70699,9 @@ MonoBehaviour:
     type: 3}
   skillPointUpgradeLevelStep: 3
   timeToReduce: 5
-  vfx: {fileID: 0}
-  im: {fileID: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  im: {fileID: 21300000, guid: d0a9c3d271bcc6745900547e56010276, type: 3}
+  offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
   reductionFlatCostBonus: 0
   isCurrentlyUpgrading: 0
