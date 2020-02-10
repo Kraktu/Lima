@@ -10,6 +10,8 @@ public class Sawmill : ResourceBuilding
 	public Sprite im;
 	public Vector3 target;
 	public Camera cam;
+
+	public Vector3 offset;
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -25,13 +27,16 @@ public class Sawmill : ResourceBuilding
 		}
 		
 			//target = UIManager.Instance.totalResourceCanvas.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
-			GameObject go = Instantiate(vfx,Input.mousePosition,Quaternion.identity,UIManager.Instance.totalResourceCanvas.transform);
+			Vector3 pos = Input.mousePosition + offset;
+			pos.z = UIManager.Instance.totalResourceCanvas.GetComponent<RectTransform>().position.z;
+			GameObject go = Instantiate(vfx,cam.ScreenToWorldPoint(pos),Quaternion.identity,UIManager.Instance.totalResourceCanvas.transform);
 			go.GetComponentInChildren<Text>().text = UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick);
 			go.GetComponentInChildren<Image>().sprite = im;
 			go.GetComponent<Animation>().Play("WoodLog");
 	}
 
-    public void UpgradeSawmill()
+
+	public void UpgradeSawmill()
     {
         if (LevelUp())
         {
