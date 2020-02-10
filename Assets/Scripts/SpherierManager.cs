@@ -405,7 +405,7 @@ public class SpherierManager : MonoBehaviour
             if (time > reloadTime)
             {
 				timeToDisplay = reloadTime - time;
-                cooldownText.text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
+                buttonToReset.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
             }
             time += Time.deltaTime;
             yield return null;
