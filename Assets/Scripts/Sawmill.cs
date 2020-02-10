@@ -18,16 +18,10 @@ public class Sawmill : ResourceBuilding
             UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
             ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
             RefreshInterface();
-            InstantiateParticles();
+            InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick));
         }
     }
-    public void InstantiateParticles()
-    {
-        GameObject go = Instantiate(vfx, Input.mousePosition, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
-        go.GetComponentInChildren<Text>().text = UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick);
-        go.GetComponentInChildren<Image>().sprite = im;
-        go.GetComponent<Animation>().Play("WoodLog");
-    }
+
 
 
 	public void UpgradeSawmill()
