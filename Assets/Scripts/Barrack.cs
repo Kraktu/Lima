@@ -40,7 +40,7 @@ public class Barrack : Building
 		if (UnitManager.Instance.canProduceNewUnit == false)
 		{
 			UnitManager.Instance.currentProducedUnit.totalTimeToProduce -= timeReducedOnClick*(1+timePercentReducedOnClick/100);
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeReducedOnClick), imDuringUpgrade);
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeReducedOnClick), imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
 		}
 	}
