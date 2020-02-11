@@ -4559,6 +4559,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1284772133450983074}
+  - component: {fileID: -4742125171010436034}
+  - component: {fileID: 1430578917980226066}
   m_Layer: 0
   m_Name: SoldierArmy_Pref
   m_TagString: Untagged
@@ -4589,6 +4591,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &-4742125171010436034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284772133450983075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c5e08dcf1f412408c70a2a943261ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1430578917980226066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284772133450983075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6255921, y: 0.8337779, z: 1}
+  m_Center: {x: 0.012596786, y: 0.17064357, z: 0}
 --- !u!1 &1284772133464560251
 GameObject:
   m_ObjectHideFlags: 0
