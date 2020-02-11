@@ -25,7 +25,11 @@ public class GeneralQuarter : Building
     public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		if (isCurrentlyUpgrading == false)
+        if (isCurrentlyUpgrading == true)
+        {
+            elpasedTime += timeToReduce;
+        }
+        if (isCurrentlyUpgrading == false)
 		{
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
 			for (int i = 0; i < buildings.Count; i++)
