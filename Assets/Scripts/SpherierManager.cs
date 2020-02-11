@@ -365,13 +365,13 @@ public class SpherierManager : MonoBehaviour
     {
         UnitManager.Instance.ProduceAllUnit();
         UIManager.Instance.fastMobilizationSkill.interactable = false;
-        StartCoroutine(ReactivateSkill(fastMobilizationCD, UIManager.Instance.fastMobilizationSkill.GetComponentInChildren<Text>(), UIManager.Instance.fastMobilizationSkill));
+        StartCoroutine(ReactivateSkill(fastMobilizationCD, UIManager.Instance.fastMobilizationSkill.GetComponentInChildren<Text>(), UIManager.Instance.fastMobilizationSkill,"Fast Mobilization"));
     }
     public void SkillScaleWorship()
     {
         UnitManager.Instance.ProduceAllSiege();
         UIManager.Instance.scaleWorshipSkill.interactable = false;
-        StartCoroutine(ReactivateSkill(scaleWorshipCD, UIManager.Instance.scaleWorshipSkill.GetComponentInChildren<Text>(), UIManager.Instance.scaleWorshipSkill));
+        StartCoroutine(ReactivateSkill(scaleWorshipCD, UIManager.Instance.scaleWorshipSkill.GetComponentInChildren<Text>(), UIManager.Instance.scaleWorshipSkill,"Scale Worship"));
     }
     public void SkillImmigration(bool on)
     {
@@ -380,37 +380,34 @@ public class SpherierManager : MonoBehaviour
             ResourceManager.Instance.workerMult = immigrationMultiplicator;
             StartCoroutine(TimerImmigration());
             UIManager.Instance.immigrationSkill.interactable = false;
-            StartCoroutine(ReactivateSkill(immigrationReloadTime, UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>(), UIManager.Instance.immigrationSkill));
+            StartCoroutine(ReactivateSkill(immigrationReloadTime, UIManager.Instance.immigrationSkill.GetComponentInChildren<Text>(), UIManager.Instance.immigrationSkill,"Immigration"));
         }
         else if (!on)//&&!reactivateButton)
         {
             ResourceManager.Instance.workerMult = 1;
         }
     }
-    public void ResetSkill(Button buttonToReset)
+    public void ResetSkill(Button buttonToReset, string nameToDisplay)
     {
 
         buttonToReset.interactable = true;
         buttonToReset.GetComponentInChildren<Text>().text = "Immigration";
     }
-    IEnumerator ReactivateSkill(double reloadTime,Text cooldownText,Button buttonToReset)
+    IEnumerator ReactivateSkill(double reloadTime,Text cooldownText,Button buttonToReset,string nameToDisplay)
     {
-        var colors = buttonToReset.colors;
-        colors.disabledColor = Color.yellow;
-        buttonToReset.colors = colors;
         double time = 0;
-		double timeToDisplay;
+		double timeToDisplay=0;
+        var colors = buttonToReset.colors;
+        colors.disabledColor = Color.red;
+        buttonToReset.colors = colors;
         while (time<= reloadTime)
         {
-            if (time > reloadTime)
-            {
-				timeToDisplay = reloadTime - time;
-                buttonToReset.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
-            }
+			timeToDisplay = reloadTime - time;
+            buttonToReset.GetComponentInChildren<Text>().text = (timeToDisplay / 3600).ToString("00") + ":" + Mathf.Floor(Mathf.Floor((float)timeToDisplay % 3600) / 60).ToString("00") + ":" + Mathf.Floor(((float)timeToDisplay % 3600) % 60).ToString("00");
             time += Time.deltaTime;
             yield return null;
         }
-        ResetSkill(buttonToReset);
+        ResetSkill(buttonToReset,nameToDisplay);
     }
     IEnumerator TimerImmigration()
     {
