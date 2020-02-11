@@ -22,7 +22,7 @@ public class AttackManager : MonoBehaviour
 
     public CombatReportButton combatReportButtonPrefab;
 
-
+    Coroutine AttackCo;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -83,7 +83,7 @@ public class AttackManager : MonoBehaviour
             if (armySent.Count > 0)
             {
                 currentSimultaneousAttack++;
-                StartCoroutine(Attacking());
+                AttackCo=StartCoroutine(Attacking());
                 UIManager.Instance.attackPanel.SetActive(false);
             }
         }
@@ -113,6 +113,7 @@ public class AttackManager : MonoBehaviour
             go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
             go.GetComponent<TroopInteraction>().timeToComeBack = time;
             time += Time.deltaTime;
+            Debug.Log(time);
             yield return null;
         }
         Destroy(go);
@@ -263,6 +264,7 @@ public class AttackManager : MonoBehaviour
             }
         }
     }
+    
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
         CombatReportButton reportButton = Instantiate(combatReportButtonPrefab, UIManager.Instance.combatReportButtonScrollViewContent.transform);
@@ -480,13 +482,14 @@ public class AttackManager : MonoBehaviour
         }
       
     }
-    public void Retreat(List<Army> comeBackArmy, Vector3 startingPos, float timeToComeBack, CombatReportButton reportButton)
+    public void Retreat(List<Army> comeBackArmy, Vector3 startingPos, float timeToComeBack, CombatReportButton reportButton,GameObject troop)
     {
-        StopCoroutine(Attacking());
-        Retreating(comeBackArmy, startingPos, timeToComeBack, reportButton);
+        StopCoroutine(AttackCo);
+        StartCoroutine(Retreating(comeBackArmy, startingPos, timeToComeBack, reportButton,troop));
     }
-    public IEnumerator Retreating(List<Army> comeBackArmy,Vector3 startingPos,float timeToComeBack, CombatReportButton reportButton)
+    public IEnumerator Retreating(List<Army> comeBackArmy,Vector3 startingPos,float timeToComeBack, CombatReportButton reportButton,GameObject troop)
     {
+        Destroy(troop);
         Vector3 endingPos = OurVillageOnMap.transform.position;
         Vector3 Direction = (endingPos - startingPos).normalized;
         float time = 0;

@@ -16,16 +16,15 @@ public class TroopInteraction : MonoBehaviour
     private void OnMouseDown()
     {
         UIManager.Instance.retreatButton.gameObject.SetActive(true);
-        UIManager.Instance.retreatButton.gameObject.transform.position = Input.mousePosition;
+        UIManager.Instance.retreatButton.gameObject.transform.position = Input.mousePosition+UIManager.Instance.retreatButtonOffset;
         UIManager.Instance.retreatButton.onClick.RemoveAllListeners();
         UIManager.Instance.retreatButton.onClick.AddListener(ArmyRetreatOrder);
     }
     public void ArmyRetreatOrder()
     {
         startingPos = transform.position;
-        AttackManager.Instance.Retreat(comeBackArmy, startingPos, timeToComeBack, reportButton);
+        AttackManager.Instance.Retreat(comeBackArmy, startingPos, timeToComeBack, reportButton,this.gameObject);
         UIManager.Instance.retreatButton.onClick.RemoveAllListeners();
         UIManager.Instance.retreatButton.gameObject.SetActive(false);
-        Destroy(gameObject);
     }
 }

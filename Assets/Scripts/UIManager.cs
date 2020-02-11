@@ -35,6 +35,7 @@ public class UIManager : MonoBehaviour
 
     public Button immigrationSkill, scaleWorshipSkill, fastMobilizationSkill;
 
+    public Vector3 retreatButtonOffset;
     public Button retreatButton;
 
 
