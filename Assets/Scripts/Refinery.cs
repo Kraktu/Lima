@@ -17,6 +17,7 @@ public class Refinery : ResourceBuilding
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick));
+			SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
 		}
 	}
 	public void UpgradeRefinery()
