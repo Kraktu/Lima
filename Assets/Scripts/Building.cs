@@ -197,7 +197,6 @@ public class Building:MonoBehaviour
 		models[_currentUsedModel].SetActive(false);
 		UIManager.Instance.BuildingInterfaceActivation(false);
 		ConstructionTimerText.gameObject.SetActive(true);
-		SoundManager.Instance.PlaySoundEffect("UpgradingBuildings_SFX");
 		//starting timer
 		GameObject go = Instantiate(constructionPoof,transform.position+Vector3.up*2,Quaternion.identity);
 		while (elpasedTime < constructionTime)

@@ -17,6 +17,7 @@ public class House : ResourceBuilding
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick));
+			SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
 		}
 	}
 

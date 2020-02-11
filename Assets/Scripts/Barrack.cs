@@ -22,6 +22,7 @@ public class Barrack : Building
 		if (isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
+			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
 		}
 		else if (isCurrentlyUpgrading == false)
 		{
