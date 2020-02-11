@@ -10,6 +10,7 @@ public class House : ResourceBuilding
 		if(isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
+			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 		}
 		else if(isCurrentlyUpgrading == false)
 		{

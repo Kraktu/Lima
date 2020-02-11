@@ -22,7 +22,8 @@ public class Barrack : Building
 		if (isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
-			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
+			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+
 		}
 		else if (isCurrentlyUpgrading == false)
 		{
@@ -38,6 +39,7 @@ public class Barrack : Building
 		if (UnitManager.Instance.canProduceNewUnit == false)
 		{
 			UnitManager.Instance.currentProducedUnit.totalTimeToProduce -= timeReducedOnClick*(1+timePercentReducedOnClick/100);
+			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
 		}
 	}
 	public override void AddWorkerToProducing()

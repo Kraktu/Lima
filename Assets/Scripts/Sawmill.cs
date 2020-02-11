@@ -12,7 +12,8 @@ public class Sawmill : ResourceBuilding
         if (isCurrentlyUpgrading == true)
         {
             elpasedTime += timeToReduce;
-        }
+			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+		}
         else if (isCurrentlyUpgrading == false)
         {
             UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);

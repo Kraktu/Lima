@@ -83,6 +83,7 @@ public class ClickBonus : MonoBehaviour
 	void OnMouseDown()
 	{
 		destroyClicks--;
+		SoundManager.Instance.PlaySoundEffect("ClickBonus_SFX");
 		if (destroyClicks == 0)
 		{
 			BonusAfterDestroyed();
