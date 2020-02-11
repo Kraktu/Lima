@@ -10,6 +10,7 @@ public class Mine : ResourceBuilding
 		if(isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce),imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 		}
 		else if(isCurrentlyUpgrading == false)
@@ -17,7 +18,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
 			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick));
+			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
 		}
     }

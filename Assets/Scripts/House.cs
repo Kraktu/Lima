@@ -10,6 +10,7 @@ public class House : ResourceBuilding
 		if(isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 		}
 		else if(isCurrentlyUpgrading == false)
@@ -17,7 +18,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
 			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick));
+			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
 		}
 	}

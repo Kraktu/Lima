@@ -29,7 +29,8 @@ public class Building:MonoBehaviour
 	public double timeToReduce = 5;
 
     public GameObject vfx;
-    public Sprite im;
+    public Sprite imNormalUse;
+	public Sprite imDuringUpgrade;
 	public Vector3 offset;
 
     [HideInInspector]
@@ -300,11 +301,11 @@ public class Building:MonoBehaviour
             }
         }
     }
-    public void InstantiateParticles(string textToInstantiate)
+    public void InstantiateParticles(string textToInstantiate, Sprite spriteToInstantiate)
     {
         GameObject go = Instantiate(vfx, Input.mousePosition + offset, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
         go.GetComponentInChildren<Text>().text = textToInstantiate;
-        go.GetComponentInChildren<Image>().sprite = im;
+        go.GetComponentInChildren<Image>().sprite = spriteToInstantiate;
         go.GetComponent<Animation>().Play("WoodLog");
 		Destroy(go, 2);
     }
