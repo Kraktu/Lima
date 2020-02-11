@@ -28,20 +28,26 @@ public class GeneralQuarter : Building
         if (isCurrentlyUpgrading == true)
         {
             elpasedTime += timeToReduce;
-        }
+			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+		}
         if (isCurrentlyUpgrading == false)
 		{
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+			bool isOneBuildingUpgrading = false;
 			for (int i = 0; i < buildings.Count; i++)
 			{
 				if (buildings[i].isCurrentlyUpgrading)
 				{
+					isOneBuildingUpgrading = true;
 					buildings[i].elpasedTime += removeTheTimeOnClick;
 				}
 			}
+			if(isOneBuildingUpgrading)
+			{
+					InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick));
+					SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
+			}
 			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick));
-			SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
 		}
 	}
 

@@ -145,11 +145,15 @@ public class UIManager : MonoBehaviour
     public void CloseUnitTab()
     {
 		Clear(inputFieldToClear);
-        WaitingforUnitSelectionText.gameObject.SetActive(true);
+		WaitingforUnitSelectionText.gameObject.SetActive(true);
         UnitPanel.gameObject.SetActive(false);
         TroopsProducingCanvas.SetActive(false);
 		EnableButton();
     }
+	public void CloseSound()
+	{
+		SoundManager.Instance.PlaySoundEffect("ClosedUI_SFX");
+	}
 
 	public void DisableButton()
 	{
