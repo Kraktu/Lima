@@ -28,6 +28,7 @@ public class GeneralQuarter : Building
         if (isCurrentlyUpgrading == true)
         {
             elpasedTime += timeToReduce;
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 		}
         if (isCurrentlyUpgrading == false)
@@ -44,7 +45,7 @@ public class GeneralQuarter : Building
 			}
 			if(isOneBuildingUpgrading)
 			{
-					InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick));
+					InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick),imNormalUse);
 					SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
 			}
 			RefreshInterface();

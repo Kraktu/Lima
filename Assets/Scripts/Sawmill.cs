@@ -12,6 +12,7 @@ public class Sawmill : ResourceBuilding
         if (isCurrentlyUpgrading == true)
         {
             elpasedTime += timeToReduce;
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 		}
         else if (isCurrentlyUpgrading == false)
@@ -19,7 +20,7 @@ public class Sawmill : ResourceBuilding
             UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
             ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
             RefreshInterface();
-            InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick));
+            InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickSawmill_SFX");
         }
     }

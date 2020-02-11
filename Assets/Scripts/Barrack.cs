@@ -22,6 +22,7 @@ public class Barrack : Building
 		if (isCurrentlyUpgrading == true)
 		{
 			elpasedTime += timeToReduce;
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 
 		}
@@ -39,6 +40,7 @@ public class Barrack : Building
 		if (UnitManager.Instance.canProduceNewUnit == false)
 		{
 			UnitManager.Instance.currentProducedUnit.totalTimeToProduce -= timeReducedOnClick*(1+timePercentReducedOnClick/100);
+			InstantiateParticles(UIManager.Instance.BigIntToString(timeReducedOnClick), imDuringUpgrade);
 			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
 		}
 	}
