@@ -105,10 +105,13 @@ public class AttackManager : MonoBehaviour
         Vector3 Direction = (endingPos - startingPos).normalized;
 
         GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
+        go.GetComponent<TroopInteraction>().comeBackArmy = attackingArmy;
+        go.GetComponent<TroopInteraction>().reportButton = Instantiate(combatReportButtonPrefab, UIManager.Instance.combatReportButtonScrollViewContent.transform);
         while (time < timeBeforeAction)
         {
             tRatio = time / timeBeforeAction;
             go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
+            go.GetComponent<TroopInteraction>().timeToComeBack = time;
             time += Time.deltaTime;
             yield return null;
         }
@@ -476,6 +479,44 @@ public class AttackManager : MonoBehaviour
             }
         }
       
+    }
+    public void Retreat(List<Army> comeBackArmy, Vector3 startingPos, float timeToComeBack, CombatReportButton reportButton)
+    {
+        StopCoroutine(Attacking());
+        Retreating(comeBackArmy, startingPos, timeToComeBack, reportButton);
+    }
+    public IEnumerator Retreating(List<Army> comeBackArmy,Vector3 startingPos,float timeToComeBack, CombatReportButton reportButton)
+    {
+        Vector3 endingPos = OurVillageOnMap.transform.position;
+        Vector3 Direction = (endingPos - startingPos).normalized;
+        float time = 0;
+        float tRatio;
+        GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
+        while (time < timeToComeBack)
+        {
+            tRatio = time / timeToComeBack;
+            go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
+            time += Time.deltaTime;
+            yield return null;
+
+        }
+        currentSimultaneousAttack--;
+        Destroy(go);
+        for (int i = 0; i < comeBackArmy.Count; i++)
+        {
+            for (int j = 0; j < UnitManager.Instance.allUnits.Count; j++)
+            {
+                if (comeBackArmy[i].armyName == UnitManager.Instance.allUnits[j].unitName)
+                {
+                    UnitManager.Instance.allUnits[j].unitNbr += comeBackArmy[i].armyNbr;
+                }
+            }
+        }
+
+        reportButton.combatPhase1 = "";
+        reportButton.endOfReport = "Your Army successfuly came back";
+        ReportAllAtUnit(comeBackArmy, ref reportButton.endOfReport);
+        reportButton.gameObject.SetActive(true);
     }
     public IEnumerator ArmyComeBack(List<Army> comeBackArmy, double wonWood, double wonOre,double VenacidWon, Vector3 startingPos, EnemyVillage enemy,CombatReportButton reportButton,bool actualizeReport)
     {

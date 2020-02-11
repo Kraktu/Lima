@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour
 
     public Button immigrationSkill, scaleWorshipSkill, fastMobilizationSkill;
 
+    public Button retreatButton;
+
 
 
     [HideInInspector]

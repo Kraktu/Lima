@@ -12,6 +12,7 @@ public class TerrainMap : MonoBehaviour
 			UIManager.Instance.enemyVillageCanvas.SetActive(false);
 			UIManager.Instance.spyPanel.SetActive(false);
 			UIManager.Instance.isSpyPanelActive = false;
+            UIManager.Instance.retreatButton.gameObject.SetActive(false);
 		}
 	}
 }
