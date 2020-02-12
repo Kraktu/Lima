@@ -56,7 +56,11 @@ public class GeneralQuarter : Building
 	{
 		Camera camera = FindObjectOfType<Camera>();
 		camera.transform.position = MapManager.Instance.cameraMapPosition;
-		UIManager.Instance.totalResourceCanvas.SetActive(false);
+        camera.orthographic = true;
+        camera.transform.Rotate(new Vector3(35, 0, 0));
+        camera.orthographicSize = 17;
+        UIManager.Instance.gameLight.color = new Color(0.7169f, 0.5854f, 0.2265f, 1);
+        UIManager.Instance.totalResourceCanvas.SetActive(false);
 	}
 
 	public void UpgradeGeneralQuarter()
