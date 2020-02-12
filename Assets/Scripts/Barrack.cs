@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Barrack : Building
 {
@@ -19,18 +20,21 @@ public class Barrack : Building
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-		if (isCurrentlyUpgrading == true)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 
-		}
-		else if (isCurrentlyUpgrading == false)
-		{
-			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
-			ReduceProductionTime();
-			RefreshInterface();
+			}
+			else if (isCurrentlyUpgrading == false)
+			{
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeBarrack);
+				ReduceProductionTime();
+				RefreshInterface();
+			}
 		}
 
     }

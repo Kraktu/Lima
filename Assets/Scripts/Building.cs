@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Building:MonoBehaviour
 {
@@ -60,31 +61,35 @@ public class Building:MonoBehaviour
     }
     public virtual void OnMouseDown()
     {
-		if (isCurrentlyUpgrading == false)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			if (level == 0)
+			if (isCurrentlyUpgrading == false)
 			{
-				currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
-			}
-			else if (level > 0)
-			{
-				currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
-			}
-			villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
+				if (level == 0)
+				{
+					currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
+				}
+				else if (level > 0)
+				{
+					currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+				}
+				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
-			UIManager.Instance.BuildingInterfaceActivation(true);
-			UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
-			UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
-			UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
-			UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
-			UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
-			UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
-			UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
-			UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
-			UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
-			UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
-			UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
-			RefreshInterface();
+				UIManager.Instance.BuildingInterfaceActivation(true);
+				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
+				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
+				UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
+				UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
+				UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
+				UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
+				UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
+				RefreshInterface();
+			}
+			
 		}
     }
 

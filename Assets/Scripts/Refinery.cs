@@ -1,36 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Refinery : ResourceBuilding
 {
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		if(isCurrentlyUpgrading == true)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
-		}
-		else if(isCurrentlyUpgrading == false)
-		{
-			ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
-			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
-			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
-		}
-			SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
-			if (!ResourceManager.Instance.isRefineryProducing)
+			if (isCurrentlyUpgrading == true)
 			{
-				ResourceManager.Instance.isRefineryProducing = true;
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 			}
-			if (stopProducingCoroutine != null)
+			else if(isCurrentlyUpgrading == false)
 			{
-				StopCoroutine(stopProducingCoroutine);
+				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
 			}
-			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
-
+				SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
+				if (!ResourceManager.Instance.isRefineryProducing)
+				{
+					ResourceManager.Instance.isRefineryProducing = true;
+				}
+				if (stopProducingCoroutine != null)
+				{
+					StopCoroutine(stopProducingCoroutine);
+				}
+				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
+		}
 	}
 	public void UpgradeRefinery()
 	{

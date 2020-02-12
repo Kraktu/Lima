@@ -1,35 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class House : ResourceBuilding
 {
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		if(isCurrentlyUpgrading == true)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
-		}
-		else if(isCurrentlyUpgrading == false)
-		{
-			ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
-			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
-			SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
-		}
-			if (!ResourceManager.Instance.isHouseProducing)
+			if (isCurrentlyUpgrading == true)
 			{
-				ResourceManager.Instance.isHouseProducing = true;
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 			}
-			if (stopProducingCoroutine != null)
+			else if(isCurrentlyUpgrading == false)
 			{
-				StopCoroutine(stopProducingCoroutine);
+				ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
+				SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
 			}
-			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("House"));
+				if (!ResourceManager.Instance.isHouseProducing)
+				{
+					ResourceManager.Instance.isHouseProducing = true;
+				}
+				if (stopProducingCoroutine != null)
+				{
+					StopCoroutine(stopProducingCoroutine);
+				}
+				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("House"));
+		}
 	}
 
 	public void UpgradeHouse()

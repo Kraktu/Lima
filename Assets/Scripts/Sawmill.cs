@@ -2,27 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Sawmill : ResourceBuilding
 {
 	public override void OnMouseDown()
     {
         base.OnMouseDown();
-        if (isCurrentlyUpgrading == true)
-        {
-            elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
-		}
-        else if (isCurrentlyUpgrading == false)
-        {
-            UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
-            ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
-            RefreshInterface();
-            InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick),imNormalUse);
-			SoundManager.Instance.PlaySoundEffect("ClickSawmill_SFX");
-        }
-			if(!ResourceManager.Instance.isSawmillProducing)
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			else if (isCurrentlyUpgrading == false)
+			{
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
+				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick), imNormalUse);
+				SoundManager.Instance.PlaySoundEffect("ClickSawmill_SFX");
+			}
+			if (!ResourceManager.Instance.isSawmillProducing)
 			{
 				ResourceManager.Instance.isSawmillProducing = true;
 			}
@@ -31,8 +34,9 @@ public class Sawmill : ResourceBuilding
 				StopCoroutine(stopProducingCoroutine);
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Sawmill"));
-    }
+		}
 
+    }
 
 
 	public void UpgradeSawmill()

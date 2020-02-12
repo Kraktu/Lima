@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GeneralQuarter : Building
 {
@@ -25,30 +26,33 @@ public class GeneralQuarter : Building
     public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-        if (isCurrentlyUpgrading == true)
-        {
-            elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
-		}
-        if (isCurrentlyUpgrading == false)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
-			bool isOneBuildingUpgrading = false;
-			for (int i = 0; i < buildings.Count; i++)
+			if (isCurrentlyUpgrading == true)
 			{
-				if (buildings[i].isCurrentlyUpgrading)
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			if (isCurrentlyUpgrading == false)
+			{
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+				bool isOneBuildingUpgrading = false;
+				for (int i = 0; i < buildings.Count; i++)
 				{
-					isOneBuildingUpgrading = true;
-					buildings[i].elpasedTime += removeTheTimeOnClick;
+					if (buildings[i].isCurrentlyUpgrading)
+					{
+						isOneBuildingUpgrading = true;
+						buildings[i].elpasedTime += removeTheTimeOnClick;
+					}
 				}
+				if(isOneBuildingUpgrading)
+				{
+						InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick),imNormalUse);
+						SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
+				}
+				RefreshInterface();
 			}
-			if(isOneBuildingUpgrading)
-			{
-					InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick),imNormalUse);
-					SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
-			}
-			RefreshInterface();
 		}
 	}
 

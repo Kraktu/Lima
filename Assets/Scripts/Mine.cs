@@ -1,35 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Mine : ResourceBuilding
 {
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-		if(isCurrentlyUpgrading == true)
+		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			elpasedTime += timeToReduce;
-			InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce),imDuringUpgrade);
-			SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
-		}
-		else if(isCurrentlyUpgrading == false)
-		{
-			ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
-			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
-			RefreshInterface();
-			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick),imNormalUse);
-			SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
-		}
-			if (!ResourceManager.Instance.isMineProducing)
+			if (isCurrentlyUpgrading == true)
 			{
-				ResourceManager.Instance.isMineProducing = true;
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce),imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
 			}
-			if (stopProducingCoroutine != null)
+			else if(isCurrentlyUpgrading == false)
 			{
-				StopCoroutine(stopProducingCoroutine);
+				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick),imNormalUse);
+				SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
 			}
-			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Mine"));
+				if (!ResourceManager.Instance.isMineProducing)
+				{
+					ResourceManager.Instance.isMineProducing = true;
+				}
+				if (stopProducingCoroutine != null)
+				{
+					StopCoroutine(stopProducingCoroutine);
+				}
+				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Mine"));
+		}
 	}
 
     public void UpgradeMine()
