@@ -71,6 +71,7 @@ public class AttackManager : MonoBehaviour
         {
             UIManager.Instance.Clear(UIManager.Instance.spyInputText.GetComponentInParent<InputField>());
             UIManager.Instance.spyPanel.gameObject.SetActive(false);
+            UnitManager.Instance.spy.unitNbr -= spyNbr;
             StartCoroutine(SendingSpy(spyNbr)) ;
         }
     }
@@ -90,12 +91,201 @@ public class AttackManager : MonoBehaviour
             yield return null;
         }
         Destroy(go);
-        Spy(spyNbr);
+        Spy(spyNbr,enemy);
     }
-    public void Spy(double spyNbr)
+    public void Spy(double spyNbr, EnemyVillage enemy)
     {
-        
+        int technoDif, militaryDif, industrialDif, defenseDif;
+        double generalDif;
+        double totalEnemyUnit=0;
+        for (int i = 0; i < enemy.myArmy.Count; i++)
+        {
+            totalEnemyUnit+=enemy.myArmy[i].armyNbr;
+        }
+        generalDif = spyNbr / enemy.nbrOfSpy;
+        if (generalDif>=10)
+        {
+            generalDif = 1;
+        }
+        else if (generalDif >= 100)
+        {
+            generalDif = 2;
+        }
+        else if (generalDif >= 1000)
+        {
+            generalDif = 3;
+        }
+        else if (generalDif <= 0.1)
+        {
+            generalDif = -1;
+        }
+        else if (generalDif <= 0.01)
+        {
+            generalDif = -2;
+        }
+        else if (generalDif <= 0.001)
+        {
+            generalDif = -3;
+        }
+        technoDif = (SpherierManager.Instance.technologicSpyLvl - enemy.technoCounterSpyLevel) + (int)generalDif ;
+        militaryDif = (SpherierManager.Instance.militarySpyLvl - enemy.militaryCounterSpyLevel) + (int)generalDif;
+        industrialDif = (SpherierManager.Instance.industrialSpyLvl - enemy.indusCounterSpyLevel) + (int)generalDif;
+        defenseDif = (SpherierManager.Instance.defenseSpyLvl - enemy.defenseCounterSpyLevel) + (int)generalDif;
+        CombatReportButton reportButton = Instantiate(combatReportButtonPrefab, UIManager.Instance.combatReportButtonScrollViewContent.transform);
+        reportButton.combatPhase1 = "You spied " + enemy.name + " with " + UIManager.Instance.BigIntToString(spyNbr) + " spies." ;
+        #region TechnoSpy
+        if (technoDif<0)
+        {
+            reportButton.combatPhase2 = "Your spy didn't detect any technology in your opponent base";
+        }
+        else if (technoDif>=3)
+        {
+            reportButton.combatPhase2 = "Your enemy have multiple technologies ! "
+                + "\nHis technology counter spy is level :" + UIManager.Instance.BigIntToString(enemy.technoCounterSpyLevel)
+                + "\nHis military counter spy is level :" + UIManager.Instance.BigIntToString(enemy.militaryCounterSpyLevel)
+                + "\nHis industrial counter spy is level :" + UIManager.Instance.BigIntToString(enemy.indusCounterSpyLevel)
+                + "\nHis defense counter spy is level :" + UIManager.Instance.BigIntToString(enemy.defenseCounterSpyLevel);
+        }
+        switch (technoDif)
+        {
+            case 0:
+                reportButton.combatPhase2 = "Your enemy have multiple technologies ! "
+                + "\nHis technology counter spy is level :" + UIManager.Instance.BigIntToString(enemy.technoCounterSpyLevel);
+                break;
+            case 1:
+                reportButton.combatPhase2 = "Your enemy have multiple technologies ! "
+                + "\nHis technology counter spy is level :" + UIManager.Instance.BigIntToString(enemy.technoCounterSpyLevel)
+                + "\nHis military counter spy is level :" + UIManager.Instance.BigIntToString(enemy.militaryCounterSpyLevel);
+                break;
+            case 2:
+                reportButton.combatPhase2 = "Your enemy have multiple technologies ! "
+                + "\nHis technology counter spy is level :" + UIManager.Instance.BigIntToString(enemy.technoCounterSpyLevel)
+                + "\nHis military counter spy is level :" + UIManager.Instance.BigIntToString(enemy.militaryCounterSpyLevel)
+                + "\nHis industrial counter spy is level :" + UIManager.Instance.BigIntToString(enemy.indusCounterSpyLevel);
+                break;
+            default:
+                break;
+        }
+        #endregion
+        #region MilitarySpy
+        if (militaryDif < 0)
+        {
+            reportButton.combatPhase3 = "Your spy didn't find the enemy army, but it doesn't mean they don't have one...";
+        }
+        else if (militaryDif >= 3)
+        {
+            reportButton.combatPhase3 = "Your enemy have an army composed of :\n";
+            ReportAllAtUnit(enemy.myArmy, ref reportButton.combatPhase3);
+        }
+        double currentMostPresentUnitNbr = 0;
+        string currentMostPresentUnitName = "";
+        switch (militaryDif)
+        {
+            case 0:
+                reportButton.combatPhase3 = "Your not sure what type of units does have your enemy, but in total he has " + UIManager.Instance.BigIntToString(totalEnemyUnit)+ " Units";
+                break;
+            case 1:
+                for (int i = 0; i < enemy.myArmy.Count; i++)
+                {
+                    if (enemy.myArmy[i].armyNbr>currentMostPresentUnitNbr)
+                    {
+                        currentMostPresentUnitNbr = enemy.myArmy[i].armyNbr;
+                        currentMostPresentUnitName = enemy.myArmy[i].armyName;
+                    }
+                }
+                reportButton.combatPhase3 = "Your not sure what type of units does have your enemy, but in total he has " + UIManager.Instance.BigIntToString(totalEnemyUnit) + " Units and his predominant unit is" + currentMostPresentUnitName;
+                break;
+            case 2:
+                for (int i = 0; i < enemy.myArmy.Count; i++)
+                {
+                    if (enemy.myArmy[i].armyNbr > currentMostPresentUnitNbr)
+                    {
+                        currentMostPresentUnitNbr = enemy.myArmy[i].armyNbr;
+                        currentMostPresentUnitName = enemy.myArmy[i].armyName;
+                    }
+                }
+                reportButton.combatPhase3 = "Your not sure what type of units does have your enemy, but in total he has " + UIManager.Instance.BigIntToString(totalEnemyUnit) + " Units and his predominant unit is" + currentMostPresentUnitName + " and he has currently " +currentMostPresentUnitNbr +" unit of this type";
+                break;
+            default:
+                break;
+        }
+        #endregion
+        #region IndustrialSpy
+
+        if (industrialDif < 0)
+        {
+            reportButton.combatPhase4 = "Your spy didn't find any resources, but it doesn't mean they don't have any ! ";
+        }
+        else if (industrialDif >= 3)
+        {
+            reportButton.combatPhase4 = "Your enemy have  : \n" + UIManager.Instance.BigIntToString(enemy.maxWoodWon) + " wood"
+                + UIManager.Instance.BigIntToString(enemy.maxOreWon) + " ore"
+                + UIManager.Instance.BigIntToString(enemy.maxVenacidWon) + " venacid";
+        }
+        switch (industrialDif)
+        {
+            case 0:
+                reportButton.combatPhase4 =  "Your enemy have  : \n" + UIManager.Instance.BigIntToString(enemy.maxWoodWon) + " wood";
+                break;
+            case 1:
+                reportButton.combatPhase4 =  "Your enemy have  : \n" + UIManager.Instance.BigIntToString(enemy.maxOreWon) + " ore";
+                break;
+            case 2:
+                reportButton.combatPhase4 = "Your enemy have  : \n" + UIManager.Instance.BigIntToString(enemy.maxWoodWon) + " wood"
+                + UIManager.Instance.BigIntToString(enemy.maxOreWon) + " ore";
+                break;
+            default:
+                break;
+        }
+        #endregion
+        #region defendeSpy
+        double apophisNbr=0,leviathanNbr=0,quetzalcoatlNbr=0;
+        for (int i = 0; i < enemy.myArmy.Count; i++)
+        {
+            if (enemy.myArmy[i].armyName=="Apophis")
+            {
+                apophisNbr = enemy.myArmy[i].armyNbr;
+            }
+            if (enemy.myArmy[i].armyName == "Quetzalcoatl")
+            {
+                quetzalcoatlNbr = enemy.myArmy[i].armyNbr;
+            }
+            if (enemy.myArmy[i].armyName == "Leviathan")
+            {
+                leviathanNbr = enemy.myArmy[i].armyNbr;
+            }
+        }
+        if (defenseDif<0)
+        {
+            reportButton.combatPhase5 = "Your spy didn't  find any siege weapon, maybe they hid them well !";
+        }
+        else if (defenseDif >= 3)
+        {
+            reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n"
+            + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n"
+            + UIManager.Instance.BigIntToString(leviathanNbr) + " Leviathan";
+        }
+        switch (defenseDif)
+        {
+            case 0:
+                reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n";
+                break;
+            case 1:
+                reportButton.combatPhase5 = reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n";
+                break;
+            case 2:
+                reportButton.combatPhase5 = reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n"
+            + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n";
+                break;
+            default:
+                break;
+        }
+        #endregion 
+        UnitManager.Instance.spy.unitNbr += spyNbr;
+        reportButton.gameObject.SetActive(true);
     }
+
+
     public void SendAttack()
     {
         if (currentSimultaneousAttack < maxSimultaneousAttack)

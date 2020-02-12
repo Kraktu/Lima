@@ -8,7 +8,7 @@ public class EnemyVillage : MonoBehaviour
     public EnemyArmySO[] enemyArmySOs;
 
     [HideInInspector]
-    public double minWoodWon, maxWoodWon, minOreWon, maxOreWon, minVenacidWon, maxVenacidWon;
+    public double minWoodWon, maxWoodWon, minOreWon, maxOreWon, minVenacidWon, maxVenacidWon,nbrOfSpy;
     [HideInInspector]
     public float timeToGetAttacked;
     [HideInInspector]
@@ -16,7 +16,7 @@ public class EnemyVillage : MonoBehaviour
     [HideInInspector]
     public Sprite myIcon;
     [HideInInspector]
-    public int level;
+    public int level, technoCounterSpyLevel,militaryCounterSpyLevel,indusCounterSpyLevel,defenseCounterSpyLevel;
     [HideInInspector]
     public List<EnemyArmySO> possibleSO;
     [HideInInspector]
@@ -45,7 +45,7 @@ public class EnemyVillage : MonoBehaviour
         {
             for (int i = 0; i < enemyArmySOs.Length; i++)
             {
-                if (enemyArmySOs[i].Level == BuildingManager.Instance.generalQuarter.level + levelDifferenceWithUs)
+                if (enemyArmySOs[i].level == BuildingManager.Instance.generalQuarter.level + levelDifferenceWithUs)
                 {
                     gameObject.SetActive(true);
                     possibleSO.Add(enemyArmySOs[i]);
@@ -55,7 +55,7 @@ public class EnemyVillage : MonoBehaviour
         if (possibleSO.Count>0)
         {
             mySO = possibleSO[Random.Range(0, possibleSO.Count)];
-            level = mySO.Level;
+            level = mySO.level;
             timeToGetAttacked = mySO.timeToGetAttacked;
             myIcon = mySO.myIcon;
             enemyName = mySO.enemyName;
@@ -66,6 +66,11 @@ public class EnemyVillage : MonoBehaviour
             maxOreWon = mySO.maxWoodWon;
             minVenacidWon = mySO.minVenacidWon;
             maxVenacidWon = mySO.maxWoodWon;
+            technoCounterSpyLevel = mySO.technoCounterSpyLevel;
+            militaryCounterSpyLevel = mySO.militaryCounterSpyLevel;
+            indusCounterSpyLevel = mySO.indusCounterSpyLevel;
+            defenseCounterSpyLevel = mySO.defenseCounterSpyLevel;
+            nbrOfSpy = mySO.nbrOfSpy;
             for (int i = 0; i < mySO.enemyArmy.Length; i++)
             {
                 myArmy.Add(new Army(mySO.enemyArmy[i].armyName, mySO.enemyArmy[i].armyNbr, mySO.enemyArmy[i].armyAttack, mySO.enemyArmy[i].armyLife, mySO.enemyArmy[i].armyAttackPerTurn, mySO.enemyArmy[i].armyArmor, mySO.enemyArmy[i].armyPierce, mySO.enemyArmy[i].armyAccuracy, mySO.enemyArmy[i].armyInWallDefenseBonus, mySO.enemyArmy[i].armyInWallAttackBonus));

@@ -9,6 +9,17 @@ public class SpherierManager : MonoBehaviour
     public double immigrationMultiplicator = 2;
     public double scaleWorshipCD = 10000;
     public double fastMobilizationCD = 5000;
+    static public SpherierManager Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     #region Army
     public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
     public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;

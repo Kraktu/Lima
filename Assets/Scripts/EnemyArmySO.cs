@@ -13,9 +13,9 @@ public struct ArmyComposition
 public class EnemyArmySO : ScriptableObject
 {
     public float timeToGetAttacked;
-    public int Level;
+    public int level, technoCounterSpyLevel, militaryCounterSpyLevel, indusCounterSpyLevel, defenseCounterSpyLevel;
     public string enemyName;
     public Sprite myIcon;
-    public double minWoodWon, maxWoodWon, minOreWon, maxOreWon, minVenacidWon, maxVenacidWon;
+    public double minWoodWon, maxWoodWon, minOreWon, maxOreWon, minVenacidWon, maxVenacidWon, nbrOfSpy;
     public ArmyComposition[] enemyArmy;
 }
