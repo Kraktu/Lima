@@ -325,7 +325,7 @@ public class SpherierManager : MonoBehaviour
     }
     public void Delator()
     {
-        //UnitManager.Instance.spy.timeToProduce -= ((UnitManager.Instance.spy.timeToProduce / 100) * delatorBonusPercent);
+        UnitManager.Instance.spy.timeToProduce -= ((UnitManager.Instance.spy.timeToProduce / 100) * delatorBonusPercent);
     }
     public void Proselytizing()
     {

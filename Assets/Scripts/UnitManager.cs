@@ -70,12 +70,12 @@ public class UnitManager : MonoBehaviour
             alchemist.remainingUnitToProduce = 0;
             alchemist.totalTimeToProduce = 0;
         }
-       //if (spy.remainingUnitToProduce > 0)
-       //{
-       //    spy.unitNbr += spy.remainingUnitToProduce;
-       //    spy.remainingUnitToProduce = 0;
-       //    spy.totalTimeToProduce = 0;
-       //}
+       if (spy.remainingUnitToProduce > 0)
+       {
+           spy.unitNbr += spy.remainingUnitToProduce;
+           spy.remainingUnitToProduce = 0;
+           spy.totalTimeToProduce = 0;
+       }
     }
     public void ProduceAllSiege()
     {
