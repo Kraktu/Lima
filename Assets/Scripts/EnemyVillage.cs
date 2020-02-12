@@ -23,10 +23,11 @@ public class EnemyVillage : MonoBehaviour
     public EnemyArmySO mySO;
     [HideInInspector]
     public List<Army> myArmy;
+    public Vector3 UIOnClickOffset;
 	private void OnMouseDown()
 	{
 		UIManager.Instance.enemyVillageCanvas.SetActive(true);
-		UIManager.Instance.enemyVillageCanvas.transform.position = new Vector3 (gameObject.transform.position.x, UIManager.Instance.enemyVillageCanvas.transform.position.y, gameObject.transform.position.z);
+        UIManager.Instance.enemyVillageCanvas.transform.position = new Vector3(gameObject.transform.position.x, UIManager.Instance.enemyVillageCanvas.transform.position.y, gameObject.transform.position.z) + UIOnClickOffset; ;
 		UIManager.Instance.spyPanel.SetActive(false);
 		UIManager.Instance.isSpyPanelActive = false;
         UIManager.Instance.atEnemyName.text = enemyName;
