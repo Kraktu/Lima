@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     public Vector3 retreatButtonOffset;
     public Button retreatButton;
 
+    public Text spyInputText;
     public Light gameLight;
 
 

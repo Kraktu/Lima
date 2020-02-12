@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
+using UnityEngine.UI;
 
 public class AttackManager : MonoBehaviour
 {
     public GameObject OurVillageOnMap;
-    public int maxSimultaneousAttack = 1, numberOfAttackPhase = 5;
-    public GameObject armyPrefabOnMap;
+    public int maxSimultaneousAttack = 1,maxSimultaneousSpying=1, numberOfAttackPhase = 5;
+    public GameObject armyPrefabOnMap,spyPrefabOnMap;
     [HideInInspector]
     public List<Army> armySent;
     [HideInInspector]
@@ -15,7 +16,7 @@ public class AttackManager : MonoBehaviour
     [HideInInspector]
     public GameObject AttackedVillage;
     [HideInInspector]
-    public int currentSimultaneousAttack = 0;
+    public int currentSimultaneousAttack = 0,currentSimultaneousSpying;
     static public AttackManager Instance { get; private set; }
     [HideInInspector]
     public bool isAttackDraw;
@@ -63,6 +64,38 @@ public class AttackManager : MonoBehaviour
         }
     }
 
+    public void SendSpy()
+    {
+        double spyNbr = double.Parse(UIManager.Instance.spyInputText.text);
+        if (currentSimultaneousSpying<maxSimultaneousSpying&& spyNbr > 0&& spyNbr <= UnitManager.Instance.spy.unitNbr)
+        {
+            UIManager.Instance.Clear(UIManager.Instance.spyInputText.GetComponentInParent<InputField>());
+            UIManager.Instance.spyPanel.gameObject.SetActive(false);
+            StartCoroutine(SendingSpy(spyNbr)) ;
+        }
+    }
+    public IEnumerator SendingSpy(double spyNbr)
+    {
+        EnemyVillage enemy = AttackedVillage.GetComponent<EnemyVillage>();
+        float time = 0,tRatio;
+        Vector3 startingPos = OurVillageOnMap.transform.position;
+        Vector3 endingPos = AttackedVillage.transform.position;
+        Vector3 Direction = (endingPos - startingPos).normalized;
+        GameObject go = Instantiate(spyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
+        while (time<enemy.timeToGetAttacked/10)
+        {
+            tRatio = time / (enemy.timeToGetAttacked / 10);
+            go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        Destroy(go);
+        Spy(spyNbr);
+    }
+    public void Spy(double spyNbr)
+    {
+        
+    }
     public void SendAttack()
     {
         if (currentSimultaneousAttack < maxSimultaneousAttack)
@@ -113,13 +146,11 @@ public class AttackManager : MonoBehaviour
             go.transform.position = Vector3.Lerp(startingPos, endingPos, tRatio);
             go.GetComponent<TroopInteraction>().timeToComeBack = time;
             time += Time.deltaTime;
-            Debug.Log(time);
             yield return null;
         }
         Destroy(go);
         Attack(attackingArmy, enemy);
     }
-
     public List<Army> CloneArmy(List<Army> ListToClone, List<Army> ListToAssign)
     {
         for (int i = 0; i < ListToClone.Count; i++)
@@ -128,7 +159,6 @@ public class AttackManager : MonoBehaviour
         }
         return ListToAssign;
     }
-
     public double CalculateMultiplicator(string atUnitName, string defUnitName)
     {
         double mult = 0;
@@ -245,11 +275,11 @@ public class AttackManager : MonoBehaviour
                 }
                 break;
             default:
+                mult = 1;
                 break;
         }
         return mult;
     }    
-
     public void ReportAllAtUnit(List<Army> Army,ref string stringToComplete)
     {
         for (int i = 0; i < Army.Count; i++)
@@ -264,7 +294,6 @@ public class AttackManager : MonoBehaviour
             }
         }
     }
-    
     public void Attack(List<Army> atArmy, EnemyVillage enemy)
     {
         CombatReportButton reportButton = Instantiate(combatReportButtonPrefab, UIManager.Instance.combatReportButtonScrollViewContent.transform);
@@ -559,10 +588,9 @@ public class AttackManager : MonoBehaviour
         reportButton.gameObject.SetActive(true);
     }
 
-   //public double GetRandomNumber(double minimum, double maximum)
-   //{
-   //    Unity.Mathematics.Random random = new Unity.Mathematics.Random();
-   //    return random.NextDouble(0,1) * (maximum - minimum) + minimum;
-   //}
+
+
+
+
 }
 
