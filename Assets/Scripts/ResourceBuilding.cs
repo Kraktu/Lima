@@ -8,8 +8,8 @@ public class ResourceBuilding : Building
     public string producedResource;
     protected string _perClickString, _perSecString;
 	public float timeBeforePausedBuilding;
-
-    public void ClickProducingUpdate(Resource modifiedResourcePerClick,double startingresource,double percentBonus,double flatBonus)
+	protected Coroutine stopProducingCoroutine;
+	public void ClickProducingUpdate(Resource modifiedResourcePerClick,double startingresource,double percentBonus,double flatBonus)
     {
             modifiedResourcePerClick.resourcePerClick= startingresource*(Mathf.Pow(perClickMagicRatioUpgrade,level-1))*(1+percentBonus/100)+flatBonus;
     }
@@ -24,5 +24,30 @@ public class ResourceBuilding : Building
             modifiedResourcePerSec.resourcePerSec = startingResource * (Mathf.Pow(perSecMagicRatioUpgrade, level - 1)) * (1 + percentBonus / 100) + flatBonus;
         }
 	}
-
+	protected IEnumerator StopProduceResourcePerSec( string stringToAnalyse)
+	{
+		float time = 0;
+		while (time < timeBeforePausedBuilding)
+		{
+			time += Time.deltaTime;
+			yield return null;
+		}
+		switch (stringToAnalyse)
+		{
+			case "Sawmill":
+				ResourceManager.Instance.isSawmillProducing = false;
+				break;
+			case "Refinery":
+				ResourceManager.Instance.isRefineryProducing = false;
+				break;
+			case "House":
+				ResourceManager.Instance.isHouseProducing = false;
+				break;
+			case "Mine":
+				ResourceManager.Instance.isMineProducing = false;
+				break;
+			default:
+				break;
+		}
+	}
 }

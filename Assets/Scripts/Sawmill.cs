@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Sawmill : ResourceBuilding
 {
-	Coroutine stopProducingCoroutine;
-    public override void OnMouseDown()
+	public override void OnMouseDown()
     {
         base.OnMouseDown();
         if (isCurrentlyUpgrading == true)
@@ -30,7 +29,7 @@ public class Sawmill : ResourceBuilding
 			{
 				StopCoroutine(stopProducingCoroutine);
 			}
-			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec());
+			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Sawmill"));
         }
     }
 
@@ -116,15 +115,5 @@ public class Sawmill : ResourceBuilding
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.wood.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
 		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus*3600) + " wood/h" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ " wood/click" + " lvl" + fourthSkillPointLevel);
-	}
-	public IEnumerator StopProduceResourcePerSec()
-	{
-		float time = 0;
-		while (time < timeBeforePausedBuilding)
-		{
-			time += Time.deltaTime;
-			yield return null;
-		}
-		ResourceManager.Instance.isSawmillProducing = false;
 	}
 }

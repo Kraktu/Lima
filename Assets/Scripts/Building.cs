@@ -290,7 +290,7 @@ public class Building:MonoBehaviour
         {
             for (int i = 0; i < prerequisites.Length; i++)
             {
-                if (prerequisites[i].neededBuilding.level==prerequisites[i].neededBuildingLevel)
+                if (prerequisites[i].neededBuilding.level>=prerequisites[i].neededBuildingLevel)
                 {
                     verifiedRequisite++;
                 }

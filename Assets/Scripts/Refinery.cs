@@ -20,7 +20,17 @@ public class Refinery : ResourceBuilding
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
+			if (!ResourceManager.Instance.isRefineryProducing)
+			{
+				ResourceManager.Instance.isRefineryProducing = true;
+			}
+			if (stopProducingCoroutine != null)
+			{
+				StopCoroutine(stopProducingCoroutine);
+			}
+			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
 		}
+
 	}
 	public void UpgradeRefinery()
 	{
@@ -92,16 +102,5 @@ public class Refinery : ResourceBuilding
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.venacid.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
 		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus * 3600) + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + " venacid/click" + " lvl" + fourthSkillPointLevel);
-	}
-
-	public IEnumerator StopProduceResourcePerSec()
-	{
-		float time = 0;
-		while (time < timeBeforePausedBuilding)
-		{
-			time += Time.deltaTime;
-			yield return null;
-		}
-		ResourceManager.Instance.isRefineryProducing = false;
 	}
 }

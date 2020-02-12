@@ -49,9 +49,18 @@ public class ResourceManager : MonoBehaviour
 			{ 
 				wood.totalResource += wood.resourcePerSec * Time.deltaTime;
 			}
-            ore.totalResource += ore.resourcePerSec * Time.deltaTime;
-            venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-			worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime;
+			if(isMineProducing)
+			{
+				ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+			}
+			if(isRefineryProducing)
+			{
+				venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
+			}
+			if(isHouseProducing)
+			{
+				worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime;
+			}
             yield return null;
         }
     }
