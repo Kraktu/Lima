@@ -93,4 +93,15 @@ public class Refinery : ResourceBuilding
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
 		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus * 3600) + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + " venacid/click" + " lvl" + fourthSkillPointLevel);
 	}
+
+	public IEnumerator StopProduceResourcePerSec()
+	{
+		float time = 0;
+		while (time < timeBeforePausedBuilding)
+		{
+			time += Time.deltaTime;
+			yield return null;
+		}
+		ResourceManager.Instance.isRefineryProducing = false;
+	}
 }
