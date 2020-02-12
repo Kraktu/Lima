@@ -20,6 +20,7 @@ public class Mine : ResourceBuilding
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
+		}
 			if (!ResourceManager.Instance.isMineProducing)
 			{
 				ResourceManager.Instance.isMineProducing = true;
@@ -29,7 +30,6 @@ public class Mine : ResourceBuilding
 				StopCoroutine(stopProducingCoroutine);
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Mine"));
-		}
 	}
 
     public void UpgradeMine()

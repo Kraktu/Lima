@@ -20,6 +20,7 @@ public class House : ResourceBuilding
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
+		}
 			if (!ResourceManager.Instance.isHouseProducing)
 			{
 				ResourceManager.Instance.isHouseProducing = true;
@@ -29,7 +30,6 @@ public class House : ResourceBuilding
 				StopCoroutine(stopProducingCoroutine);
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("House"));
-		}
 	}
 
 	public void UpgradeHouse()

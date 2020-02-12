@@ -23425,6 +23425,7 @@ MonoBehaviour:
   perClickMagicRatioUpgrade: 1.05
   perSecMagicRatioUpgrade: 1.02
   producedResource: Venacid
+  timeBeforePausedBuilding: 10
 --- !u!65 &612629036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34811,6 +34812,7 @@ MonoBehaviour:
   perClickMagicRatioUpgrade: 1.02
   perSecMagicRatioUpgrade: 1.02
   producedResource: Worker
+  timeBeforePausedBuilding: 10
 --- !u!65 &900474092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55735,6 +55737,7 @@ MonoBehaviour:
   perClickMagicRatioUpgrade: 1.05
   perSecMagicRatioUpgrade: 1.02
   producedResource: Ore
+  timeBeforePausedBuilding: 10
 --- !u!65 &1393608205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65303,6 +65306,10 @@ MonoBehaviour:
   startingVenacidPerClick: 1
   startingWorkerPerClick: 1
   skillPoint: 10000
+  isSawmillProducing: 1
+  isMineProducing: 1
+  isHouseProducing: 1
+  isRefineryProducing: 1
   workerMult: 1
   flatWoodBonusPerSec: 0
   percentWoodBonusPerSec: 0
@@ -66542,6 +66549,7 @@ MonoBehaviour:
   perClickMagicRatioUpgrade: 1.02
   perSecMagicRatioUpgrade: 1.02
   producedResource: Wood
+  timeBeforePausedBuilding: 10
 --- !u!65 &1602226632
 BoxCollider:
   m_ObjectHideFlags: 0

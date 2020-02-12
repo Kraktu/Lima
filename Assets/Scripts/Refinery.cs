@@ -19,6 +19,7 @@ public class Refinery : ResourceBuilding
 			UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
 			RefreshInterface();
 			InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
+		}
 			SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
 			if (!ResourceManager.Instance.isRefineryProducing)
 			{
@@ -29,7 +30,6 @@ public class Refinery : ResourceBuilding
 				StopCoroutine(stopProducingCoroutine);
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
-		}
 
 	}
 	public void UpgradeRefinery()

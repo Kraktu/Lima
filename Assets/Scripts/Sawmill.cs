@@ -21,6 +21,7 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
             InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick),imNormalUse);
 			SoundManager.Instance.PlaySoundEffect("ClickSawmill_SFX");
+        }
 			if(!ResourceManager.Instance.isSawmillProducing)
 			{
 				ResourceManager.Instance.isSawmillProducing = true;
@@ -30,7 +31,6 @@ public class Sawmill : ResourceBuilding
 				StopCoroutine(stopProducingCoroutine);
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Sawmill"));
-        }
     }
 
 
