@@ -7,6 +7,7 @@ public class ResourceBuilding : Building
     public float perClickMagicRatioUpgrade, perSecMagicRatioUpgrade;
     public string producedResource;
     protected string _perClickString, _perSecString;
+	public float timeBeforePausedBuilding;
 
     public void ClickProducingUpdate(Resource modifiedResourcePerClick,double startingresource,double percentBonus,double flatBonus)
     {
@@ -23,7 +24,5 @@ public class ResourceBuilding : Building
             modifiedResourcePerSec.resourcePerSec = startingResource * (Mathf.Pow(perSecMagicRatioUpgrade, level - 1)) * (1 + percentBonus / 100) + flatBonus;
         }
 	}
-
-
 
 }
