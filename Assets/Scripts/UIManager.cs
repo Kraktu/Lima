@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
     public Vector3 retreatButtonOffset;
     public Button retreatButton;
 
-    public Text spyInputText;
+    public Text spyInputText, spyNbrPanelText;
     public Light gameLight;
 
 
@@ -102,6 +102,7 @@ public class UIManager : MonoBehaviour
         else
         {
             spyPanel.SetActive(true);
+            spyNbrPanelText.text = "You currently have : "+BigIntToString(UnitManager.Instance.spy.unitNbr)+"Spy.";
         }
         isSpyPanelActive = !isSpyPanelActive;
     }

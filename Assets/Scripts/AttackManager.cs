@@ -127,6 +127,10 @@ public class AttackManager : MonoBehaviour
         {
             generalDif = -3;
         }
+        else
+        {
+            generalDif = 0;
+        }
         technoDif = (SpherierManager.Instance.technologicSpyLvl - enemy.technoCounterSpyLevel) + (int)generalDif ;
         militaryDif = (SpherierManager.Instance.militarySpyLvl - enemy.militaryCounterSpyLevel) + (int)generalDif;
         industrialDif = (SpherierManager.Instance.industrialSpyLvl - enemy.indusCounterSpyLevel) + (int)generalDif;
@@ -271,10 +275,10 @@ public class AttackManager : MonoBehaviour
                 reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n";
                 break;
             case 1:
-                reportButton.combatPhase5 = reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n";
+                reportButton.combatPhase5 =  "Your enemy have  : " + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n";
                 break;
             case 2:
-                reportButton.combatPhase5 = reportButton.combatPhase5 = "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n"
+                reportButton.combatPhase5 =  "Your enemy have  : " + UIManager.Instance.BigIntToString(apophisNbr) + " Apophis\n"
             + UIManager.Instance.BigIntToString(quetzalcoatlNbr) + " Quetzalcoatl\n";
                 break;
             default:

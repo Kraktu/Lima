@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce3740637a2cfe499d450c38b59acda, type: 3}
   m_Name: Testenami 1
   m_EditorClassIdentifier: 
-  timeToGetAttacked: 10
-  Level: 3
+  timeToGetAttacked: 7.350919
+  level: 1
+  technoCounterSpyLevel: 2
+  militaryCounterSpyLevel: 2
+  indusCounterSpyLevel: 2
+  defenseCounterSpyLevel: 2
   enemyName: JeanMichelCrapaud
   myIcon: {fileID: 21300000, guid: 1e7786d7b9051b74bbedef050f2ce1eb, type: 3}
   minWoodWon: 1000
@@ -22,6 +26,7 @@ MonoBehaviour:
   maxOreWon: 10000
   minVenacidWon: 1000
   maxVenacidWon: 10000
+  nbrOfSpy: 1
   enemyArmy:
   - armyName: Archer
     armyNbr: 10

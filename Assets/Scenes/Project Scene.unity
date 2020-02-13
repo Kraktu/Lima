@@ -2893,7 +2893,7 @@ GameObject:
   - component: {fileID: 75789397}
   - component: {fileID: 75789396}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SpyNbr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2949,7 +2949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: skibidi
+  m_Text: Yjdfjfdjfd
 --- !u!222 &75789397
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4297,7 +4297,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 111584111}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1592076625}
+        m_MethodName: SendSpy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &111584111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14647,7 +14658,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tilelvlMax
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -31192,7 +31203,7 @@ GameObject:
   - component: {fileID: 796505733}
   - component: {fileID: 796505732}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: SpyPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32716,7 +32727,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tilelvlMax
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -41171,7 +41182,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tilelvlMax
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -50246,6 +50257,10 @@ MonoBehaviour:
   levelDifferenceWithUs: 0
   enemyArmySOs:
   - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
+  - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
+  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
+  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
+  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -58125,6 +58140,9 @@ MonoBehaviour:
   enemyArmySOs:
   - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
   - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
+  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
+  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
+  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -58929,6 +58947,9 @@ MonoBehaviour:
   enemyArmySOs:
   - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
   - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
+  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
+  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
+  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -66331,7 +66352,8 @@ MonoBehaviour:
   fastMobilizationSkill: {fileID: 671748976}
   retreatButtonOffset: {x: 100, y: 100, z: 0}
   retreatButton: {fileID: 1425760476}
-  spyInputText: {fileID: 0}
+  spyInputText: {fileID: 617522915}
+  spyNbrPanelText: {fileID: 75789396}
   gameLight: {fileID: 705507994}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
@@ -70919,7 +70941,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tilelvlMax
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}

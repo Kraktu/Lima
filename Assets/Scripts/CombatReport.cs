@@ -28,7 +28,7 @@ public class CombatReport : MonoBehaviour
         else
         {
             combatPhase2Text.gameObject.SetActive(true);
-            combatPhase2Text.text = combatPhase1;
+            combatPhase2Text.text = combatPhase2;
         }
         if (combatPhase3 == "")
         {
@@ -37,7 +37,7 @@ public class CombatReport : MonoBehaviour
         else
         {
             combatPhase3Text.gameObject.SetActive(true);
-            combatPhase3Text.text = combatPhase1;
+            combatPhase3Text.text = combatPhase3;
         }
         if (combatPhase4 == "")
         {
@@ -46,7 +46,7 @@ public class CombatReport : MonoBehaviour
         else
         {
             combatPhase4Text.gameObject.SetActive(true);
-            combatPhase4Text.text = combatPhase1;
+            combatPhase4Text.text = combatPhase4;
         }
         if (combatPhase5 == "")
         {
@@ -55,7 +55,7 @@ public class CombatReport : MonoBehaviour
         else
         {
             combatPhase5Text.gameObject.SetActive(true);
-            combatPhase5Text.text = combatPhase1;
+            combatPhase5Text.text = combatPhase5;
         }
         endOfReportText.text = endOfReport;
     }
