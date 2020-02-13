@@ -28,6 +28,7 @@ public class Building:MonoBehaviour
 	public GameObject constructionPoof;
 	public int skillPointUpgradeLevelStep;
 	public double timeToReduce = 5;
+    public bool isBuildingPanelDisplayedLeft=true;
 
     public GameObject vfx, particlesOnClick;
     public Sprite imNormalUse;
@@ -81,6 +82,14 @@ public class Building:MonoBehaviour
 				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
 				UIManager.Instance.BuildingInterfaceActivation(true);
+                if (isBuildingPanelDisplayedLeft)
+                {
+                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
+                }
+                else
+                {
+                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(8.23f, 16.97f, -14.8f);
+                }
 				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
