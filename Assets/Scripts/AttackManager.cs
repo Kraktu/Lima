@@ -751,6 +751,7 @@ public class AttackManager : MonoBehaviour
 		float time = 0;
         float tRatio;
         GameObject go = Instantiate(armyPrefabOnMap,startingPos, Quaternion.LookRotation(Direction, Vector3.up));
+		go.GetComponent<BoxCollider>().enabled = false;
         while (time < enemy.timeToGetAttacked)
         {
             tRatio = time/enemy.timeToGetAttacked;

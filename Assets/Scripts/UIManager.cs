@@ -102,7 +102,7 @@ public class UIManager : MonoBehaviour
         else
         {
             spyPanel.SetActive(true);
-            spyNbrPanelText.text = "You currently have : "+BigIntToString(UnitManager.Instance.spy.unitNbr)+"Spy.";
+            spyNbrPanelText.text = "You currently have : "+BigIntToString(UnitManager.Instance.spy.unitNbr)+" Spy.";
         }
         isSpyPanelActive = !isSpyPanelActive;
     }

@@ -88,7 +88,7 @@ public class Building:MonoBehaviour
                 }
                 else
                 {
-                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(8.23f, 16.97f, -14.8f);
+                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
                 }
 				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
