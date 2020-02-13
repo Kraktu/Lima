@@ -29,7 +29,7 @@ public class Building:MonoBehaviour
 	public int skillPointUpgradeLevelStep;
 	public double timeToReduce = 5;
 
-    public GameObject vfx;
+    public GameObject vfx, particlesOnClick;
     public Sprite imNormalUse;
 	public Sprite imDuringUpgrade;
 	public Vector3 offset;
@@ -63,6 +63,11 @@ public class Building:MonoBehaviour
     {
 		if (!EventSystem.current.IsPointerOverGameObject())
 		{
+			if(particlesOnClick != null)
+			{
+				GameObject go = Instantiate(particlesOnClick,transform.position, Quaternion.identity);
+				Destroy(go,1);
+			}
 			if (isCurrentlyUpgrading == false)
 			{
 				if (level == 0)
