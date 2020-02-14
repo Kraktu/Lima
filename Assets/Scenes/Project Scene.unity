@@ -4835,7 +4835,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Service population
+      value: Population pole
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -4906,6 +4906,11 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: Accelerates the production of workers by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -20069,6 +20074,12 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: 'Active: Unlocks a skill that doubles your production of workers for
+        a limited time'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75384,7 +75395,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Matraquer
+      value: Bludgeon
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75480,6 +75491,12 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: Click on one of your buildings pulling the reactive side and boost its
+        productivity by 100% for 1 minute
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77191,7 +77208,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: "R\xE9orientation professionelle"
+      value: Professional reorientation
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77242,6 +77259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: You can now remove workers from your buildings and reassign them elsewhere
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88273,7 +88295,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: "Contr\xF4leurs de travail"
+      value: Labour controllers
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88359,6 +88381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: Your workers take 5% more time before firing
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88458,7 +88485,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88483,7 +88510,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Tour de garde
+      value: Guard tower (Work in progress)
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88584,6 +88611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89828,6 +89860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: Increases the maximum limit of your workers in your HQ by 5 permanently
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -93466,6 +93503,18 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileName
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: tileDescription
+      value: Your search starts here. You can buy the neighboring tiles by spending
+        a research point. You can also see tiles farther away. However, to acquire
+        them, you will have to buy one of its neighbors beforehand.
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
