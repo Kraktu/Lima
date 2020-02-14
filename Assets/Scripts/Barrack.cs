@@ -35,6 +35,49 @@ public class Barrack : Building
 		}
 	}
 
+
+	public override void AddFirstSkillPoint()
+	{
+		base.AddFirstSkillPoint();
+		if (skillFirstUpgraded)
+		{
+			UnitManager.Instance.currentProducedUnit.timeToProduce += skillFirstBonus;
+			UpdateBarrack();
+			RefreshInterface();
+		}
+	}
+	public override void AddSecondSkillPoint()
+	{
+		base.AddSecondSkillPoint();
+		if (skillSecondUpgraded)
+		{
+			ResourceManager.Instance.flatOreBonusPerSec += skillSecondBonus;
+			UpdateBarrack();
+			RefreshInterface();
+		}
+	}
+	public override void AddThirdSkillPoint()
+	{
+		base.AddThirdSkillPoint();
+		if (skillThirdUpgraded)
+		{
+			ResourceManager.Instance.percentOreBonusPerClick += skillThirdBonus;
+			UpdateBarrack();
+			RefreshInterface();
+		}
+	}
+	public override void AddFourthSkillPoint()
+	{
+		base.AddFourthSkillPoint();
+		if (skillFourthUpgraded)
+		{
+			ResourceManager.Instance.flatOreBonusPerClick += skillFourthBonus;
+			UpdateBarrack();
+			RefreshInterface();
+		}
+	}
+
+
 	public void UpgradeBarrack()
     {
         if (LevelUp())
@@ -43,49 +86,6 @@ public class Barrack : Building
             RefreshInterface();
         }
     }
-
-	//public override void AddFirstSkillPoint()
-	//{
-	//	base.AddFirstSkillPoint();
-	//	if (skillFirstUpgraded)
-	//	{
-	//		ResourceManager.Instance. += skillFirstBonus;
-	//		UpdateBarrack();
-	//		RefreshInterface();
-	//	}
-	//}
-	//public override void AddSecondSkillPoint()
-	//{
-	//	base.AddSecondSkillPoint();
-	//	if (skillSecondUpgraded)
-	//	{
-	//		ResourceManager.Instance.flatOreBonusPerSec += skillSecondBonus;
-	//		UpdateBarrack();
-	//		RefreshInterface();
-	//	}
-	//}
-	//public override void AddThirdSkillPoint()
-	//{
-	//	base.AddThirdSkillPoint();
-	//	if (skillThirdUpgraded)
-	//	{
-	//		ResourceManager.Instance.percentOreBonusPerClick += skillThirdBonus;
-	//		UpdateBarrack();
-	//		RefreshInterface();
-	//	}
-	//}
-	//public override void AddFourthSkillPoint()
-	//{
-	//	base.AddFourthSkillPoint();
-	//	if (skillFourthUpgraded)
-	//	{
-	//		ResourceManager.Instance.flatOreBonusPerClick += skillFourthBonus;
-	//		UpdateBarrack();
-	//		RefreshInterface();
-	//	}
-	//}
-
-
 	public void UpdateBarrack()
     {
         for (int i = 0; i < unitsToUnlock.Length; i++)
