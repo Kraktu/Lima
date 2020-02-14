@@ -1,15 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class House : ResourceBuilding
 {
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
-        RefreshInterface();
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			else if(isCurrentlyUpgrading == false)
+			{
+				ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
+				SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
+			}
+				if (!ResourceManager.Instance.isHouseProducing)
+				{
+					ResourceManager.Instance.isHouseProducing = true;
+				}
+				if (stopProducingCoroutine != null)
+				{
+					StopCoroutine(stopProducingCoroutine);
+				}
+				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("House"));
+		}
 	}
 
 	public void UpgradeHouse()
@@ -95,9 +119,9 @@ public class House : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickString = producedResource + ": " + ResourceManager.Instance.worker.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.worker.resourcePerSec).ToString("0") + " /h";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + "%" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + "%" + " lvl" + fourthSkillPointLevel);
+		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick) + " /Click";
+		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.worker.resourcePerSec) + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + "%" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + "%" + " lvl" + fourthSkillPointLevel);
 	}
 }

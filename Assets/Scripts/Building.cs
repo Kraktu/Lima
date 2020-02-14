@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Building:MonoBehaviour
 {
@@ -26,11 +27,18 @@ public class Building:MonoBehaviour
     public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
 	public int skillPointUpgradeLevelStep;
+	public double timeToReduce = 5;
+    public bool isBuildingPanelDisplayedLeft=true;
 
-	[HideInInspector]
+    public GameObject vfx, particlesOnClick;
+    public Sprite imNormalUse;
+	public Sprite imDuringUpgrade;
+	public Vector3 offset;
+
+    [HideInInspector]
 	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
 	[HideInInspector]
-	public bool isCurentlyUpgrading=false;
+	public bool isCurrentlyUpgrading=false;
     [HideInInspector]
     public double elpasedTime = 0;
     [HideInInspector]
@@ -50,36 +58,53 @@ public class Building:MonoBehaviour
 
     public virtual void Start()
     {
-        //FutureStart
+        //wesh
     }
     public virtual void OnMouseDown()
     {
-        
-        if (level==0)
-        {
-            currentCost = woodCost.ToString("0") + " woods\n" + oreCost.ToString("0") + " ores\n" + venacidCost.ToString("0") + " venacids";
-        }
-        else if (level>0)
-        {
-            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
-        }
-        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0"); 
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if(particlesOnClick != null)
+			{
+				GameObject go = Instantiate(particlesOnClick,transform.position, Quaternion.identity);
+				Destroy(go,1);
+			}
+			if (isCurrentlyUpgrading == false)
+			{
+				if (level == 0)
+				{
+					currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
+				}
+				else if (level > 0)
+				{
+					currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+				}
+				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
-        UIManager.Instance.BuildingInterfaceActivation(true);
-        UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
-		UIManager.Instance.goToMenuButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
-		UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
-		UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
-		UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
-		UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
-		UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
-		RefreshInterface();
-
+				UIManager.Instance.BuildingInterfaceActivation(true);
+                if (isBuildingPanelDisplayedLeft)
+                {
+                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
+                }
+                else
+                {
+                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
+                }
+				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
+				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+				UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
+				UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
+				UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
+				UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
+				UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
+				UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
+				RefreshInterface();
+			}
+			
+		}
     }
 
     public bool LevelUp()
@@ -94,6 +119,10 @@ public class Building:MonoBehaviour
             _woodUpgradeCost = startingWoodUpgradeCost * (Mathf.Pow(magicRatio.x, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
             _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
             _venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
+            for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+            {
+                BuildingManager.Instance.allBuilding[i].CheckIfActive();
+        }
             return true;
         }
         else if (level != 0 && _woodUpgradeCost <= ResourceManager.Instance.wood.totalResource && _oreUpgradeCost <= ResourceManager.Instance.ore.totalResource && _venacidUpgradeCost <= ResourceManager.Instance.venacid.totalResource)
@@ -106,13 +135,18 @@ public class Building:MonoBehaviour
             _woodUpgradeCost = startingWoodUpgradeCost*(Mathf.Pow(magicRatio.x,level-1))*(1-reductionPercentCostBonus)-reductionFlatCostBonus;
             _oreUpgradeCost = startingOreUpgradeCost * (Mathf.Pow(magicRatio.y, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
 			_venacidUpgradeCost = startingVenacidUpgradeCost * (Mathf.Pow(magicRatio.z, level - 1)) * (1 - reductionPercentCostBonus) - reductionFlatCostBonus;
-			return true;
+            for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+            {
+                BuildingManager.Instance.allBuilding[i].CheckIfActive();
+        }
+            return true;
 
         }
         else
         {
             return false;
         }
+
     }
 	public virtual void AddWorkerToProducing()
 	{
@@ -177,11 +211,10 @@ public class Building:MonoBehaviour
         elpasedTime = 0;
         double constructionScafoldStep = constructionTime / scaffoldingModels.Length;
 		double timeToCompletion;
-		isCurentlyUpgrading = true;
+		isCurrentlyUpgrading = true;
 
 		//Désactivation de tout ce qu'il faut enlever à l'écran et activation du timer et du model construction
 		models[_currentUsedModel].SetActive(false);
-		GetComponent<BoxCollider>().enabled = false;
 		UIManager.Instance.BuildingInterfaceActivation(false);
 		ConstructionTimerText.gameObject.SetActive(true);
 		//starting timer
@@ -202,10 +235,9 @@ public class Building:MonoBehaviour
 		}
 		Destroy(go);
 		// réactivation du boxcolider, MAJ du temps pour la prochaine upgrade,desactivation du text de timer
-		GetComponent<BoxCollider>().enabled = true;
 		constructionTime *= constructionTimeMultiplicator;
 		ConstructionTimerText.gameObject.SetActive(false);
-		isCurentlyUpgrading = false;
+		isCurrentlyUpgrading = false;
 
 		//Réactivation du modèle en checkant si on est pas passé au modèle suivant, même chose pour les habitants max dans le bâtiment.
 		if (level==1)
@@ -241,21 +273,65 @@ public class Building:MonoBehaviour
 
     public virtual void RefreshInterface()
     {
-        villagers = currentWorkers.ToString("0") + "/" + workersLimit.ToString("0");
+        villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
         if (level==0)
         {
-            currentCost = woodCost.ToString("0") + " woods\n" + oreCost.ToString("0") + " ores\n" + venacidCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
         }
         else
         {
-            currentCost = _woodUpgradeCost.ToString("0") + " woods\n" + _oreUpgradeCost.ToString("0") + " ores\n" + _venacidUpgradeCost.ToString("0") + " venacids";
+            currentCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
-    }
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
+		if(skillPoints >0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(true);
+		}
+		else if(skillPoints == 0)
+		{
+			UIManager.Instance.exclamationPoint.gameObject.SetActive(false);
+		}
+	}
 	public virtual void AnimationBuildings()
 	{
 
 	}
-	
+    public Prerequisite[] prerequisites;
+    public void CheckIfActive()
+    {
+        int verifiedRequisite = 0;
+        if (prerequisites.Length == 0)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            for (int i = 0; i < prerequisites.Length; i++)
+            {
+                if (prerequisites[i].neededBuilding.level>=prerequisites[i].neededBuildingLevel)
+                {
+                    verifiedRequisite++;
+                }
+            }
+            if (verifiedRequisite==prerequisites.Length)
+            {
+                gameObject.SetActive(true);
+            }
+        }
+    }
+    public void InstantiateParticles(string textToInstantiate, Sprite spriteToInstantiate)
+    {
+        GameObject go = Instantiate(vfx, Input.mousePosition + offset, Quaternion.identity, UIManager.Instance.totalResourceCanvas.transform);
+        go.GetComponentInChildren<Text>().text = textToInstantiate;
+        go.GetComponentInChildren<Image>().sprite = spriteToInstantiate;
+        go.GetComponent<Animation>().Play("WoodLog");
+		Destroy(go, 2);
+    }
+}
+[System.Serializable]
+public struct Prerequisite
+{
+   public Building neededBuilding;
+   public int neededBuildingLevel;
 }

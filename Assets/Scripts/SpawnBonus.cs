@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnBonus : MonoBehaviour
 {
+
 	public float spawnMinTime = 1;
 	public float spawnMaxTime = 1;
 
@@ -15,7 +16,8 @@ public class SpawnBonus : MonoBehaviour
 
 	float totalSpawnChance;
 
-    void Start()
+
+	void Start()
     {
 		Invoke("RandomSpawn", Random.Range(spawnMinTime, spawnMaxTime));
 		for (int i = 0; i <Bonus.Length; i++)
@@ -41,7 +43,7 @@ public class SpawnBonus : MonoBehaviour
 			}
 		}
 		Vector3 posistion = center + new Vector3(Random.Range(-size.x / 2, size.x / 2), 0, Random.Range(-size.z / 2, size.z / 2));
-		Instantiate(Bonus[objectToSpawn], posistion, Quaternion.identity);
+		Instantiate(Bonus[objectToSpawn], posistion,Bonus[objectToSpawn].transform.rotation);
 		float spawnTime = Random.Range(spawnMinTime, spawnMaxTime);
 		Invoke("RandomSpawn", spawnTime);
 

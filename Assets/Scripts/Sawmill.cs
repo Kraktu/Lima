@@ -1,19 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Sawmill : ResourceBuilding
 {
-	
-    public override void OnMouseDown()
+	public override void OnMouseDown()
     {
         base.OnMouseDown();
-		ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
-        RefreshInterface();
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			else if (isCurrentlyUpgrading == false)
+			{
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeSawmill);
+				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerClick;
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick), imNormalUse);
+				SoundManager.Instance.PlaySoundEffect("ClickSawmill_SFX");
+			}
+			if (!ResourceManager.Instance.isSawmillProducing)
+			{
+				ResourceManager.Instance.isSawmillProducing = true;
+			}
+			if (stopProducingCoroutine != null)
+			{
+				StopCoroutine(stopProducingCoroutine);
+			}
+			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Sawmill"));
+		}
+
     }
 
-    public void UpgradeSawmill()
+
+	public void UpgradeSawmill()
     {
         if (LevelUp())
         {
@@ -89,9 +115,9 @@ public class Sawmill : ResourceBuilding
     public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickString = producedResource + ": " + ResourceManager.Instance.wood.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.wood.resourcePerSec).ToString("0") + " /h";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus*3600).ToString("0") + " wood/h" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.0")+ " wood/click" + " lvl" + fourthSkillPointLevel);
+		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick) + " /Click";
+		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.wood.resourcePerSec) + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus*3600) + " wood/h" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ " wood/click" + " lvl" + fourthSkillPointLevel);
 	}
 }

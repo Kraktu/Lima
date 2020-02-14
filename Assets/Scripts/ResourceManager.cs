@@ -12,6 +12,12 @@ public class ResourceManager : MonoBehaviour
 	public double startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public double startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
 
+    public int skillPoint=0;
+
+	[HideInInspector]
+	public bool isSawmillProducing = true, isMineProducing = true, isHouseProducing = true, isRefineryProducing = true;
+    [HideInInspector]
+    public double workerMult=1;
     [HideInInspector]
     public Resource wood, ore, venacid,worker,gems;
 	[HideInInspector]
@@ -37,12 +43,24 @@ public class ResourceManager : MonoBehaviour
 	}
     public IEnumerator GenerateResourcePerSec()
     {
-        while (true)
-        {
-            wood.totalResource += wood.resourcePerSec * Time.deltaTime;
-            ore.totalResource += ore.resourcePerSec * Time.deltaTime;
-            venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
-			worker.totalResource += worker.resourcePerSec * Time.deltaTime;
+		while (true)
+		{
+			if (isSawmillProducing)
+			{ 
+				wood.totalResource += wood.resourcePerSec * Time.deltaTime;
+			}
+			if(isMineProducing)
+			{
+				ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+			}
+			if(isRefineryProducing)
+			{
+				venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
+			}
+			if(isHouseProducing)
+			{
+				worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime;
+			}
             yield return null;
         }
     }

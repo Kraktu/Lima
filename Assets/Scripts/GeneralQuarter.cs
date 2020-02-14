@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GeneralQuarter : Building
 {
@@ -15,6 +16,7 @@ public class GeneralQuarter : Building
     public override void Start()
     {
         base.Start();
+        MapManager.Instance.RefreshEnemies();
         buildings.Add(BuildingManager.Instance.sawmill);
         buildings.Add(BuildingManager.Instance.mine);
         buildings.Add(BuildingManager.Instance.house);
@@ -24,31 +26,58 @@ public class GeneralQuarter : Building
     public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
-        for (int i = 0; i < buildings.Count; i++)
-        {
-            if (buildings[i].isCurentlyUpgrading)
-            {
-                buildings[i].elpasedTime+=removeTheTimeOnClick;
-            }
-        }
-
-		RefreshInterface();
-		UIManager.Instance.goToMenuButton.onClick.AddListener(GoToMap);
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			if (isCurrentlyUpgrading == false)
+			{
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
+				bool isOneBuildingUpgrading = false;
+				for (int i = 0; i < buildings.Count; i++)
+				{
+					if (buildings[i].isCurrentlyUpgrading)
+					{
+						isOneBuildingUpgrading = true;
+						buildings[i].elpasedTime += removeTheTimeOnClick;
+					}
+				}
+				if(isOneBuildingUpgrading)
+				{
+						InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick),imNormalUse);
+						SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
+				}
+				RefreshInterface();
+			}
+		}
 	}
 
-	void GoToMap()
+	public void GoToMap()
 	{
 		Camera camera = FindObjectOfType<Camera>();
 		camera.transform.position = MapManager.Instance.cameraMapPosition;
-		UIManager.Instance.totalResourceCanvas.SetActive(false);
+        camera.orthographic = true;
+        camera.transform.Rotate(new Vector3(35, 0, 0));
+        camera.orthographicSize = 17;
+        UIManager.Instance.gameLight.color = new Color(0.7169f, 0.5854f, 0.2265f, 1);
+        UIManager.Instance.totalResourceCanvas.SetActive(false);
 	}
 
 	public void UpgradeGeneralQuarter()
 	{
 		if(LevelUp())
 		{
+            MapManager.Instance.RefreshEnemies();
 			RefreshInterface();
+		}
+		if(level == 1)
+		{
+			UIManager.Instance.goToMapButton.gameObject.SetActive(true);
+			UIManager.Instance.spherierButton.gameObject.SetActive(true);
 		}
 	}
 
@@ -121,8 +150,7 @@ public class GeneralQuarter : Building
     public override void RefreshInterface()
     {
         base.RefreshInterface();
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0.0") + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + skillSecondBonus.ToString("0") + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0.00")+ "%" + " lvl" + fourthSkillPointLevel, 
-		goToMapMenuText,goToMapMenuSprite);
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "s" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + "%" +" lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "s" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ "%" + " lvl" + fourthSkillPointLevel);
 	}
 }

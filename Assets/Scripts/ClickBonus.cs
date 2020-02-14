@@ -14,8 +14,13 @@ public class ClickBonus : MonoBehaviour
 	public double gemsNbr = 1;
 	public TypeOfBonus typeOfBonus;
 
+	public Animator animBonus;
+	public GameObject animOnClick;
+	public Vector3 offsetAnimOnClick;
+
 	private void Start()
 	{
+		animBonus = gameObject.GetComponentInChildren<Animator>();
 		Invoke("DestroyChest", time);
 	}
 
@@ -69,15 +74,21 @@ public class ClickBonus : MonoBehaviour
 			default:
 				break;
 		}
-		Destroy(gameObject);
+		animBonus.Play("chest_opening");
+		gameObject.GetComponent<BoxCollider>().enabled = false;
+		SoundManager.Instance.PlaySoundEffect("OpenedBonus_SFX");
+		Destroy(gameObject,1);
 	}
 
 	void OnMouseDown()
 	{
 		destroyClicks--;
+		SoundManager.Instance.PlaySoundEffect("ClickBonus_SFX");
 		if (destroyClicks == 0)
 		{
 			BonusAfterDestroyed();
 		}
+		GameObject go = Instantiate(animOnClick,transform.position + offsetAnimOnClick,Quaternion.identity);
+		Destroy(go, 0.2f);
 	}
 }

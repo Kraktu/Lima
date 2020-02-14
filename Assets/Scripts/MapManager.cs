@@ -5,9 +5,13 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
 	Camera cam;
-	public Vector3 cameraMapPosition;
+	public Vector3 cameraMapPosition, cameraSpherierPosition;
+	public Quaternion cameraSpherierRotation;
+    public SpawnBonus spawnBonus;
 	[HideInInspector]
 	public Vector3 initialCameraPosition;
+
+    public EnemyVillage[] enemyVillages;
 	static public MapManager Instance { get; private set; }
 
 
@@ -26,5 +30,12 @@ public class MapManager : MonoBehaviour
     {
 		cam = FindObjectOfType<Camera>();
 		initialCameraPosition = cam.transform.position;
+    }
+    public void RefreshEnemies()
+    {
+        for (int i = 0; i < enemyVillages.Length; i++)
+        {
+            enemyVillages[i].LoadAnEnemy();
+        }
     }
 }

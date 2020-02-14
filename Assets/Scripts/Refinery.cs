@@ -1,15 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Refinery : ResourceBuilding
 {
 	public override void OnMouseDown()
 	{
 		base.OnMouseDown();
-		ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
-		UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
-		RefreshInterface();
+		if (!EventSystem.current.IsPointerOverGameObject())
+		{
+			if (isCurrentlyUpgrading == true)
+			{
+				elpasedTime += timeToReduce;
+				InstantiateParticles(UIManager.Instance.BigIntToString(timeToReduce), imDuringUpgrade);
+				SoundManager.Instance.PlaySoundEffect("ClickScaffolding_SFX");
+			}
+			else if(isCurrentlyUpgrading == false)
+			{
+				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
+				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
+				RefreshInterface();
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
+			}
+				SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
+				if (!ResourceManager.Instance.isRefineryProducing)
+				{
+					ResourceManager.Instance.isRefineryProducing = true;
+				}
+				if (stopProducingCoroutine != null)
+				{
+					StopCoroutine(stopProducingCoroutine);
+				}
+				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
+		}
 	}
 	public void UpgradeRefinery()
 	{
@@ -77,9 +101,9 @@ public class Refinery : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
-		_perClickString = producedResource + ": " + ResourceManager.Instance.venacid.resourcePerClick.ToString("0") + " /Click";
-		_perSecString = producedResource + ": " + (3600 * ResourceManager.Instance.venacid.resourcePerSec).ToString("0") + " /h";
-		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, skillPoints.ToString() + " skill points",
-		firstSkillPointUpgradeName + skillFirstBonus.ToString("0") + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + (skillSecondBonus * 3600).ToString("0") + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + skillThirdBonus.ToString("0") + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + skillFourthBonus.ToString("0") + " venacid/click" + " lvl" + fourthSkillPointLevel);
+		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick) + " /Click";
+		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.venacid.resourcePerSec) + " /h";
+		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
+		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + "%" + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus * 3600) + " venacid/h" + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + "%" + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + " venacid/click" + " lvl" + fourthSkillPointLevel);
 	}
 }

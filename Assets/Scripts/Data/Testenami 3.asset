@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce3740637a2cfe499d450c38b59acda, type: 3}
+  m_Name: Testenami 3
+  m_EditorClassIdentifier: 
+  timeToGetAttacked: 7.350919
+  level: 3
+  technoCounterSpyLevel: 4
+  militaryCounterSpyLevel: 4
+  indusCounterSpyLevel: 4
+  defenseCounterSpyLevel: 4
+  enemyName: JeanMichelCrapaud
+  myIcon: {fileID: 21300000, guid: 1e7786d7b9051b74bbedef050f2ce1eb, type: 3}
+  minWoodWon: 1000
+  maxWoodWon: 10000
+  minOreWon: 1000
+  maxOreWon: 10000
+  minVenacidWon: 1000
+  maxVenacidWon: 10000
+  nbrOfSpy: 1
+  enemyArmy:
+  - armyName: Archer
+    armyNbr: 10
+    armyAttack: 100
+    armyLife: 100
+    armyAttackPerTurn: 20
+    armyArmor: 4
+    armyPierce: 7
+    armyAccuracy: 9
+    armyInWallAttackBonus: 0
+    armyInWallDefenseBonus: 0
+  - armyName: Spearman
+    armyNbr: 10
+    armyAttack: 2
+    armyLife: 8
+    armyAttackPerTurn: 5
+    armyArmor: 1
+    armyPierce: 3
+    armyAccuracy: 8
+    armyInWallAttackBonus: 0
+    armyInWallDefenseBonus: 0
