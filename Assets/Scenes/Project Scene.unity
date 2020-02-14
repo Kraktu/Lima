@@ -23669,6 +23669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 0.25
 --- !u!1001 &589944942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48844,6 +48845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicVolume: 0.2
 --- !u!82 &1173613279
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48854,11 +48856,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 457a6d55870068d4894219a1eb1f5e4f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 70b187c75c75b6447b61f12e8fe81626, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -68611,31 +68613,31 @@ MonoBehaviour:
   _aSourceMusic: {fileID: 1173613279}
   _soundEffects:
   - name: ClickSawmill_SFX
-    clip: {fileID: 8300000, guid: 45d0a8ad6030a5746b8b799b2c9a70e3, type: 3}
+    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
   - name: ClickRefinery_SFX
-    clip: {fileID: 8300000, guid: 7872606d01bbedb4b92b4e30b7e4bc03, type: 3}
+    clip: {fileID: 8300000, guid: b5f45b9b25dceb64bb1ba3e6c46555e8, type: 3}
   - name: ClickMine_SFX
-    clip: {fileID: 8300000, guid: af1b4fa8b36867344a49f88591cebff3, type: 3}
+    clip: {fileID: 8300000, guid: ba6b0b810a359c14eba883c8d62e0d8c, type: 3}
   - name: ClickQG_SFX
     clip: {fileID: 8300000, guid: 14763fae68517ef4d8eca6482ec04ded, type: 3}
   - name: OpenedBonus_SFX
-    clip: {fileID: 8300000, guid: 562db2593236dd24c9ce26cf1d38160b, type: 3}
+    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
   - name: ClickHouse_SFX
     clip: {fileID: 8300000, guid: 7c9714a5714afbc489a697875b13e75b, type: 3}
   - name: ClickBarrack_SFX
     clip: {fileID: 8300000, guid: b60c251910c731842bbd9789ac0aaed1, type: 3}
   - name: ClickScaffolding_SFX
-    clip: {fileID: 8300000, guid: c487707ec3d899d408ba4c5edf1dfa9f, type: 3}
+    clip: {fileID: 8300000, guid: 516fb8e821ff43a4eafd471e1cbe200f, type: 3}
   - name: ClickBonus_SFX
-    clip: {fileID: 8300000, guid: 8daa8af2cd751154cbaec7f9541e3228, type: 3}
+    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
   - name: ClosedUI_SFX
-    clip: {fileID: 8300000, guid: 56d0b64de31437942920cd0ca69283e2, type: 3}
+    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
   - name: SendArmy_SFX
-    clip: {fileID: 8300000, guid: b393c7c21e72862498155eac65b2cefb, type: 3}
+    clip: {fileID: 8300000, guid: ed3276001a52d254086fd617ea4ba05d, type: 3}
   - name: SendSpy_SFX
-    clip: {fileID: 8300000, guid: 442837a44e455574285ad89c7188d048, type: 3}
+    clip: {fileID: 8300000, guid: ce378d27d6efb0d47994337fbcbde987, type: 3}
   - name: OpenReport_SFX
-    clip: {fileID: 8300000, guid: bea6d26e767db0c4e89fb078b9b8b3b6, type: 3}
+    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
 --- !u!1001 &1593021480
 PrefabInstance:
   m_ObjectHideFlags: 0
