@@ -28,4 +28,5 @@ public class Army
     {
         totalLife = armyNbr * armyLife;
     }
+
 }
