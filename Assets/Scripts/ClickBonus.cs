@@ -38,6 +38,7 @@ public class ClickBonus : MonoBehaviour
 				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 144;
 				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 144;
 				ResourceManager.Instance.gems.totalResource += gemsNbr;
+				SoundManager.Instance.PlaySoundEffect("OpenedMediocreBonus_SFX");
 				break;
 			case TypeOfBonus.common:
 				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
@@ -48,6 +49,7 @@ public class ClickBonus : MonoBehaviour
 				{
 					UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level;
 				}
+				SoundManager.Instance.PlaySoundEffect("OpenedCommonBonus_SFX");
 				break;
 			case TypeOfBonus.unusual:
 				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
@@ -58,26 +60,28 @@ public class ClickBonus : MonoBehaviour
 				{
 					UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level*10;
 				}
+				SoundManager.Instance.PlaySoundEffect("OpenedUnusualBonus_SFX");
 				break;
 			case TypeOfBonus.supernatural:
 				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 1800;
 				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 1800;
 				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 1800;
 				ResourceManager.Instance.gems.totalResource += gemsNbr;
+				SoundManager.Instance.PlaySoundEffect("OpenedSupernaturalBonus_SFX");
 				break;
 			case TypeOfBonus.mythical:
 				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 3600;
 				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 3600;
 				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 3600;
 				ResourceManager.Instance.gems.totalResource += gemsNbr;
+				SoundManager.Instance.PlaySoundEffect("OpenedMythicalBonus_SFX");
 				break;
 			default:
 				break;
 		}
 		animBonus.Play("chest_opening");
 		gameObject.GetComponent<BoxCollider>().enabled = false;
-		SoundManager.Instance.PlaySoundEffect("OpenedBonus_SFX");
-		Destroy(gameObject,1);
+		Destroy(gameObject,3);
 	}
 
 	void OnMouseDown()

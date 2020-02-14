@@ -145,5 +145,6 @@ public class Barrack : Building
     {
         UIManager.Instance.TroopsProducingCanvas.SetActive(true);
 		UIManager.Instance.DisableButton();
+		SoundManager.Instance.PlaySoundEffect("GoToTroops_SFX");
     }
 }

@@ -119,6 +119,7 @@ public class UIManager : MonoBehaviour
 			cam.orthographic = true;
 			spherierCanvas.SetActive(true);
 			totalResourceCanvas.SetActive(false);
+			SoundManager.Instance.PlaySoundEffect("GoToSpherier_SFX");
 		}
 		else
 		{

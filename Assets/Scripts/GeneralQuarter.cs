@@ -65,6 +65,7 @@ public class GeneralQuarter : Building
         camera.orthographicSize = 17;
         UIManager.Instance.gameLight.color = new Color(0.7169f, 0.5854f, 0.2265f, 1);
         UIManager.Instance.totalResourceCanvas.SetActive(false);
+		SoundManager.Instance.PlaySoundEffect("GoToMap_SFX");
 	}
 
 	public void UpgradeGeneralQuarter()
