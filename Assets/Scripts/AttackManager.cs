@@ -321,7 +321,7 @@ public class AttackManager : MonoBehaviour
                 currentSimultaneousAttack++;
                 AttackCo=StartCoroutine(Attacking());
                 UIManager.Instance.attackPanel.SetActive(false);
-				SoundManager.Instance.PlaySoundEffect("SendAttack_SFX");
+				SoundManager.Instance.PlaySoundEffect("SendArmy_SFX");
             }
         }
         else
