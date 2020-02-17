@@ -19,36 +19,37 @@ public class InputManager : MonoBehaviour
         Instance = this;
     }
     private void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.Escape))
-		{
-			MenuManagers.Instance.OptionButton();
-		}
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuManagers.Instance.OptionButton();
+        }
 
-	//	if(Input.GetKeyDown(KeyCode.M))
-	//	{
-    //        if (BuildingManager.Instance.generalQuarter.level>0)
-    //        {
-    //            if (isOnVillage)
-    //            {
-    //                BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().GoToMap();
-    //            }
-    //            else
-    //            {
-    //                ourVillageOnMap.GoToVillage();
-    //            }
-    //        }	
-	//	}
-    //    if (Input.GetKeyDown(KeyCode.S))
-    //    {
-    //        if (isOnSpherier)
-    //        {
-    //            UIManager.Instance.SpherierMapActive(true);
-    //        }
-    //        else
-    //        {
-    //            UIManager.Instance.SpherierMapActive(false);
-    //        }
-    //    }
-	//}
+        //	if(Input.GetKeyDown(KeyCode.M))
+        //	{
+        //        if (BuildingManager.Instance.generalQuarter.level>0)
+        //        {
+        //            if (isOnVillage)
+        //            {
+        //                BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().GoToMap();
+        //            }
+        //            else
+        //            {
+        //                ourVillageOnMap.GoToVillage();
+        //            }
+        //        }	
+        //	}
+        //    if (Input.GetKeyDown(KeyCode.S))
+        //    {
+        //        if (isOnSpherier)
+        //        {
+        //            UIManager.Instance.SpherierMapActive(true);
+        //        }
+        //        else
+        //        {
+        //            UIManager.Instance.SpherierMapActive(false);
+        //        }
+        //    }
+        //}
+    }
 }
