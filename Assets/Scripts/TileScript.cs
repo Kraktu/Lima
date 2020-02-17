@@ -31,15 +31,15 @@ public class TileScript : MonoBehaviour
         myMesh = gameObject.GetComponent<MeshRenderer>();
         if (tilelvlMax==0)
         {
-            myMesh.material = inexistantMat;
+            gameObject.SetActive(false);
         }
         else if (!visible)
         {
-            myMesh.material = invisibleMat;
+            gameObject.SetActive(false);
         }
         else if (!buyable)
         {
-            myMesh.material = visibleMat;
+            gameObject.SetActive(true);
         }
         else if (!bought)
         {
