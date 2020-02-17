@@ -1759,7 +1759,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Fine blade
+      value: Fine lame
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -1810,11 +1810,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The accuracy of your swordsmen is always 100%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2126,7 +2121,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Rapid mobilization
+      value: Mobilisation rapide
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2212,12 +2207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that allows your military units to be trained
-        instantly'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2344,7 +2333,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Silver key
+      value: "Cl\xE9 en argent"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2400,11 +2389,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' It now takes 5 shots to open a mythical chest'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2567,6 +2551,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9201809182450308570, guid: 45ff5f09082877e48a75064dde4e2f67,
     type: 3}
   m_PrefabInstance: {fileID: 1219943864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &69588517
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2026842893}
+    m_Modifications:
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9643444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2646508
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 149.30801
+      objectReference: {fileID: 0}
+    - target: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163119206493998361, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileBarrack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af, type: 3}
+--- !u!4 &69588518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5121261777566875402, guid: 34d022b4f1e8c4f4cb0cf77ccf4f50af,
+    type: 3}
+  m_PrefabInstance: {fileID: 69588517}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &70675073
 GameObject:
@@ -4806,6 +4865,156 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e269e477b95954cb4e6992a3088cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &126195505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 841504365}
+    m_Modifications:
+    - target: {fileID: 1388590505906243479, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_Name
+      value: Mine_LVL04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec3d489cd9352ae48ba09c2e786538a1, type: 3}
+--- !u!4 &126195506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2674604287053755780, guid: ec3d489cd9352ae48ba09c2e786538a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 126195505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &127566425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2026842893}
+    m_Modifications:
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8746669
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4847244
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 122.01101
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139521172526687058, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileBarrack04
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e27b6cb8a84e59c4b9dfe433aec69979, type: 3}
+--- !u!4 &127566426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2146677739041820993, guid: e27b6cb8a84e59c4b9dfe433aec69979,
+    type: 3}
+  m_PrefabInstance: {fileID: 127566425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &130098285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4851,7 +5060,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Population pole
+      value: Service population
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -4922,11 +5131,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Accelerates the production of workers by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -5558,135 +5762,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 144672748}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &148788619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148788620}
-  - component: {fileID: 148788623}
-  - component: {fileID: 148788622}
-  - component: {fileID: 148788621}
-  m_Layer: 0
-  m_Name: ReturnToVillageBtn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &148788620
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1524870191}
-  m_Father: {fileID: 678964344}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827, y: -462}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &148788621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 148788622}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1899195192}
-        m_MethodName: GoToVillage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &148788622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &148788623
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_CullTransparentMesh: 0
 --- !u!1 &149412233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,7 +5925,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Retreat
+      value: Retraite
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -5941,11 +6016,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: When you order a retreat, your units return to town 5% faster
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -6483,6 +6553,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158971525}
   m_CullTransparentMesh: 0
+--- !u!1001 &159745939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2026842893}
+    m_Modifications:
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.92265856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.38561812
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 134.636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7132356472585491242, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileBarrack01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a, type: 3}
+--- !u!4 &159745940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6097981324008382777, guid: 7f1c45c8c2bec6c439ad88d0c7a4c85a,
+    type: 3}
+  m_PrefabInstance: {fileID: 159745939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &161539317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8482,12 +8627,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Vos clics sur l'Arsenal diminue vos temps de production d'unit\xE9s
-        dans ce b\xE2timent de 2 secs suppl\xE9mentaires  "
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -8660,6 +8799,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
     type: 3}
   m_PrefabInstance: {fileID: 210681536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &210958495
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1426585025}
+    m_Modifications:
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621567977439499685, guid: 54f7442fc1df35e409e7402c8e490594,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileIncubatorLVL01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54f7442fc1df35e409e7402c8e490594, type: 3}
+--- !u!4 &210958496 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1313634883679348662, guid: 54f7442fc1df35e409e7402c8e490594,
+    type: 3}
+  m_PrefabInstance: {fileID: 210958495}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &211110443
 PrefabInstance:
@@ -8874,7 +9088,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Army spearhead'
+      value: "Fer de lance de l'arm\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -8950,11 +9164,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Spearmen 's production time decreased by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9081,7 +9290,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Gold key
+      value: "Cl\xE9 en or"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9127,11 +9336,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: It now takes 10 moves to open a supernatural chest
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9240,7 +9444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19918752, y: 0.8905556}
   m_AnchorMax: {x: 0.23779164, y: 0.9591852}
-  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.5, y: 28}
   m_SizeDelta: {x: -0.5999756, y: 0.3999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216787249
@@ -9324,7 +9528,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Isolationist policy'
+      value: Politique isolatoire
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9435,12 +9639,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that prevents your opponents from spying on
-        you for a certain period of time'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -14160,6 +14358,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fefdd4857dba68d4b9dac832def449e6, type: 3}
+--- !u!1 &346393768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346393769}
+  m_Layer: 0
+  m_Name: QG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &346393769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346393768}
+  m_LocalRotation: {x: -0, y: 0.5400145, z: -0, w: 0.8416557}
+  m_LocalPosition: {x: -6.0699997, y: 0, z: -4.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 955876247}
+  - {fileID: 1103922849}
+  - {fileID: 1651009536}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 65.369, z: 0}
 --- !u!1 &347484684
 GameObject:
   m_ObjectHideFlags: 0
@@ -14260,6 +14491,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &352555605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 841504365}
+    m_Modifications:
+    - target: {fileID: 6076175806125150603, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_Name
+      value: Mine_LVL03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7da79eb99212b634ea29f1ad07ecc9a1, type: 3}
+--- !u!4 &352555606 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7064371464308220824, guid: 7da79eb99212b634ea29f1ad07ecc9a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 352555605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &352584524
 GameObject:
   m_ObjectHideFlags: 0
@@ -15354,12 +15660,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' After clicking 500x in a row on the same building, your next clicks
-        on the same building get a 500% bonus for 50 seconds'
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -15473,7 +15773,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military spy
+      value: Espion militaire 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -15559,11 +15859,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy collects better quality military information'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17070,7 +17365,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Hissing in the night
+      value: Sifflement dans la nuit
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17126,12 +17421,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The number of attacks per turn the Apophis can make is increased by
-        1'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17679,7 +17968,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17694,7 +17983,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Reload MORE (Work in Progress)
+      value: Rechargez 2
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17796,21 +18085,10 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Your clicks on the Tower decrease the recharge time of the ammunition
-        by 2 additional seconds '
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
       value: Tile (427)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -18072,6 +18350,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429888788}
   m_CullTransparentMesh: 0
+--- !u!1001 &433620388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1807864971}
+    m_Modifications:
+    - target: {fileID: 2224719382830269033, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_Name
+      value: RaffineryLVL00
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6465064
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7629085
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 80.55701
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dee1df7757d5fd846aaae929b1f8db6e, type: 3}
+--- !u!4 &433620389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2919620796212097146, guid: dee1df7757d5fd846aaae929b1f8db6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 433620388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &439239564
 GameObject:
   m_ObjectHideFlags: 0
@@ -19600,7 +19953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.57524997, y: 0.8951851}
   m_AnchorMax: {x: 0.67412496, y: 0.9556296}
-  m_AnchoredPosition: {x: 0.25, y: -0.5}
+  m_AnchoredPosition: {x: 0.25, y: 27.500061}
   m_SizeDelta: {x: 0.5, y: -1.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471069496
@@ -20274,12 +20627,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Active: Unlocks a skill that doubles your production of workers for
-        a limited time'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -21697,7 +22044,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -21717,7 +22064,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Reload ! (Work in Progress)
+      value: Rechargez 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -21828,12 +22175,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Your clicks on the Tower decrease the recharge time of the ammunition
-        by 1 second '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -22657,6 +22998,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 531032343}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &536908905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 841504365}
+    m_Modifications:
+    - target: {fileID: 7882783650103638651, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_Name
+      value: Mine_LVL01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b0010160407b994a8bccf19a601b2af, type: 3}
+--- !u!4 &536908906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7882783651710962378, guid: 7b0010160407b994a8bccf19a601b2af,
+    type: 3}
+  m_PrefabInstance: {fileID: 536908905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &541939032
 GameObject:
   m_ObjectHideFlags: 0
@@ -23188,6 +23604,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562123732}
   m_CullTransparentMesh: 0
+--- !u!1001 &563133935
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1807864971}
+    m_Modifications:
+    - target: {fileID: 663198466358225568, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_Name
+      value: RaffineryLVL01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6646008
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.74719864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 83.303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 310710e4a12a69b4dae9e510682642f4, type: 3}
+--- !u!4 &563133936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4571011394564741299, guid: 310710e4a12a69b4dae9e510682642f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 563133935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &563716615 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
@@ -23886,7 +24377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0.25
+  musicVolume: 0
 --- !u!1001 &589944942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24024,7 +24515,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -24039,7 +24530,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Ammunition depot (work in progress)
+      value: "D\xE9pot de munitions"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -24150,11 +24641,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Active: creates a spell that instantly searches for ammo in your turn.'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -25206,7 +25692,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Fencer
+      value: Escrimeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -25262,11 +25748,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases the number of attacks per turn by 1'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -26883,6 +27364,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 655989875}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &659688430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1426585025}
+    m_Modifications:
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927090656513443740, guid: b00383a53af990844925cad81599e6f2,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileIncubatorLVL04
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b00383a53af990844925cad81599e6f2, type: 3}
+--- !u!4 &659688431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5600292654616655247, guid: b00383a53af990844925cad81599e6f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 659688430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &661435058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26923,7 +27479,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Slingshot
+      value: Lance pierres
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -26989,11 +27545,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Archers' attack is increased by 5 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27526,7 +28077,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Inquisitor
+      value: Inquisiteur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27627,11 +28178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your alchemists in your walls heal 10% more'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27746,7 +28292,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 3
+      value: "Hi\xE9rarchie militaire 3"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27822,11 +28368,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Each time 100 spearmans are created, a swordsman is offered
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -28247,7 +28788,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &678964344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28260,7 +28801,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1425760479}
-  - {fileID: 148788620}
   m_Father: {fileID: 1179861865}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28993,7 +29533,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Defensive counterintelligence (WIK)'
+      value: "Contre espionnage d\xE9fense"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -29094,12 +29634,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your defenses'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -30995,7 +31529,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Proselytizing
+      value: "Pros\xE9lytisme"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -31086,11 +31620,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time you create 100 alchemists, summon a random siege weapon'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -32758,12 +33287,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 100
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 200
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -33061,7 +33590,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: I need healing
+      value: J'ai besoin de soins
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33132,11 +33661,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Alchemists'' production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33589,6 +34113,81 @@ MonoBehaviour:
   m_Spacing: {x: 115.54, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!1001 &812247193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1426585025}
+    m_Modifications:
+    - target: {fileID: 4779255424889514082, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileIncubatorLVL03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5090f2b657acea45900fc21e1b40e16, type: 3}
+--- !u!4 &812247194 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8360944408458369649, guid: a5090f2b657acea45900fc21e1b40e16,
+    type: 3}
+  m_PrefabInstance: {fileID: 812247193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &812528299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33629,7 +34228,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Industrial counterintelligence
+      value: Contre espionnage industriel
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33735,12 +34334,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your industries'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -34003,7 +34596,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Defending spies (work in progress)
+      value: "Espionnage des d\xE9fenses 1"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -34079,11 +34672,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy is more likely to learn more about enemy defenses.'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -34197,14 +34785,14 @@ RectTransform:
   m_GameObject: {fileID: 817011179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.64405, z: 1}
   m_Children: []
   m_Father: {fileID: 449558308}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.86181486}
   m_AnchorMax: {x: 0.8775208, y: 1}
-  m_AnchoredPosition: {x: -5.300049, y: 0.82995605}
+  m_AnchoredPosition: {x: -5.300049, y: 22}
   m_SizeDelta: {x: -2.8000488, y: 5.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817011181
@@ -34890,6 +35478,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &841504364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 841504365}
+  m_Layer: 0
+  m_Name: Mine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &841504365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841504364}
+  m_LocalRotation: {x: 0.002757612, y: 0.61698174, z: -0.0021619587, w: 0.78696966}
+  m_LocalPosition: {x: 15.38, y: -0.1, z: -1.77}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 855056477}
+  - {fileID: 536908906}
+  - {fileID: 1084056736}
+  - {fileID: 352555606}
+  - {fileID: 126195506}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0.402, y: 76.193, z: 0}
 --- !u!1001 &841507277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35291,6 +35914,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 852883528}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &855056476
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 841504365}
+    m_Modifications:
+    - target: {fileID: 5062275436376455144, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_Name
+      value: Mine_LVL00
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efe93a19a43243549ba35dbbba77664b, type: 3}
+--- !u!4 &855056477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5062275437407450359, guid: efe93a19a43243549ba35dbbba77664b,
+    type: 3}
+  m_PrefabInstance: {fileID: 855056476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &855258256 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
@@ -35343,7 +36041,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Squire
+      value: 'Ecuyer '
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -35419,11 +36117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increase the life of your swordsmen by 10 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -36629,6 +37322,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 904307680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &904726443
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2026842893}
+    m_Modifications:
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.93594
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.35215953
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 138.761
+      objectReference: {fileID: 0}
+    - target: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646704440749269516, guid: fd884aaeb3194a6429fcc236522ffb0d,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileBarrack02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd884aaeb3194a6429fcc236522ffb0d, type: 3}
+--- !u!4 &904726444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 342532535796224031, guid: fd884aaeb3194a6429fcc236522ffb0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 904726443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &905977170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37537,7 +38305,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Iron key
+      value: "cl\xE9 en bronze"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -37603,11 +38371,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: It now takes 2 shots to open an unusual chest
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -38366,7 +39129,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Religious fanatic
+      value: Fanatique religieux
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -38437,11 +39200,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The production time of all siege weapons is decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -38797,6 +39555,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c14b647f98de674485b2fe57a1fdb30, type: 3}
+--- !u!1001 &955876246
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 346393769}
+    m_Modifications:
+    - target: {fileID: 6745925967958971698, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileQGLVL00
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4de0973837a3443438687e6d20993eb6, type: 3}
+--- !u!4 &955876247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7765628756601988897, guid: 4de0973837a3443438687e6d20993eb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 955876246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &956222589 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
@@ -39684,7 +40517,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Initiated clicker
+      value: "Clicker initi\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -39775,12 +40608,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'After clicking 100x in a row on the same building, your next clicks
-        on the same building get a 100% bonus for 10 seconds '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -42868,6 +43695,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1041640399}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1043069951
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923546727}
+    m_Modifications:
+    - target: {fileID: 5698330123448531580, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab37f04ece88fd64cbc2261c25305f1d, type: 3}
+--- !u!4 &1043069952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5698330123448531581, guid: ab37f04ece88fd64cbc2261c25305f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1043069951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1043324274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42908,7 +43810,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Industrial spying
+      value: Espionnage industriel
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -42994,11 +43896,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your Spy Gathers More Information About The Enemy Industry'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -44461,6 +45358,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1082330508}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1084056735
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 841504365}
+    m_Modifications:
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274941148548922681, guid: 52aed004f994a32439126f4715b5b8ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Mine_LVL02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52aed004f994a32439126f4715b5b8ec, type: 3}
+--- !u!4 &1084056736 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5274941148548922680, guid: 52aed004f994a32439126f4715b5b8ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084056735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1086740990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44501,7 +45473,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Master clicker
+      value: "Ma\xEEtre clicker"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -44547,12 +45519,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' After clicking 1000x in a row on the same building, your next clicks
-        on the same building get a 1000% bonus for 100 seconds'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45458,6 +46424,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52aed004f994a32439126f4715b5b8ec, type: 3}
+--- !u!1001 &1103922848
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 346393769}
+    m_Modifications:
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5051831
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8630122
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 60.687004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206869833203727921, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileQGLVL01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b91c7fa94dd41c4ea86d140e84c70e3, type: 3}
+--- !u!4 &1103922849 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5304684616480246818, guid: 9b91c7fa94dd41c4ea86d140e84c70e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1103922848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1107790247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45598,7 +46639,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 1
+      value: "Hi\xE9rarchie militaire 1"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45689,11 +46730,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 spearmen are created, an archer is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45820,7 +46856,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Stools
+      value: Selles
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45876,11 +46912,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: The accuracy of the horsemen is increased by 5% points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -46117,7 +47148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24352086, y: 0.8951851}
   m_AnchorMax: {x: 0.3435625, y: 0.9556296}
-  m_AnchoredPosition: {x: -0.5, y: -0.5}
+  m_AnchoredPosition: {x: -0.5, y: 27.500061}
   m_SizeDelta: {x: -2.5, y: -1.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111310145
@@ -47168,7 +48199,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bronze weapons
+      value: Armes en bronze
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47254,11 +48285,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your units see their mineral costs decrease by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47357,6 +48383,170 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 680326032}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1136417503
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -7117302697841357167, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -74.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7117302697841357167, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7117302697841357167, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22497115
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22497115
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22497115
+      objectReference: {fileID: 0}
+    - target: {fileID: -2873636589484501563, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2873636589484501563, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -2873636589484501563, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2784311128158294143, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 56b52b0714703564da1c9258c2f7a2d8, type: 2}
+    - target: {fileID: -927199367670048503, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_Name
+      value: ROCK1.fbx_Collection_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569939465882371116, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569939465882371116, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 62.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569939465882371116, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821932461132601228, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821932461132601228, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821932461132601228, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403408533658783909, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -64.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403408533658783909, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403408533658783909, guid: ab6158126edaa204792054e2a1f1648a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab6158126edaa204792054e2a1f1648a, type: 3}
 --- !u!1 &1137275092
 GameObject:
   m_ObjectHideFlags: 0
@@ -47856,7 +49046,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military counterintelligence
+      value: Contre espionnage militaire 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47937,12 +49127,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the size of
-        your military'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -48103,6 +49287,81 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5655fe1462cd4cd459954a29b335504a, type: 3}
+--- !u!1001 &1145627287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1807864971}
+    m_Modifications:
+    - target: {fileID: 1718741473153051752, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_Name
+      value: RaffineryLVL03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6905893
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72324723
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 87.354004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce802bf14606658468ee7225b1de1ce6, type: 3}
+--- !u!4 &1145627288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2414329191254335099, guid: ce802bf14606658468ee7225b1de1ce6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1145627287}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1147004279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48612,6 +49871,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
     type: 3}
   m_PrefabInstance: {fileID: 1153168943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1157172122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2026842893}
+    m_Modifications:
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9148095
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.40388557
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 132.35701
+      objectReference: {fileID: 0}
+    - target: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449192443745133680, guid: b8d9b346cf931ac459cb4c438e7609d7,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileBarrack03
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8d9b346cf931ac459cb4c438e7609d7, type: 3}
+--- !u!4 &1157172123 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 857352079554975331, guid: b8d9b346cf931ac459cb4c438e7609d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1157172122}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1157259844
 PrefabInstance:
@@ -49168,7 +50502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0.2
+  musicVolume: 0
 --- !u!82 &1173613279
 AudioSource:
   m_ObjectHideFlags: 0
@@ -49179,11 +50513,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70b187c75c75b6447b61f12e8fe81626, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 457a6d55870068d4894219a1eb1f5e4f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -49502,7 +50836,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Apprentice clicker
+      value: Apprenti clicker
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -49603,12 +50937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: After clicking 50x in a row on the same building, your next clicks on
-        the same building get a 50% bonus for 5 seconds
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51109,7 +52437,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: First aid
+      value: Premiers soins
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51165,12 +52493,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases Alchemists'' Breakthrough by 10%  If an alchemist pierces,
-        his treatment heals an additional 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51297,7 +52619,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: The rose and the sword
+      value: "La rose et l'\xE9p\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51383,11 +52705,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The production time of swordsmen is reduced by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51896,6 +53213,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e269e477b95954cb4e6992a3088cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1232769818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923546727}
+    m_Modifications:
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2171291288259789197, guid: 6cee50111e208a64381b2a516b81ad82,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL00
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cee50111e208a64381b2a516b81ad82, type: 3}
+--- !u!4 &1232769819 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2171291288259789196, guid: 6cee50111e208a64381b2a516b81ad82,
+    type: 3}
+  m_PrefabInstance: {fileID: 1232769818}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234140997
 GameObject:
   m_ObjectHideFlags: 0
@@ -51930,7 +53322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0826875, y: 0.8951851}
   m_AnchorMax: {x: 0.18200001, y: 0.9556296}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 0, y: 27.500061}
   m_SizeDelta: {x: 0.5, y: -1.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234140999
@@ -55606,7 +56998,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Solid walls
+      value: Murs solides 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -55727,12 +57119,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases cost of wood and minerals from tower upgrades by 1%  (technology
-        upgradable up to 50%)'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -55941,7 +57327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.698, y: 0.8905556}
   m_AnchorMax: {x: 0.73800004, y: 0.9591852}
-  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.5, y: 24}
   m_SizeDelta: {x: -2.600006, y: 0.3999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314888856
@@ -56332,7 +57718,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Scales cult
+      value: "Culte de l'\xE9caille"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -56403,12 +57789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that allows your siege weapons to be trained
-        instantly '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57205,7 +58585,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Rudimentary weapons
+      value: Armes rudimentaires
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57306,11 +58686,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your units see their wood costs decrease by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57841,7 +59216,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Feathered snake
+      value: "Serpent \xE0 plumes"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57902,11 +59277,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Quetzalc\xF3atl breakthrough increased by 5%"
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -58315,7 +59685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.40800002, y: 0.8951851}
   m_AnchorMax: {x: 0.5067708, y: 0.9556296}
-  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_AnchoredPosition: {x: 0, y: 27.500061}
   m_SizeDelta: {x: 0.5, y: -1.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1376641405
@@ -58457,6 +59827,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
     type: 3}
   m_PrefabInstance: {fileID: 1377245813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1379683085
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923546727}
+    m_Modifications:
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630663791595767722, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2390cfcd68527d74290b06fb6c1cc1cb, type: 3}
+--- !u!4 &1379683086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5630663791595767721, guid: 2390cfcd68527d74290b06fb6c1cc1cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1379683085}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1388905502
 PrefabInstance:
@@ -59338,7 +60783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.74752086, y: 0.8951851}
   m_AnchorMax: {x: 0.848125, y: 0.9556296}
-  m_AnchoredPosition: {x: -0.5, y: -0.5}
+  m_AnchoredPosition: {x: -0.5, y: 23.5}
   m_SizeDelta: {x: -2.5, y: -1.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1409033770
@@ -59421,7 +60866,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Apocalypse Messenger
+      value: Message d'apocalypse
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -59472,11 +60917,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Leviathan's attack increased by 25 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -60267,6 +61707,41 @@ RectTransform:
   m_AnchoredPosition: {x: -25.3, y: 28.3}
   m_SizeDelta: {x: 109.3, y: 86.6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1426585024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426585025}
+  m_Layer: 0
+  m_Name: House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426585025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426585024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.67, y: 0, z: 7.32}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_Children:
+  - {fileID: 1748618143}
+  - {fileID: 210958496}
+  - {fileID: 1988625923}
+  - {fileID: 812247194}
+  - {fileID: 659688431}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1426648448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62041,7 +63516,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Heavy armor'
+      value: Armure lourde
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62107,11 +63582,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increase the armor of your swordsmen by 10 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62415,7 +63885,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Army of hunters
+      value: "Arm\xE9e de chasseurs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62491,11 +63961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Archers'' production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -63297,7 +64762,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Turtle training'
+      value: Formation tortue
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -63343,12 +64808,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' During the first phase of combat, none of the damage against your swordsmen
-        can be fatal. If they were to die, swordsmen keep 1PV'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -65921,7 +67380,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Swashbubkler
+      value: Bretteur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -65982,11 +67441,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Augmente l'attaque de vos \xE9p\xE9istes de 5 points  "
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -66450,83 +67904,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520440735}
   m_CullTransparentMesh: 0
---- !u!1 &1524870190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1524870191}
-  - component: {fileID: 1524870193}
-  - component: {fileID: 1524870192}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1524870191
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 148788620}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1524870192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Go to village
---- !u!222 &1524870193
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
-  m_CullTransparentMesh: 0
 --- !u!1 &1526276146
 GameObject:
   m_ObjectHideFlags: 0
@@ -66704,6 +68081,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1526424985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1534579550
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1807864971}
+    m_Modifications:
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7306276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.68277615
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 93.878006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242300699638846380, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+        type: 3}
+      propertyPath: m_Name
+      value: RaffineryLVL02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 186b8c9e8e0a4364b92585a3fba42dd7, type: 3}
+--- !u!4 &1534579551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4916190309038924223, guid: 186b8c9e8e0a4364b92585a3fba42dd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1534579550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1536678741
 GameObject:
   m_ObjectHideFlags: 0
@@ -66738,7 +68190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5302709, y: 0.8905556}
   m_AnchorMax: {x: 0.56952083, y: 0.9591852}
-  m_AnchoredPosition: {x: 0.25, y: 0}
+  m_AnchoredPosition: {x: 0.25, y: 28.000061}
   m_SizeDelta: {x: -1.5999985, y: 0.3999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536678743
@@ -68909,7 +70361,6 @@ MonoBehaviour:
   spyInputText: {fileID: 617522915}
   spyNbrPanelText: {fileID: 75789396}
   gameLight: {fileID: 705507994}
-  map2Canvas: {fileID: 678964343}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -69079,45 +70530,31 @@ MonoBehaviour:
   _aSourceMusic: {fileID: 1173613279}
   _soundEffects:
   - name: ClickSawmill_SFX
-    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
+    clip: {fileID: 8300000, guid: 45d0a8ad6030a5746b8b799b2c9a70e3, type: 3}
   - name: ClickRefinery_SFX
-    clip: {fileID: 8300000, guid: b5f45b9b25dceb64bb1ba3e6c46555e8, type: 3}
+    clip: {fileID: 8300000, guid: 7872606d01bbedb4b92b4e30b7e4bc03, type: 3}
   - name: ClickMine_SFX
-    clip: {fileID: 8300000, guid: ba6b0b810a359c14eba883c8d62e0d8c, type: 3}
+    clip: {fileID: 8300000, guid: af1b4fa8b36867344a49f88591cebff3, type: 3}
   - name: ClickQG_SFX
     clip: {fileID: 8300000, guid: 14763fae68517ef4d8eca6482ec04ded, type: 3}
-  - name: OpenedMediocreBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedCommonBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedUnusualBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedSupernaturalBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedMythicalBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
+  - name: OpenedBonus_SFX
+    clip: {fileID: 8300000, guid: 562db2593236dd24c9ce26cf1d38160b, type: 3}
   - name: ClickHouse_SFX
     clip: {fileID: 8300000, guid: 7c9714a5714afbc489a697875b13e75b, type: 3}
   - name: ClickBarrack_SFX
     clip: {fileID: 8300000, guid: b60c251910c731842bbd9789ac0aaed1, type: 3}
   - name: ClickScaffolding_SFX
-    clip: {fileID: 8300000, guid: 516fb8e821ff43a4eafd471e1cbe200f, type: 3}
+    clip: {fileID: 8300000, guid: c487707ec3d899d408ba4c5edf1dfa9f, type: 3}
   - name: ClickBonus_SFX
-    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
+    clip: {fileID: 8300000, guid: 8daa8af2cd751154cbaec7f9541e3228, type: 3}
   - name: ClosedUI_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
+    clip: {fileID: 8300000, guid: 56d0b64de31437942920cd0ca69283e2, type: 3}
   - name: SendArmy_SFX
-    clip: {fileID: 8300000, guid: ed3276001a52d254086fd617ea4ba05d, type: 3}
+    clip: {fileID: 8300000, guid: b393c7c21e72862498155eac65b2cefb, type: 3}
   - name: SendSpy_SFX
-    clip: {fileID: 8300000, guid: ce378d27d6efb0d47994337fbcbde987, type: 3}
+    clip: {fileID: 8300000, guid: 442837a44e455574285ad89c7188d048, type: 3}
   - name: OpenReport_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToMap_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToTroops_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToSpherier_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
+    clip: {fileID: 8300000, guid: bea6d26e767db0c4e89fb078b9b8b3b6, type: 3}
 --- !u!1001 &1593021480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70589,7 +72026,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Army of horsemen
+      value: "Arm\xE9e de cavaliers"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -70660,11 +72097,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Horsemen''s production time is reduced by 5% '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -71278,6 +72710,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649614727}
   m_CullTransparentMesh: 0
+--- !u!1001 &1651009535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 346393769}
+    m_Modifications:
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.59620875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.80282944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 73.198006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7740254294080392502, guid: 98e95784cc7856241ae6d4c62185e9f8,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileQGLVL02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98e95784cc7856241ae6d4c62185e9f8, type: 3}
+--- !u!4 &1651009536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6715343810379677477, guid: 98e95784cc7856241ae6d4c62185e9f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1651009535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1653004570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72687,7 +74194,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Snitch
+      value: Caffardeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -72783,11 +74290,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Spy production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73088,7 +74590,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Dragon chest
+      value: Coffre du dragon
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73149,13 +74651,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a poor chest by 5% and the chance of
-        hitting a common chest by 1% but increases the chance of hitting a supernatural
-        chest by 6%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73644,7 +75139,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Technological espionage
+      value: Espionnage technologique 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73730,12 +75225,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy is more likely to know the number of points spent in each
-        branch of his tech tree'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -74839,7 +76328,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Ardent defender
+      value: "Ardants d\xE9fenseurs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -74955,11 +76444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases the armor of units in your walls by 10 points'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75263,7 +76747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.36447918, y: 0.8905556}
   m_AnchorMax: {x: 0.4044792, y: 0.9591852}
-  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: 28.000061}
   m_SizeDelta: {x: -0.6000061, y: 0.3999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748441813
@@ -75284,7 +76768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4abad828b17189b4e862783ef1545c75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73a995c9c4290374ea529fdc0fe89aae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75302,6 +76786,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748441811}
   m_CullTransparentMesh: 0
+--- !u!1001 &1748618142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1426585025}
+    m_Modifications:
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446257671163862987, guid: 181e2c196e62b0f4492eb0f6b0859143,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileIncubatorLVL00
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 181e2c196e62b0f4492eb0f6b0859143, type: 3}
+--- !u!4 &1748618143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4858393625261059544, guid: 181e2c196e62b0f4492eb0f6b0859143,
+    type: 3}
+  m_PrefabInstance: {fileID: 1748618142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1749695551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75342,7 +76901,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bronze key
+      value: Cle en bronze
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75424,11 +76983,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: One click is enough to open a common chest
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -75439,11 +76993,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f01395d1fed4d9478ca1dcec104c73d, type: 2}
-    - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75902,7 +77451,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bludgeon
+      value: Matraquer
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75998,12 +77547,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Click on one of your buildings pulling the reactive side and boost its
-        productivity by 100% for 1 minute
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -76583,7 +78126,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Forced walk
+      value: "Marche forc\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -76689,11 +78232,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Reduces travel time to enemy by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77193,7 +78731,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Pointed lance'
+      value: Lance pointue
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77259,11 +78797,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Spearmen attack is increased by 5 points'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77725,7 +79258,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Professional reorientation
+      value: "R\xE9orientation professionelle"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77776,11 +79309,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: You can now remove workers from your buildings and reassign them elsewhere
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -78490,6 +80018,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807845643}
   m_CullTransparentMesh: 0
+--- !u!1 &1807864970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807864971}
+  m_Layer: 0
+  m_Name: Raffinery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807864971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807864970}
+  m_LocalRotation: {x: -0, y: 0.34878698, z: -0, w: 0.93720204}
+  m_LocalPosition: {x: 15.01, y: 0, z: 10.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 433620389}
+  - {fileID: 563133936}
+  - {fileID: 1534579551}
+  - {fileID: 1145627288}
+  - {fileID: 2119244235}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 40.826, z: 0}
 --- !u!1001 &1814371942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80316,7 +81879,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Custos
+      value: Custode
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80407,12 +81970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your clicks on the Arsenal decrease your unit production times in this
-        building by 1 second
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80532,7 +82089,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Instructor
+      value: Instructeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80604,17 +82161,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: The production of military units no longer stops when your barracks flanks.
-        However, workers' CD reduction bonuses remain inactive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346947677996495048, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -80625,26 +82171,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3221220e3fbe57145934700c6d2b43da, type: 2}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81536,7 +83062,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Pirate chest
+      value: Coffre pirate
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -81607,12 +83133,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a poor chest by 5% and increases the
-        chance of hitting an unusual chest by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82557,7 +84077,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 4
+      value: "Hi\xE9rarchie militaire 4"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82618,11 +84138,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 swordsmen are created, a rider is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82817,7 +84332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.039729167, y: 0.8905556}
   m_AnchorMax: {x: 0.078520834, y: 0.9591852}
-  m_AnchoredPosition: {x: -0.5, y: 0}
+  m_AnchoredPosition: {x: -0.5, y: 28.000061}
   m_SizeDelta: {x: -0.5999756, y: 0.3999939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917351175
@@ -82838,7 +84353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7827d02857d974f4c83014bb66800067, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7508f83d79aeeba458ab5bc57e7056fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -83138,6 +84653,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1910850250}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1923546726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1923546727}
+  m_Layer: 0
+  m_Name: Sawmill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1923546727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923546726}
+  m_LocalRotation: {x: -0, y: -0.2736252, z: -0, w: 0.9618364}
+  m_LocalPosition: {x: -17.96, y: 0, z: 8.46}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 1232769819}
+  - {fileID: 2058327677}
+  - {fileID: 1379683086}
+  - {fileID: 1043069952}
+  - {fileID: 2070959644}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: -31.760002, z: 0}
 --- !u!1 &1923577015
 GameObject:
   m_ObjectHideFlags: 0
@@ -83434,7 +84984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3396e204ac7112e4ab0f600a152cfa40, type: 2}
+  - {fileID: 2100000, guid: 56b52b0714703564da1c9258c2f7a2d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83927,12 +85477,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a common chest by 4% and increases
-        the chance of hitting a legendary chest by 4%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -86152,6 +87696,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987540611}
   m_CullTransparentMesh: 0
+--- !u!1001 &1988625922
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1426585025}
+    m_Modifications:
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935807267834804447, guid: 92f3eda472933744ebe0117760d371af,
+        type: 3}
+      propertyPath: m_Name
+      value: ReptileIncubatorLVL02
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 92f3eda472933744ebe0117760d371af, type: 3}
+--- !u!4 &1988625923 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 55611114547268300, guid: 92f3eda472933744ebe0117760d371af,
+    type: 3}
+  m_PrefabInstance: {fileID: 1988625922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1989641197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87649,7 +89268,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Wooden sword
+      value: "Ep\xE9e en bois"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -87735,11 +89354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Swordsmen''s breakthrough increased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88017,7 +89631,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Memory box
+      value: "Boite \xE0 souvenirs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88104,12 +89718,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Decreases the chance of hitting a poor chest by 5% and increases the
-        chance of hitting a common chest by 5%
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -88183,6 +89791,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2024815950}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026842892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026842893}
+  m_Layer: 0
+  m_Name: Caserne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026842893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026842892}
+  m_LocalRotation: {x: -0, y: -0.65753007, z: -0, w: 0.7534284}
+  m_LocalPosition: {x: 4.21, y: 0, z: -1.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 69588518}
+  - {fileID: 159745940}
+  - {fileID: 904726444}
+  - {fileID: 1157172123}
+  - {fileID: 127566426}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: -82.22401, z: 0}
 --- !u!1 &2028416169
 GameObject:
   m_ObjectHideFlags: 0
@@ -88645,7 +90288,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Technological counterintelligence
+      value: Contre espionnage technologique
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88741,12 +90384,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your technologies'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88883,7 +90520,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Labour controllers
+      value: "Contr\xF4leurs de travail"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88969,11 +90606,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your workers take 5% more time before firing
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89073,7 +90705,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89098,13 +90730,12 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Guard tower (Work in progress)
+      value: Tour de garde
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileDescription
-      value: The tower takes an extra second before flanking for each military unit
-        in your city. Sending units on mission decreases this bonus
+      value: "sqduhzqnfuhyuqfge\xE8ta!FYBEYFBEZF9Be76VE8T"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89200,11 +90831,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89319,7 +90945,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 2
+      value: "Hi\xE9rarchie militaire 2"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89405,11 +91031,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 archers are created, a spearman is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89873,6 +91494,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2055354858}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2058327676
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923546727}
+    m_Modifications:
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359550421417699771, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 483a50c9380c8924ebc9232b57bcc427, type: 3}
+--- !u!4 &2058327677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
+    type: 3}
+  m_PrefabInstance: {fileID: 2058327676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2061070401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90231,6 +91927,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2070363256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2070959643
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1923546727}
+    m_Modifications:
+    - target: {fileID: 5530221999914775208, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af52c37d53b89ce4aa17f1fe907205a1, type: 3}
+--- !u!4 &2070959644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8855222846934122683, guid: af52c37d53b89ce4aa17f1fe907205a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070959643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2072102877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90454,11 +92225,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increases the maximum limit of your workers in your HQ by 5 permanently
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -92239,7 +94005,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Amateur clicker
+      value: Clicker amateur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -92350,12 +94116,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: After clicking 10x in a row on the same building, your next clicks on
-        the same building get a 10% bonus for 1 second
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -92529,6 +94289,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
     type: 3}
   m_PrefabInstance: {fileID: 2118800006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2119244234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1807864971}
+    m_Modifications:
+    - target: {fileID: 285442971168160488, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_Name
+      value: RaffineryLVL04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7142122
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.69992924
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 91.157005
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16ce2e361727f02449986e88216e57e4, type: 3}
+--- !u!4 &2119244235 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3867819150542555387, guid: 16ce2e361727f02449986e88216e57e4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2119244234}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127961025
 GameObject:
@@ -94103,18 +95938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileName
-      value: Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your search starts here. You can buy the neighboring tiles by spending
-        a research point. You can also see tiles farther away. However, to acquire
-        them, you will have to buy one of its neighbors beforehand.
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}

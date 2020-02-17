@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     public Text spyInputText, spyNbrPanelText;
     public Light gameLight;
 
-
+	public GameObject map2Canvas;
 
     [HideInInspector]
     public bool isSpyPanelActive;

@@ -1759,7 +1759,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Fine blade
+      value: Fine lame
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -1810,11 +1810,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The accuracy of your swordsmen is always 100%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2126,7 +2121,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Rapid mobilization
+      value: Mobilisation rapide
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2212,12 +2207,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that allows your military units to be trained
-        instantly'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2344,7 +2333,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Silver key
+      value: "Cl\xE9 en argent"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -2400,11 +2389,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' It now takes 5 shots to open a mythical chest'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -4851,7 +4835,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Population pole
+      value: Service population
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -4922,11 +4906,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Accelerates the production of workers by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -5558,135 +5537,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 144672748}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &148788619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148788620}
-  - component: {fileID: 148788623}
-  - component: {fileID: 148788622}
-  - component: {fileID: 148788621}
-  m_Layer: 0
-  m_Name: ReturnToVillageBtn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &148788620
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1524870191}
-  m_Father: {fileID: 678964344}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 827, y: -462}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &148788621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 148788622}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1899195192}
-        m_MethodName: GoToVillage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &148788622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &148788623
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148788619}
-  m_CullTransparentMesh: 0
 --- !u!1 &149412233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,7 +5700,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Retreat
+      value: Retraite
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -5941,11 +5791,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: When you order a retreat, your units return to town 5% faster
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -8482,12 +8327,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Vos clics sur l'Arsenal diminue vos temps de production d'unit\xE9s
-        dans ce b\xE2timent de 2 secs suppl\xE9mentaires  "
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -8874,7 +8713,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Army spearhead'
+      value: "Fer de lance de l'arm\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -8950,11 +8789,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Spearmen 's production time decreased by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9081,7 +8915,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Gold key
+      value: "Cl\xE9 en or"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9127,11 +8961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: It now takes 10 moves to open a supernatural chest
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9324,7 +9153,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Isolationist policy'
+      value: Politique isolatoire
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -9435,12 +9264,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that prevents your opponents from spying on
-        you for a certain period of time'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -15354,12 +15177,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' After clicking 500x in a row on the same building, your next clicks
-        on the same building get a 500% bonus for 50 seconds'
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -15473,7 +15290,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military spy
+      value: Espion militaire 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -15559,11 +15376,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy collects better quality military information'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17070,7 +16882,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Hissing in the night
+      value: Sifflement dans la nuit
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17126,12 +16938,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The number of attacks per turn the Apophis can make is increased by
-        1'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17679,7 +17485,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17694,7 +17500,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Reload MORE (Work in Progress)
+      value: Rechargez 2
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -17796,21 +17602,10 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Your clicks on the Tower decrease the recharge time of the ammunition
-        by 2 additional seconds '
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
       value: Tile (427)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -20275,12 +20070,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Active: Unlocks a skill that doubles your production of workers for
-        a limited time'
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -21697,7 +21486,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -21717,7 +21506,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Reload ! (Work in Progress)
+      value: Rechargez 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -21828,12 +21617,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Your clicks on the Tower decrease the recharge time of the ammunition
-        by 1 second '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -23886,7 +23669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0.25
 --- !u!1001 &589944942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24024,7 +23806,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -24039,7 +23821,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Ammunition depot (work in progress)
+      value: "D\xE9pot de munitions"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -24150,11 +23932,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Active: creates a spell that instantly searches for ammo in your turn.'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -25206,7 +24983,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Fencer
+      value: Escrimeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -25262,11 +25039,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases the number of attacks per turn by 1'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -26923,7 +26695,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Slingshot
+      value: Lance pierres
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -26989,11 +26761,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Archers' attack is increased by 5 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27526,7 +27293,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Inquisitor
+      value: Inquisiteur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27627,11 +27394,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your alchemists in your walls heal 10% more'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27746,7 +27508,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 3
+      value: "Hi\xE9rarchie militaire 3"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -27822,11 +27584,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Each time 100 spearmans are created, a swordsman is offered
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -28247,7 +28004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &678964344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28260,7 +28017,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1425760479}
-  - {fileID: 148788620}
   m_Father: {fileID: 1179861865}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28993,7 +28749,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Defensive counterintelligence (WIK)'
+      value: "Contre espionnage d\xE9fense"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -29094,12 +28850,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your defenses'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -30995,7 +30745,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Proselytizing
+      value: "Pros\xE9lytisme"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -31086,11 +30836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time you create 100 alchemists, summon a random siege weapon'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -32758,12 +32503,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 100
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 200
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -33061,7 +32806,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: I need healing
+      value: J'ai besoin de soins
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33132,11 +32877,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Alchemists'' production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33629,7 +33369,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Industrial counterintelligence
+      value: Contre espionnage industriel
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -33735,12 +33475,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your industries'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -34003,7 +33737,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Defending spies (work in progress)
+      value: "Espionnage des d\xE9fenses 1"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -34079,11 +33813,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy is more likely to learn more about enemy defenses.'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -35343,7 +35072,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Squire
+      value: 'Ecuyer '
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -35419,11 +35148,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increase the life of your swordsmen by 10 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -37537,7 +37261,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Iron key
+      value: "cl\xE9 en bronze"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -37603,11 +37327,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: It now takes 2 shots to open an unusual chest
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -38366,7 +38085,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Religious fanatic
+      value: Fanatique religieux
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -38437,11 +38156,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The production time of all siege weapons is decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -39684,7 +39398,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Initiated clicker
+      value: "Clicker initi\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -39775,12 +39489,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'After clicking 100x in a row on the same building, your next clicks
-        on the same building get a 100% bonus for 10 seconds '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -42908,7 +42616,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Industrial spying
+      value: Espionnage industriel
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -42994,11 +42702,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your Spy Gathers More Information About The Enemy Industry'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -44501,7 +44204,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Master clicker
+      value: "Ma\xEEtre clicker"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -44547,12 +44250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' After clicking 1000x in a row on the same building, your next clicks
-        on the same building get a 1000% bonus for 100 seconds'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45598,7 +45295,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 1
+      value: "Hi\xE9rarchie militaire 1"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45689,11 +45386,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 spearmen are created, an archer is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45820,7 +45512,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Stools
+      value: Selles
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -45876,11 +45568,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: The accuracy of the horsemen is increased by 5% points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47168,7 +46855,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bronze weapons
+      value: Armes en bronze
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47254,11 +46941,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your units see their mineral costs decrease by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47856,7 +47538,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military counterintelligence
+      value: Contre espionnage militaire 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -47937,12 +47619,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the size of
-        your military'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -49168,7 +48844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1205131a399f9145aaa955104442c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0.2
 --- !u!82 &1173613279
 AudioSource:
   m_ObjectHideFlags: 0
@@ -49179,11 +48854,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70b187c75c75b6447b61f12e8fe81626, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 457a6d55870068d4894219a1eb1f5e4f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -49502,7 +49177,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Apprentice clicker
+      value: Apprenti clicker
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -49603,12 +49278,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: After clicking 50x in a row on the same building, your next clicks on
-        the same building get a 50% bonus for 5 seconds
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51109,7 +50778,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: First aid
+      value: Premiers soins
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51165,12 +50834,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases Alchemists'' Breakthrough by 10%  If an alchemist pierces,
-        his treatment heals an additional 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51297,7 +50960,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: The rose and the sword
+      value: "La rose et l'\xE9p\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -51383,11 +51046,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' The production time of swordsmen is reduced by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -55606,7 +55264,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Solid walls
+      value: Murs solides 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -55727,12 +55385,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases cost of wood and minerals from tower upgrades by 1%  (technology
-        upgradable up to 50%)'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -56332,7 +55984,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Scales cult
+      value: "Culte de l'\xE9caille"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -56403,12 +56055,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Active: Creates a spell that allows your siege weapons to be trained
-        instantly '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57205,7 +56851,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Rudimentary weapons
+      value: Armes rudimentaires
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57306,11 +56952,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your units see their wood costs decrease by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57841,7 +57482,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Feathered snake
+      value: "Serpent \xE0 plumes"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -57902,11 +57543,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Quetzalc\xF3atl breakthrough increased by 5%"
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -59421,7 +59057,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Apocalypse Messenger
+      value: Message d'apocalypse
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -59472,11 +59108,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Leviathan's attack increased by 25 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62041,7 +61672,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Heavy armor'
+      value: Armure lourde
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62107,11 +61738,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increase the armor of your swordsmen by 10 points
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62415,7 +62041,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Army of hunters
+      value: "Arm\xE9e de chasseurs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -62491,11 +62117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Archers'' production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -63297,7 +62918,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Turtle training'
+      value: Formation tortue
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -63343,12 +62964,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' During the first phase of combat, none of the damage against your swordsmen
-        can be fatal. If they were to die, swordsmen keep 1PV'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -65921,7 +65536,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Swashbubkler
+      value: Bretteur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -65982,11 +65597,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: "Augmente l'attaque de vos \xE9p\xE9istes de 5 points  "
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -66449,83 +66059,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520440735}
-  m_CullTransparentMesh: 0
---- !u!1 &1524870190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1524870191}
-  - component: {fileID: 1524870193}
-  - component: {fileID: 1524870192}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1524870191
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 148788620}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1524870192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Go to village
---- !u!222 &1524870193
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524870190}
   m_CullTransparentMesh: 0
 --- !u!1 &1526276146
 GameObject:
@@ -68909,7 +68442,6 @@ MonoBehaviour:
   spyInputText: {fileID: 617522915}
   spyNbrPanelText: {fileID: 75789396}
   gameLight: {fileID: 705507994}
-  map2Canvas: {fileID: 678964343}
   isSpyPanelActive: 0
 --- !u!114 &1592076623
 MonoBehaviour:
@@ -69079,45 +68611,31 @@ MonoBehaviour:
   _aSourceMusic: {fileID: 1173613279}
   _soundEffects:
   - name: ClickSawmill_SFX
-    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
+    clip: {fileID: 8300000, guid: 45d0a8ad6030a5746b8b799b2c9a70e3, type: 3}
   - name: ClickRefinery_SFX
-    clip: {fileID: 8300000, guid: b5f45b9b25dceb64bb1ba3e6c46555e8, type: 3}
+    clip: {fileID: 8300000, guid: 7872606d01bbedb4b92b4e30b7e4bc03, type: 3}
   - name: ClickMine_SFX
-    clip: {fileID: 8300000, guid: ba6b0b810a359c14eba883c8d62e0d8c, type: 3}
+    clip: {fileID: 8300000, guid: af1b4fa8b36867344a49f88591cebff3, type: 3}
   - name: ClickQG_SFX
     clip: {fileID: 8300000, guid: 14763fae68517ef4d8eca6482ec04ded, type: 3}
-  - name: OpenedMediocreBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedCommonBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedUnusualBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedSupernaturalBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
-  - name: OpenedMythicalBonus_SFX
-    clip: {fileID: 8300000, guid: f89375698ab4fe54895761d94a340610, type: 3}
+  - name: OpenedBonus_SFX
+    clip: {fileID: 8300000, guid: 562db2593236dd24c9ce26cf1d38160b, type: 3}
   - name: ClickHouse_SFX
     clip: {fileID: 8300000, guid: 7c9714a5714afbc489a697875b13e75b, type: 3}
   - name: ClickBarrack_SFX
     clip: {fileID: 8300000, guid: b60c251910c731842bbd9789ac0aaed1, type: 3}
   - name: ClickScaffolding_SFX
-    clip: {fileID: 8300000, guid: 516fb8e821ff43a4eafd471e1cbe200f, type: 3}
+    clip: {fileID: 8300000, guid: c487707ec3d899d408ba4c5edf1dfa9f, type: 3}
   - name: ClickBonus_SFX
-    clip: {fileID: 8300000, guid: bb0d10889e44c064d877f5c615a4ddad, type: 3}
+    clip: {fileID: 8300000, guid: 8daa8af2cd751154cbaec7f9541e3228, type: 3}
   - name: ClosedUI_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
+    clip: {fileID: 8300000, guid: 56d0b64de31437942920cd0ca69283e2, type: 3}
   - name: SendArmy_SFX
-    clip: {fileID: 8300000, guid: ed3276001a52d254086fd617ea4ba05d, type: 3}
+    clip: {fileID: 8300000, guid: b393c7c21e72862498155eac65b2cefb, type: 3}
   - name: SendSpy_SFX
-    clip: {fileID: 8300000, guid: ce378d27d6efb0d47994337fbcbde987, type: 3}
+    clip: {fileID: 8300000, guid: 442837a44e455574285ad89c7188d048, type: 3}
   - name: OpenReport_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToMap_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToTroops_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
-  - name: GoToSpherier_SFX
-    clip: {fileID: 8300000, guid: 60ff97e7ba3bbcf499369f1dd4ed4a58, type: 3}
+    clip: {fileID: 8300000, guid: bea6d26e767db0c4e89fb078b9b8b3b6, type: 3}
 --- !u!1001 &1593021480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70589,7 +70107,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Army of horsemen
+      value: "Arm\xE9e de cavaliers"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -70660,11 +70178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: 'Horsemen''s production time is reduced by 5% '
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -72687,7 +72200,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Snitch
+      value: Caffardeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -72783,11 +72296,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Spy production time decreased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73088,7 +72596,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Dragon chest
+      value: Coffre du dragon
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73149,13 +72657,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a poor chest by 5% and the chance of
-        hitting a common chest by 1% but increases the chance of hitting a supernatural
-        chest by 6%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73644,7 +73145,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Technological espionage
+      value: Espionnage technologique 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -73730,12 +73231,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your spy is more likely to know the number of points spent in each
-        branch of his tech tree'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -74839,7 +74334,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Ardent defender
+      value: "Ardants d\xE9fenseurs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -74955,11 +74450,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Increases the armor of units in your walls by 10 points'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75284,7 +74774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4abad828b17189b4e862783ef1545c75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73a995c9c4290374ea529fdc0fe89aae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -75342,7 +74832,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bronze key
+      value: Cle en bronze
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75424,11 +74914,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: One click is enough to open a common chest
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -75439,11 +74924,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f01395d1fed4d9478ca1dcec104c73d, type: 2}
-    - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75902,7 +75382,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Bludgeon
+      value: Matraquer
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -75998,12 +75478,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Click on one of your buildings pulling the reactive side and boost its
-        productivity by 100% for 1 minute
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -76583,7 +76057,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Forced walk
+      value: "Marche forc\xE9e"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -76689,11 +76163,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Reduces travel time to enemy by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77193,7 +76662,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: ' Pointed lance'
+      value: Lance pointue
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77259,11 +76728,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Spearmen attack is increased by 5 points'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77725,7 +77189,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Professional reorientation
+      value: "R\xE9orientation professionelle"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -77776,11 +77240,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: You can now remove workers from your buildings and reassign them elsewhere
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80316,7 +79775,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Custos
+      value: Custode
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80407,12 +79866,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your clicks on the Arsenal decrease your unit production times in this
-        building by 1 second
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80532,7 +79985,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Instructor
+      value: Instructeur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -80604,17 +80057,6 @@ PrefabInstance:
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: The production of military units no longer stops when your barracks flanks.
-        However, workers' CD reduction bonuses remain inactive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4346947677996495048, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -80625,26 +80067,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3221220e3fbe57145934700c6d2b43da, type: 2}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81536,7 +80958,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Pirate chest
+      value: Coffre pirate
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -81607,12 +81029,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a poor chest by 5% and increases the
-        chance of hitting an unusual chest by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82557,7 +81973,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 4
+      value: "Hi\xE9rarchie militaire 4"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82618,11 +82034,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 swordsmen are created, a rider is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -82838,7 +82249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7827d02857d974f4c83014bb66800067, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7508f83d79aeeba458ab5bc57e7056fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -83927,12 +83338,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Decreases the chance of hitting a common chest by 4% and increases
-        the chance of hitting a legendary chest by 4%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -87649,7 +87054,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Wooden sword
+      value: "Ep\xE9e en bois"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -87735,11 +87140,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Swordsmen''s breakthrough increased by 5%'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88017,7 +87417,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Memory box
+      value: "Boite \xE0 souvenirs"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88103,12 +87503,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Decreases the chance of hitting a poor chest by 5% and increases the
-        chance of hitting a common chest by 5%
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88645,7 +88039,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Technological counterintelligence
+      value: Contre espionnage technologique
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88741,12 +88135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Your opponent needs more spies to effectively determine the extent
-        of your technologies'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88883,7 +88271,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Labour controllers
+      value: "Contr\xF4leurs de travail"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -88969,11 +88357,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your workers take 5% more time before firing
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89073,7 +88456,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89098,13 +88481,12 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Guard tower (Work in progress)
+      value: Tour de garde
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileDescription
-      value: The tower takes an extra second before flanking for each military unit
-        in your city. Sending units on mission decreases this bonus
+      value: "sqduhzqnfuhyuqfge\xE8ta!FYBEYFBEZF9Be76VE8T"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89200,11 +88582,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile
-      objectReference: {fileID: 0}
-    - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958377907673285388, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89319,7 +88696,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Military hierarchy 2
+      value: "Hi\xE9rarchie militaire 2"
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -89405,11 +88782,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: ' Each time 100 archers are created, a spearman is offered'
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -90454,11 +89826,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Increases the maximum limit of your workers in your HQ by 5 permanently
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -92239,7 +91606,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Amateur clicker
+      value: Clicker amateur
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -92350,12 +91717,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: After clicking 10x in a row on the same building, your next clicks on
-        the same building get a 10% bonus for 1 second
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -94103,18 +93464,6 @@ PrefabInstance:
         type: 3}
       propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileName
-      value: Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
-        type: 3}
-      propertyPath: tileDescription
-      value: Your search starts here. You can buy the neighboring tiles by spending
-        a research point. You can also see tiles farther away. However, to acquire
-        them, you will have to buy one of its neighbors beforehand.
       objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}

@@ -66,6 +66,7 @@ public class GeneralQuarter : Building
         UIManager.Instance.gameLight.color = new Color(0.7169f, 0.5854f, 0.2265f, 1);
         UIManager.Instance.totalResourceCanvas.SetActive(false);
 		SoundManager.Instance.PlaySoundEffect("GoToMap_SFX");
+		UIManager.Instance.map2Canvas.SetActive(true);
 	}
 
 	public void UpgradeGeneralQuarter()
