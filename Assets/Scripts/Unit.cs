@@ -32,7 +32,7 @@ public class Unit : MonoBehaviour
     public void OpenMyTab()
     {
         UIManager.Instance.selectedUnitProduceButton.onClick.RemoveAllListeners();
-        UIManager.Instance.OpenSelectedUnitTab(unitName, attack, life, attackPerTurn, armor, pierce, accuracy, woodPrice, orePrice, venacidPrice, timeToProduce,unitNbr, longUnitImage);
+        UIManager.Instance.OpenSelectedUnitTab(unitName, attack, life, pierce, armor, attackPerTurn, accuracy, woodPrice, orePrice, venacidPrice, timeToProduce,unitNbr, longUnitImage);
         UIManager.Instance.selectedUnitProduceButton.onClick.AddListener(ProduceUnit);
     }
 
