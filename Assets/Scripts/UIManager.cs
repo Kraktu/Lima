@@ -125,7 +125,7 @@ public class UIManager : MonoBehaviour
 
 		if (isSpherierMapActive)
 		{
-            InputManager.Instance.isOnSpherier = false;
+            InputManager.Instance.isOnSpherier = true;
 			Camera cam = FindObjectOfType<Camera>();
 			cam.transform.position = MapManager.Instance.cameraSpherierPosition;
 			cam.transform.Rotate(new Vector3(35,0,0));
@@ -136,7 +136,7 @@ public class UIManager : MonoBehaviour
 		}
 		else
 		{
-            InputManager.Instance.isOnSpherier = true;
+            InputManager.Instance.isOnSpherier = false;
 			Camera cam = FindObjectOfType<Camera>();
 			cam.transform.position = MapManager.Instance.initialCameraPosition;
 			cam.transform.Rotate(new Vector3(-35, 0, 0));
