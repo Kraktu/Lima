@@ -37,20 +37,24 @@ public class GeneralQuarter : Building
 			if (isCurrentlyUpgrading == false)
 			{
 				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeGeneralQuarter);
-				bool isOneBuildingUpgrading = false;
-				for (int i = 0; i < buildings.Count; i++)
-				{
-					if (buildings[i].isCurrentlyUpgrading)
-					{
-						isOneBuildingUpgrading = true;
-						buildings[i].elpasedTime += removeTheTimeOnClick;
-					}
-				}
-				if(isOneBuildingUpgrading)
-				{
-						InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick),imNormalUse);
-						SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
-				}
+                if (level>0)
+                {
+                    bool isOneBuildingUpgrading = false;
+                    for (int i = 0; i < buildings.Count; i++)
+                    {
+                        if (buildings[i].isCurrentlyUpgrading)
+                        {
+                            isOneBuildingUpgrading = true;
+                            buildings[i].elpasedTime += removeTheTimeOnClick;
+                        }
+                    }
+                    if (isOneBuildingUpgrading)
+                    {
+                        InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick), imNormalUse);
+                        SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
+                    }
+                }
+				
 				RefreshInterface();
 			}
 		}
