@@ -63,7 +63,7 @@ public class House : ResourceBuilding
 		base.AddFirstSkillPoint();
 		if (skillFirstUpgraded)
 		{
-			ResourceManager.Instance.flatWorkerBonusPerSec += skillFirstBonus;
+			ResourceManager.Instance.percentWorkerBonusPerSec += skillFirstBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
 		}
@@ -73,7 +73,7 @@ public class House : ResourceBuilding
 		base.AddSecondSkillPoint();
 		if (skillSecondUpgraded)
 		{
-			ResourceManager.Instance.percentWorkerBonusPerSec += skillSecondBonus;
+			ResourceManager.Instance.flatWorkerBonusPerSec += skillSecondBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
 		}
@@ -83,7 +83,7 @@ public class House : ResourceBuilding
 		base.AddThirdSkillPoint();
 		if (skillThirdUpgraded)
 		{
-			ResourceManager.Instance.flatWorkerBonusPerClick += skillThirdBonus;
+			ResourceManager.Instance.percentWorkerBonusPerClick += skillThirdBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
 		}
@@ -93,7 +93,7 @@ public class House : ResourceBuilding
 		base.AddFourthSkillPoint();
 		if (skillFourthUpgraded)
 		{
-			ResourceManager.Instance.percentWorkerBonusPerClick += skillFourthBonus;
+			ResourceManager.Instance.flatWorkerBonusPerClick += skillFourthBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
 		}
