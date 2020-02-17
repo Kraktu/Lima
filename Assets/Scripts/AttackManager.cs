@@ -90,6 +90,14 @@ public class AttackManager : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        time = 0;
+        while (time < enemy.timeToGetAttacked / 10)
+        {
+            tRatio = time / (enemy.timeToGetAttacked / 10);
+            go.transform.position = Vector3.Lerp(endingPos, startingPos, tRatio);
+            time += Time.deltaTime;
+            yield return null;
+        }
         Destroy(go);
         Spy(spyNbr,enemy);
     }

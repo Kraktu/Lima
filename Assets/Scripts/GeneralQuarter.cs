@@ -73,6 +73,7 @@ public class GeneralQuarter : Building
 		if(LevelUp())
 		{
             MapManager.Instance.RefreshEnemies();
+            ResourceManager.Instance.skillPoint++;
 			RefreshInterface();
 		}
 		if(level == 1)
