@@ -76,6 +76,7 @@ public class GeneralQuarter : Building
             MapManager.Instance.RefreshEnemies();
             ResourceManager.Instance.skillPoint++;
 			RefreshInterface();
+            UIManager.Instance.UpdateSkillPointText();
 		}
 		if(level == 1)
 		{

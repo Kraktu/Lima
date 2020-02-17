@@ -88,13 +88,14 @@ public class TileScript : MonoBehaviour
 	{
         if (buyable&&tileLvl<tilelvlMax&&ResourceManager.Instance.skillPoint>0)
         {
-            ResourceManager.Instance.skillPoint++;
+            ResourceManager.Instance.skillPoint--;
             tileLvl++;
             SetMeBought();
             MyMatUpdate();
             functionToCall.Invoke();
 			ActivateAdjacentTile();
 			RefreshTilePanel();
+            UIManager.Instance.UpdateSkillPointText();
         }
 	}
 

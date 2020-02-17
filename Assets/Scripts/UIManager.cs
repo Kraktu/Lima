@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
 	public GameObject map2Canvas;
 
 	public Scrollbar combatReportScrollBar;
+    public Text skillPointText;
     [HideInInspector]
     public bool isSpyPanelActive;
 
@@ -78,6 +79,10 @@ public class UIManager : MonoBehaviour
         {
             buildingUICanvas.SetActive(false);
         }
+    }
+    public void UpdateSkillPointText()
+    {
+        skillPointText.text = BigIntToString(ResourceManager.Instance.skillPoint);
     }
     public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString)
     {
