@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OurVillageOnMap : MonoBehaviour
 {
-	void GoToVillage()
+	public void GoToVillage()
 	{
 		Camera cam = FindObjectOfType<Camera>();
         cam.transform.position = MapManager.Instance.initialCameraPosition;
@@ -13,6 +13,7 @@ public class OurVillageOnMap : MonoBehaviour
         cam.orthographicSize = 5;
         UIManager.Instance.gameLight.color = new Color(1, 0.9568f, 0.8392f, 1);
         UIManager.Instance.totalResourceCanvas.SetActive(true);
+		UIManager.Instance.map2Canvas.SetActive(false);
 	}
 
 	private void OnMouseDown()
