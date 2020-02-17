@@ -11,6 +11,7 @@ public class GeneralQuarter : Building
     public string goToMapMenuText;
 	public double removeTheTimeOnClick =1;
 	double workerFactor =100;
+    public int skillPointEarnedPerLevel;
 	
 
     public override void Start()
@@ -78,7 +79,7 @@ public class GeneralQuarter : Building
 		if(LevelUp())
 		{
             MapManager.Instance.RefreshEnemies();
-            ResourceManager.Instance.skillPoint++;
+            ResourceManager.Instance.skillPoint+=skillPointEarnedPerLevel;
 			RefreshInterface();
             UIManager.Instance.UpdateSkillPointText();
 		}
