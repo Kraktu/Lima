@@ -72,7 +72,8 @@ public class AttackManager : MonoBehaviour
             UIManager.Instance.Clear(UIManager.Instance.spyInputText.GetComponentInParent<InputField>());
             UIManager.Instance.spyPanel.gameObject.SetActive(false);
             UnitManager.Instance.spy.unitNbr -= spyNbr;
-            StartCoroutine(SendingSpy(spyNbr)) ;
+            StartCoroutine(SendingSpy(spyNbr));
+			SoundManager.Instance.PlaySoundEffect("SendSpy_SFX");
         }
     }
     public IEnumerator SendingSpy(double spyNbr)
@@ -320,6 +321,7 @@ public class AttackManager : MonoBehaviour
                 currentSimultaneousAttack++;
                 AttackCo=StartCoroutine(Attacking());
                 UIManager.Instance.attackPanel.SetActive(false);
+				SoundManager.Instance.PlaySoundEffect("SendAttack_SFX");
             }
         }
         else
