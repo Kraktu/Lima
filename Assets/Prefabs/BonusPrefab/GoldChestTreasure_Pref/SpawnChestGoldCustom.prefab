@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee205c8b93a5e8b4cb03609bbc828cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnChance: 9
+  spawnChance: 0
   time: 2
   destroyClicks: 10
   gemsNbr: 1
@@ -232,6 +232,12 @@ MonoBehaviour:
   animOnClick: {fileID: 7994329837708087495, guid: acbad6da4ce563e478c11c1fd37b1530,
     type: 3}
   offsetAnimOnClick: {x: 0, y: 1, z: 0}
+  vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+  woodSprite: {fileID: 21300000, guid: 7827d02857d974f4c83014bb66800067, type: 3}
+  oreSprite: {fileID: 21300000, guid: 2dcca32b72206a84fbbaea0bec1df302, type: 3}
+  venacidSprite: {fileID: 21300000, guid: 4abad828b17189b4e862783ef1545c75, type: 3}
+  gemSprite: {fileID: 21300000, guid: cc939b669ae578746a2bb88a769cf8a7, type: 3}
 --- !u!65 &5425200379836482434
 BoxCollider:
   m_ObjectHideFlags: 0
