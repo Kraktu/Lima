@@ -80402,6 +80402,11 @@ PrefabInstance:
       value: The production of military units no longer stops when your barracks flanks.
         However, workers' CD reduction bonuses remain inactive
       objectReference: {fileID: 0}
+    - target: {fileID: 4346947677996495048, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5371878667720128464, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_Name
@@ -80412,6 +80417,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3221220e3fbe57145934700c6d2b43da, type: 2}
+    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149618768569473314, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: m_LocalPosition.x
