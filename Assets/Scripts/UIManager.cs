@@ -43,6 +43,7 @@ public class UIManager : MonoBehaviour
 
 	public GameObject map2Canvas;
 
+	public Slider unitSelectionSlider;
     [HideInInspector]
     public bool isSpyPanelActive;
 
