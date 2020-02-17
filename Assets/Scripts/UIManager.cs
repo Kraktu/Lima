@@ -50,6 +50,9 @@ public class UIManager : MonoBehaviour
     [HideInInspector]
     public bool isSpyPanelActive;
 
+	public Sprite spriteBonus;
+	public string stringBonus;
+
 
     private void Awake()
     {

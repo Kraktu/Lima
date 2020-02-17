@@ -34,47 +34,158 @@ public class ClickBonus : MonoBehaviour
 		switch (typeOfBonus)
 		{
 			case TypeOfBonus.mediocre:
-				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec  * 144;
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 144;
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 144;
-				ResourceManager.Instance.gems.totalResource += gemsNbr;
+				
+				switch (Random.Range(0, 4))
+				{
+					case 0:
+						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 144;
+						break;
+					case 1:
+						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 144;
+						break;
+					case 2:
+						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 144;
+						break;
+					case 3:
+						ResourceManager.Instance.gems.totalResource += gemsNbr;
+						break;
+					default:
+						break;
+				}
 				SoundManager.Instance.PlaySoundEffect("OpenedMediocreBonus_SFX");
 				break;
+				
 			case TypeOfBonus.common:
-				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
-				ResourceManager.Instance.gems.totalResource += gemsNbr;
-				if (UnitManager.Instance.allUnits.Count >0)
+				if (UnitManager.Instance.allUnits.Count == 0)
 				{
-					UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level;
+					switch (Random.Range(0, 4))
+					{
+						case 0:
+							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
+							break;
+						case 1:
+							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
+							break;
+						case 2:
+							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
+							break;
+						case 3:
+							ResourceManager.Instance.gems.totalResource += gemsNbr;
+							break;
+						default:
+							break;
+					}
+				}
+				else
+				{
+					switch (Random.Range(0, 5))
+					{
+						case 0:
+							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
+							break;
+						case 1:
+							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
+							break;
+						case 2:
+							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
+							break;
+						case 3:
+							ResourceManager.Instance.gems.totalResource += gemsNbr;
+							break;
+						case 4:
+							UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level;
+							break;
+						default:
+							break;
+					}
 				}
 				SoundManager.Instance.PlaySoundEffect("OpenedCommonBonus_SFX");
 				break;
 			case TypeOfBonus.unusual:
-				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
-				ResourceManager.Instance.gems.totalResource += gemsNbr;
-				if (UnitManager.Instance.allUnits.Count > 0)
+
+				if (UnitManager.Instance.allUnits.Count == 0)
 				{
-					UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level*10;
+					switch (Random.Range(0, 4))
+					{
+						case 0:
+							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
+							break;
+						case 1:
+							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
+							break;
+						case 2:
+							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
+							break;
+						case 3:
+							ResourceManager.Instance.gems.totalResource += gemsNbr;
+							break;
+						default:
+							break;
+					}
+				}
+				else
+				{
+					switch (Random.Range(0, 5))
+					{
+						case 0:
+							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
+							break;
+						case 1:
+							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
+							break;
+						case 2:
+							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
+							break;
+						case 3:
+							ResourceManager.Instance.gems.totalResource += gemsNbr;
+							break;
+						case 4:
+							UnitManager.Instance.allUnits[Random.Range(0, UnitManager.Instance.allUnits.Count)].unitNbr += BuildingManager.Instance.barraks.level*10;
+							break;
+						default:
+							break;
+					}
 				}
 				SoundManager.Instance.PlaySoundEffect("OpenedUnusualBonus_SFX");
 				break;
 			case TypeOfBonus.supernatural:
-				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 1800;
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 1800;
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 1800;
-				ResourceManager.Instance.gems.totalResource += gemsNbr;
+				switch (Random.Range(0, 4))
+				{
+					case 0:
+						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 1800;
+						break;
+					case 1:
+						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 1800;
+						break;
+					case 2:
+						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 1800;
+						break;
+					case 3:
+						ResourceManager.Instance.gems.totalResource += gemsNbr;
+						break;
+					default:
+						break;
+				}
 				SoundManager.Instance.PlaySoundEffect("OpenedSupernaturalBonus_SFX");
 				break;
 			case TypeOfBonus.mythical:
-				ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 3600;
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 3600;
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 3600;
-				ResourceManager.Instance.gems.totalResource += gemsNbr;
-				SoundManager.Instance.PlaySoundEffect("OpenedMythicalBonus_SFX");
+				switch (Random.Range(0, 4))
+				{
+					case 0:
+						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 3600;
+						break;
+					case 1:
+						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 3600;
+						break;
+					case 2:
+						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 3600;
+						break;
+					case 3:
+						ResourceManager.Instance.gems.totalResource += gemsNbr;
+						break;
+					default:
+						break;
+				}
 				break;
 			default:
 				break;

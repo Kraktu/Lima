@@ -32946,6 +32946,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6955305294112344555, guid: 9571ef644a4c99e4c813c349a0556a7c,
         type: 3}
+    - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
+        type: 3}
+      propertyPath: center.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 173750701303189057, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: m_Name
@@ -69151,6 +69156,8 @@ MonoBehaviour:
   combatReportScrollBar: {fileID: 0}
   skillPointText: {fileID: 293974257}
   isSpyPanelActive: 0
+  spriteBonus: {fileID: 0}
+  stringBonus: 
 --- !u!114 &1592076623
 MonoBehaviour:
   m_ObjectHideFlags: 0
