@@ -125,16 +125,18 @@ public class UIManager : MonoBehaviour
 
 		if (isSpherierMapActive)
 		{
+            InputManager.Instance.isOnSpherier = false;
 			Camera cam = FindObjectOfType<Camera>();
 			cam.transform.position = MapManager.Instance.cameraSpherierPosition;
 			cam.transform.Rotate(new Vector3(35,0,0));
 			cam.orthographic = true;
 			spherierCanvas.SetActive(true);
 			totalResourceCanvas.SetActive(false);
-			SoundManager.Instance.PlaySoundEffect("GoToSpherier_SFX");
+            SoundManager.Instance.PlaySoundEffect("GoToSpherier_SFX");
 		}
 		else
 		{
+            InputManager.Instance.isOnSpherier = true;
 			Camera cam = FindObjectOfType<Camera>();
 			cam.transform.position = MapManager.Instance.initialCameraPosition;
 			cam.transform.Rotate(new Vector3(-35, 0, 0));
@@ -149,7 +151,7 @@ public class UIManager : MonoBehaviour
         if (isActive)
         {
             attackPanel.SetActive(true);
-            atUserName.text = "Weshweshlesamis";
+            atUserName.text = "User";
             atUserLvl.text = "Lv." + BigIntToString(BuildingManager.Instance.generalQuarter.level);
             UnitManager.Instance.ActualiseAttackPanel();
 			for (int i = 0; i < inputFieldUnits.Length; i++)

@@ -72,6 +72,7 @@ public class GeneralQuarter : Building
         UIManager.Instance.totalResourceCanvas.SetActive(false);
 		SoundManager.Instance.PlaySoundEffect("GoToMap_SFX");
 		UIManager.Instance.map2Canvas.SetActive(true);
+        InputManager.Instance.isOnVillage = false;
 	}
 
 	public void UpgradeGeneralQuarter()

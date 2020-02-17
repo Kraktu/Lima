@@ -14,6 +14,7 @@ public class OurVillageOnMap : MonoBehaviour
         UIManager.Instance.gameLight.color = new Color(1, 0.9568f, 0.8392f, 1);
         UIManager.Instance.totalResourceCanvas.SetActive(true);
 		UIManager.Instance.map2Canvas.SetActive(false);
+        InputManager.Instance.isOnVillage = true;
 	}
 
 	private void OnMouseDown()
