@@ -100,7 +100,7 @@ public class GeneralQuarter : Building
 		base.AddFirstSkillPoint();
 		if (skillFirstUpgraded)
 		{
-			removeTheTimeOnClick += skillFirstBonus;
+			workerFactor -= skillFirstBonus;
 			RefreshInterface();
 		}
 	}
@@ -109,7 +109,10 @@ public class GeneralQuarter : Building
 		base.AddSecondSkillPoint();
 		if (skillSecondUpgraded)
 		{
-			removeTheTimeOnClick *= (1 + skillSecondBonus / 100);
+			for (int i = 0; i < buildings.Count; i++)
+			{
+				buildings[i].constructionTime -= ((1 + level) * level) / 2;
+			}
 			RefreshInterface();
 		}
 	}
@@ -118,10 +121,7 @@ public class GeneralQuarter : Building
 		base.AddThirdSkillPoint();
 		if (skillThirdUpgraded)
 		{
-			for (int i = 0; i < buildings.Count; i++)
-			{
-				buildings[i].constructionTime -= ((1 + level) * level) / 2;
-			}
+			removeTheTimeOnClick *= (1 + skillThirdBonus / 100);
 			RefreshInterface();
 		}
 	}
@@ -130,7 +130,7 @@ public class GeneralQuarter : Building
 		base.AddFourthSkillPoint();
 		if (skillFourthUpgraded)
 		{
-			workerFactor -= skillFourthBonus;
+			removeTheTimeOnClick += skillFourthBonus;
 			RefreshInterface();
 		}
 	}

@@ -82,7 +82,7 @@ public class Barrack : Building
 		{
 			for (int i = 0; i < unitsToUnlock.Length; i++)
 			{
-				unitsToUnlock[i].flatTimeReducing += firstSkillPointLevel;
+				unitsToUnlock[i].timeToReduceMultiplicator -= firstSkillPointLevel;
 			}
 			UpdateBarrack();
 			RefreshInterface();
@@ -95,7 +95,7 @@ public class Barrack : Building
 		{
 			for (int i = 0; i < unitsToUnlock.Length; i++)
 			{
-				unitsToUnlock[i].timeToReduceMultiplicator -= skillSecondBonus;
+				unitsToUnlock[i].flatTimeReducing += skillSecondBonus;
 			}
 			UpdateBarrack();
 			RefreshInterface();
@@ -106,7 +106,7 @@ public class Barrack : Building
 		base.AddThirdSkillPoint();
 		if (skillThirdUpgraded)
 		{
-			timeReducedOnClick += skillThirdBonus;
+			timePercentReducedOnClick+= skillThirdBonus;
 			UpdateBarrack();
 			RefreshInterface();
 		}
@@ -116,7 +116,7 @@ public class Barrack : Building
 		base.AddFourthSkillPoint();
 		if (skillFourthUpgraded)
 		{
-			timePercentReducedOnClick += skillFourthBonus;
+			timeReducedOnClick += skillFourthBonus;
 			UpdateBarrack();
 			RefreshInterface();
 		}
