@@ -52,6 +52,7 @@ public class UIManager : MonoBehaviour
 
 	public Sprite spriteBonus;
 	public string stringBonus;
+    
 
 
     private void Awake()
