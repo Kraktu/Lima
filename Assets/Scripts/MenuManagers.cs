@@ -48,4 +48,8 @@ public class MenuManagers : MonoBehaviour
 	{
 		Application.Quit();
 	}
+	public void FullScreen()
+	{
+		Screen.fullScreen = !Screen.fullScreen;
+	}
 }
