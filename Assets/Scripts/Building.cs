@@ -95,6 +95,14 @@ public class Building:MonoBehaviour
 				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
+                if (level==0)
+                {
+                    UIManager.Instance.addWorkerButton.gameObject.SetActive(false);
+                }
+                else
+                {
+                    UIManager.Instance.addWorkerButton.gameObject.SetActive(true);
+                }
 				UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
 				UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
