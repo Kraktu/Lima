@@ -752,6 +752,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &30098878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8267,6 +8268,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &208793297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10552,6 +10554,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &257174590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12284,6 +12287,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &305859134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24983,10 +24987,14 @@ MonoBehaviour:
   buildingDescription: It is in this building that you collect the resource specific
     to your race. It is a scarce resource so you will need a lot of patience. Adding
     workers here speeds up production.
-  firstSkillPointUpgradeName: NaN
-  secondSkillPointUpgradeName: NaN
-  thirdSkillPointUpgradeName: NaN
-  fourthSkillPointUpgradeName: NaN
+  firstSkillPointUpgradeName: +
+  secondSkillPointUpgradeName: +
+  thirdSkillPointUpgradeName: +
+  fourthSkillPointUpgradeName: +
+  firstSkillPointUpgradeNameEnd: '% per hour'
+  secondSkillPointUpgradeNameEnd: ' Venacid per hour'
+  thirdSkillPointUpgradeNameEnd: '% per clic'
+  fourthSkillPointUpgradeNameEnd: ' Venacid per clic'
   woodCost: 150
   oreCost: 350
   venacidCost: 50
@@ -36993,6 +37001,10 @@ MonoBehaviour:
   secondSkillPointUpgradeName: 'Reduce % time per sec + '
   thirdSkillPointUpgradeName: 'Reduce flat time per click + '
   fourthSkillPointUpgradeName: 'Reduce % time per click + '
+  firstSkillPointUpgradeNameEnd: 
+  secondSkillPointUpgradeNameEnd: 
+  thirdSkillPointUpgradeNameEnd: 
+  fourthSkillPointUpgradeNameEnd: 
   woodCost: 150
   oreCost: 50
   venacidCost: 0
@@ -38470,6 +38482,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &932977102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41572,6 +41585,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1001250523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41857,6 +41871,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1007973069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42661,6 +42676,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!1 &1024791485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7638346441841959730, guid: 9c14b647f98de674485b2fe57a1fdb30,
@@ -52465,6 +52481,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1227434453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59580,10 +59597,14 @@ MonoBehaviour:
   buildingName: Mine
   buildingDescription: It is in this building that you collect ore. Add workers to
     harvest more.
-  firstSkillPointUpgradeName: +2% Ores per hour
-  secondSkillPointUpgradeName: + 1000 Ores per hour
-  thirdSkillPointUpgradeName: + 2.5 % Ores per clic
-  fourthSkillPointUpgradeName: + 0,25 Ores per clic
+  firstSkillPointUpgradeName: +
+  secondSkillPointUpgradeName: +
+  thirdSkillPointUpgradeName: +
+  fourthSkillPointUpgradeName: +
+  firstSkillPointUpgradeNameEnd: '% Ores per hour'
+  secondSkillPointUpgradeNameEnd: ' Ores per hour'
+  thirdSkillPointUpgradeNameEnd: '% Ores per clic'
+  fourthSkillPointUpgradeNameEnd: ' Ores per clic'
   woodCost: 50
   oreCost: 200
   venacidCost: 0
@@ -61567,6 +61588,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1432357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63784,6 +63806,10 @@ MonoBehaviour:
   secondSkillPointUpgradeName: xD
   thirdSkillPointUpgradeName: g pa d'inspi
   fourthSkillPointUpgradeName: dsl
+  firstSkillPointUpgradeNameEnd: 
+  secondSkillPointUpgradeNameEnd: 
+  thirdSkillPointUpgradeNameEnd: 
+  fourthSkillPointUpgradeNameEnd: 
   woodCost: 100
   oreCost: 300
   venacidCost: 50
@@ -70842,10 +70868,14 @@ MonoBehaviour:
   buildingName: Sawmill
   buildingDescription: It is in this building that you harvest wood. Add workers to
     harvest more.
-  firstSkillPointUpgradeName: + 2 % Woods per hour
-  secondSkillPointUpgradeName: + 1000 Woods per hour
-  thirdSkillPointUpgradeName: +2,5 % Woods per clic
-  fourthSkillPointUpgradeName: + 0,25 Woods per clic
+  firstSkillPointUpgradeName: '+  '
+  secondSkillPointUpgradeName: '+ '
+  thirdSkillPointUpgradeName: '+ '
+  fourthSkillPointUpgradeName: '+ '
+  firstSkillPointUpgradeNameEnd: '% Woods per her'
+  secondSkillPointUpgradeNameEnd: ' woods per hour'
+  thirdSkillPointUpgradeNameEnd: '% Woods per clic'
+  fourthSkillPointUpgradeNameEnd: ' woods per clic'
   woodCost: 200
   oreCost: 50
   venacidCost: 0
@@ -72459,6 +72489,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1653608640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78021,6 +78052,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1790936670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79142,6 +79174,10 @@ MonoBehaviour:
   secondSkillPointUpgradeName: 'Reduce % time on click + '
   thirdSkillPointUpgradeName: 'Reduce flat general time + '
   fourthSkillPointUpgradeName: 'Reduce % general time  + '
+  firstSkillPointUpgradeNameEnd: 
+  secondSkillPointUpgradeNameEnd: 
+  thirdSkillPointUpgradeNameEnd: 
+  fourthSkillPointUpgradeNameEnd: 
   woodCost: 300
   oreCost: 300
   venacidCost: 100
@@ -80764,6 +80800,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1853417453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85669,6 +85706,7 @@ MonoBehaviour:
   swordmanBonusNumber: 0
   horsemanBonusNumber: 0
   siegeUnitBonusNumber: 0
+  isUnitsUnlocked: 0
 --- !u!114 &1945919085
 MonoBehaviour:
   m_ObjectHideFlags: 0
