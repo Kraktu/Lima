@@ -29,6 +29,8 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public double archerBonusNumber = 0, spearmanBonusNumber = 0, swordmanBonusNumber = 0, horsemanBonusNumber = 0,siegeUnitBonusNumber=0;
 
+	[HideInInspector]
+	public bool isUnitsUnlocked = false;
     public void OpenMyTab()
     {
         UIManager.Instance.selectedUnitProduceButton.onClick.RemoveAllListeners();
