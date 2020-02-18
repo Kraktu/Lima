@@ -40,6 +40,7 @@ public class TileScript : MonoBehaviour
         else if (!buyable)
         {
             gameObject.SetActive(true);
+			myMesh.material = visibleMat;
         }
         else if (!bought)
         {
