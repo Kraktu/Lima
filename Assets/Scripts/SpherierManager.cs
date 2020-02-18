@@ -21,8 +21,9 @@ public class SpherierManager : MonoBehaviour
         Instance = this;
     }
     #region Army
-    public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10;
-    public double HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;
+    public double sharpSpearBonus = 5, saddleBonus = 5, slingShotBonus = 5, swashBucklerBonus = 5, militaryHierarchyOneBonus = 1, militaryHierarchyTwoBonus = 1, militaryHierarchyThreeBonus = 1, militaryHierarchyFourBonus = 1, squireBonus = 10, heavyArmorBonus = 10, fencerBonus = 1;
+    public double retreatPercentBonus =5,firstHealPercent = 10,HorsemanArmyPercent = 5, INeedHealingPercent = 5, armySpearHeadPercent = 5, huntersArmyPercent = 5, rosesAndSwordPercent = 5, bronzeWeaponPercent = 5, woodenSwordPercent = 5, forcedWalkBonusPercent = 5, basicWeaponBonusPercent = 5;
+
 
     [HideInInspector]
     public int industrialSpyLvl, technologicSpyLvl, defenseSpyLvl, militarySpyLvl;
@@ -143,23 +144,22 @@ public class SpherierManager : MonoBehaviour
     {
         UIManager.Instance.fastMobilizationSkill.gameObject.SetActive(true);
     }
-
-
-    // WIP
-
     public void FirstHeal()
     {
-        Debug.Log("WIP");
+		UnitManager.Instance.alchemist.pierce += firstHealPercent;
     }
     public void Fencer()
     {
-        Debug.Log("WIP");
-    }
-    public void TurtleFormation()
-    {
-        Debug.Log("WIP");
+		UnitManager.Instance.swordman.attackPerTurn += fencerBonus;
     }
     public void Retreat()
+    {
+		AttackManager.Instance.retreatPercentTime -= (float)retreatPercentBonus;
+    }
+
+    // WIP
+
+    public void TurtleFormation()
     {
         Debug.Log("WIP");
     }
