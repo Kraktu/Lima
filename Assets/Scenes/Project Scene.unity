@@ -8221,7 +8221,7 @@ MonoBehaviour:
   woodPrice: 0
   orePrice: 0
   venacidPrice: 2000
-  timeToProduce: 250
+  timeToProduce: 65
   atUnitName: {fileID: 1731600680}
   atUnitNbr: {fileID: 102452849}
   atUnitSentText: {fileID: 1479313416}
@@ -10482,7 +10482,7 @@ MonoBehaviour:
   woodPrice: 75
   orePrice: 300
   venacidPrice: 15
-  timeToProduce: 120
+  timeToProduce: 45
   atUnitName: {fileID: 617796471}
   atUnitNbr: {fileID: 31330946}
   atUnitSentText: {fileID: 978314402}
@@ -12214,7 +12214,7 @@ MonoBehaviour:
   woodPrice: 37.5
   orePrice: 150
   venacidPrice: 0
-  timeToProduce: 60
+  timeToProduce: 30
   atUnitName: {fileID: 1277473040}
   atUnitNbr: {fileID: 2051960382}
   atUnitSentText: {fileID: 1256502081}
@@ -24891,12 +24891,12 @@ MonoBehaviour:
   secondSkillPointUpgradeName: NaN
   thirdSkillPointUpgradeName: NaN
   fourthSkillPointUpgradeName: NaN
-  woodCost: 200
-  oreCost: 200
+  woodCost: 150
+  oreCost: 350
   venacidCost: 50
   startingWoodUpgradeCost: 300
-  startingOreUpgradeCost: 300
-  startingVenacidUpgradeCost: 30
+  startingOreUpgradeCost: 500
+  startingVenacidUpgradeCost: 100
   magicRatio: {x: 1.03, y: 1.03, z: 1.07}
   canBuild: 1
   models:
@@ -36838,12 +36838,12 @@ MonoBehaviour:
   thirdSkillPointUpgradeName: 'Reduce flat time per click + '
   fourthSkillPointUpgradeName: 'Reduce % time per click + '
   woodCost: 150
-  oreCost: 150
+  oreCost: 50
   venacidCost: 0
-  startingWoodUpgradeCost: 175
-  startingOreUpgradeCost: 175
+  startingWoodUpgradeCost: 200
+  startingOreUpgradeCost: 100
   startingVenacidUpgradeCost: 10
-  magicRatio: {x: 1.09, y: 1.09, z: 1.09}
+  magicRatio: {x: 1.05, y: 1.07, z: 1.09}
   canBuild: 1
   models:
   - {fileID: 619305647}
@@ -41382,7 +41382,7 @@ MonoBehaviour:
   woodPrice: 750
   orePrice: 750
   venacidPrice: 500
-  timeToProduce: 100
+  timeToProduce: 50
   atUnitName: {fileID: 1880084976}
   atUnitNbr: {fileID: 1851930123}
   atUnitSentText: {fileID: 1526276147}
@@ -41664,9 +41664,9 @@ MonoBehaviour:
   accuracy: 100
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 10
-  orePrice: 25
-  venacidPrice: 10
+  woodPrice: 0
+  orePrice: 75
+  venacidPrice: 25
   timeToProduce: 10
   atUnitName: {fileID: 612908990}
   atUnitNbr: {fileID: 2012827236}
@@ -42465,13 +42465,13 @@ MonoBehaviour:
   attackPerTurn: 4
   armor: 0
   pierce: 50
-  accuracy: 25
+  accuracy: 50
   inWallArmorBonus: 0
   inWallAttackBonus: 0
   woodPrice: 112.5
   orePrice: 15
   venacidPrice: 0
-  timeToProduce: 45
+  timeToProduce: 22.5
   atUnitName: {fileID: 545664718}
   atUnitNbr: {fileID: 1362713806}
   atUnitSentText: {fileID: 2106874493}
@@ -52221,7 +52221,7 @@ MonoBehaviour:
   woodPrice: 150
   orePrice: 150
   venacidPrice: 30
-  timeToProduce: 130
+  timeToProduce: 30
   atUnitName: {fileID: 345136670}
   atUnitNbr: {fileID: 930276073}
   atUnitSentText: {fileID: 664636897}
@@ -59332,11 +59332,11 @@ MonoBehaviour:
   secondSkillPointUpgradeName: 'Auto collect + '
   thirdSkillPointUpgradeName: 'Click collect multiplicator + '
   fourthSkillPointUpgradeName: 'Click collect + '
-  woodCost: 100
-  oreCost: 150
+  woodCost: 50
+  oreCost: 200
   venacidCost: 0
   startingWoodUpgradeCost: 150
-  startingOreUpgradeCost: 200
+  startingOreUpgradeCost: 300
   startingVenacidUpgradeCost: 25
   magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
@@ -63514,13 +63514,13 @@ MonoBehaviour:
   secondSkillPointUpgradeName: xD
   thirdSkillPointUpgradeName: g pa d'inspi
   fourthSkillPointUpgradeName: dsl
-  woodCost: 250
-  oreCost: 200
+  woodCost: 100
+  oreCost: 300
   venacidCost: 50
-  startingWoodUpgradeCost: 350
-  startingOreUpgradeCost: 150
+  startingWoodUpgradeCost: 150
+  startingOreUpgradeCost: 350
   startingVenacidUpgradeCost: 50
-  magicRatio: {x: 1.05, y: 1.08, z: 1.07}
+  magicRatio: {x: 1.05, y: 1.07, z: 1.09}
   canBuild: 1
   models:
   - {fileID: 1138483829}
@@ -70564,10 +70564,10 @@ MonoBehaviour:
   secondSkillPointUpgradeName: 'Auto collect + '
   thirdSkillPointUpgradeName: 'Click collect multiplicator + '
   fourthSkillPointUpgradeName: 'Click collect + '
-  woodCost: 150
-  oreCost: 100
+  woodCost: 200
+  oreCost: 50
   venacidCost: 0
-  startingWoodUpgradeCost: 200
+  startingWoodUpgradeCost: 300
   startingOreUpgradeCost: 150
   startingVenacidUpgradeCost: 25
   magicRatio: {x: 1.07, y: 1.07, z: 1.07}
@@ -78803,10 +78803,10 @@ MonoBehaviour:
   woodCost: 300
   oreCost: 300
   venacidCost: 100
-  startingWoodUpgradeCost: 750
-  startingOreUpgradeCost: 750
+  startingWoodUpgradeCost: 1000
+  startingOreUpgradeCost: 500
   startingVenacidUpgradeCost: 250
-  magicRatio: {x: 1.09, y: 1.09, z: 1.09}
+  magicRatio: {x: 1.03, y: 1.07, z: 1.09}
   canBuild: 1
   models:
   - {fileID: 679646829}
@@ -80406,7 +80406,7 @@ MonoBehaviour:
   woodPrice: 75
   orePrice: 15
   venacidPrice: 0
-  timeToProduce: 30
+  timeToProduce: 15
   atUnitName: {fileID: 108282701}
   atUnitNbr: {fileID: 689190743}
   atUnitSentText: {fileID: 41274856}
@@ -85281,7 +85281,7 @@ MonoBehaviour:
   woodPrice: 250
   orePrice: 1000
   venacidPrice: 750
-  timeToProduce: 10
+  timeToProduce: 60
   atUnitName: {fileID: 1102348639}
   atUnitNbr: {fileID: 1290692037}
   atUnitSentText: {fileID: 1732982154}
