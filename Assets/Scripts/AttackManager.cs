@@ -23,7 +23,9 @@ public class AttackManager : MonoBehaviour
 
     public CombatReportButton combatReportButtonPrefab;
 
-    Coroutine AttackCo;
+	public float retreatPercentTime = 100;
+
+	Coroutine AttackCo;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -720,6 +722,7 @@ public class AttackManager : MonoBehaviour
         StopCoroutine(AttackCo);
         StartCoroutine(Retreating(comeBackArmy, startingPos, timeToComeBack, reportButton,troop));
     }
+
     public IEnumerator Retreating(List<Army> comeBackArmy,Vector3 startingPos,float timeToComeBack, CombatReportButton reportButton,GameObject troop)
     {
         Destroy(troop);
@@ -727,6 +730,7 @@ public class AttackManager : MonoBehaviour
         Vector3 Direction = (endingPos - startingPos).normalized;
         float time = 0;
         float tRatio;
+		timeToComeBack = timeToComeBack * (retreatPercentTime / 100);
         GameObject go = Instantiate(armyPrefabOnMap, startingPos, Quaternion.LookRotation(Direction, Vector3.up));
         while (time < timeToComeBack)
         {

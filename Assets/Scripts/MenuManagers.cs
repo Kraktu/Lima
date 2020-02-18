@@ -52,4 +52,9 @@ public class MenuManagers : MonoBehaviour
 	{
 		Screen.fullScreen = !Screen.fullScreen;
 	}
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
