@@ -8,6 +8,7 @@ public class Building:MonoBehaviour
 {
     public string buildingName, buildingDescription;
 	public string firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName;
+	public string firstSkillPointUpgradeNameEnd, secondSkillPointUpgradeNameEnd, thirdSkillPointUpgradeNameEnd, fourthSkillPointUpgradeNameEnd;
 	public double woodCost,oreCost,venacidCost;
 	public double startingWoodUpgradeCost, startingOreUpgradeCost, startingVenacidUpgradeCost;
     public Vector3 magicRatio;
