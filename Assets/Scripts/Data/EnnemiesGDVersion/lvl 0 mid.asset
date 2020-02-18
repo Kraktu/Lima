@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce3740637a2cfe499d450c38b59acda, type: 3}
+  m_Name: lvl 0 mid
+  m_EditorClassIdentifier: 
+  timeToGetAttacked: 25
+  level: 0
+  technoCounterSpyLevel: 0
+  militaryCounterSpyLevel: 0
+  indusCounterSpyLevel: 0
+  defenseCounterSpyLevel: 0
+  enemyName: Manon
+  myIcon: {fileID: 21300000, guid: a4df420cc1c54b546b7c9387a93b47b8, type: 3}
+  minWoodWon: 0
+  maxWoodWon: 250
+  minOreWon: 0
+  maxOreWon: 250
+  minVenacidWon: 0
+  maxVenacidWon: 100
+  nbrOfSpy: 0
+  enemyArmy: []

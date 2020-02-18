@@ -8210,18 +8210,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
   unitName: Leviathan
   unitNbr: 0
-  attack: 200
-  life: 200
-  attackPerTurn: 3
-  armor: 10
-  pierce: 50
-  accuracy: 75
+  attack: 125
+  life: 75
+  attackPerTurn: 1
+  armor: 250
+  pierce: 100
+  accuracy: 25
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
+  woodPrice: 0
+  orePrice: 0
+  venacidPrice: 2000
+  timeToProduce: 250
   atUnitName: {fileID: 1731600680}
   atUnitNbr: {fileID: 102452849}
   atUnitSentText: {fileID: 1479313416}
@@ -10471,18 +10471,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
   unitName: Horseman
   unitNbr: 0
-  attack: 150
-  life: 200
-  attackPerTurn: 1
+  attack: 35
+  life: 20
+  attackPerTurn: 2
   armor: 50
-  pierce: 18
-  accuracy: 80
+  pierce: 25
+  accuracy: 50
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 20
-  orePrice: 20
-  venacidPrice: 0
-  timeToProduce: 4
+  woodPrice: 75
+  orePrice: 300
+  venacidPrice: 15
+  timeToProduce: 120
   atUnitName: {fileID: 617796471}
   atUnitNbr: {fileID: 31330946}
   atUnitSentText: {fileID: 978314402}
@@ -12203,18 +12203,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
   unitName: Swordman
   unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
+  attack: 10
+  life: 30
+  attackPerTurn: 1
+  armor: 40
   pierce: 50
-  accuracy: 75
+  accuracy: 80
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 10
-  orePrice: 10
+  woodPrice: 37.5
+  orePrice: 150
   venacidPrice: 0
-  timeToProduce: 3
+  timeToProduce: 60
   atUnitName: {fileID: 1277473040}
   atUnitNbr: {fileID: 2051960382}
   atUnitSentText: {fileID: 1256502081}
@@ -24884,18 +24884,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Refinery
-  buildingDescription: You can recolt venacid here
+  buildingDescription: It is in this building that you collect the resource specific
+    to your race. It is a scarce resource so you will need a lot of patience. Adding
+    workers here speeds up production.
   firstSkillPointUpgradeName: NaN
   secondSkillPointUpgradeName: NaN
   thirdSkillPointUpgradeName: NaN
   fourthSkillPointUpgradeName: NaN
-  woodCost: 10
-  oreCost: 20
-  venacidCost: 15
-  startingWoodUpgradeCost: 100
-  startingOreUpgradeCost: 200
-  startingVenacidUpgradeCost: 150
-  magicRatio: {x: 1.02, y: 1.03, z: 0}
+  woodCost: 200
+  oreCost: 200
+  venacidCost: 50
+  startingWoodUpgradeCost: 300
+  startingOreUpgradeCost: 300
+  startingVenacidUpgradeCost: 30
+  magicRatio: {x: 1.03, y: 1.03, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 477846565}
@@ -24907,17 +24909,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 02000000040000000600000008000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 5
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
   buildingIcon: {fileID: 21300000, guid: 33bd7f98d1f84bb42b84b9f00a8d1aa9, type: 3}
-  constructionTimeMultiplicator: 1.4
-  constructionTime: 10
-  skillFirstBonus: 0
-  skillSecondBonus: 0
-  skillThirdBonus: 0
-  skillFourthBonus: 0
+  constructionTimeMultiplicator: 1.25
+  constructionTime: 50
+  skillFirstBonus: 0.5
+  skillSecondBonus: 0.69
+  skillThirdBonus: 2.5
+  skillFourthBonus: 0.15
   ConstructionTimerText: {fileID: 541939034}
   scaffoldingModels:
   - {fileID: 1961953337}
@@ -24926,8 +24928,8 @@ MonoBehaviour:
   - {fileID: 1943915733}
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
-  skillPointUpgradeLevelStep: 0
-  timeToReduce: 5
+  skillPointUpgradeLevelStep: 1
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
@@ -24946,12 +24948,10 @@ MonoBehaviour:
     neededBuildingLevel: 1
   - neededBuilding: {fileID: 1393608204}
     neededBuildingLevel: 1
-  - neededBuilding: {fileID: 1804895543}
-    neededBuildingLevel: 3
-  perClickMagicRatioUpgrade: 1.05
-  perSecMagicRatioUpgrade: 1.02
+  perClickMagicRatioUpgrade: 1.155
+  perSecMagicRatioUpgrade: 1.1825
   producedResource: Venacid
-  timeBeforePausedBuilding: 10
+  timeBeforePausedBuilding: 300
 --- !u!65 &612629036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33055,12 +33055,12 @@ PrefabInstance:
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMinTime
-      value: 30
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
       propertyPath: spawnMaxTime
-      value: 60
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 173750701303189056, guid: 93d65ac9fd988fc40b7f8536a7446bce,
         type: 3}
@@ -36829,18 +36829,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: House
-  buildingDescription: Where the villager lives
+  buildingDescription: It is in this building that your workers are born. You need
+    workers in all buildings. Adding workers here will speed up births.
   firstSkillPointUpgradeName: 'Reduce flat time per sec + '
   secondSkillPointUpgradeName: 'Reduce % time per sec + '
   thirdSkillPointUpgradeName: 'Reduce flat time per click + '
   fourthSkillPointUpgradeName: 'Reduce % time per click + '
-  woodCost: 15
-  oreCost: 20
+  woodCost: 150
+  oreCost: 150
   venacidCost: 0
-  startingWoodUpgradeCost: 50
-  startingOreUpgradeCost: 20
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.02, y: 1.02, z: 0}
+  startingWoodUpgradeCost: 175
+  startingOreUpgradeCost: 175
+  startingVenacidUpgradeCost: 10
+  magicRatio: {x: 1.09, y: 1.09, z: 1.09}
   canBuild: 1
   models:
   - {fileID: 619305647}
@@ -36852,17 +36853,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 0a000000140000001e00000028000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 5
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: cc22815672931884295a8c3006b50d1f, type: 3}
   buildingIcon: {fileID: 21300000, guid: db1e86d9536e4a04e994e63f131f8b0d, type: 3}
-  constructionTimeMultiplicator: 1.2
+  constructionTimeMultiplicator: 1.25
   constructionTime: 10
   skillFirstBonus: 1
-  skillSecondBonus: 2
-  skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillSecondBonus: 0.045
+  skillThirdBonus: 0.05
+  skillFourthBonus: -0.46128862845
   ConstructionTimerText: {fileID: 1121612507}
   scaffoldingModels:
   - {fileID: 343291957}
@@ -36871,8 +36872,8 @@ MonoBehaviour:
   - {fileID: 590291236}
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
-  skillPointUpgradeLevelStep: 4
-  timeToReduce: 5
+  skillPointUpgradeLevelStep: 1
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 0
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
@@ -36891,10 +36892,10 @@ MonoBehaviour:
     neededBuildingLevel: 1
   - neededBuilding: {fileID: 1393608204}
     neededBuildingLevel: 1
-  perClickMagicRatioUpgrade: 1.02
-  perSecMagicRatioUpgrade: 1.02
+  perClickMagicRatioUpgrade: 1.122
+  perSecMagicRatioUpgrade: 1.177
   producedResource: Worker
-  timeBeforePausedBuilding: 10
+  timeBeforePausedBuilding: 300
 --- !u!65 &900474092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41370,16 +41371,16 @@ MonoBehaviour:
   unitNbr: 0
   attack: 100
   life: 100
-  attackPerTurn: 2
-  armor: 10
+  attackPerTurn: 1
+  armor: 200
   pierce: 50
-  accuracy: 75
+  accuracy: 50
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
+  woodPrice: 750
+  orePrice: 750
+  venacidPrice: 500
+  timeToProduce: 100
   atUnitName: {fileID: 1880084976}
   atUnitNbr: {fileID: 1851930123}
   atUnitSentText: {fileID: 1526276147}
@@ -41662,8 +41663,8 @@ MonoBehaviour:
   inWallArmorBonus: 0
   inWallAttackBonus: 0
   woodPrice: 10
-  orePrice: 10
-  venacidPrice: 100
+  orePrice: 25
+  venacidPrice: 10
   timeToProduce: 10
   atUnitName: {fileID: 612908990}
   atUnitNbr: {fileID: 2012827236}
@@ -42457,18 +42458,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
   unitName: Archer
   unitNbr: 0
-  attack: 10
-  life: 20
-  attackPerTurn: 2
-  armor: 3
-  pierce: 75
+  attack: 15
+  life: 5
+  attackPerTurn: 4
+  armor: 0
+  pierce: 50
   accuracy: 25
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 5
-  orePrice: 5
+  woodPrice: 112.5
+  orePrice: 15
   venacidPrice: 0
-  timeToProduce: 2
+  timeToProduce: 45
   atUnitName: {fileID: 545664718}
   atUnitNbr: {fileID: 1362713806}
   atUnitSentText: {fileID: 2106874493}
@@ -52207,18 +52208,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: 6ca4e7ff4e370e947a01dc2143e5a909, type: 3}
   unitName: Alchemist
   unitNbr: 0
-  attack: 25
-  life: 130
+  attack: 10
+  life: 10
   attackPerTurn: 1
   armor: 10
-  pierce: 25
-  accuracy: 30
+  pierce: 0
+  accuracy: 100
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 75
-  orePrice: 50
-  venacidPrice: 10
-  timeToProduce: 20
+  woodPrice: 150
+  orePrice: 150
+  venacidPrice: 30
+  timeToProduce: 130
   atUnitName: {fileID: 345136670}
   atUnitNbr: {fileID: 930276073}
   atUnitSentText: {fileID: 664636897}
@@ -52956,11 +52957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: 0
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
-  - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
-  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
-  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
-  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
+  - {fileID: 11400000, guid: 9beb2363423368e48a0debac5a445d32, type: 2}
+  - {fileID: 11400000, guid: 95bdeb4b96a15c643bbf144de7dca466, type: 2}
+  - {fileID: 11400000, guid: ac15117f83965bb45bbd980092edb1e4, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -56120,7 +56119,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileSkillPointNeeded
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -56135,7 +56134,7 @@ PrefabInstance:
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
       propertyPath: tileName
-      value: Solid walls
+      value: Solid walls (work in progress)
       objectReference: {fileID: 0}
     - target: {fileID: 4156068438859359747, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
         type: 3}
@@ -59325,18 +59324,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Mine
-  buildingDescription: Mine extract Ores from a cave
+  buildingDescription: It is in this building that you collect ore. Add workers to
+    harvest more.
   firstSkillPointUpgradeName: 'Auto collect multiplicator + '
   secondSkillPointUpgradeName: 'Auto collect + '
   thirdSkillPointUpgradeName: 'Click collect multiplicator + '
   fourthSkillPointUpgradeName: 'Click collect + '
-  woodCost: 25
-  oreCost: 30
+  woodCost: 100
+  oreCost: 150
   venacidCost: 0
-  startingWoodUpgradeCost: 200
-  startingOreUpgradeCost: 150
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.02, y: 1.03, z: 0}
+  startingWoodUpgradeCost: 150
+  startingOreUpgradeCost: 200
+  startingVenacidUpgradeCost: 25
+  magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 309530105}
@@ -59348,17 +59348,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 0300000006000000090000000c000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 5
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: c4d8a2a4dff33234f83a1cd425d60d53, type: 3}
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
-  constructionTimeMultiplicator: 1.4
+  constructionTimeMultiplicator: 1.25
   constructionTime: 10
-  skillFirstBonus: 1
-  skillSecondBonus: 2
-  skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFirstBonus: 0.5
+  skillSecondBonus: 0.22125
+  skillThirdBonus: 2.5
+  skillFourthBonus: 0.15
   ConstructionTimerText: {fileID: 302967593}
   scaffoldingModels:
   - {fileID: 1947120053}
@@ -59367,8 +59367,8 @@ MonoBehaviour:
   - {fileID: 838123955}
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
-  skillPointUpgradeLevelStep: 2
-  timeToReduce: 5
+  skillPointUpgradeLevelStep: 1
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 3846350738296519211, guid: d385117e4e2cade49b686dc6ca295e6e,
@@ -59384,10 +59384,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   skillPoints: 0
   prerequisites: []
-  perClickMagicRatioUpgrade: 1.05
-  perSecMagicRatioUpgrade: 1.02
+  perClickMagicRatioUpgrade: 1.155
+  perSecMagicRatioUpgrade: 1.1825
   producedResource: Ore
-  timeBeforePausedBuilding: 10
+  timeBeforePausedBuilding: 300
 --- !u!65 &1393608205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61003,11 +61003,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: -1
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
-  - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
-  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
-  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
-  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
+  - {fileID: 11400000, guid: 441b6c6a7b649c64090f4db9c4b1d572, type: 2}
+  - {fileID: 11400000, guid: 5338e352d468d3c42a6a4dbc1664d83e, type: 2}
+  - {fileID: 11400000, guid: 9e958c6dee3006140a5e9c66c3f757e4, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -61830,11 +61828,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDifferenceWithUs: 1
   enemyArmySOs:
-  - {fileID: 11400000, guid: 5ce6fb25fa383c844b029101b21972da, type: 2}
-  - {fileID: 11400000, guid: 4b83cd2c109435048aac843b50feab6d, type: 2}
-  - {fileID: 11400000, guid: 8318ed3461aca0e4ca321516c8b0b4a1, type: 2}
-  - {fileID: 11400000, guid: 34a66e690a276f1448ce1b4e45959663, type: 2}
-  - {fileID: 11400000, guid: fbb662036da69b849bd09eee489e2a14, type: 2}
+  - {fileID: 11400000, guid: 5046bd29b326c484b89a4dded9ea9f26, type: 2}
+  - {fileID: 11400000, guid: 31bca6ba348932f44a8192a97d7348f4, type: 2}
+  - {fileID: 11400000, guid: 4c5a7e6fe1b4bd64dab44e34cde3346c, type: 2}
   minWoodWon: 0
   maxWoodWon: 0
   minOreWon: 0
@@ -63509,18 +63505,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Barrack
-  buildingDescription: You can create Unit here
+  buildingDescription: This is where you produce soldiers, spies and siege weapons.
+    Send them to enemy villages to collect information or resources. Send them to
+    enemy villages to collect information or resources.
   firstSkillPointUpgradeName: "alex d\xE9brouille toi"
   secondSkillPointUpgradeName: xD
   thirdSkillPointUpgradeName: g pa d'inspi
   fourthSkillPointUpgradeName: dsl
-  woodCost: 10
-  oreCost: 20
-  venacidCost: 0
-  startingWoodUpgradeCost: 20
-  startingOreUpgradeCost: 10
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.02, y: 1.02, z: 1.02}
+  woodCost: 250
+  oreCost: 200
+  venacidCost: 50
+  startingWoodUpgradeCost: 350
+  startingOreUpgradeCost: 150
+  startingVenacidUpgradeCost: 50
+  magicRatio: {x: 1.05, y: 1.08, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 1138483829}
@@ -63532,17 +63530,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 02000000030000000400000005000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 4
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
   buildingIcon: {fileID: 21300000, guid: 594c01935eb99e24c86c31401dc6d66b, type: 3}
-  constructionTimeMultiplicator: 1.01
-  constructionTime: 2
+  constructionTimeMultiplicator: 1.25
+  constructionTime: 30
   skillFirstBonus: 1
-  skillSecondBonus: 2
-  skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillSecondBonus: 0.5
+  skillThirdBonus: 0.5
+  skillFourthBonus: 0.5
   ConstructionTimerText: {fileID: 1366564625}
   scaffoldingModels:
   - {fileID: 1080734070}
@@ -63551,8 +63549,8 @@ MonoBehaviour:
   - {fileID: 286576564}
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
-  skillPointUpgradeLevelStep: 5
-  timeToReduce: 5
+  skillPointUpgradeLevelStep: 1
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
@@ -63568,7 +63566,7 @@ MonoBehaviour:
   skillPoints: 0
   prerequisites:
   - neededBuilding: {fileID: 1804895543}
-    neededBuildingLevel: 4
+    neededBuildingLevel: 1
   goToBarrackMenuSprite: {fileID: 21300000, guid: 5830e98115e071648a9ea4e86cad4e20,
     type: 3}
   goToBarrackMenuText: Show Unit Panel
@@ -63582,9 +63580,9 @@ MonoBehaviour:
   - {fileID: 1945919084}
   - {fileID: 208793296}
   - {fileID: 1007973068}
-  levelToUnlockNextUnit: 010000000200000003000000040000000500000006000000070000000800000004000000
-  timeReducedOnClick: 1
-  timePercentReducedOnClick: 1
+  levelToUnlockNextUnit: 020000000300000004000000010000000300000005000000060000000700000001000000
+  timeReducedOnClick: 1.1
+  timePercentReducedOnClick: 0.25
 --- !u!65 &1462228425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69296,20 +69294,20 @@ MonoBehaviour:
   venacidName: Venacid
   workerName: Worker
   gemsName: Gems
-  startingWood: 50
-  startingOre: 45
-  startingVenacid: 20
-  startingWorker: 0
+  startingWood: 100
+  startingOre: 100
+  startingVenacid: 0
+  startingWorker: 2
   startingGems: 0
-  startingWoodPerSec: 200000000
-  startingOrePerSec: 200000000
-  startingVenacidPerSec: 50
-  startingWorkerPerSec: 10
-  startingWoodPerClick: 1
-  startingOrePerClick: 1
-  startingVenacidPerClick: 1
-  startingWorkerPerClick: 1
-  skillPoint: 999
+  startingWoodPerSec: 1.9125
+  startingOrePerSec: 1.9125
+  startingVenacidPerSec: 0.3
+  startingWorkerPerSec: 0.03375
+  startingWoodPerClick: 2.25
+  startingOrePerClick: 2.25
+  startingVenacidPerClick: 0.5625
+  startingWorkerPerClick: 0.0225
+  skillPoint: 0
   isSawmillProducing: 1
   isMineProducing: 1
   isHouseProducing: 1
@@ -70554,18 +70552,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Sawmill
-  buildingDescription: Sawmill cut trees and provide wood for your village
+  buildingDescription: It is in this building that you harvest wood. Add workers to
+    harvest more.
   firstSkillPointUpgradeName: 'Auto collect multiplicator + '
   secondSkillPointUpgradeName: 'Auto collect + '
   thirdSkillPointUpgradeName: 'Click collect multiplicator + '
   fourthSkillPointUpgradeName: 'Click collect + '
-  woodCost: 10
-  oreCost: 20
+  woodCost: 150
+  oreCost: 100
   venacidCost: 0
-  startingWoodUpgradeCost: 20
-  startingOreUpgradeCost: 25
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.02, y: 1.02, z: 1.02}
+  startingWoodUpgradeCost: 200
+  startingOreUpgradeCost: 150
+  startingVenacidUpgradeCost: 25
+  magicRatio: {x: 1.07, y: 1.07, z: 1.07}
   canBuild: 1
   models:
   - {fileID: 305339733}
@@ -70577,17 +70576,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 050000000a0000000f00000014000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 5
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: c7f38e223691fbb4a83c7f2e9fe37835, type: 3}
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
-  constructionTimeMultiplicator: 1.1
+  constructionTimeMultiplicator: 1.25
   constructionTime: 10
-  skillFirstBonus: 1
-  skillSecondBonus: 2
-  skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFirstBonus: 0.5
+  skillSecondBonus: 0.22125
+  skillThirdBonus: 2.5
+  skillFourthBonus: 0.15
   ConstructionTimerText: {fileID: 1913292645}
   scaffoldingModels:
   - {fileID: 1141855015}
@@ -70597,7 +70596,7 @@ MonoBehaviour:
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
   skillPointUpgradeLevelStep: 1
-  timeToReduce: 5
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 7630511522565323014, guid: ef43f1bf319f46f44b92729fab572939,
@@ -70613,10 +70612,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   skillPoints: 0
   prerequisites: []
-  perClickMagicRatioUpgrade: 1.02
-  perSecMagicRatioUpgrade: 1.02
+  perClickMagicRatioUpgrade: 1.155
+  perSecMagicRatioUpgrade: 1.1825
   producedResource: Wood
-  timeBeforePausedBuilding: 10
+  timeBeforePausedBuilding: 300
 --- !u!65 &1602226632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78787,18 +78786,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: Head Quarter
-  buildingDescription: The Head Quarter, to control your troopers
+  buildingDescription: The HQ is the central place for all decisions. It allows you
+    to see the world map to send troops or spies to the surrounding villages. It also
+    unlocks access to technology. Finally, adding workers here improves the reduction
+    in CD provided by this building.
   firstSkillPointUpgradeName: 'Reduce flat time on click + '
   secondSkillPointUpgradeName: 'Reduce % time on click + '
   thirdSkillPointUpgradeName: 'Reduce flat general time + '
   fourthSkillPointUpgradeName: 'Reduce % general time  + '
-  woodCost: 30
-  oreCost: 15
-  venacidCost: 0
-  startingWoodUpgradeCost: 150
-  startingOreUpgradeCost: 100
-  startingVenacidUpgradeCost: 0
-  magicRatio: {x: 1.02, y: 1.02, z: 0}
+  woodCost: 300
+  oreCost: 300
+  venacidCost: 100
+  startingWoodUpgradeCost: 750
+  startingOreUpgradeCost: 750
+  startingVenacidUpgradeCost: 250
+  magicRatio: {x: 1.09, y: 1.09, z: 1.09}
   canBuild: 1
   models:
   - {fileID: 679646829}
@@ -78810,17 +78812,17 @@ MonoBehaviour:
   upgradeModelsLevelStep: 060000000c0000001200000018000000
   level: 0
   currentWorkers: 0
-  workersLimit: 10
-  workerLimitUpgrade: 10
-  workerLimitUpgradeLevelStep: 5
+  workersLimit: 4
+  workerLimitUpgrade: 1
+  workerLimitUpgradeLevelStep: 1
   workerIconBuilding: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
-  constructionTimeMultiplicator: 1.3
+  constructionTimeMultiplicator: 1.15
   constructionTime: 10
-  skillFirstBonus: 1
-  skillSecondBonus: 2
+  skillFirstBonus: 0.5
+  skillSecondBonus: 0.5
   skillThirdBonus: 1
-  skillFourthBonus: 0.1
+  skillFourthBonus: 0.5
   ConstructionTimerText: {fileID: 2127961027}
   scaffoldingModels:
   - {fileID: 270149804}
@@ -78829,8 +78831,8 @@ MonoBehaviour:
   - {fileID: 2138942192}
   constructionPoof: {fileID: 8714610018007563255, guid: e0902805499bba64995fafa52c941088,
     type: 3}
-  skillPointUpgradeLevelStep: 3
-  timeToReduce: 5
+  skillPointUpgradeLevelStep: 1
+  timeToReduce: 1.5
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
@@ -78844,12 +78846,20 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
-  prerequisites: []
+  prerequisites:
+  - neededBuilding: {fileID: 1602226631}
+    neededBuildingLevel: 1
+  - neededBuilding: {fileID: 900474091}
+    neededBuildingLevel: 1
+  - neededBuilding: {fileID: 1393608204}
+    neededBuildingLevel: 1
+  - neededBuilding: {fileID: 612629035}
+    neededBuildingLevel: 1
   buildings: []
   goToMapMenuSprite: {fileID: 21300000, guid: 0b137cd946fad7948b0fda06b088102f, type: 3}
   goToMapMenuText: Go To Map
   removeTheTimeOnClick: 1
-  skillPointEarnedPerLevel: 0
+  skillPointEarnedPerLevel: 3
 --- !u!65 &1804895544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80379,18 +80389,18 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
   unitName: Spearman
   unitNbr: 0
-  attack: 100
-  life: 50
-  attackPerTurn: 2
-  armor: 5
-  pierce: 70
+  attack: 20
+  life: 20
+  attackPerTurn: 3
+  armor: 10
+  pierce: 75
   accuracy: 30
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 80
-  orePrice: 80
+  woodPrice: 75
+  orePrice: 15
   venacidPrice: 0
-  timeToProduce: 5
+  timeToProduce: 30
   atUnitName: {fileID: 108282701}
   atUnitNbr: {fileID: 689190743}
   atUnitSentText: {fileID: 41274856}
@@ -85254,17 +85264,17 @@ MonoBehaviour:
   longUnitImage: {fileID: 21300000, guid: fc4e781e0fa6ebc4b8db54df615b1f0a, type: 3}
   unitName: Quetzalcoatl
   unitNbr: 0
-  attack: 150
-  life: 150
-  attackPerTurn: 2
-  armor: 4
-  pierce: 50
+  attack: 75
+  life: 125
+  attackPerTurn: 1
+  armor: 150
+  pierce: 25
   accuracy: 75
   inWallArmorBonus: 0
   inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
+  woodPrice: 250
+  orePrice: 1000
+  venacidPrice: 750
   timeToProduce: 10
   atUnitName: {fileID: 1102348639}
   atUnitNbr: {fileID: 1290692037}
