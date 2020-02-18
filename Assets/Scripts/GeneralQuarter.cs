@@ -76,19 +76,22 @@ public class GeneralQuarter : Building
 	}
 
 	public void UpgradeGeneralQuarter()
-	{
-		if(LevelUp())
-		{
-            MapManager.Instance.RefreshEnemies();
-            ResourceManager.Instance.skillPoint+=skillPointEarnedPerLevel;
-			RefreshInterface();
-            UIManager.Instance.UpdateSkillPointText();
-		}
-		if(level == 1)
-		{
-			UIManager.Instance.goToMapButton.gameObject.SetActive(true);
-			UIManager.Instance.spherierButton.gameObject.SetActive(true);
-		}
+    {
+        if (AttackManager.Instance.currentSimultaneousAttack==0)
+        {
+            if (LevelUp())
+            {
+                MapManager.Instance.RefreshEnemies();
+                ResourceManager.Instance.skillPoint += skillPointEarnedPerLevel;
+                RefreshInterface();
+                UIManager.Instance.UpdateSkillPointText();
+            }
+            if (level == 1)
+            {
+                UIManager.Instance.goToMapButton.gameObject.SetActive(true);
+                UIManager.Instance.spherierButton.gameObject.SetActive(true);
+            }
+        }
 	}
 
     public override void AddWorkerToProducing()

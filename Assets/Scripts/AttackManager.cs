@@ -94,6 +94,8 @@ public class AttackManager : MonoBehaviour
             yield return null;
         }
         time = 0;
+        Direction = (startingPos - endingPos).normalized;
+        go.transform.rotation = Quaternion.LookRotation(Direction, Vector3.up);
         while (time < enemy.timeToGetAttacked / 10)
         {
             tRatio = time / (enemy.timeToGetAttacked / 10);
