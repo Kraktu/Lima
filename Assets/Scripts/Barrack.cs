@@ -127,7 +127,7 @@ public class Barrack : Building
     {
         for (int i = 0; i < unitsToUnlock.Length; i++)
         {
-            if (levelToUnlockNextUnit[i]==level)
+            if (levelToUnlockNextUnit[i]==level&&!unitsToUnlock[i].gameObject.activeInHierarchy)
             {
                 unitsToUnlock[i].gameObject.SetActive(true);
                 unitsToUnlock[i].myAttackPanel.SetActive(true);
