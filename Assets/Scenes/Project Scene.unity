@@ -59580,10 +59580,10 @@ MonoBehaviour:
   buildingName: Mine
   buildingDescription: It is in this building that you collect ore. Add workers to
     harvest more.
-  firstSkillPointUpgradeName: 'Auto collect multiplicator + '
-  secondSkillPointUpgradeName: 'Auto collect + '
-  thirdSkillPointUpgradeName: 'Click collect multiplicator + '
-  fourthSkillPointUpgradeName: 'Click collect + '
+  firstSkillPointUpgradeName: +2% Ores per hour
+  secondSkillPointUpgradeName: + 1000 Ores per hour
+  thirdSkillPointUpgradeName: + 2.5 % Ores per clic
+  fourthSkillPointUpgradeName: + 0,25 Ores per clic
   woodCost: 50
   oreCost: 200
   venacidCost: 0
@@ -59609,10 +59609,10 @@ MonoBehaviour:
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
   constructionTimeMultiplicator: 1.25
   constructionTime: 10
-  skillFirstBonus: 0.5
-  skillSecondBonus: 0.22125
+  skillFirstBonus: 2
+  skillSecondBonus: 0.2775
   skillThirdBonus: 2.5
-  skillFourthBonus: 0.15
+  skillFourthBonus: 0.25
   ConstructionTimerText: {fileID: 302967593}
   scaffoldingModels:
   - {fileID: 1947120053}
@@ -70842,10 +70842,10 @@ MonoBehaviour:
   buildingName: Sawmill
   buildingDescription: It is in this building that you harvest wood. Add workers to
     harvest more.
-  firstSkillPointUpgradeName: 'Auto collect multiplicator + '
-  secondSkillPointUpgradeName: 'Auto collect + '
-  thirdSkillPointUpgradeName: 'Click collect multiplicator + '
-  fourthSkillPointUpgradeName: 'Click collect + '
+  firstSkillPointUpgradeName: + 2 % Woods per hour
+  secondSkillPointUpgradeName: + 1000 Woods per hour
+  thirdSkillPointUpgradeName: +2,5 % Woods per clic
+  fourthSkillPointUpgradeName: + 0,25 Woods per clic
   woodCost: 200
   oreCost: 50
   venacidCost: 0
@@ -70871,10 +70871,10 @@ MonoBehaviour:
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
   constructionTimeMultiplicator: 1.25
   constructionTime: 10
-  skillFirstBonus: 0.5
-  skillSecondBonus: 0.22125
+  skillFirstBonus: 2
+  skillSecondBonus: 0.2775
   skillThirdBonus: 2.5
-  skillFourthBonus: 0.15
+  skillFourthBonus: 0.25
   ConstructionTimerText: {fileID: 1913292645}
   scaffoldingModels:
   - {fileID: 1141855015}
