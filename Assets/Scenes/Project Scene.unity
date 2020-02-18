@@ -24933,7 +24933,7 @@ MonoBehaviour:
   isBuildingPanelDisplayedLeft: 1
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
-  imNormalUse: {fileID: 21300000, guid: f1850dc5b202c3f43abf1f4be246b6b0, type: 3}
+  imNormalUse: {fileID: 21300000, guid: 4abad828b17189b4e862783ef1545c75, type: 3}
   imDuringUpgrade: {fileID: 21300000, guid: a08aa30b881bb0d42b714e424af55df8, type: 3}
   offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
@@ -24947,6 +24947,8 @@ MonoBehaviour:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
   - neededBuilding: {fileID: 1393608204}
+    neededBuildingLevel: 1
+  - neededBuilding: {fileID: 900474091}
     neededBuildingLevel: 1
   perClickMagicRatioUpgrade: 1.155
   perSecMagicRatioUpgrade: 1.1825
@@ -36877,7 +36879,7 @@ MonoBehaviour:
   isBuildingPanelDisplayedLeft: 0
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 0}
-  imNormalUse: {fileID: 21300000, guid: 1cd96935a953c3346aaba1a403712a66, type: 3}
+  imNormalUse: {fileID: 21300000, guid: 79c573b380738ce489f6263e06649f27, type: 3}
   imDuringUpgrade: {fileID: 21300000, guid: a08aa30b881bb0d42b714e424af55df8, type: 3}
   offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
@@ -59373,7 +59375,7 @@ MonoBehaviour:
   vfx: {fileID: 2717958254632629714, guid: 9d552a9d0d075744295bc92d7700119b, type: 3}
   particlesOnClick: {fileID: 3846350738296519211, guid: d385117e4e2cade49b686dc6ca295e6e,
     type: 3}
-  imNormalUse: {fileID: 21300000, guid: 669149cedd5aa25429bd524d77786fbd, type: 3}
+  imNormalUse: {fileID: 21300000, guid: 2dcca32b72206a84fbbaea0bec1df302, type: 3}
   imDuringUpgrade: {fileID: 21300000, guid: a08aa30b881bb0d42b714e424af55df8, type: 3}
   offset: {x: 50, y: 50, z: 0}
   reductionPercentCostBonus: 0
@@ -67286,7 +67288,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 13df87dd56d9322418feddab98fbd6ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79c573b380738ce489f6263e06649f27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -69301,7 +69303,7 @@ MonoBehaviour:
   startingGems: 0
   startingWoodPerSec: 1.9125
   startingOrePerSec: 1.9125
-  startingVenacidPerSec: 0.3
+  startingVenacidPerSec: 0.15
   startingWorkerPerSec: 0.03375
   startingWoodPerClick: 2.25
   startingOrePerClick: 2.25
@@ -69516,6 +69518,7 @@ MonoBehaviour:
   isAttackDraw: 0
   combatReportButtonPrefab: {fileID: 2215156293737782736, guid: c84136e98cbcee24eb26d68661dd0461,
     type: 3}
+  retreatPercentTime: 100
 --- !u!114 &1592076626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69557,6 +69560,9 @@ MonoBehaviour:
   militaryHierarchyFourBonus: 1
   squireBonus: 10
   heavyArmorBonus: 10
+  fencerBonus: 1
+  retreatPercentBonus: 5
+  firstHealPercent: 10
   HorsemanArmyPercent: 5
   INeedHealingPercent: 5
   armySpearHeadPercent: 5
