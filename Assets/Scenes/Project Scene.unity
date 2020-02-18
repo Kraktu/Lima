@@ -7562,7 +7562,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8206,8 +8206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 339109094}
-  smallUnitImage: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: 8dbb13f927f3b4441ac900b7d0d38c65, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 8dbb13f927f3b4441ac900b7d0d38c65, type: 3}
   unitName: Leviathan
   unitNbr: 0
   attack: 200
@@ -8309,7 +8309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8dbb13f927f3b4441ac900b7d0d38c65, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10467,8 +10467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 566720622}
-  smallUnitImage: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
-  longUnitImage: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: 4fa8482f8bc25f741bd4341fa319223c, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 4fa8482f8bc25f741bd4341fa319223c, type: 3}
   unitName: Horseman
   unitNbr: 0
   attack: 150
@@ -10570,7 +10570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fa8482f8bc25f741bd4341fa319223c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12199,8 +12199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1066951286}
-  smallUnitImage: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
-  longUnitImage: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: 2b0b88805a594874893d39f809e8b0d3, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 2b0b88805a594874893d39f809e8b0d3, type: 3}
   unitName: Swordman
   unitNbr: 0
   attack: 33
@@ -12302,7 +12302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b0b88805a594874893d39f809e8b0d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14258,7 +14258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &347484685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33928,7 +33928,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.0007324219}
-  m_SizeDelta: {x: 0, y: -602.7}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &812246967
 MonoBehaviour:
@@ -41364,8 +41364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1667515137}
-  smallUnitImage: {fileID: 21300000, guid: 0877678785b224c4981a4524450d0c1e, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 0877678785b224c4981a4524450d0c1e, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: 1ca06e74cd60c88498045ecdec8b8ef1, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 1ca06e74cd60c88498045ecdec8b8ef1, type: 3}
   unitName: Apophis
   unitNbr: 0
   attack: 100
@@ -41467,7 +41467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0877678785b224c4981a4524450d0c1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ca06e74cd60c88498045ecdec8b8ef1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42368,7 +42368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ece13214a4cb1734db7809bf0ed0a8cd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42453,8 +42453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 2065482085}
-  smallUnitImage: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: ece13214a4cb1734db7809bf0ed0a8cd, type: 3}
+  longUnitImage: {fileID: 21300000, guid: ece13214a4cb1734db7809bf0ed0a8cd, type: 3}
   unitName: Archer
   unitNbr: 0
   attack: 10
@@ -59351,7 +59351,7 @@ MonoBehaviour:
   workersLimit: 10
   workerLimitUpgrade: 10
   workerLimitUpgradeLevelStep: 5
-  workerIconBuilding: {fileID: 21300000, guid: c4d8a2a4dff33234f83a1cd425d60d53, type: 3}
+  workerIconBuilding: {fileID: 21300000, guid: 4b44607713b359940a4a29644b2fc5e6, type: 3}
   buildingIcon: {fileID: 21300000, guid: 35e6d5d26b093f746a6fafb00df60806, type: 3}
   constructionTimeMultiplicator: 1.4
   constructionTime: 10
@@ -63733,9 +63733,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1464459517
 MonoBehaviour:
@@ -70580,7 +70580,7 @@ MonoBehaviour:
   workersLimit: 10
   workerLimitUpgrade: 10
   workerLimitUpgradeLevelStep: 5
-  workerIconBuilding: {fileID: 21300000, guid: c7f38e223691fbb4a83c7f2e9fe37835, type: 3}
+  workerIconBuilding: {fileID: 21300000, guid: 4cafef3a57700064abcf71414e61d80b, type: 3}
   buildingIcon: {fileID: 21300000, guid: ae407bbff2718444d85661620e7a6380, type: 3}
   constructionTimeMultiplicator: 1.1
   constructionTime: 10
@@ -80375,8 +80375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1301136299}
-  smallUnitImage: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
-  longUnitImage: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
+  smallUnitImage: {fileID: 21300000, guid: 69af0ddbf02b142458a96345e3cdd072, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 69af0ddbf02b142458a96345e3cdd072, type: 3}
   unitName: Spearman
   unitNbr: 0
   attack: 100
@@ -80478,7 +80478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 69af0ddbf02b142458a96345e3cdd072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
