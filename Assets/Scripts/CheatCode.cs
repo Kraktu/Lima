@@ -13,7 +13,7 @@ public class CheatCode : MonoBehaviour
 				ResourceManager.Instance.wood.totalResource += 1000;
 			}
 		}
-		if (Input.GetKey(KeyCode.Nw))
+		if (Input.GetKey(KeyCode.N))
 		{
 			if (Input.GetKeyDown(KeyCode.P))
 			{
