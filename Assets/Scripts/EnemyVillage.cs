@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class EnemyVillage : MonoBehaviour
 {
     public int levelDifferenceWithUs;
@@ -26,6 +26,8 @@ public class EnemyVillage : MonoBehaviour
     public Vector3 UIOnClickOffset;
 	private void OnMouseDown()
 	{
+        if (!EventSystem.current.IsPointerOverGameObject())
+        { 
 		UIManager.Instance.enemyVillageCanvas.SetActive(true);
         UIManager.Instance.enemyVillageCanvas.transform.position = new Vector3(gameObject.transform.position.x, UIManager.Instance.enemyVillageCanvas.transform.position.y, gameObject.transform.position.z) + UIOnClickOffset; ;
 		UIManager.Instance.spyPanel.SetActive(false);
@@ -35,6 +37,7 @@ public class EnemyVillage : MonoBehaviour
         UIManager.Instance.atEnemyIcon.sprite = myIcon;
         AttackManager.Instance.timeToAttack = timeToGetAttacked;
         AttackManager.Instance.AttackedVillage = this.gameObject;
+        }
 
 	}
 
