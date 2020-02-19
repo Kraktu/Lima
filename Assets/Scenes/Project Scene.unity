@@ -10462,6 +10462,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1707146064}
     m_Modifications:
+    - target: {fileID: 2373532976179521325, guid: f0a3bfa5dab11a44a8019954bca9d87e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373532976218845296, guid: f0a3bfa5dab11a44a8019954bca9d87e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2373532976690977658, guid: f0a3bfa5dab11a44a8019954bca9d87e,
         type: 3}
       propertyPath: m_Name
@@ -10541,6 +10551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373532977119621209, guid: f0a3bfa5dab11a44a8019954bca9d87e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a3bfa5dab11a44a8019954bca9d87e, type: 3}
@@ -38686,14 +38701,14 @@ MonoBehaviour:
   buildingName: House
   buildingDescription: It is in this building that your workers are born. You need
     workers in all buildings. Adding workers here will speed up births.
-  firstSkillPointUpgradeName: 'Reduce flat time per sec + '
-  secondSkillPointUpgradeName: 'Reduce % time per sec + '
-  thirdSkillPointUpgradeName: 'Reduce flat time per click + '
-  fourthSkillPointUpgradeName: 'Reduce % time per click + '
-  firstSkillPointUpgradeNameEnd: 
-  secondSkillPointUpgradeNameEnd: 
-  thirdSkillPointUpgradeNameEnd: 
-  fourthSkillPointUpgradeNameEnd: 
+  firstSkillPointUpgradeName: 'Time before birth : -'
+  secondSkillPointUpgradeName: 'Time before birth : -'
+  thirdSkillPointUpgradeName: 'Time before birth : -'
+  fourthSkillPointUpgradeName: 'Time before birth : -'
+  firstSkillPointUpgradeNameEnd: '%'
+  secondSkillPointUpgradeNameEnd: ' sec'
+  thirdSkillPointUpgradeNameEnd: ' % per clic'
+  fourthSkillPointUpgradeNameEnd: sec per clic
   woodCost: 150
   oreCost: 50
   venacidCost: 0
@@ -66006,14 +66021,14 @@ MonoBehaviour:
   buildingDescription: This is where you produce soldiers, spies and siege weapons.
     Send them to enemy villages to collect information or resources. Send them to
     enemy villages to collect information or resources.
-  firstSkillPointUpgradeName: "alex d\xE9brouille toi"
-  secondSkillPointUpgradeName: xD
-  thirdSkillPointUpgradeName: g pa d'inspi
-  fourthSkillPointUpgradeName: dsl
-  firstSkillPointUpgradeNameEnd: 
-  secondSkillPointUpgradeNameEnd: 
-  thirdSkillPointUpgradeNameEnd: 
-  fourthSkillPointUpgradeNameEnd: 
+  firstSkillPointUpgradeName: 'Enrollment time : -'
+  secondSkillPointUpgradeName: 'Enrollment time : -'
+  thirdSkillPointUpgradeName: 'Enrollment time : -'
+  fourthSkillPointUpgradeName: 'Enrollment time : -'
+  firstSkillPointUpgradeNameEnd: '%'
+  secondSkillPointUpgradeNameEnd: ' sec'
+  thirdSkillPointUpgradeNameEnd: '% per clic'
+  fourthSkillPointUpgradeNameEnd: sec per clic
   woodCost: 100
   oreCost: 300
   venacidCost: 50
@@ -81981,14 +81996,14 @@ MonoBehaviour:
     to see the world map to send troops or spies to the surrounding villages. It also
     unlocks access to technology. Finally, adding workers here improves the reduction
     in CD provided by this building.
-  firstSkillPointUpgradeName: 'Reduce flat time on click + '
-  secondSkillPointUpgradeName: 'Reduce % time on click + '
-  thirdSkillPointUpgradeName: 'Reduce flat general time + '
-  fourthSkillPointUpgradeName: 'Reduce % general time  + '
-  firstSkillPointUpgradeNameEnd: 
-  secondSkillPointUpgradeNameEnd: 
-  thirdSkillPointUpgradeNameEnd: 
-  fourthSkillPointUpgradeNameEnd: 
+  firstSkillPointUpgradeName: 'Construction time : -'
+  secondSkillPointUpgradeName: 'Construction time : -  '
+  thirdSkillPointUpgradeName: 'Construction time : - '
+  fourthSkillPointUpgradeName: 'Construction time : -'
+  firstSkillPointUpgradeNameEnd: '%'
+  secondSkillPointUpgradeNameEnd: ' sec'
+  thirdSkillPointUpgradeNameEnd: ' % per clic'
+  fourthSkillPointUpgradeNameEnd: ' sec / clic'
   woodCost: 300
   oreCost: 300
   venacidCost: 100
