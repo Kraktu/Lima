@@ -18,10 +18,10 @@ public class Mine : ResourceBuilding
 			}
 			else if(isCurrentlyUpgrading == false)
 			{
-				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick;
+				ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerClick + amateurClickerBonus;
 				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeMine);
 				RefreshInterface();
-				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick),imNormalUse);
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick + amateurClickerBonus),imNormalUse);
 				SoundManager.Instance.PlaySoundEffect("ClickMine_SFX");
 			}
 				if (!ResourceManager.Instance.isMineProducing)

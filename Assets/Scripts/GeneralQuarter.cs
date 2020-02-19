@@ -46,12 +46,12 @@ public class GeneralQuarter : Building
                         if (buildings[i].isCurrentlyUpgrading)
                         {
                             isOneBuildingUpgrading = true;
-                            buildings[i].elpasedTime += removeTheTimeOnClick;
+                            buildings[i].elpasedTime += removeTheTimeOnClick + amateurClickerBonus;
                         }
                     }
                     if (isOneBuildingUpgrading)
                     {
-                        InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick), imNormalUse);
+                        InstantiateParticles(UIManager.Instance.BigIntToString(removeTheTimeOnClick + amateurClickerBonus), imNormalUse);
                         SoundManager.Instance.PlaySoundEffect("ClickQG_SFX");
                     }
                 }

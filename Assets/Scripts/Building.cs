@@ -50,12 +50,14 @@ public class Building : MonoBehaviour
 	public float skillPoints = 0;
 
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
+    protected double amateurClickerBonus=0;
 
 	protected bool workerGotUpgraded, workerGotDowngraded, skillFirstUpgraded, skillSecondUpgraded, skillThirdUpgraded, skillFourthUpgraded;
 	protected string currentWoodCost, currentOreCost, currentVenacidCost, villagers, buildingNamePlusLevel;
 
 	int _currentUsedModel = 0;
 	double _woodUpgradeCost, _oreUpgradeCost, _venacidUpgradeCost;
+
 
 	[HideInInspector]
 	public int consecutiveClicks;
@@ -165,38 +167,352 @@ public class Building : MonoBehaviour
 	{
 		if(consecutiveClicks == 50)
 		{
-			StartCoroutine(ActiveClicks());
+			StartCoroutine(LearnerClicks());
 		}
 	}
 	public void InitiatedClicker()
 	{
 		if (consecutiveClicks == 100)
 		{
-			StartCoroutine(ActiveClicks());
+			StartCoroutine(InitiatedClicks());
 		}
 	}
 	public void TeacherClicker()
 	{
 		if (consecutiveClicks ==500)
 		{
-			StartCoroutine(ActiveClicks());
+			StartCoroutine(TeacherClicks());
 		}
 	}
 	public void MasterClicker()
 	{
 		if (consecutiveClicks == 1000)
 		{
-			StartCoroutine(ActiveClicks());
+			StartCoroutine(MasterClicks());
 		}
 	}
 
 	protected IEnumerator ActiveClicks()
-	{
-		while (true)
-		{
-			yield return null;
-		}
+    {
+        float time = 0;
+        float timeLimite = 1;
+        switch (buildingName)
+        {
+            case "SawMill":
+                BuildingManager.Instance.sawmill.amateurClickerBonus = ((ResourceManager.Instance.startingWoodPerClick * 10) / 100);
+                while (time<timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.sawmill.amateurClickerBonus = 0;
+                break;
+            case "Mine":
+                BuildingManager.Instance.mine.amateurClickerBonus = ((ResourceManager.Instance.startingOrePerClick * 10) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Refinery":
+                BuildingManager.Instance.refinery.amateurClickerBonus = ((ResourceManager.Instance.startingVenacidPerClick * 10) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Barrack":
+                BuildingManager.Instance.barraks.amateurClickerBonus = ((BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick * 10) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.barraks.amateurClickerBonus = 0;
+                break;
+            case "House":
+                BuildingManager.Instance.house.amateurClickerBonus = ((ResourceManager.Instance.startingWorkerPerClick * 10) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.house.amateurClickerBonus = 0;
+                break;
+            case "Head Quarter":
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = ((BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().removeTheTimeOnClick * 10) / 100); ;
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = 0;
+                break;
+            default:
+                break;
+        }
+
 	}
+    protected IEnumerator LearnerClicks()
+    {
+        float time = 0;
+        float timeLimite = 5;
+        switch (buildingName)
+        {
+            case "SawMill":
+                BuildingManager.Instance.sawmill.amateurClickerBonus = ((ResourceManager.Instance.startingWoodPerClick * 50) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.sawmill.amateurClickerBonus = 0;
+                break;
+            case "Mine":
+                BuildingManager.Instance.mine.amateurClickerBonus = ((ResourceManager.Instance.startingOrePerClick * 50) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Refinery":
+                BuildingManager.Instance.refinery.amateurClickerBonus = ((ResourceManager.Instance.startingVenacidPerClick * 50) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Barrack":
+                BuildingManager.Instance.barraks.amateurClickerBonus = ((BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick * 50) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.barraks.amateurClickerBonus = 0;
+                break;
+            case "House":
+                BuildingManager.Instance.house.amateurClickerBonus = ((ResourceManager.Instance.startingWorkerPerClick * 50) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.house.amateurClickerBonus = 0;
+                break;
+            case "Head Quarter":
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = ((BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().removeTheTimeOnClick*50)/100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = 0;
+                break;
+            default:
+                break;
+        }
+    }
+    protected IEnumerator InitiatedClicks()
+    {
+        float time = 0;
+        float timeLimite = 10;
+        switch (buildingName)
+        {
+            case "SawMill":
+                BuildingManager.Instance.sawmill.amateurClickerBonus = ((ResourceManager.Instance.startingWoodPerClick * 100) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.sawmill.amateurClickerBonus = 0;
+                break;
+            case "Mine":
+                BuildingManager.Instance.mine.amateurClickerBonus = ((ResourceManager.Instance.startingOrePerClick * 100) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Refinery":
+                BuildingManager.Instance.refinery.amateurClickerBonus = ((ResourceManager.Instance.startingVenacidPerClick * 100) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Barrack":
+                BuildingManager.Instance.barraks.amateurClickerBonus = ((BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick * 100) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.barraks.amateurClickerBonus = 0;
+                break;
+            case "House":
+                BuildingManager.Instance.house.amateurClickerBonus = ((ResourceManager.Instance.startingWorkerPerClick * 100) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.house.amateurClickerBonus = 0;
+                break;
+            case "Head Quarter":
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = ((BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().removeTheTimeOnClick * 100) / 100); ;
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = 0;
+                break;
+            default:
+                break;
+        }
+    }
+    protected IEnumerator TeacherClicks()
+    {
+        float time = 0;
+        float timeLimite = 50;
+        switch (buildingName)
+        {
+            case "SawMill":
+                BuildingManager.Instance.sawmill.amateurClickerBonus = ((ResourceManager.Instance.startingWoodPerClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.sawmill.amateurClickerBonus = 0;
+                break;
+            case "Mine":
+                BuildingManager.Instance.mine.amateurClickerBonus = ((ResourceManager.Instance.startingOrePerClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Refinery":
+                BuildingManager.Instance.refinery.amateurClickerBonus = ((ResourceManager.Instance.startingVenacidPerClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Barrack":
+                BuildingManager.Instance.barraks.amateurClickerBonus = ((BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.barraks.amateurClickerBonus = 0;
+                break;
+            case "House":
+                BuildingManager.Instance.house.amateurClickerBonus = ((ResourceManager.Instance.startingWorkerPerClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.house.amateurClickerBonus = 0;
+                break;
+            case "Head Quarter":
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = ((BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().removeTheTimeOnClick * 500) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = 0;
+                break;
+            default:
+                break;
+        }
+    }
+    protected IEnumerator MasterClicks()
+    {
+        float time = 0;
+        float timeLimite = 100;
+        switch (buildingName)
+        {
+            case "SawMill":
+                BuildingManager.Instance.sawmill.amateurClickerBonus = ((ResourceManager.Instance.startingWoodPerClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.sawmill.amateurClickerBonus = 0;
+                break;
+            case "Mine":
+                BuildingManager.Instance.mine.amateurClickerBonus = ((ResourceManager.Instance.startingOrePerClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Refinery":
+                BuildingManager.Instance.refinery.amateurClickerBonus = ((ResourceManager.Instance.startingVenacidPerClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.mine.amateurClickerBonus = 0;
+                break;
+            case "Barrack":
+                BuildingManager.Instance.barraks.amateurClickerBonus = ((BuildingManager.Instance.barraks.GetComponent<Barrack>().timeReducedOnClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.barraks.amateurClickerBonus = 0;
+                break;
+            case "House":
+                BuildingManager.Instance.house.amateurClickerBonus = ((ResourceManager.Instance.startingWorkerPerClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.house.amateurClickerBonus = 0;
+                break;
+            case "Head Quarter":
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = ((BuildingManager.Instance.generalQuarter.GetComponent<GeneralQuarter>().removeTheTimeOnClick * 1000) / 100);
+                while (time < timeLimite)
+                {
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                BuildingManager.Instance.generalQuarter.amateurClickerBonus = 0;
+                break;
+            default:
+                break;
+        }
+    }
 
     public bool LevelUp()
     {

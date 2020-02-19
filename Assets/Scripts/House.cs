@@ -18,10 +18,10 @@ public class House : ResourceBuilding
 			}
 			else if(isCurrentlyUpgrading == false)
 			{
-				ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick;
+				ResourceManager.Instance.worker.totalResource += ResourceManager.Instance.worker.resourcePerClick + amateurClickerBonus;
 				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeHouse);
 				RefreshInterface();
-				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick),imNormalUse);
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick + amateurClickerBonus),imNormalUse);
 				SoundManager.Instance.PlaySoundEffect("ClickHouse_SFX");
 			}
 				if (!ResourceManager.Instance.isHouseProducing)

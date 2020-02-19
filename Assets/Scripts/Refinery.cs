@@ -18,10 +18,10 @@ public class Refinery : ResourceBuilding
 			}
 			else if(isCurrentlyUpgrading == false)
 			{
-				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick;
+				ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerClick + amateurClickerBonus;
 				UIManager.Instance.upgradeButton.onClick.AddListener(UpgradeRefinery);
 				RefreshInterface();
-				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick),imNormalUse);
+				InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick + amateurClickerBonus),imNormalUse);
 				SoundManager.Instance.PlaySoundEffect("ClickRefinery_SFX");
 			}
 				if (!ResourceManager.Instance.isRefineryProducing)
