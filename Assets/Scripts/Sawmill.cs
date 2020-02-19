@@ -35,11 +35,26 @@ public class Sawmill : ResourceBuilding
 			}
 			stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Sawmill"));
 		}
+        if (ResourceManager.Instance.isSawmillProducing == false&&SpherierManager.Instance.heavyClubBonus==true)
+        {
+            StartCoroutine(HeavyClubSawmillBonus());
+        }
 
+    }
+    IEnumerator HeavyClubSawmillBonus()
+    {
+        ResourceManager.Instance.heavyClubSawMillBonus = 2;
+        float time = 0;
+        while (time < 60) 
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        ResourceManager.Instance.heavyClubSawMillBonus = 1;
     }
 
 
-	public void UpgradeSawmill()
+    public void UpgradeSawmill()
     {
         if (LevelUp())
         {

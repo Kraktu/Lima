@@ -9,6 +9,8 @@ public class SpherierManager : MonoBehaviour
     public double immigrationMultiplicator = 2;
     public double scaleWorshipCD = 10000;
     public double fastMobilizationCD = 5000;
+    [HideInInspector]
+    public bool heavyClubBonus=false;
     static public SpherierManager Instance { get; private set; }
     private void Awake()
     {
@@ -272,6 +274,10 @@ public class SpherierManager : MonoBehaviour
     {
         MapManager.Instance.spawnBonus.Bonus[4].destroyClicks = (int)goldKeyBonus;
     }
+    public void HeavyClub()
+    {
+        heavyClubBonus = true;
+    }
     //WIP
     public void ReloadOne()
     {
@@ -301,10 +307,7 @@ public class SpherierManager : MonoBehaviour
     {
         Debug.Log("WIP");
     }
-    public void HeavyClub()
-    {
-        Debug.Log("WIP");
-    }
+
     #endregion
     #region Defense
     public double ApocalypseMessengerBonus = 25, whistlingInTheNightBonus = 1, proselytizingBonus = 1,ardentDefenderBonus=10;

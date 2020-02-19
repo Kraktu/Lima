@@ -33,9 +33,24 @@ public class Refinery : ResourceBuilding
 					StopCoroutine(stopProducingCoroutine);
 				}
 				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Refinery"));
-		}
+            if (ResourceManager.Instance.isRefineryProducing == false && SpherierManager.Instance.heavyClubBonus == true)
+            {
+                StartCoroutine(HeavyClubRefineryBonus());
+            }
+        }
 	}
-	public void UpgradeRefinery()
+    IEnumerator HeavyClubRefineryBonus()
+    {
+        ResourceManager.Instance.heavyClubRefineryBonus = 2;
+        float time = 0;
+        while (time < 60)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        ResourceManager.Instance.heavyClubRefineryBonus = 1;
+    }
+    public void UpgradeRefinery()
 	{
 		if (LevelUp())
 		{

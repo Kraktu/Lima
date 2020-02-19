@@ -33,10 +33,25 @@ public class House : ResourceBuilding
 					StopCoroutine(stopProducingCoroutine);
 				}
 				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("House"));
-		}
+            if (ResourceManager.Instance.isHouseProducing == false && SpherierManager.Instance.heavyClubBonus == true)
+            {
+                StartCoroutine(HeavyClubHouseBonus());
+            }
+        }
 	}
+    IEnumerator HeavyClubHouseBonus()
+    {
+        ResourceManager.Instance.heavyClubHouseBonus = 2;
+        float time = 0;
+        while (time < 60)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        ResourceManager.Instance.heavyClubHouseBonus = 1;
+    }
 
-	public void UpgradeHouse()
+    public void UpgradeHouse()
 	{
 		if (LevelUp())
 		{
