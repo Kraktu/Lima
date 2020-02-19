@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     static public UIManager Instance { get; private set; }
 
     public GameObject buildingUICanvas, totalResourceCanvas, enemyVillageCanvas, spyPanel, TroopsProducingCanvas, UnitPanel;
-    public Text buildingNameText, descriptionText, priceText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
+    public Text buildingNameText, descriptionText, priceWoodText,priceOreText,priceVenacidText, autoProdText, clickProdText, villagersText, woodNumberText, oreNumberText, workersNumberText, venacidNumberText, gemsNumberText, skillPointsText, firstSkillPointUpgrade, secondSkillPointUpgrade, thirdSkillPointUpgrade, fourthSkillPointUpgrade, WaitingforUnitSelectionText;
     public Button upgradeButton, addWorkerButton, addFirstSkillPoint, addSecondSkillPoint, addThirdSkillPoint, addFourthSkillPoint;
     public Image workerIcon, buildingIcon,exclamationPoint;
 
@@ -88,11 +88,13 @@ public class UIManager : MonoBehaviour
     {
         skillPointText.text = BigIntToString(ResourceManager.Instance.skillPoint);
     }
-    public void BuildingInterfaceUpdate(string buildingName, string description, string price, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString)
+    public void BuildingInterfaceUpdate(string buildingName, string description, string currentWoodprice,string currentOrePrice, string currentVenacid, string autoProd, string clickProd, string villagers, Sprite workerSpecifiedIcon, Sprite buildingSpecifiedIcon, string skillPoints, string firstSkillPointUpgradeString, string secondSkillpointUpgradeString, string thirdSkillPointUpgradeString, string fourthSkillPointUpgradeString)
     {
         buildingNameText.text = buildingName;
         descriptionText.text = description;
-        priceText.text = price;
+        priceWoodText.text = currentWoodprice;
+        priceOreText.text = currentOrePrice;
+        priceVenacidText.text = currentVenacid;
         autoProdText.text = autoProd;
         clickProdText.text = clickProd;
         villagersText.text = villagers;

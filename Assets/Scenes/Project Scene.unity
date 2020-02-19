@@ -16593,7 +16593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &384230288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21383,6 +21383,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 501650678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &506074252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506074253}
+  - component: {fileID: 506074254}
+  - component: {fileID: 506074255}
+  m_Layer: 5
+  m_Name: VenacidPriceText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &506074253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506074252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.020000026, z: 0.020000026}
+  m_Children: []
+  m_Father: {fileID: 1040780419}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.591, y: -0.55}
+  m_SizeDelta: {x: 148.097, y: 27.054}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &506074254
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506074252}
+  m_CullTransparentMesh: 0
+--- !u!114 &506074255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506074252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 12
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Price for upgrade :
+
+'
 --- !u!1 &506473306
 GameObject:
   m_ObjectHideFlags: 0
@@ -23370,7 +23449,7 @@ RectTransform:
   m_LocalScale: {x: 0.9, y: 0.90000105, z: 0.90000105}
   m_Children: []
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43406,6 +43485,9 @@ Transform:
   - {fileID: 1967243893}
   - {fileID: 1265481446}
   - {fileID: 2033427412}
+  - {fileID: 1401439681}
+  - {fileID: 1889382841}
+  - {fileID: 506074253}
   - {fileID: 1116412196}
   - {fileID: 550875933}
   - {fileID: 1456823848}
@@ -46862,7 +46944,7 @@ RectTransform:
   m_LocalScale: {x: 1.60389, y: 1.6038918, z: 1.6038918}
   m_Children: []
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -47176,7 +47258,7 @@ RectTransform:
   m_Children:
   - {fileID: 304514832}
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -60008,6 +60090,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1400874429}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1401439680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1401439681}
+  - component: {fileID: 1401439682}
+  - component: {fileID: 1401439683}
+  m_Layer: 5
+  m_Name: WoodPriceText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1401439681
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401439680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.020000026, z: 0.020000026}
+  m_Children: []
+  m_Father: {fileID: 1040780419}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.591, y: 0.11}
+  m_SizeDelta: {x: 148.097, y: 27.054}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1401439682
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401439680}
+  m_CullTransparentMesh: 0
+--- !u!114 &1401439683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401439680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 12
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Price for upgrade :
+
+'
 --- !u!1001 &1408205516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63141,7 +63302,7 @@ RectTransform:
   m_LocalScale: {x: 0.02, y: 0.020000027, z: 0.020000027}
   m_Children: []
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -69673,7 +69834,9 @@ MonoBehaviour:
   UnitPanel: {fileID: 1062679326}
   buildingNameText: {fileID: 386845223}
   descriptionText: {fileID: 1800091584}
-  priceText: {fileID: 2033427413}
+  priceWoodText: {fileID: 1401439683}
+  priceOreText: {fileID: 1889382843}
+  priceVenacidText: {fileID: 506074255}
   autoProdText: {fileID: 1967243894}
   clickProdText: {fileID: 1265481447}
   villagersText: {fileID: 1456823849}
@@ -74756,7 +74919,7 @@ RectTransform:
   m_LocalScale: {x: 1.60389, y: 1.6038918, z: 1.6038918}
   m_Children: []
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -82032,7 +82195,7 @@ RectTransform:
   m_LocalScale: {x: 1.60389, y: 1.6038918, z: 1.6038918}
   m_Children: []
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -82464,6 +82627,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884836274}
   m_CullTransparentMesh: 0
+--- !u!1 &1889382840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1889382841}
+  - component: {fileID: 1889382842}
+  - component: {fileID: 1889382843}
+  m_Layer: 5
+  m_Name: OrePriceText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1889382841
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889382840}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.02, y: 0.020000026, z: 0.020000026}
+  m_Children: []
+  m_Father: {fileID: 1040780419}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.591, y: -0.22}
+  m_SizeDelta: {x: 148.097, y: 27.054}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1889382842
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889382840}
+  m_CullTransparentMesh: 0
+--- !u!114 &1889382843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889382840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 12
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Price for upgrade :
+
+'
 --- !u!1001 &1889472260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88195,7 +88437,7 @@ RectTransform:
   m_Children:
   - {fileID: 1985494161}
   m_Father: {fileID: 1040780419}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -89634,7 +89876,7 @@ GameObject:
   - component: {fileID: 2033427414}
   - component: {fileID: 2033427413}
   m_Layer: 5
-  m_Name: Price
+  m_Name: IntroPriceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89648,7 +89890,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033427411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 0.02, y: 0.020000026, z: 0.020000026}
   m_Children: []
   m_Father: {fileID: 1040780419}
@@ -89656,8 +89898,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.916, y: -0}
-  m_SizeDelta: {x: 180.637, y: 64.987}
+  m_AnchoredPosition: {x: 2.591, y: 0.379}
+  m_SizeDelta: {x: 148.097, y: 27.054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033427413
 MonoBehaviour:
@@ -89692,11 +89934,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Price for upgrade :
 
-    tatata woods
-
-    tatata ores
-
-    tatata venacid'
+'
 --- !u!222 &2033427414
 CanvasRenderer:
   m_ObjectHideFlags: 0

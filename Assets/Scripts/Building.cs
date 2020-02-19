@@ -52,7 +52,7 @@ public class Building:MonoBehaviour
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
     protected bool workerGotUpgraded, skillFirstUpgraded,skillSecondUpgraded,skillThirdUpgraded,skillFourthUpgraded;
-    protected string currentCost,villagers,buildingNamePlusLevel;
+    protected string currentWoodCost,currentOreCost,currentVenacidCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
 	double _woodUpgradeCost, _oreUpgradeCost, _venacidUpgradeCost;
@@ -74,12 +74,16 @@ public class Building:MonoBehaviour
 			{
 				if (level == 0)
 				{
-					currentCost = "Cost :\n"+UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
+                    currentWoodCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n";
+                    currentOreCost = UIManager.Instance.BigIntToString(oreCost) + " ores\n";
+                    currentVenacidCost = UIManager.Instance.BigIntToString(venacidCost) + " venacids";
 				}
 				else if (level > 0)
 				{
-					currentCost = "Cost :\n" + UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
-				}
+                    currentWoodCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n";
+                    currentOreCost = UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n";
+                    currentVenacidCost = UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+                }
 				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
 				UIManager.Instance.BuildingInterfaceActivation(true);
@@ -285,16 +289,20 @@ public class Building:MonoBehaviour
         villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
         if (level==0)
         {
-            currentCost = "Cost :\n" + UIManager.Instance.BigIntToString(woodCost) + " woods\n" + UIManager.Instance.BigIntToString(oreCost) + " ores\n" + UIManager.Instance.BigIntToString(venacidCost) + " venacids";
-			UIManager.Instance.upgradeText.text = "Build";
+            currentWoodCost = UIManager.Instance.BigIntToString(woodCost) + " woods";
+            currentOreCost = UIManager.Instance.BigIntToString(oreCost) + " ores";
+            currentVenacidCost = UIManager.Instance.BigIntToString(venacidCost) + " venacids"; 
+            UIManager.Instance.upgradeText.text = "Build";
 		}
         else
         {
-            currentCost = "Cost :\n" + UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n" + UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n" + UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
-			UIManager.Instance.upgradeText.text = "Upgrade";
+            currentWoodCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods";
+            currentOreCost = UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores";
+            currentVenacidCost = UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+            UIManager.Instance.upgradeText.text = "Upgrade";
         }
         buildingNamePlusLevel = buildingName + " Lv." + level;
-        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
+        UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points", firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName);
 		if(skillPoints >0)
 		{
 			UIManager.Instance.exclamationPoint.gameObject.SetActive(true);
