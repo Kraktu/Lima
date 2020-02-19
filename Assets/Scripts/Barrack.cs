@@ -48,7 +48,20 @@ public class Barrack : Building
 			SoundManager.Instance.PlaySoundEffect("ClickBarrack_SFX");
 		}
 	}
-	public override void AddWorkerToProducing()
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            for (int i = 0; i < unitsToUnlock.Length; i++)
+            {
+                unitsToUnlock[i].timeToReduceMultiplicator += 0.1;
+            }
+            UpdateBarrack();
+            RefreshInterface();
+        }
+    }
+    public override void AddWorkerToProducing()
 	{
 		base.AddWorkerToProducing();
 		if (workerGotUpgraded)

@@ -51,7 +51,7 @@ public class Building:MonoBehaviour
 
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
-    protected bool workerGotUpgraded, skillFirstUpgraded,skillSecondUpgraded,skillThirdUpgraded,skillFourthUpgraded;
+    protected bool workerGotUpgraded, workerGotDowngraded, skillFirstUpgraded,skillSecondUpgraded,skillThirdUpgraded,skillFourthUpgraded;
     protected string currentWoodCost,currentOreCost,currentVenacidCost,villagers,buildingNamePlusLevel;
 
 	int _currentUsedModel=0;
@@ -111,7 +111,9 @@ public class Building:MonoBehaviour
                     UIManager.Instance.addWorkerButton.gameObject.SetActive(true);
                 }
 				UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
+                UIManager.Instance.removeWorkerButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
+                UIManager.Instance.removeWorkerButton.onClick.AddListener(RemoveWorkerToProducing);
 				UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
 				UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
 				UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
@@ -162,6 +164,18 @@ public class Building:MonoBehaviour
             return false;
         }
 
+    }
+    public virtual void RemoveWorkerToProducing()
+    {
+        workerGotDowngraded = false;
+        if (currentWorkers > 0)
+        {
+            ResourceManager.Instance.worker.totalResource++;
+            currentWorkers--;
+            RefreshInterface();
+            AnimationBuildings();
+            workerGotDowngraded = true;
+        }
     }
 	public virtual void AddWorkerToProducing()
 	{

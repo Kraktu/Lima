@@ -43,7 +43,17 @@ public class Refinery : ResourceBuilding
 			RefreshInterface();
 		}
 	}
-	public override void AddWorkerToProducing()
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            ResourceManager.Instance.percentVenacidBonusPerSec -= 1;
+            UpdateRefineryProducing();
+            RefreshInterface();
+        }
+    }
+    public override void AddWorkerToProducing()
 	{
 		base.AddWorkerToProducing();
 		if (workerGotUpgraded)
