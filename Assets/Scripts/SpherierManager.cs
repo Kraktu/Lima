@@ -168,7 +168,7 @@ public class SpherierManager : MonoBehaviour
     #region Passive
 
     public double AdministrationBonus = 5;
-    public double PopulationServiceBonusPercent = 5;
+    public double PopulationServiceBonusPercent = 5, workControlerPercentBonus = 5;
     public void Administration()
     {
         BuildingManager.Instance.generalQuarter.workersLimit += AdministrationBonus;
@@ -178,32 +178,49 @@ public class SpherierManager : MonoBehaviour
         ResourceManager.Instance.percentWorkerBonusPerSec += PopulationServiceBonusPercent;
         BuildingManager.Instance.house.GetComponent<House>().UpdateHouseProducing();
     }
-
-
-    //WIP
-
     public void Immigration()
     {
         UIManager.Instance.immigrationSkill.gameObject.SetActive(true);
     }
     public void ProfessionalReorientation()
     {
-        Debug.Log("WIP");
+        UIManager.Instance.removeWorkerButton.gameObject.SetActive(true);
+    } 
+    public void WorkControler()
+    {
+        for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+        {
+            Sawmill sawmill = BuildingManager.Instance.allBuilding[i].GetComponent<Sawmill>() ;
+            Mine mine = BuildingManager.Instance.allBuilding[i].GetComponent<Mine>();
+            Refinery refinery = BuildingManager.Instance.allBuilding[i].GetComponent<Refinery>();
+            if (sawmill != null)
+            {
+                sawmill.timeBeforePausedBuilding += (float)workControlerPercentBonus;
+            }
+            else if (mine != null)
+            {
+                mine.timeBeforePausedBuilding+= (float)workControlerPercentBonus;
+            }
+            else if (refinery!=null)
+            {
+                refinery.timeBeforePausedBuilding+= (float)workControlerPercentBonus;
+            }
+        }
     }
+
+
+    //WIP
+
+
     public void Insructor()
     {
         Debug.Log("WIP");
     }
-
     public void TurnOfDuty()
     {
         Debug.Log("WIP");
     }
 
-    public void WorkControler()
-    {
-        Debug.Log("WIP");
-    }
     #endregion
     #region Active
 

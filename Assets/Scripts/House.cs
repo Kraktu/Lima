@@ -48,6 +48,16 @@ public class House : ResourceBuilding
             RefreshInterface();
 		}
 	}
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            ResourceManager.Instance.percentWorkerBonusPerSec -= 1;
+            UpdateHouseProducing();
+            RefreshInterface();
+        }
+    }
     public override void AddWorkerToProducing()
     {
         base.AddWorkerToProducing();

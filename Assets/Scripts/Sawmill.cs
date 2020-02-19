@@ -47,6 +47,16 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            ResourceManager.Instance.percentWoodBonusPerSec -= 1;
+            UpdateSawmillProducing();
+            RefreshInterface();
+        }
+    }
     public override void AddWorkerToProducing()
     {
         base.AddWorkerToProducing();

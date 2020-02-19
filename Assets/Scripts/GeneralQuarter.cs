@@ -94,6 +94,19 @@ public class GeneralQuarter : Building
         }
 	}
 
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            for (int i = 0; i < buildings.Count; i++)
+            {
+                buildings[i].constructionTime += buildings[i].constructionTime / workerFactor;
+            }
+            RefreshInterface();
+        }
+    }
+
     public override void AddWorkerToProducing()
     {
         base.AddWorkerToProducing();

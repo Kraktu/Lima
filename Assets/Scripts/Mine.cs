@@ -44,6 +44,16 @@ public class Mine : ResourceBuilding
             RefreshInterface();
 		}
 	}
+    public override void RemoveWorkerToProducing()
+    {
+        base.RemoveWorkerToProducing();
+        if (workerGotDowngraded)
+        {
+            ResourceManager.Instance.percentOreBonusPerSec -= 1;
+            UpdateMineProducing();
+            RefreshInterface();
+        }
+    }
     public override void AddWorkerToProducing()
     {
         base.AddWorkerToProducing();
