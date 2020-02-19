@@ -283,33 +283,45 @@ public class SpherierManager : MonoBehaviour
     }
     public void AmateurClicker()
     {
-		//if (ResourceManager.Instance.)
-		//{
-		//
-		//}
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			BuildingManager.Instance.allBuilding[i].isActiveAmateurClicker = true;
+		}
     }
     public void LearnerClicker()
     {
-        Debug.Log("WIP");
-    }
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			BuildingManager.Instance.allBuilding[i].isActiveLearnerClicker = true;
+		}
+	}
     public void InitiatedClicker()
     {
-        Debug.Log("WIP");
-    }
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			BuildingManager.Instance.allBuilding[i].isActiveInitiatedClicker = true;
+		}
+	}
     public void TeacherClicker()
     {
-        Debug.Log("WIP");
-    }
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			BuildingManager.Instance.allBuilding[i].isActiveTeacherClicker = true;
+		}
+	}
     public void MasterClicker()
     {
-        Debug.Log("WIP");
-    }
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			BuildingManager.Instance.allBuilding[i].isActiveMasterClicker = true;
+		}
+	}
     public void HeavyClub()
     {
-		if ()
-		{
-
-		}
+		//if ()
+		//{
+		//
+		//}
     }
     #endregion
     #region Defense

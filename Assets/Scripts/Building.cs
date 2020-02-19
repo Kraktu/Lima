@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Building:MonoBehaviour
+public class Building : MonoBehaviour
 {
-    public string buildingName, buildingDescription;
+	public string buildingName, buildingDescription;
 	public string firstSkillPointUpgradeName, secondSkillPointUpgradeName, thirdSkillPointUpgradeName, fourthSkillPointUpgradeName;
 	public string firstSkillPointUpgradeNameEnd, secondSkillPointUpgradeNameEnd, thirdSkillPointUpgradeNameEnd, fourthSkillPointUpgradeNameEnd;
-	public double woodCost,oreCost,venacidCost;
+	public double woodCost, oreCost, venacidCost;
 	public double startingWoodUpgradeCost, startingOreUpgradeCost, startingVenacidUpgradeCost;
-    public Vector3 magicRatio;
-    public bool canBuild=false;
-    public GameObject[] models;
-    public int[] upgradeModelsLevelStep;
-    public float level = 0;
-    public double currentWorkers, workersLimit, workerLimitUpgrade, workerLimitUpgradeLevelStep;
-	public Sprite workerIconBuilding,buildingIcon;
+	public Vector3 magicRatio;
+	public bool canBuild = false;
+	public GameObject[] models;
+	public int[] upgradeModelsLevelStep;
+	public float level = 0;
+	public double currentWorkers, workersLimit, workerLimitUpgrade, workerLimitUpgradeLevelStep;
+	public Sprite workerIconBuilding, buildingIcon;
 	public float constructionTimeMultiplicator;
 	public double constructionTime;
 	public double skillFirstBonus = 1;
@@ -25,104 +25,178 @@ public class Building:MonoBehaviour
 	public double skillThirdBonus = 1;
 	public double skillFourthBonus = 1;
 	public TextMesh ConstructionTimerText;
-    public GameObject[] scaffoldingModels;
+	public GameObject[] scaffoldingModels;
 	public GameObject constructionPoof;
 	public int skillPointUpgradeLevelStep;
 	public double timeToReduce = 5;
-    public bool isBuildingPanelDisplayedLeft=true;
+	public bool isBuildingPanelDisplayedLeft = true;
 
-    public GameObject vfx, particlesOnClick;
-    public Sprite imNormalUse;
+	public GameObject vfx, particlesOnClick;
+	public Sprite imNormalUse;
 	public Sprite imDuringUpgrade;
 	public Vector3 offset;
 
-    [HideInInspector]
-	public double reductionPercentCostBonus=0,reductionFlatCostBonus=0;
 	[HideInInspector]
-	public bool isCurrentlyUpgrading=false;
-    [HideInInspector]
-    public double elpasedTime = 0;
-    [HideInInspector]
-    public bool refreshInterface;
+	public double reductionPercentCostBonus = 0, reductionFlatCostBonus = 0;
+	[HideInInspector]
+	public bool isCurrentlyUpgrading = false;
+	[HideInInspector]
+	public double elpasedTime = 0;
+	[HideInInspector]
+	public bool refreshInterface;
 	[HideInInspector]
 	public Animator anim;
 	[HideInInspector]
-	public float skillPoints =0;
+	public float skillPoints = 0;
 
 	protected int firstSkillPointLevel = 0, secondSkillPointLevel = 0, thirdSkillPointLevel = 0, fourthSkillPointLevel = 0;
 
-    protected bool workerGotUpgraded, workerGotDowngraded, skillFirstUpgraded,skillSecondUpgraded,skillThirdUpgraded,skillFourthUpgraded;
-    protected string currentWoodCost,currentOreCost,currentVenacidCost,villagers,buildingNamePlusLevel;
+	protected bool workerGotUpgraded, workerGotDowngraded, skillFirstUpgraded, skillSecondUpgraded, skillThirdUpgraded, skillFourthUpgraded;
+	protected string currentWoodCost, currentOreCost, currentVenacidCost, villagers, buildingNamePlusLevel;
 
-	int _currentUsedModel=0;
+	int _currentUsedModel = 0;
 	double _woodUpgradeCost, _oreUpgradeCost, _venacidUpgradeCost;
 
+	[HideInInspector]
 	public int consecutiveClicks;
+	[HideInInspector]
+	public bool isActiveAmateurClicker=false, isActiveLearnerClicker=false, isActiveInitiatedClicker=false, isActiveTeacherClicker=false, isActiveMasterClicker=false;
 
-    public virtual void Start()
-    {
-        //wesh
-    }
-    public virtual void OnMouseDown()
-    {
+	public virtual void Start()
+	{
+		//wesh
+	}
+	public virtual void OnMouseDown()
+	{
+		int savedConsecutiveClicks = consecutiveClicks;
+		for (int i = 0; i < BuildingManager.Instance.allBuilding.Count; i++)
+		{
+			consecutiveClicks = 0;
+		}
+		consecutiveClicks = savedConsecutiveClicks;
+		consecutiveClicks++;
+		if (isActiveAmateurClicker == true)
+		{
+			AmateurClicker();
+		}
+		if (isActiveLearnerClicker == true)
+		{
+			LearnerClicker();
+		}
+		if (isActiveInitiatedClicker == true)
+		{
+			InitiatedClicker();
+		}
+		if (isActiveTeacherClicker == true)
+		{
+			TeacherClicker();
+		}
+		if (isActiveMasterClicker == true)
+		{
+			MasterClicker();
+		}
 		if (!EventSystem.current.IsPointerOverGameObject())
 		{
-			if(particlesOnClick != null)
+			if (particlesOnClick != null)
 			{
-				GameObject go = Instantiate(particlesOnClick,transform.position, Quaternion.identity);
-				Destroy(go,1);
+				GameObject go = Instantiate(particlesOnClick, transform.position, Quaternion.identity);
+				Destroy(go, 1);
 			}
 			if (isCurrentlyUpgrading == false)
 			{
 				if (level == 0)
 				{
-                    currentWoodCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n";
-                    currentOreCost = UIManager.Instance.BigIntToString(oreCost) + " ores\n";
-                    currentVenacidCost = UIManager.Instance.BigIntToString(venacidCost) + " venacids";
+					currentWoodCost = UIManager.Instance.BigIntToString(woodCost) + " woods\n";
+					currentOreCost = UIManager.Instance.BigIntToString(oreCost) + " ores\n";
+					currentVenacidCost = UIManager.Instance.BigIntToString(venacidCost) + " venacids";
 				}
 				else if (level > 0)
 				{
-                    currentWoodCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n";
-                    currentOreCost = UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n";
-                    currentVenacidCost = UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
-                }
+					currentWoodCost = UIManager.Instance.BigIntToString(_woodUpgradeCost) + " woods\n";
+					currentOreCost = UIManager.Instance.BigIntToString(_oreUpgradeCost) + " ores\n";
+					currentVenacidCost = UIManager.Instance.BigIntToString(_venacidUpgradeCost) + " venacids";
+				}
 				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
 				UIManager.Instance.BuildingInterfaceActivation(true);
-                if (isBuildingPanelDisplayedLeft)
-                {
-                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
-                }
-                else
-                {
-                    UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
-                }
+				if (isBuildingPanelDisplayedLeft)
+				{
+					UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
+				}
+				else
+				{
+					UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
+				}
 				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addThirdSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addFourthSkillPoint.onClick.RemoveAllListeners();
-                if (level==0)
-                {
-                    UIManager.Instance.addWorkerButton.gameObject.SetActive(false);
-                }
-                else
-                {
-                    UIManager.Instance.addWorkerButton.gameObject.SetActive(true);
-                }
+				if (level == 0)
+				{
+					UIManager.Instance.addWorkerButton.gameObject.SetActive(false);
+				}
+				else
+				{
+					UIManager.Instance.addWorkerButton.gameObject.SetActive(true);
+				}
 				UIManager.Instance.addWorkerButton.onClick.RemoveAllListeners();
-                UIManager.Instance.removeWorkerButton.onClick.RemoveAllListeners();
+				UIManager.Instance.removeWorkerButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addWorkerButton.onClick.AddListener(AddWorkerToProducing);
-                UIManager.Instance.removeWorkerButton.onClick.AddListener(RemoveWorkerToProducing);
+				UIManager.Instance.removeWorkerButton.onClick.AddListener(RemoveWorkerToProducing);
 				UIManager.Instance.addFirstSkillPoint.onClick.AddListener(AddFirstSkillPoint);
 				UIManager.Instance.addSecondSkillPoint.onClick.AddListener(AddSecondSkillPoint);
 				UIManager.Instance.addThirdSkillPoint.onClick.AddListener(AddThirdSkillPoint);
 				UIManager.Instance.addFourthSkillPoint.onClick.AddListener(AddFourthSkillPoint);
 				RefreshInterface();
 			}
-			
+
 		}
-    }
+	}
+
+	public void AmateurClicker()
+	{
+		if (consecutiveClicks == 10)
+		{
+			StartCoroutine(ActiveClicks());
+		}
+	}
+	public void LearnerClicker()
+	{
+		if(consecutiveClicks == 50)
+		{
+			StartCoroutine(ActiveClicks());
+		}
+	}
+	public void InitiatedClicker()
+	{
+		if (consecutiveClicks == 100)
+		{
+			StartCoroutine(ActiveClicks());
+		}
+	}
+	public void TeacherClicker()
+	{
+		if (consecutiveClicks ==500)
+		{
+			StartCoroutine(ActiveClicks());
+		}
+	}
+	public void MasterClicker()
+	{
+		if (consecutiveClicks == 1000)
+		{
+			StartCoroutine(ActiveClicks());
+		}
+	}
+
+	protected IEnumerator ActiveClicks()
+	{
+		while (true)
+		{
+			yield return null;
+		}
+	}
 
     public bool LevelUp()
     {
