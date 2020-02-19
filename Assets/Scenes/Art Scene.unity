@@ -12183,7 +12183,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Build
+
+'
 --- !u!222 &304514834
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25127,6 +25129,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
@@ -29447,18 +29455,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8995912730206668227, guid: 67ae8cb18f5a3f348a2100fbca1f44d5,
     type: 3}
   m_PrefabInstance: {fileID: 695392827}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &696388317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2359550421417699771, guid: 483a50c9380c8924ebc9232b57bcc427,
-    type: 3}
-  m_PrefabInstance: {fileID: 1422751842}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &696388318 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-    type: 3}
-  m_PrefabInstance: {fileID: 1422751842}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &704436876
 PrefabInstance:
@@ -37137,6 +37133,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
@@ -41012,7 +41014,7 @@ Transform:
   m_Children:
   - {fileID: 305339734}
   - {fileID: 302685981}
-  - {fileID: 696388318}
+  - {fileID: 1589054594}
   - {fileID: 1874072183}
   - {fileID: 1476924112}
   - {fileID: 882203768}
@@ -59741,6 +59743,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites: []
   perClickMagicRatioUpgrade: 1.155
   perSecMagicRatioUpgrade: 1.1825
@@ -61047,80 +61055,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422737067}
   m_CullTransparentMesh: 0
---- !u!1001 &1422751842
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 985994980}
-    m_Modifications:
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699770, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699771, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_Name
-      value: SawmillLVL01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359550421417699771, guid: 483a50c9380c8924ebc9232b57bcc427,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 483a50c9380c8924ebc9232b57bcc427, type: 3}
 --- !u!1 &1425760475
 GameObject:
   m_ObjectHideFlags: 0
@@ -64024,6 +63958,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1804895543}
     neededBuildingLevel: 1
@@ -69704,6 +69644,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1925415391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1589054593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3383487634421142984, guid: 483a50c9380c8924ebc9232b57bcc427,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936999188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1589054594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936999188}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1591818115
 GameObject:
   m_ObjectHideFlags: 0
@@ -69852,7 +69804,12 @@ MonoBehaviour:
   startingOrePerClick: 2.25
   startingVenacidPerClick: 0.5625
   startingWorkerPerClick: 0.0225
+  isTenClicks: 0
   skillPoint: 0
+  heavyClubSawMillBonus: 1
+  heavyClubMineBonus: 1
+  heavyClubRefineryBonus: 1
+  heavyClubHouseBonus: 1
   isSawmillProducing: 1
   isMineProducing: 1
   isHouseProducing: 1
@@ -69927,6 +69884,7 @@ MonoBehaviour:
   WaitingforUnitSelectionText: {fileID: 1520440737}
   upgradeButton: {fileID: 1116412197}
   addWorkerButton: {fileID: 2009608928}
+  removeWorkerButton: {fileID: 0}
   addFirstSkillPoint: {fileID: 385167686}
   addSecondSkillPoint: {fileID: 1624158998}
   addThirdSkillPoint: {fileID: 149412235}
@@ -70095,6 +70053,7 @@ MonoBehaviour:
   immigrationMultiplicator: 2
   scaleWorshipCD: 10000
   fastMobilizationCD: 5000
+  heavyClubBonus: 0
   sharpSpearBonus: 5
   saddleBonus: 5
   slingShotBonus: 5
@@ -70123,6 +70082,7 @@ MonoBehaviour:
   militarySpyLvl: 0
   AdministrationBonus: 5
   PopulationServiceBonusPercent: 5
+  workControlerPercentBonus: 5
   roteBonus: 2
   custodeBonus: 1
   ironKeyBonus: 1
@@ -71124,7 +71084,7 @@ MonoBehaviour:
   models:
   - {fileID: 305339733}
   - {fileID: 302685980}
-  - {fileID: 696388317}
+  - {fileID: 1589054593}
   - {fileID: 1874072182}
   - {fileID: 1476924111}
   - {fileID: 882203767}
@@ -71166,6 +71126,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites: []
   perClickMagicRatioUpgrade: 1.155
   perSecMagicRatioUpgrade: 1.1825
@@ -79467,6 +79433,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
@@ -85088,6 +85060,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.045989, y: 0.05391456, z: 10}
   m_Center: {x: -0.02298317, y: -0.012562806, z: 0}
+--- !u!1001 &1936999188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 985994980}
+    m_Modifications:
+    - target: {fileID: 3383487634421142984, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_Name
+      value: SawmillLVL01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142984, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383487634421142987, guid: 483a50c9380c8924ebc9232b57bcc427,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 483a50c9380c8924ebc9232b57bcc427, type: 3}
 --- !u!1001 &1938248649
 PrefabInstance:
   m_ObjectHideFlags: 0

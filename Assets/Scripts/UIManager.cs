@@ -52,8 +52,8 @@ public class UIManager : MonoBehaviour
 
 	public Sprite spriteBonus;
 	public string stringBonus;
-    
 
+	public Text simultaneousAttack, simultaneousSpy;
 
     private void Awake()
     {
@@ -71,6 +71,7 @@ public class UIManager : MonoBehaviour
         venacidNumberText.text = BigIntToString(ResourceManager.Instance.venacid.totalResource);
         workersNumberText.text = BigIntToString(ResourceManager.Instance.worker.totalResource);
         gemsNumberText.text = BigIntToString(ResourceManager.Instance.gems.totalResource);
+		SimultaneousAttack();
     }
 
     public void BuildingInterfaceActivation(bool isActive)
@@ -217,6 +218,12 @@ public class UIManager : MonoBehaviour
         selectedUnitBigSprite.sprite = bigsprite;
 		EnableButton();
     }
+
+	public void SimultaneousAttack()
+	{
+		simultaneousAttack.text = "Current simultaneous attacks : " + AttackManager.Instance.currentSimultaneousAttack + "/" + AttackManager.Instance.maxSimultaneousAttack;
+		simultaneousSpy.text = "Current simultaneous spying : " + AttackManager.Instance.currentSimultaneousSpying + "/" + AttackManager.Instance.maxSimultaneousSpying;
+	}
 
 	public void Clear(InputField toClear)
 	{

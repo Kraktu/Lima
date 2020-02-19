@@ -25739,6 +25739,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
@@ -38282,6 +38288,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1
@@ -61208,6 +61220,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites: []
   perClickMagicRatioUpgrade: 1.155
   perSecMagicRatioUpgrade: 1.1825
@@ -65763,6 +65781,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1804895543}
     neededBuildingLevel: 1
@@ -71595,7 +71619,12 @@ MonoBehaviour:
   startingOrePerClick: 2.25
   startingVenacidPerClick: 0.5625
   startingWorkerPerClick: 0.0225
+  isTenClicks: 0
   skillPoint: 0
+  heavyClubSawMillBonus: 1
+  heavyClubMineBonus: 1
+  heavyClubRefineryBonus: 1
+  heavyClubHouseBonus: 1
   isSawmillProducing: 1
   isMineProducing: 1
   isHouseProducing: 1
@@ -71839,6 +71868,7 @@ MonoBehaviour:
   immigrationMultiplicator: 2
   scaleWorshipCD: 10000
   fastMobilizationCD: 5000
+  heavyClubBonus: 0
   sharpSpearBonus: 5
   saddleBonus: 5
   slingShotBonus: 5
@@ -72911,6 +72941,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites: []
   perClickMagicRatioUpgrade: 1.155
   perSecMagicRatioUpgrade: 1.1825
@@ -81638,6 +81674,12 @@ MonoBehaviour:
   refreshInterface: 0
   anim: {fileID: 0}
   skillPoints: 0
+  consecutiveClicks: 0
+  isActiveAmateurClicker: 0
+  isActiveLearnerClicker: 0
+  isActiveInitiatedClicker: 0
+  isActiveTeacherClicker: 0
+  isActiveMasterClicker: 0
   prerequisites:
   - neededBuilding: {fileID: 1602226631}
     neededBuildingLevel: 1

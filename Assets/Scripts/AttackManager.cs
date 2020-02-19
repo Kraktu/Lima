@@ -71,6 +71,7 @@ public class AttackManager : MonoBehaviour
         double spyNbr = double.Parse(UIManager.Instance.spyInputText.text);
         if (currentSimultaneousSpying<maxSimultaneousSpying&& spyNbr > 0&& spyNbr <= UnitManager.Instance.spy.unitNbr)
         {
+			currentSimultaneousSpying++;
             UIManager.Instance.Clear(UIManager.Instance.spyInputText.GetComponentInParent<InputField>());
             UIManager.Instance.spyPanel.gameObject.SetActive(false);
             UnitManager.Instance.spy.unitNbr -= spyNbr;
@@ -103,6 +104,7 @@ public class AttackManager : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+		currentSimultaneousSpying--;
         Destroy(go);
         Spy(spyNbr,enemy);
     }
