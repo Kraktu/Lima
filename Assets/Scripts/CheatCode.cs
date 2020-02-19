@@ -13,7 +13,7 @@ public class CheatCode : MonoBehaviour
 				ResourceManager.Instance.wood.totalResource += 1000;
 			}
 		}
-		if (Input.GetKey(KeyCode.N))
+		if (Input.GetKey(KeyCode.Nw))
 		{
 			if (Input.GetKeyDown(KeyCode.P))
 			{
@@ -25,13 +25,6 @@ public class CheatCode : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.P))
 			{
 				ResourceManager.Instance.venacid.totalResource += 1000;
-			}
-		}
-		if (Input.GetKey(KeyCode.W))
-		{
-			if (Input.GetKeyDown(KeyCode.P))
-			{
-				ResourceManager.Instance.wood.totalResource += 1000;
 			}
 		}
 		if (Input.GetKey(KeyCode.U))

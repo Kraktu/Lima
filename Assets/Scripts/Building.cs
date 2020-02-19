@@ -121,14 +121,14 @@ public class Building : MonoBehaviour
 				villagers = UIManager.Instance.BigIntToString(currentWorkers) + "/" + UIManager.Instance.BigIntToString(workersLimit);
 
 				UIManager.Instance.BuildingInterfaceActivation(true);
-				if (isBuildingPanelDisplayedLeft)
-				{
-					UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
-				}
-				else
-				{
-					UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
-				}
+				//if (isBuildingPanelDisplayedLeft)
+				//{
+				//	UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.6f, 12.79f, -13.36f);
+				//}
+				//else
+				//{
+				//	UIManager.Instance.buildingUICanvas.transform.position = new Vector3(-10.06f, 17.8f, -6.2f);
+				//}
 				UIManager.Instance.upgradeButton.onClick.RemoveAllListeners();
 				UIManager.Instance.addFirstSkillPoint.onClick.RemoveAllListeners();
 				UIManager.Instance.addSecondSkillPoint.onClick.RemoveAllListeners();
