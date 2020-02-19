@@ -15,6 +15,8 @@ public class ResourceManager : MonoBehaviour
 
     public int skillPoint=0;
 
+    [HideInInspector]
+    public int heavyClubSawMillBonus = 1, heavyClubMineBonus = 1, heavyClubRefineryBonus = 1, heavyClubHouseBonus = 1;
 	[HideInInspector]
 	public bool isSawmillProducing = true, isMineProducing = true, isHouseProducing = true, isRefineryProducing = true;
     [HideInInspector]
@@ -48,19 +50,19 @@ public class ResourceManager : MonoBehaviour
 		{
 			if (isSawmillProducing)
 			{ 
-				wood.totalResource += wood.resourcePerSec * Time.deltaTime;
+				wood.totalResource += wood.resourcePerSec * Time.deltaTime* heavyClubSawMillBonus;
 			}
 			if(isMineProducing)
 			{
-				ore.totalResource += ore.resourcePerSec * Time.deltaTime;
+				ore.totalResource += ore.resourcePerSec * Time.deltaTime * heavyClubMineBonus;
 			}
 			if(isRefineryProducing)
 			{
-				venacid.totalResource += venacid.resourcePerSec * Time.deltaTime;
+				venacid.totalResource += venacid.resourcePerSec * Time.deltaTime * heavyClubRefineryBonus;
 			}
 			if(isHouseProducing)
 			{
-				worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime;
+				worker.totalResource += worker.resourcePerSec *workerMult* Time.deltaTime * heavyClubHouseBonus;
 			}
             yield return null;
         }

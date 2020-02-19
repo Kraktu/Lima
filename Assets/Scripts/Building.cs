@@ -437,6 +437,8 @@ public class Building : MonoBehaviour
         go.GetComponent<Animation>().Play("WoodLog");
 		Destroy(go, 2);
     }
+
+
 }
 [System.Serializable]
 public struct Prerequisite

@@ -33,8 +33,23 @@ public class Mine : ResourceBuilding
 					StopCoroutine(stopProducingCoroutine);
 				}
 				stopProducingCoroutine = StartCoroutine(StopProduceResourcePerSec("Mine"));
-		}
+            if (ResourceManager.Instance.isMineProducing == false && SpherierManager.Instance.heavyClubBonus == true)
+            {
+                StartCoroutine(HeavyClubMineBonus());
+            }
+        }
 	}
+    IEnumerator HeavyClubMineBonus()
+    {
+        ResourceManager.Instance.heavyClubMineBonus = 2;
+        float time = 0;
+        while (time < 60)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        ResourceManager.Instance.heavyClubMineBonus = 1;
+    }
 
     public void UpgradeMine()
 	{
