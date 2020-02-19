@@ -241,7 +241,13 @@ public class UIManager : MonoBehaviour
         nbr[0] = nbrToTransform;
 		if (nbrToTransform > 0 && nbrToTransform < 1)
 		{
-			return nbrToTransform.ToString("0.0");
+            string nbrToReturn = nbrToTransform.ToString("0.00");
+            if (nbrToReturn=="-1")
+            {
+                nbrToReturn = "0";
+            }
+
+            return nbrToReturn;
 		}
 		else
 		{

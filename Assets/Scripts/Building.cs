@@ -570,7 +570,7 @@ public class Building : MonoBehaviour
 	public virtual void AddWorkerToProducing()
 	{
         workerGotUpgraded = false;
-		if (ResourceManager.Instance.worker.totalResource > 0 && currentWorkers < workersLimit)
+		if (ResourceManager.Instance.worker.totalResource >= 1 && currentWorkers < workersLimit)
 		{
 			ResourceManager.Instance.worker.totalResource--;
 			currentWorkers++;
