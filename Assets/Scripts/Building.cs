@@ -57,6 +57,8 @@ public class Building:MonoBehaviour
 	int _currentUsedModel=0;
 	double _woodUpgradeCost, _oreUpgradeCost, _venacidUpgradeCost;
 
+	public int consecutiveClicks;
+
     public virtual void Start()
     {
         //wesh

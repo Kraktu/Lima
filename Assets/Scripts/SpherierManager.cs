@@ -266,7 +266,10 @@ public class SpherierManager : MonoBehaviour
     }
     public void AmateurClicker()
     {
-        Debug.Log("WIP");
+		//if (ResourceManager.Instance.)
+		//{
+		//
+		//}
     }
     public void LearnerClicker()
     {
@@ -286,7 +289,10 @@ public class SpherierManager : MonoBehaviour
     }
     public void HeavyClub()
     {
-        Debug.Log("WIP");
+		if ()
+		{
+
+		}
     }
     #endregion
     #region Defense

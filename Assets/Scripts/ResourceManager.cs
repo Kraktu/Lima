@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     public double startingWood, startingOre, startingVenacid, startingWorker,startingGems;
 	public double startingWoodPerSec, startingOrePerSec, startingVenacidPerSec,startingWorkerPerSec;
 	public double startingWoodPerClick, startingOrePerClick, startingVenacidPerClick,startingWorkerPerClick;
+	public bool isTenClicks = false;
 
     public int skillPoint=0;
 
