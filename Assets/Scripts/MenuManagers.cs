@@ -26,6 +26,10 @@ public class MenuManagers : MonoBehaviour
 	{
 		SceneManager.LoadScene("Project Scene");
 	}
+    public void SnakeLoas()
+    {
+        SceneManager.LoadScene("Project Scene");
+    }
 
 
 	//public void ReptileLoad()
