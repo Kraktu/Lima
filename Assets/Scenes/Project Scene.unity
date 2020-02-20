@@ -746,180 +746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e269e477b95954cb4e6992a3088cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &30098875
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 30098876}
-  - component: {fileID: 30098880}
-  - component: {fileID: 30098879}
-  - component: {fileID: 30098878}
-  - component: {fileID: 30098877}
-  m_Layer: 5
-  m_Name: Unit (12)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &30098876
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30098875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 812246966}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 628.54004, y: -1555}
-  m_SizeDelta: {x: 250, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &30098877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30098875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttackPanel: {fileID: 0}
-  smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
-  unitName: Swordman
-  unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  inWallArmorBonus: 0
-  inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
-  atUnitName: {fileID: 0}
-  atUnitNbr: {fileID: 0}
-  atUnitSentText: {fileID: 0}
-  atUnitInputField: {fileID: 0}
-  atUnitSprite: {fileID: 0}
-  unitInQueue: 0
-  totalTimeToProduce: 0
-  timeToReduceMultiplicator: 100
-  remainingUnitToProduce: 0
-  flatTimeReducing: 0
-  archerBonusNumber: 0
-  spearmanBonusNumber: 0
-  swordmanBonusNumber: 0
-  horsemanBonusNumber: 0
-  siegeUnitBonusNumber: 0
-  isUnitsUnlocked: 0
---- !u!114 &30098878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30098875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 30098879}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 30098877}
-        m_MethodName: OpenMyTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &30098879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30098875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &30098880
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30098875}
-  m_CullTransparentMesh: 0
 --- !u!1001 &30624528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5309,7 +5135,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55e61f3bbac58de4a9fccd92dec45626, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc9b70ab36904be488948a61368788f3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8444,7 +8270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 339109094}
   smallUnitImage: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 7487a4fadc607b24381cbf5f9f2e40d4, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 676ad3d4789491c4bb61d8acd8c3cdab, type: 3}
   unitName: Leviathan
   unitNbr: 0
   attack: 125
@@ -10834,7 +10660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 566720622}
   smallUnitImage: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
-  longUnitImage: {fileID: 21300000, guid: fffb889098ff70e4f9a197c4930716f2, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 4a46830877f65bd49a6e92b6759305af, type: 3}
   unitName: Horseman
   unitNbr: 0
   attack: 35
@@ -12668,7 +12494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1066951286}
   smallUnitImage: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
-  longUnitImage: {fileID: 21300000, guid: a5c7f92d96f1f9341b8a294ea9d1ae4d, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 8d52245a4b7d1194a8c7d6377ef81684, type: 3}
   unitName: Swordman
   unitNbr: 0
   attack: 10
@@ -15604,8 +15430,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18734,7 +18560,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -19366,7 +19192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0a341cc1c169f743a1c469661bebaa4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95b194eb03a3d004b971c8862e85406b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25224,8 +25050,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -25342,8 +25168,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -26174,7 +26000,7 @@ MonoBehaviour:
   workersLimit: 4
   workerLimitUpgrade: 1
   workerLimitUpgradeLevelStep: 1
-  workerIconBuilding: {fileID: 21300000, guid: 6e112bd1f1c188749bb2c2574736e508, type: 3}
+  workerIconBuilding: {fileID: 21300000, guid: fe17e4c78d53d8749ad1789a70605975, type: 3}
   buildingIcon: {fileID: 21300000, guid: 33bd7f98d1f84bb42b84b9f00a8d1aa9, type: 3}
   constructionTimeMultiplicator: 1.25
   constructionTime: 50
@@ -26713,7 +26539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 223f1d612423ca449bf536acab66ca7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3c7f5a474b70de488219babd2b9ea21, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35705,11 +35531,6 @@ RectTransform:
   - {fileID: 1945919083}
   - {fileID: 208793295}
   - {fileID: 1007973067}
-  - {fileID: 1790936668}
-  - {fileID: 932977100}
-  - {fileID: 30098876}
-  - {fileID: 1432357033}
-  - {fileID: 1653608638}
   m_Father: {fileID: 1464459516}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40264,180 +40085,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695be9257387c694bad288eb13ebf460, type: 3}
---- !u!1 &932977099
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 932977100}
-  - component: {fileID: 932977104}
-  - component: {fileID: 932977103}
-  - component: {fileID: 932977102}
-  - component: {fileID: 932977101}
-  m_Layer: 5
-  m_Name: Unit (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &932977100
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932977099}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 812246966}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 263, y: -1555}
-  m_SizeDelta: {x: 250, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &932977101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932977099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttackPanel: {fileID: 0}
-  smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
-  unitName: Swordman
-  unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  inWallArmorBonus: 0
-  inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
-  atUnitName: {fileID: 0}
-  atUnitNbr: {fileID: 0}
-  atUnitSentText: {fileID: 0}
-  atUnitInputField: {fileID: 0}
-  atUnitSprite: {fileID: 0}
-  unitInQueue: 0
-  totalTimeToProduce: 0
-  timeToReduceMultiplicator: 100
-  remainingUnitToProduce: 0
-  flatTimeReducing: 0
-  archerBonusNumber: 0
-  spearmanBonusNumber: 0
-  swordmanBonusNumber: 0
-  horsemanBonusNumber: 0
-  siegeUnitBonusNumber: 0
-  isUnitsUnlocked: 0
---- !u!114 &932977102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932977099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 932977103}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 932977101}
-        m_MethodName: OpenMyTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &932977103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932977099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &932977104
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 932977099}
-  m_CullTransparentMesh: 0
 --- !u!1001 &942488642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42584,7 +42231,8 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 0dfa0411ee429704e87e72c5ae02dd8d,
+            type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -42609,8 +42257,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -43514,7 +43162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e466471acd92989428da87a71d13512c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90a57b246d3316d44a68403a21c249e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -43585,7 +43233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1667515137}
   smallUnitImage: {fileID: 21300000, guid: 0877678785b224c4981a4524450d0c1e, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 0877678785b224c4981a4524450d0c1e, type: 3}
+  longUnitImage: {fileID: 21300000, guid: d0019224be65fd647a06d4b172e07cf8, type: 3}
   unitName: Apophis
   unitNbr: 0
   attack: 100
@@ -43871,7 +43519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 108178851}
   smallUnitImage: {fileID: 21300000, guid: b4c626cb11617bf4fb975a92e65715bb, type: 3}
-  longUnitImage: {fileID: 21300000, guid: b4c626cb11617bf4fb975a92e65715bb, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 887660c1dbddd014c90f11e173e19cee, type: 3}
   unitName: Spy
   unitNbr: 0
   attack: 1
@@ -44676,7 +44324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 2065482085}
   smallUnitImage: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 9edb5c5f8dcb05b41a504fa1e3ce0209, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 9cbb2fabaf2e65e40a74af9f79364c59, type: 3}
   unitName: Archer
   unitNbr: 0
   attack: 15
@@ -54406,7 +54054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 571177668}
   smallUnitImage: {fileID: 21300000, guid: 6ca4e7ff4e370e947a01dc2143e5a909, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 6ca4e7ff4e370e947a01dc2143e5a909, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 8661f86f5fd175141b6567f2974b6130, type: 3}
   unitName: Alchemist
   unitNbr: 0
   attack: 10
@@ -55167,8 +54815,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -56665,7 +56313,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
@@ -62813,7 +62461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3e86f1416c8f81546bb091c53e310574, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b2cd6dc1480c8842a11572d3d08d344, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -63800,180 +63448,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1429230977}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1432357032
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1432357033}
-  - component: {fileID: 1432357037}
-  - component: {fileID: 1432357036}
-  - component: {fileID: 1432357035}
-  - component: {fileID: 1432357034}
-  m_Layer: 5
-  m_Name: Unit (13)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1432357033
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432357032}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 812246966}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 263, y: -1835}
-  m_SizeDelta: {x: 250, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1432357034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432357032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttackPanel: {fileID: 0}
-  smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
-  unitName: Swordman
-  unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  inWallArmorBonus: 0
-  inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
-  atUnitName: {fileID: 0}
-  atUnitNbr: {fileID: 0}
-  atUnitSentText: {fileID: 0}
-  atUnitInputField: {fileID: 0}
-  atUnitSprite: {fileID: 0}
-  unitInQueue: 0
-  totalTimeToProduce: 0
-  timeToReduceMultiplicator: 100
-  remainingUnitToProduce: 0
-  flatTimeReducing: 0
-  archerBonusNumber: 0
-  spearmanBonusNumber: 0
-  swordmanBonusNumber: 0
-  horsemanBonusNumber: 0
-  siegeUnitBonusNumber: 0
-  isUnitsUnlocked: 0
---- !u!114 &1432357035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432357032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1432357036}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1432357034}
-        m_MethodName: OpenMyTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1432357036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432357032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1432357037
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432357032}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1432829420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66203,7 +65677,7 @@ MonoBehaviour:
   workersLimit: 4
   workerLimitUpgrade: 1
   workerLimitUpgradeLevelStep: 1
-  workerIconBuilding: {fileID: 21300000, guid: ba91ee8ad48967c46ba0bc54ecae0e09, type: 3}
+  workerIconBuilding: {fileID: 21300000, guid: 3d224089ab2a9e64182b64add1ef9dad, type: 3}
   buildingIcon: {fileID: 21300000, guid: 594c01935eb99e24c86c31401dc6d66b, type: 3}
   constructionTimeMultiplicator: 1.25
   constructionTime: 30
@@ -75199,180 +74673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653495022}
   m_CullTransparentMesh: 0
---- !u!1 &1653608637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1653608638}
-  - component: {fileID: 1653608642}
-  - component: {fileID: 1653608641}
-  - component: {fileID: 1653608640}
-  - component: {fileID: 1653608639}
-  m_Layer: 5
-  m_Name: Unit (14)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1653608638
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653608637}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 812246966}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 628.54004, y: -1835}
-  m_SizeDelta: {x: 250, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1653608639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653608637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttackPanel: {fileID: 0}
-  smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
-  unitName: Swordman
-  unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  inWallArmorBonus: 0
-  inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
-  atUnitName: {fileID: 0}
-  atUnitNbr: {fileID: 0}
-  atUnitSentText: {fileID: 0}
-  atUnitInputField: {fileID: 0}
-  atUnitSprite: {fileID: 0}
-  unitInQueue: 0
-  totalTimeToProduce: 0
-  timeToReduceMultiplicator: 100
-  remainingUnitToProduce: 0
-  flatTimeReducing: 0
-  archerBonusNumber: 0
-  spearmanBonusNumber: 0
-  swordmanBonusNumber: 0
-  horsemanBonusNumber: 0
-  siegeUnitBonusNumber: 0
-  isUnitsUnlocked: 0
---- !u!114 &1653608640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653608637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1653608641}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1653608639}
-        m_MethodName: OpenMyTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1653608641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653608637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1653608642
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653608637}
-  m_CullTransparentMesh: 0
 --- !u!1 &1657918010
 GameObject:
   m_ObjectHideFlags: 0
@@ -78646,8 +77946,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71a03cde16470f646bbfc6a68563ae5f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -81150,180 +80450,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1790080453}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1790936667
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1790936668}
-  - component: {fileID: 1790936672}
-  - component: {fileID: 1790936671}
-  - component: {fileID: 1790936670}
-  - component: {fileID: 1790936669}
-  m_Layer: 5
-  m_Name: Unit (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1790936668
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790936667}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 812246966}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 628.54004, y: -1275}
-  m_SizeDelta: {x: 250, y: 250}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1790936669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790936667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338ad9b5798271442b742786c27e4271, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAttackPanel: {fileID: 0}
-  smallUnitImage: {fileID: 21300000, guid: 0c93f195cc78a7948a65f56d53f1b2c8, type: 3}
-  longUnitImage: {fileID: 21300000, guid: 459f8e70f29c3f14086972cf13dcba0a, type: 3}
-  unitName: Swordman
-  unitNbr: 0
-  attack: 33
-  life: 25
-  attackPerTurn: 3
-  armor: 4
-  pierce: 50
-  accuracy: 75
-  inWallArmorBonus: 0
-  inWallAttackBonus: 0
-  woodPrice: 150
-  orePrice: 300
-  venacidPrice: 10
-  timeToProduce: 10
-  atUnitName: {fileID: 0}
-  atUnitNbr: {fileID: 0}
-  atUnitSentText: {fileID: 0}
-  atUnitInputField: {fileID: 0}
-  atUnitSprite: {fileID: 0}
-  unitInQueue: 0
-  totalTimeToProduce: 0
-  timeToReduceMultiplicator: 100
-  remainingUnitToProduce: 0
-  flatTimeReducing: 0
-  archerBonusNumber: 0
-  spearmanBonusNumber: 0
-  swordmanBonusNumber: 0
-  horsemanBonusNumber: 0
-  siegeUnitBonusNumber: 0
-  isUnitsUnlocked: 0
---- !u!114 &1790936670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790936667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1790936671}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1790936669}
-        m_MethodName: OpenMyTab
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1790936671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790936667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1790936672
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790936667}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1791374593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82381,7 +81507,7 @@ MonoBehaviour:
   workersLimit: 4
   workerLimitUpgrade: 1
   workerLimitUpgradeLevelStep: 1
-  workerIconBuilding: {fileID: 21300000, guid: 553190fb7bee3cf49964c5897a85fbdb, type: 3}
+  workerIconBuilding: {fileID: 21300000, guid: 3d224089ab2a9e64182b64add1ef9dad, type: 3}
   buildingIcon: {fileID: 21300000, guid: 617482b2af905764f85d766601f81bdd, type: 3}
   constructionTimeMultiplicator: 1.15
   constructionTime: 10
@@ -83958,7 +83084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1301136299}
   smallUnitImage: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
-  longUnitImage: {fileID: 21300000, guid: bd9f5a534f142564bb4d154d78a1cd21, type: 3}
+  longUnitImage: {fileID: 21300000, guid: e884e50eeece1f14eb09f575cf8996b4, type: 3}
   unitName: Spearman
   unitNbr: 0
   attack: 20
@@ -88949,7 +88075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAttackPanel: {fileID: 1922543030}
   smallUnitImage: {fileID: 21300000, guid: fc4e781e0fa6ebc4b8db54df615b1f0a, type: 3}
-  longUnitImage: {fileID: 21300000, guid: fc4e781e0fa6ebc4b8db54df615b1f0a, type: 3}
+  longUnitImage: {fileID: 21300000, guid: 86c69138aed05614b8a4a4de87024d1d, type: 3}
   unitName: Quetzalcoatl
   unitNbr: 0
   attack: 75
@@ -95554,7 +94680,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ed99baa8c59cd6342a98be56bf9b893f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78cbd37405fd10e47a75e01c4905fc75, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
