@@ -41,6 +41,7 @@ public class MenuManagers : MonoBehaviour
 	{
 		panelOption.gameObject.SetActive(true);
 		closePanel.gameObject.SetActive(true);
+		SoundManager.Instance.PlaySoundEffect("GoToSettings_SFX");
 	}
 	public void ClosePanel()
 	{
