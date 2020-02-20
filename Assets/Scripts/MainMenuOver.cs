@@ -20,7 +20,7 @@ public class MainMenuOver : MonoBehaviour
                 + "\nWith a bit of knowledge, your"
                 + "\nIndustries will never stops producing."
                 + "\nWhen it comes to army, human"
-                + "\nare not he worst, even if their"
+                + "\nare not the worst, even if their"
                 + "\nweapon technology is not the best."
                 +"\n"
                 + "\nIdeal for farmer and defensive player.";
