@@ -60,6 +60,7 @@ public class Sawmill : ResourceBuilding
         {
             UpdateSawmillProducing();
             RefreshInterface();
+            CheckSkillPoint();
         }
     }
     public override void RemoveWorkerToProducing()

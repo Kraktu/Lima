@@ -57,7 +57,8 @@ public class Mine : ResourceBuilding
 		{
             UpdateMineProducing();
             RefreshInterface();
-		}
+            CheckSkillPoint();
+        }
 	}
     public override void RemoveWorkerToProducing()
     {

@@ -85,6 +85,7 @@ public class GeneralQuarter : Building
                 ResourceManager.Instance.skillPoint += skillPointEarnedPerLevel;
                 RefreshInterface();
                 UIManager.Instance.UpdateSkillPointText();
+                CheckSkillPoint();
             }
             if (level == 1)
             {

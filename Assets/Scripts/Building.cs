@@ -638,7 +638,30 @@ public class Building : MonoBehaviour
 		ConstructionTimerText.gameObject.SetActive(true);
 		//starting timer
 		GameObject go = Instantiate(constructionPoof,transform.position+Vector3.up*2,Quaternion.identity);
-		while (elpasedTime < constructionTime)
+        switch (buildingName)
+        {
+            case "Sawmill":
+                UIManager.Instance.exclaSawmill.gameObject.SetActive(false);
+                break;
+            case "Mine":
+                UIManager.Instance.exclaMine.gameObject.SetActive(false);
+                break;
+            case "GeneralQuarter":
+                UIManager.Instance.exclaQG.gameObject.SetActive(false);
+                break;
+            case "Refinery":
+                UIManager.Instance.exclaVenacid.gameObject.SetActive(false);
+                break;
+            case "House":
+                UIManager.Instance.exclaHouse.gameObject.SetActive(false);
+                break;
+            case "Barrack":
+                UIManager.Instance.exclaBarrack.gameObject.SetActive(false);
+                break;
+            default:
+                break;
+        }
+        while (elpasedTime < constructionTime)
 		{
             for (int i = 0; i < scaffoldingModels.Length; i++)
             {
@@ -687,6 +710,33 @@ public class Building : MonoBehaviour
         {
                 scaffoldingModels[i].SetActive(false);
         }
+        if (skillPoints>0)
+        {
+            switch (buildingName)
+            {
+                case "Sawmill":
+                    UIManager.Instance.exclaSawmill.gameObject.SetActive(true);
+                    break;
+                case "Mine":
+                    UIManager.Instance.exclaMine.gameObject.SetActive(true);
+                    break;
+                case "GeneralQuarter":
+                    UIManager.Instance.exclaQG.gameObject.SetActive(true);
+                    break;
+                case "Refinery":
+                    UIManager.Instance.exclaVenacid.gameObject.SetActive(true);
+                    break;
+                case "House":
+                    UIManager.Instance.exclaHouse.gameObject.SetActive(true);
+                    break;
+                case "Barrack":
+                    UIManager.Instance.exclaBarrack.gameObject.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
+        }
+       
         AnimationBuildings();
 	}
 

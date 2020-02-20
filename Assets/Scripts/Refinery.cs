@@ -56,7 +56,8 @@ public class Refinery : ResourceBuilding
 		{
 			UpdateRefineryProducing();
 			RefreshInterface();
-		}
+            CheckSkillPoint();
+        }
 	}
     public override void RemoveWorkerToProducing()
     {

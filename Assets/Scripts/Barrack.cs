@@ -81,6 +81,7 @@ public class Barrack : Building
         {
             UpdateBarrack();
             RefreshInterface();
+            CheckSkillPoint();
         }
 		if(level == 1)
 		{

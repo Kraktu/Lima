@@ -61,7 +61,8 @@ public class House : ResourceBuilding
             }
             UpdateHouseProducing();
             RefreshInterface();
-		}
+            CheckSkillPoint();
+        }
 	}
 
     public override void RemoveWorkerToProducing()
