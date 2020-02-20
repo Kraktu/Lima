@@ -54,6 +54,7 @@ public class UIManager : MonoBehaviour
 	public string stringBonus;
 
 	public Text simultaneousAttack, simultaneousSpy;
+	public Image exclaSawmill, exclaMine, exclaVenacid, exclaQG, exclaHouse, exclaBarrack;
 
     private void Awake()
     {

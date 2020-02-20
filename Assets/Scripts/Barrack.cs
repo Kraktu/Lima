@@ -87,7 +87,17 @@ public class Barrack : Building
 			UIManager.Instance.troopsButton.gameObject.SetActive(true);
 		}
     }
-
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaBarrack.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaBarrack.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
@@ -98,6 +108,7 @@ public class Barrack : Building
 				unitsToUnlock[i].timeToReduceMultiplicator -= firstSkillPointLevel;
 			}
 			UpdateBarrack();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -111,6 +122,7 @@ public class Barrack : Building
 				unitsToUnlock[i].flatTimeReducing += skillSecondBonus;
 			}
 			UpdateBarrack();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -121,6 +133,7 @@ public class Barrack : Building
 		{
 			timePercentReducedOnClick+= skillThirdBonus;
 			UpdateBarrack();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -131,6 +144,7 @@ public class Barrack : Building
 		{
 			timeReducedOnClick += skillFourthBonus;
 			UpdateBarrack();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -152,6 +166,7 @@ public class Barrack : Building
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
+		CheckSkillPoint();
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost,currentOreCost,currentVenacidCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
 		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + firstSkillPointUpgradeNameEnd + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + secondSkillPointUpgradeNameEnd + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + thirdSkillPointUpgradeNameEnd + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus) + fourthSkillPointUpgradeNameEnd + " lvl" + fourthSkillPointLevel);
 	}

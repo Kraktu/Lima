@@ -78,12 +78,24 @@ public class Refinery : ResourceBuilding
 			RefreshInterface();
 		}
 	}
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaVenacid.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaVenacid.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
 		if (skillFirstUpgraded)
 		{
 			ResourceManager.Instance.percentVenacidBonusPerSec += skillFirstBonus;
+			CheckSkillPoint();
 			UpdateRefineryProducing();
 			RefreshInterface();
 		}
@@ -94,6 +106,7 @@ public class Refinery : ResourceBuilding
 		if (skillSecondUpgraded)
 		{
 			ResourceManager.Instance.flatVenacidBonusPerSec += skillSecondBonus;
+			CheckSkillPoint();
 			UpdateRefineryProducing();
 			RefreshInterface();
 		}
@@ -104,6 +117,7 @@ public class Refinery : ResourceBuilding
 		if (skillThirdUpgraded)
 		{
 			ResourceManager.Instance.percentVenacidBonusPerClick += skillThirdBonus;
+			CheckSkillPoint();
 			UpdateRefineryProducing();
 			RefreshInterface();
 		}
@@ -114,6 +128,7 @@ public class Refinery : ResourceBuilding
 		if (skillFourthUpgraded)
 		{
 			ResourceManager.Instance.flatVenacidBonusPerClick += skillFourthBonus;
+			CheckSkillPoint();
 			UpdateRefineryProducing();
 			RefreshInterface();
 		}
@@ -126,6 +141,7 @@ public class Refinery : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
+		CheckSkillPoint();
 		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerClick) + " /Click";
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.venacid.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",

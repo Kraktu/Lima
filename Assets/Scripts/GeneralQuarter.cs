@@ -119,7 +119,17 @@ public class GeneralQuarter : Building
             RefreshInterface();
         }
     }
-
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaQG.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaQG.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
@@ -127,6 +137,7 @@ public class GeneralQuarter : Building
 		{
 			workerFactor -= skillFirstBonus;
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddSecondSkillPoint()
@@ -139,6 +150,7 @@ public class GeneralQuarter : Building
 				buildings[i].constructionTime -= ((1 + level) * level) / 2;
 			}
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddThirdSkillPoint()
@@ -148,6 +160,7 @@ public class GeneralQuarter : Building
 		{
 			removeTheTimeOnClick *= (1 + skillThirdBonus / 100);
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddFourthSkillPoint()
@@ -157,6 +170,7 @@ public class GeneralQuarter : Building
 		{
 			removeTheTimeOnClick += skillFourthBonus;
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 
@@ -176,6 +190,7 @@ public class GeneralQuarter : Building
     public override void RefreshInterface()
     {
         base.RefreshInterface();
+		CheckSkillPoint();
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, "", "", villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
 		firstSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFirstBonus) + firstSkillPointUpgradeNameEnd + " lvl." + firstSkillPointLevel, secondSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillSecondBonus) + secondSkillPointUpgradeNameEnd + " lvl." + secondSkillPointLevel, thirdSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillThirdBonus) + thirdSkillPointUpgradeNameEnd + " lvl." + thirdSkillPointLevel, fourthSkillPointUpgradeName + UIManager.Instance.BigIntToString(skillFourthBonus)+ fourthSkillPointUpgradeNameEnd + " lvl" + fourthSkillPointLevel);
 	}
