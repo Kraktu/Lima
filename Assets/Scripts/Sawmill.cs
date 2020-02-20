@@ -82,7 +82,17 @@ public class Sawmill : ResourceBuilding
             RefreshInterface();
         }
     }
-
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaSawmill.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaSawmill.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
@@ -90,6 +100,7 @@ public class Sawmill : ResourceBuilding
 		{
 			ResourceManager.Instance.percentWoodBonusPerSec += skillFirstBonus;
 			UpdateSawmillProducing();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -100,6 +111,7 @@ public class Sawmill : ResourceBuilding
 		{
 			ResourceManager.Instance.flatWoodBonusPerSec += skillSecondBonus;
 			UpdateSawmillProducing();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -110,6 +122,7 @@ public class Sawmill : ResourceBuilding
 		{
 			ResourceManager.Instance.percentWoodBonusPerClick += skillThirdBonus;
 			UpdateSawmillProducing();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -120,6 +133,7 @@ public class Sawmill : ResourceBuilding
 		{
 			ResourceManager.Instance.flatWoodBonusPerClick += skillFourthBonus;
 			UpdateSawmillProducing();
+			CheckSkillPoint();
 			RefreshInterface();
 		}
 	}
@@ -140,6 +154,7 @@ public class Sawmill : ResourceBuilding
     public override void RefreshInterface()
 	{
 		base.RefreshInterface();
+		CheckSkillPoint();
 		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerClick) + " /Click";
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.wood.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",

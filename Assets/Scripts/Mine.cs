@@ -79,6 +79,17 @@ public class Mine : ResourceBuilding
             RefreshInterface();
         }
     }
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaMine.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaMine.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
@@ -87,6 +98,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.percentOreBonusPerSec += skillFirstBonus;
 			UpdateMineProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddSecondSkillPoint()
@@ -97,6 +109,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.flatOreBonusPerSec += skillSecondBonus;
 			UpdateMineProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddThirdSkillPoint()
@@ -107,6 +120,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.percentOreBonusPerClick += skillThirdBonus;
 			UpdateMineProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddFourthSkillPoint()
@@ -117,6 +131,7 @@ public class Mine : ResourceBuilding
 			ResourceManager.Instance.flatOreBonusPerClick += skillFourthBonus;
 			UpdateMineProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 
@@ -136,6 +151,7 @@ public class Mine : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
+		CheckSkillPoint();
 		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerClick) + " /Click";
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.ore.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",

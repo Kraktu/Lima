@@ -63,6 +63,7 @@ public class House : ResourceBuilding
             RefreshInterface();
 		}
 	}
+
     public override void RemoveWorkerToProducing()
     {
         base.RemoveWorkerToProducing();
@@ -83,6 +84,17 @@ public class House : ResourceBuilding
             RefreshInterface();
         }
     }
+	public void CheckSkillPoint()
+	{
+		if (skillPoints == 0)
+		{
+			UIManager.Instance.exclaHouse.gameObject.SetActive(false);
+		}
+		else
+		{
+			UIManager.Instance.exclaHouse.gameObject.SetActive(true);
+		}
+	}
 	public override void AddFirstSkillPoint()
 	{
 		base.AddFirstSkillPoint();
@@ -91,6 +103,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.percentWorkerBonusPerSec += skillFirstBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddSecondSkillPoint()
@@ -101,6 +114,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.flatWorkerBonusPerSec += skillSecondBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddThirdSkillPoint()
@@ -111,6 +125,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.percentWorkerBonusPerClick += skillThirdBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AddFourthSkillPoint()
@@ -121,6 +136,7 @@ public class House : ResourceBuilding
 			ResourceManager.Instance.flatWorkerBonusPerClick += skillFourthBonus;
 			UpdateHouseProducing();
 			RefreshInterface();
+			CheckSkillPoint();
 		}
 	}
 	public override void AnimationBuildings()
@@ -144,6 +160,7 @@ public class House : ResourceBuilding
 	public override void RefreshInterface()
 	{
 		base.RefreshInterface();
+		CheckSkillPoint();
 		_perClickString = producedResource + ": " + UIManager.Instance.BigIntToString(ResourceManager.Instance.worker.resourcePerClick) + " /Click";
 		_perSecString = producedResource + ": " + UIManager.Instance.BigIntToString(3600 * ResourceManager.Instance.worker.resourcePerSec) + " /h";
 		UIManager.Instance.BuildingInterfaceUpdate(buildingNamePlusLevel, buildingDescription, currentWoodCost, currentOreCost, currentVenacidCost, _perSecString, _perClickString, villagers, workerIconBuilding, buildingIcon, UIManager.Instance.BigIntToString(skillPoints) + " skill points",
