@@ -45,16 +45,43 @@ public class ClickBonus : MonoBehaviour
 				switch (Random.Range(0, 4))
 				{
 					case 0:
+                        if (ResourceManager.Instance.wood.totalResource ==0)
+                        {
+                            ResourceManager.Instance.wood.totalResource += 100;
+                            InstantiateParticles("100", woodSprite);
+                        }
+                        else
+                        {
 						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 144;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 144), woodSprite);
+
+                        }
 						break;
 					case 1:
-						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 144;
+                        if (ResourceManager.Instance.ore.totalResource == 0)
+                        {
+                            ResourceManager.Instance.ore.totalResource += 100;
+                            InstantiateParticles("100", oreSprite);
+                        }
+                        else
+                        {
+
+                        ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 144;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 144), oreSprite);
+                        }
 						break;
 					case 2:
-						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 144;
+                        if (ResourceManager.Instance.venacid.totalResource == 0)
+                        {
+                            ResourceManager.Instance.venacid.totalResource += 100;
+                            InstantiateParticles("100", venacidSprite);
+                        }
+                        else
+                        {
+                        ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 144;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 144), venacidSprite);
+
+                        }
 						break;
 					case 3:
 						ResourceManager.Instance.gems.totalResource += gemsNbr;
@@ -72,16 +99,43 @@ public class ClickBonus : MonoBehaviour
 					switch (Random.Range(0, 4))
 					{
 						case 0:
-							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
+                            if (ResourceManager.Instance.wood.totalResource == 0)
+                            {
+                                ResourceManager.Instance.wood.totalResource += 100;
+                                InstantiateParticles("100", woodSprite);
+                            }
+                            else
+                            {
+                            ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 360), woodSprite);
+
+                            }
 							break;
 						case 1:
-							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
+                            if (ResourceManager.Instance.ore.totalResource == 0)
+                            {
+                                ResourceManager.Instance.ore.totalResource += 100;
+                                InstantiateParticles("100", oreSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 360), oreSprite);
+                            }
 							break;
 						case 2:
-							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
+                            if (ResourceManager.Instance.venacid.totalResource == 0)
+                            {
+                                ResourceManager.Instance.venacid.totalResource += 100;
+                                InstantiateParticles("100", venacidSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 360), venacidSprite);
+                            }
 							break;
 						case 3:
 							ResourceManager.Instance.gems.totalResource += gemsNbr;
@@ -96,18 +150,46 @@ public class ClickBonus : MonoBehaviour
 					switch (Random.Range(0, 5))
 					{
 						case 0:
-							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
+                            if (ResourceManager.Instance.wood.totalResource == 0)
+                            {
+                                ResourceManager.Instance.wood.totalResource += 100;
+                                InstantiateParticles("100", woodSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 360), woodSprite);
+                            }
 							break;
 						case 1:
-							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
+                            if (ResourceManager.Instance.ore.totalResource == 0)
+                            {
+                                ResourceManager.Instance.ore.totalResource += 100;
+                                InstantiateParticles("100", oreSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 360), oreSprite);
+                            }
 							break;
 						case 2:
-							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
+                            if (ResourceManager.Instance.venacid.totalResource == 0)
+                            {
+                                ResourceManager.Instance.venacid.totalResource += 100;
+                                InstantiateParticles("100", venacidSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 360;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 360), oreSprite);
+                            }
 							break;
 						case 3:
+
 							ResourceManager.Instance.gems.totalResource += gemsNbr;
 							InstantiateParticles(UIManager.Instance.BigIntToString(gemsNbr), gemSprite);
 							break;
@@ -129,16 +211,43 @@ public class ClickBonus : MonoBehaviour
 					switch (Random.Range(0, 4))
 					{
 						case 0:
-							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
+                            if (ResourceManager.Instance.wood.totalResource == 0)
+                            {
+                                ResourceManager.Instance.wood.totalResource += 100;
+                                InstantiateParticles("100", woodSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 720), woodSprite);
+                            }
 							break;
 						case 1:
-							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
+                            if (ResourceManager.Instance.ore.totalResource == 0)
+                            {
+                                ResourceManager.Instance.ore.totalResource += 100;
+                                InstantiateParticles("100", oreSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 720), oreSprite);
+                            }
 							break;
 						case 2:
-							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
+                            if (ResourceManager.Instance.venacid.totalResource == 0)
+                            {
+                                ResourceManager.Instance.venacid.totalResource += 100;
+                                InstantiateParticles("100", venacidSprite);
+                            }
+                            else
+                            {
+                            ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 720), venacidSprite);
+
+                            }
 							break;
 						case 3:
 							ResourceManager.Instance.gems.totalResource += gemsNbr;
@@ -153,16 +262,43 @@ public class ClickBonus : MonoBehaviour
 					switch (Random.Range(0, 5))
 					{
 						case 0:
-							ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
+                            if (ResourceManager.Instance.wood.totalResource == 0)
+                            {
+                                ResourceManager.Instance.wood.totalResource += 100;
+                                InstantiateParticles("100", woodSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 720), woodSprite);
+                            }
 							break;
 						case 1:
-							ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
+                            if (ResourceManager.Instance.ore.totalResource == 0)
+                            {
+                                ResourceManager.Instance.ore.totalResource += 100;
+                                InstantiateParticles("100", oreSprite);
+                            }
+                            else
+                            {
+                            ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 720), oreSprite);
+
+                            }
 							break;
 						case 2:
-							ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
+                            if (ResourceManager.Instance.venacid.totalResource == 0)
+                            {
+                                ResourceManager.Instance.venacid.totalResource += 100;
+                                InstantiateParticles("100", venacidSprite);
+                            }
+                            else
+                            {
+
+                            ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 720;
 							InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 720), venacidSprite);
+                            }
 							break;
 						case 3:
 							ResourceManager.Instance.gems.totalResource += gemsNbr;
@@ -183,16 +319,43 @@ public class ClickBonus : MonoBehaviour
 				switch (Random.Range(0, 4))
 				{
 					case 0:
-						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 1800;
+                        if (ResourceManager.Instance.wood.totalResource == 0)
+                        {
+                            ResourceManager.Instance.wood.totalResource += 100;
+                            InstantiateParticles("100", woodSprite);
+                        }
+                        else
+                        {
+
+                        ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 1800;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 1800), woodSprite);
+                        }
 						break;
 					case 1:
-						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 1800;
+                        if (ResourceManager.Instance.ore.totalResource == 0)
+                        {
+                            ResourceManager.Instance.ore.totalResource += 100;
+                            InstantiateParticles("100", oreSprite);
+                        }
+                        else
+                        {
+
+                        ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 1800;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 1800), oreSprite);
+                        }
 						break;
 					case 2:
-						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 1800;
+                        if (ResourceManager.Instance.venacid.totalResource == 0)
+                        {
+                            ResourceManager.Instance.venacid.totalResource += 100;
+                            InstantiateParticles("100", venacidSprite);
+                        }
+                        else
+                        {
+
+                        ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 1800;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 1800), venacidSprite);
+                        }
 						break;
 					case 3:
 						ResourceManager.Instance.gems.totalResource += gemsNbr;
@@ -207,16 +370,43 @@ public class ClickBonus : MonoBehaviour
 				switch (Random.Range(0, 4))
 				{
 					case 0:
-						ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 3600;
+                        if (ResourceManager.Instance.wood.totalResource == 0)
+                        {
+                            ResourceManager.Instance.wood.totalResource += 100;
+                            InstantiateParticles("100", woodSprite);
+                        }
+                        else
+                        {
+
+                        ResourceManager.Instance.wood.totalResource += ResourceManager.Instance.wood.resourcePerSec * 3600;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.wood.resourcePerSec * 3600), woodSprite);
+                        }
 						break;
 					case 1:
-						ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 3600;
+                        if (ResourceManager.Instance.ore.totalResource == 0)
+                        {
+                            ResourceManager.Instance.ore.totalResource += 100;
+                            InstantiateParticles("100", oreSprite);
+                        }
+                        else
+                        {
+                        ResourceManager.Instance.ore.totalResource += ResourceManager.Instance.ore.resourcePerSec * 3600;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.ore.resourcePerSec * 3600), oreSprite);
+
+                        }
 						break;
 					case 2:
-						ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 3600;
+                        if (ResourceManager.Instance.venacid.totalResource == 0)
+                        {
+                            ResourceManager.Instance.venacid.totalResource += 100;
+                            InstantiateParticles("100", venacidSprite);
+                        }
+                        else
+                        {
+                        ResourceManager.Instance.venacid.totalResource += ResourceManager.Instance.venacid.resourcePerSec * 3600;
 						InstantiateParticles(UIManager.Instance.BigIntToString(ResourceManager.Instance.venacid.resourcePerSec * 3600), venacidSprite);
+
+                        }
 						break;
 					case 3:
 						ResourceManager.Instance.gems.totalResource += gemsNbr;
