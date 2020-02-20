@@ -9,6 +9,7 @@ public class MenuManagers : MonoBehaviour
 	static public MenuManagers Instance { get; private set; }
 
 	public GameObject panelOption;
+    public GameObject CanvasLoading, GeneralCanvas;
 	public Button closePanel;
 
 	private void Awake()
@@ -21,14 +22,26 @@ public class MenuManagers : MonoBehaviour
 
 		Instance = this;
 	}
+    IEnumerator LoadYourAsyncScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Project Scene");
 
-	public void HumansLoad()
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+    public void HumansLoad()
 	{
-		SceneManager.LoadScene("Project Scene");
+        GeneralCanvas.SetActive(false);
+        CanvasLoading.SetActive(true);
+		StartCoroutine(LoadYourAsyncScene());
 	}
     public void SnakeLoas()
     {
-        SceneManager.LoadScene("Project Scene");
+        GeneralCanvas.SetActive(false);
+        CanvasLoading.SetActive(true);
+        StartCoroutine(LoadYourAsyncScene());
     }
 
 
